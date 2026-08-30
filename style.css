@@ -853,3 +853,27 @@ select {
     }
 
 }
+
+/* CONTACT HIGHLIGHT - DARK TEXT */
+.contact-highlight {
+    color: #0b2d4f !important;
+}
+
+.contact-highlight strong {
+    color: #0b2d4f !important;
+    font-weight: 700;
+}
+
+.contact-highlight p {
+    color: #183b5b !important;
+}
+
+.contact-highlight a {
+    color: #0b2d4f !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-highlight a:hover {
+    color: #1479c9 !important;
+}
