@@ -13,10 +13,10 @@
     </title>
 
     <meta name="description"
-        content="JB TECH SERVICES provides business telecom, connectivity, cloud communication, business calling and GeM procurement solutions for organizations in India and international markets.">
+        content="JB TECH SERVICES provides business telecom, connectivity, cloud communication, business calling and GeM-related solutions for businesses in India and international markets.">
 
     <meta name="keywords"
-        content="JB TECH SERVICES, telecom services, business connectivity, cloud telephony, cloud communication, business calling, GeM services, GeM procurement, Tata Tele Business Services, JioBusiness, Vi Business, TeleCMI, IHA Telephony">
+        content="JB TECH SERVICES, telecom services, business connectivity, cloud telephony, cloud communication, business calling, GeM services, Tata Tele Business Services, JioBusiness, Vi Business, TeleCMI, IHA Telephony">
 
     <meta name="author"
         content="JB TECH SERVICES">
@@ -24,288 +24,499 @@
     <link rel="stylesheet"
         href="style.css">
 
+
     <style>
 
-        /* =========================================================
-           HOMEPAGE ENHANCEMENTS
-        ========================================================= */
+        /* =====================================================
+           HOMEPAGE HERO SLIDER
+        ===================================================== */
 
-        .hero {
+        .hero-slider {
             position: relative;
             overflow: hidden;
+            min-height: 570px;
+            background: #082b4c;
         }
 
-        .hero::before {
+        .hero-slides {
+            position: relative;
+            min-height: 570px;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(25px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease,
+                visibility 0.7s ease;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .hero-slide::before {
             content: "";
             position: absolute;
-            width: 500px;
-            height: 500px;
+
+            width: 520px;
+            height: 520px;
+
             border-radius: 50%;
-            background: rgba(255,255,255,0.04);
-            top: -200px;
-            right: -150px;
+
+            background: rgba(255,255,255,0.035);
+
+            top: -220px;
+            right: -130px;
         }
 
-        .hero::after {
+        .hero-slide::after {
             content: "";
             position: absolute;
+
             width: 350px;
             height: 350px;
+
             border-radius: 50%;
-            background: rgba(255,255,255,0.03);
+
+            background: rgba(255,255,255,0.025);
+
             bottom: -180px;
-            left: -120px;
+            left: -100px;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
+
             max-width: 850px;
+
+            padding: 90px 0 110px;
         }
 
         .hero-label {
             display: inline-block;
+
             color: #9fc9ef;
-            font-weight: 700;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
+
             font-size: 14px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.8px;
+
+            text-transform: uppercase;
+
             margin-bottom: 18px;
         }
 
-        .hero h1 {
-            margin-bottom: 22px;
+        .hero-content h1 {
+            color: #ffffff;
+
+            font-size: clamp(42px, 6vw, 68px);
+
+            line-height: 1.08;
+
+            margin: 0 0 24px;
+
+            max-width: 850px;
         }
 
-        .hero-description {
-            max-width: 760px;
+        .hero-content p {
+            color: #dbeafe;
+
             font-size: 19px;
+
             line-height: 1.75;
+
+            max-width: 760px;
+
+            margin-bottom: 0;
         }
 
         .hero-buttons {
-            margin-top: 30px;
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-top: 32px;
         }
 
-        /* =========================================================
-           TRUST STRIP
-        ========================================================= */
+        .hero-buttons .btn {
+            min-width: 175px;
+
+            text-align: center;
+        }
+
+        .hero-dots {
+            position: absolute;
+
+            z-index: 10;
+
+            bottom: 30px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            display: flex;
+
+            gap: 10px;
+        }
+
+        .hero-dot {
+            width: 11px;
+            height: 11px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,0.7);
+
+            background: transparent;
+
+            cursor: pointer;
+
+            padding: 0;
+
+            transition: all 0.25s ease;
+        }
+
+        .hero-dot.active {
+            background: #ffffff;
+
+            transform: scale(1.15);
+        }
+
+
+        /* =====================================================
+           TRUST BAR
+        ===================================================== */
 
         .trust-strip {
             background: #f8fafc;
+
             border-bottom: 1px solid #e5e7eb;
         }
 
         .trust-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
             gap: 20px;
+
             padding: 28px 0;
         }
 
         .trust-item {
             text-align: center;
-            padding: 10px;
+
+            padding: 8px;
         }
 
         .trust-item strong {
             display: block;
+
+            color: #0b2d4f;
+
             font-size: 16px;
+
             margin-bottom: 5px;
         }
 
         .trust-item span {
             color: #64748b;
+
             font-size: 14px;
         }
 
-        /* =========================================================
-           SECTION INTRO
-        ========================================================= */
+
+        /* =====================================================
+           SECTION LABEL
+        ===================================================== */
 
         .section-kicker {
             color: #1769aa;
+
             font-size: 13px;
+
             font-weight: 800;
+
             letter-spacing: 1.5px;
+
             text-transform: uppercase;
+
             margin-bottom: 10px;
         }
 
-        .section-title p {
-            max-width: 720px;
-            margin-left: auto;
-            margin-right: auto;
-        }
 
-        /* =========================================================
-           FEATURE BOX
-        ========================================================= */
+        /* =====================================================
+           CARD ENHANCEMENTS
+        ===================================================== */
 
+        .solution-card,
+        .partner-card,
         .feature-box {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 18px;
-            padding: 32px;
-            box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
-        .feature-box h3 {
-            margin-top: 15px;
-            margin-bottom: 12px;
+        .solution-card:hover,
+        .partner-card:hover,
+        .feature-box:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(15,23,42,0.10);
         }
 
-        /* =========================================================
-           SOLUTION CARDS
-        ========================================================= */
-
-        .solution-card {
-            transition: transform 0.25s ease,
-                        box-shadow 0.25s ease;
-        }
-
-        .solution-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(15,23,42,0.10);
-        }
-
-        .solution-card .learn-more {
-            display: inline-block;
-            margin-top: 12px;
+        .learn-more {
             font-weight: 700;
         }
 
-        /* =========================================================
-           PARTNERS
-        ========================================================= */
 
-        .partner-card {
-            transition: transform 0.25s ease,
-                        box-shadow 0.25s ease;
+        /* =====================================================
+           FEATURE BOX
+        ===================================================== */
+
+        .feature-box {
+
+            background: #ffffff;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 18px;
+
+            padding: 32px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(15,23,42,0.06);
         }
 
-        .partner-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 14px 32px rgba(15,23,42,0.09);
-        }
 
-        .partner-logo-text {
-            font-weight: 800;
-            font-size: 24px;
-        }
-
-        /* =========================================================
+        /* =====================================================
            CHECK LIST
-        ========================================================= */
+        ===================================================== */
 
         .check-list {
+
             padding-left: 0;
+
             list-style: none;
         }
 
         .check-list li {
-            margin: 12px 0;
+
             position: relative;
+
             padding-left: 28px;
+
+            margin: 12px 0;
         }
 
         .check-list li::before {
+
             content: "✓";
+
             position: absolute;
+
             left: 0;
+
             top: 0;
-            font-weight: 800;
+
             color: #1769aa;
+
+            font-weight: 800;
         }
 
-        /* =========================================================
+
+        /* =====================================================
+           PARTNER TEXT
+        ===================================================== */
+
+        .partner-logo-text {
+
+            color: #0b2d4f;
+
+            font-size: 24px;
+
+            font-weight: 800;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* =====================================================
+           CONTACT HIGHLIGHT
+        ===================================================== */
+
+        .contact-highlight {
+
+            background: #ffffff;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 18px;
+
+            padding: 28px;
+
+            margin-top: 28px;
+
+            color: #0b2d4f !important;
+        }
+
+        .contact-highlight strong {
+
+            color: #0b2d4f !important;
+
+            font-weight: 700;
+        }
+
+        .contact-highlight p {
+
+            color: #183b5b !important;
+        }
+
+        .contact-highlight a {
+
+            color: #0b2d4f !important;
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+        .contact-highlight a:hover {
+
+            color: #1479c9 !important;
+        }
+
+
+        /* =====================================================
            CTA
-        ========================================================= */
+        ===================================================== */
 
         .cta {
+
             position: relative;
+
             overflow: hidden;
         }
 
-        .cta h2 {
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
 
-        .cta p {
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* =========================================================
-           CONTACT HIGHLIGHT
-        ========================================================= */
-
- .contact-highlight {
-    background: #f8fafc;
-    border: 1px solid #e5e7eb;
-    border-radius: 18px;
-    padding: 28px;
-    margin-top: 25px;
-    color: #0b2d4f;
-}
-
-.contact-highlight strong {
-    color: #0b2d4f !important;
-    font-weight: 700;
-}
-
-.contact-highlight p {
-    color: #183b5b !important;
-}
-
-.contact-highlight a {
-    color: #0b2d4f !important;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.contact-highlight a:hover {
-    color: #1479c9 !important;
-}
-        }
-
-        /* =========================================================
+        /* =====================================================
            RESPONSIVE
-        ========================================================= */
+        ===================================================== */
 
         @media (max-width: 900px) {
 
             .trust-grid {
-                grid-template-columns: repeat(2, 1fr);
+
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
-            .hero-description {
+            .hero-content {
+
+                padding:
+                    75px 0 100px;
+            }
+
+            .hero-content p {
+
                 font-size: 17px;
             }
 
         }
 
+
         @media (max-width: 600px) {
 
-            .trust-grid {
-                grid-template-columns: 1fr;
+            .hero-slider,
+            .hero-slides {
+
+                min-height: 620px;
             }
 
-            .hero h1 {
-                font-size: 38px;
-                line-height: 1.15;
+            .hero-content {
+
+                padding:
+                    70px 0 100px;
             }
 
-            .hero-description {
+            .hero-content h1 {
+
+                font-size: 39px;
+
+                line-height: 1.12;
+            }
+
+            .hero-content p {
+
                 font-size: 16px;
+
                 line-height: 1.6;
             }
 
+            .hero-buttons {
+
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .hero-buttons .btn {
+
+                width: 100%;
+            }
+
+            .trust-grid {
+
+                grid-template-columns: 1fr;
+            }
+
             .feature-box {
+
                 padding: 24px;
+            }
+
+        }
+
+
+        /* =====================================================
+           ACCESSIBILITY
+        ===================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .hero-slide {
+
+                transition: none;
+            }
+
+            .solution-card,
+            .partner-card,
+            .feature-box {
+
+                transition: none;
             }
 
         }
@@ -318,9 +529,9 @@
 <body>
 
 
-<!-- =========================================================
+<!-- =====================================================
      NAVIGATION
-========================================================= -->
+===================================================== -->
 
 <header class="navbar">
 
@@ -382,60 +593,251 @@
 
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+<!-- =====================================================
+     HERO SLIDER
+===================================================== -->
 
-<section class="hero">
+<section class="hero-slider">
 
-    <div class="container">
-
-        <div class="hero-content">
-
-            <span class="hero-label">
-                Business Technology Solutions
-            </span>
+    <div class="hero-slides">
 
 
-            <h1>
+        <!-- SLIDE 1 -->
 
-                Business Connectivity &
-                <br>
-                Communication Solutions
+        <div class="hero-slide active">
 
-            </h1>
+            <div class="container">
 
+                <div class="hero-content">
 
-            <p class="hero-description">
+                    <span class="hero-label">
+                        Business Technology Solutions
+                    </span>
 
-                JB TECH SERVICES helps businesses connect,
-                communicate and operate more efficiently through
-                telecom connectivity, cloud communication,
-                business calling and GeM solutions.
+                    <h1>
+                        Business Connectivity &
+                        <br>
+                        Communication Solutions
+                    </h1>
 
-            </p>
+                    <p>
+                        Telecom, connectivity, cloud communication
+                        and business calling solutions designed to
+                        help organizations communicate better,
+                        operate efficiently and grow with confidence.
+                    </p>
 
+                    <div class="hero-buttons">
 
-            <div class="hero-buttons">
+                        <a href="contact.html"
+                           class="btn btn-primary">
 
-                <a href="contact.html"
-                   class="btn btn-primary">
+                            Get a Business Quote
 
-                    Get a Business Quote
+                        </a>
 
-                </a>
+                        <a href="services.html"
+                           class="btn btn-outline">
 
+                            Explore Our Services
 
-                <a href="services.html"
-                   class="btn btn-outline">
+                        </a>
 
-                    Explore Our Services
+                    </div>
 
-                </a>
+                </div>
 
             </div>
 
         </div>
+
+
+
+        <!-- SLIDE 2 -->
+
+        <div class="hero-slide">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <span class="hero-label">
+                        Enterprise Telecom
+                    </span>
+
+                    <h1>
+                        Reliable Connectivity
+                        <br>
+                        For Your Business
+                    </h1>
+
+                    <p>
+                        Business telecom and connectivity solutions
+                        designed around your organization's
+                        communication and operational requirements.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="services.html"
+                           class="btn btn-primary">
+
+                            Explore Telecom Services
+
+                        </a>
+
+                        <a href="contact.html"
+                           class="btn btn-outline">
+
+                            Discuss Your Requirement
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SLIDE 3 -->
+
+        <div class="hero-slide">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <span class="hero-label">
+                        Cloud Communication
+                    </span>
+
+                    <h1>
+                        Smarter Business
+                        <br>
+                        Communication
+                    </h1>
+
+                    <p>
+                        Cloud telephony, business calling and
+                        communication solutions supporting teams
+                        and customers across domestic and
+                        international markets.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="cloud-communication.html"
+                           class="btn btn-primary">
+
+                            Explore Cloud Solutions
+
+                        </a>
+
+                        <a href="contact.html"
+                           class="btn btn-outline">
+
+                            Talk to Our Team
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SLIDE 4 -->
+
+        <div class="hero-slide">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <span class="hero-label">
+                        Government e-Marketplace
+                    </span>
+
+                    <h1>
+                        Growing Our Presence
+                        <br>
+                        On GeM
+                    </h1>
+
+                    <p>
+                        Through our partnership with Dugong,
+                        JB TECH SERVICES is building its presence
+                        on the Government e-Marketplace and
+                        exploring relevant business opportunities.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="gem-services.html"
+                           class="btn btn-primary">
+
+                            Explore GeM Services
+
+                        </a>
+
+                        <a href="contact.html"
+                           class="btn btn-outline">
+
+                            Discuss Your Requirement
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- SLIDER DOTS -->
+
+    <div class="hero-dots">
+
+        <button
+            class="hero-dot active"
+            type="button"
+            aria-label="Show slide 1"
+            data-slide="0">
+        </button>
+
+        <button
+            class="hero-dot"
+            type="button"
+            aria-label="Show slide 2"
+            data-slide="1">
+        </button>
+
+        <button
+            class="hero-dot"
+            type="button"
+            aria-label="Show slide 3"
+            data-slide="2">
+        </button>
+
+        <button
+            class="hero-dot"
+            type="button"
+            aria-label="Show slide 4"
+            data-slide="3">
+        </button>
 
     </div>
 
@@ -443,9 +845,9 @@
 
 
 
-<!-- =========================================================
-     TRUST STRIP
-========================================================= -->
+<!-- =====================================================
+     TRUST BAR
+===================================================== -->
 
 <section class="trust-strip">
 
@@ -453,14 +855,15 @@
 
         <div class="trust-grid">
 
+
             <div class="trust-item">
 
                 <strong>
-                    Telecom & Connectivity
+                    Telecom
                 </strong>
 
                 <span>
-                    Business Connectivity Solutions
+                    Business Connectivity
                 </span>
 
             </div>
@@ -499,10 +902,11 @@
                 </strong>
 
                 <span>
-                    Dugong Authorized
+                    Business Support
                 </span>
 
             </div>
+
 
         </div>
 
@@ -512,9 +916,9 @@
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      INTRODUCTION
-========================================================= -->
+===================================================== -->
 
 <section class="section section-light">
 
@@ -529,44 +933,33 @@
                     ☁️
                 </div>
 
-
                 <div class="section-kicker">
                     About Our Solutions
                 </div>
-
 
                 <h2>
                     Technology Solutions
                     Built Around Your Business
                 </h2>
 
-
                 <p>
-
-                    JB TECH SERVICES works with businesses to
-                    simplify their connectivity, communication
-                    and procurement requirements.
-
+                    JB TECH SERVICES helps businesses simplify
+                    their connectivity, communication and
+                    procurement requirements through practical
+                    technology solutions.
                 </p>
 
-
                 <p>
-
                     Through our telecom and cloud communication
                     partnerships, we help businesses access
-                    solutions from established technology
-                    providers.
-
+                    solutions from established technology providers.
                 </p>
-
 
                 <p>
-
-                    We also provide GeM portal services through
-                    our stated Dugong authorization.
-
+                    We also work in partnership with Dugong to
+                    support our presence and business activities
+                    on the Government e-Marketplace (GeM).
                 </p>
-
 
                 <a href="about.html"
                    class="btn btn-primary">
@@ -595,8 +988,7 @@
 
                         <p>
                             Telecom and connectivity solutions
-                            designed for modern business
-                            requirements.
+                            for modern businesses.
                         </p>
 
                     </div>
@@ -613,8 +1005,8 @@
                         </h3>
 
                         <p>
-                            Cloud-based communication and
-                            business calling solutions.
+                            Smart cloud-based calling and
+                            communication solutions.
                         </p>
 
                     </div>
@@ -631,15 +1023,17 @@
                         </h3>
 
                         <p>
-                            GeM portal assistance and procurement
-                            support for business requirements.
+                            GeM-related business support through
+                            our partnership with Dugong.
                         </p>
 
                     </div>
 
+
                 </div>
 
             </div>
+
 
         </div>
 
@@ -649,9 +1043,9 @@
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      CORE SOLUTIONS
-========================================================= -->
+===================================================== -->
 
 <section class="section section-gray">
 
@@ -669,8 +1063,8 @@
             </h2>
 
             <p>
-                Practical business solutions covering
-                connectivity, communication and procurement.
+                Business-focused solutions covering connectivity,
+                communication and GeM-related requirements.
             </p>
 
         </div>
@@ -738,13 +1132,12 @@
                 </div>
 
                 <h3>
-                    GeM Procurement
+                    GeM Business Support
                 </h3>
 
                 <p>
-                    Professional GeM portal services and
-                    procurement assistance through our stated
-                    Dugong authorization.
+                    GeM-related support and business activities
+                    through our partnership with Dugong.
                 </p>
 
                 <a href="gem-services.html"
@@ -769,8 +1162,8 @@
 
                 <p>
                     Professional voice and calling solutions
-                    helping businesses communicate with
-                    customers and teams.
+                    helping businesses communicate with customers
+                    and teams.
                 </p>
 
                 <a href="cloud-communication.html"
@@ -794,9 +1187,8 @@
                 </h3>
 
                 <p>
-                    Communication solutions supporting
-                    businesses serving customers across
-                    international markets.
+                    Communication solutions supporting businesses
+                    serving customers across international markets.
                 </p>
 
                 <a href="cloud-communication.html"
@@ -834,6 +1226,7 @@
 
             </div>
 
+
         </div>
 
     </div>
@@ -842,9 +1235,9 @@
 
 
 
-<!-- =========================================================
-     TECHNOLOGY PARTNERS
-========================================================= -->
+<!-- =====================================================
+     TECHNOLOGY & SOLUTION PARTNERS
+===================================================== -->
 
 <section class="section section-light">
 
@@ -862,11 +1255,9 @@
             </h2>
 
             <p>
-
-                Our business partnerships help us provide
-                telecom, connectivity and cloud communication
-                solutions for different business requirements.
-
+                Our partnerships help us provide a broader
+                range of telecom, connectivity and cloud
+                communication solutions.
             </p>
 
         </div>
@@ -886,8 +1277,7 @@
                 </h3>
 
                 <p>
-                    Enterprise telecom and connectivity
-                    solutions.
+                    Enterprise telecom and connectivity solutions.
                 </p>
 
             </div>
@@ -904,8 +1294,7 @@
                 </h3>
 
                 <p>
-                    Business connectivity and digital
-                    solutions.
+                    Business connectivity and digital solutions.
                 </p>
 
             </div>
@@ -922,8 +1311,7 @@
                 </h3>
 
                 <p>
-                    Enterprise telecom and communication
-                    solutions.
+                    Enterprise telecom and communication solutions.
                 </p>
 
             </div>
@@ -940,8 +1328,7 @@
                 </h3>
 
                 <p>
-                    Cloud communication and business
-                    telephony solutions.
+                    Cloud communication and business telephony.
                 </p>
 
             </div>
@@ -958,8 +1345,7 @@
                 </h3>
 
                 <p>
-                    Cloud communication and telephony
-                    solutions.
+                    Cloud communication and telephony solutions.
                 </p>
 
             </div>
@@ -972,14 +1358,16 @@
                 </div>
 
                 <h3>
-                    Dugong Authorized
+                    In Partnership with Dugong
                 </h3>
 
                 <p>
-                    GeM portal and procurement services.
+                    Supporting our GeM presence and related
+                    business activities.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -989,9 +1377,9 @@
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      WHY CHOOSE US
-========================================================= -->
+===================================================== -->
 
 <section class="section section-dark">
 
@@ -1009,11 +1397,9 @@
             </h2>
 
             <p>
-
-                We focus on understanding the requirement first
-                and then helping businesses identify an
-                appropriate technology solution.
-
+                We combine technology partnerships,
+                business understanding and responsive
+                support to provide practical solutions.
             </p>
 
         </div>
@@ -1034,8 +1420,8 @@
 
                 <p>
                     Business relationships with telecom and
-                    communication solution providers help us
-                    offer a broader range of solutions.
+                    communication technology providers help
+                    us offer a broader range of solutions.
                 </p>
 
             </div>
@@ -1048,13 +1434,13 @@
                 </div>
 
                 <h3>
-                    Requirement Focused
+                    Business Focused
                 </h3>
 
                 <p>
                     We focus on understanding your actual
                     business requirement before discussing
-                    a solution.
+                    an appropriate solution.
                 </p>
 
             </div>
@@ -1071,12 +1457,13 @@
                 </h3>
 
                 <p>
-                    Telecom, cloud communication and GeM-related
-                    services coordinated through one business
-                    technology partner.
+                    Telecom, cloud communication and
+                    GeM-related business support under
+                    one technology partner.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1086,9 +1473,9 @@
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      BUSINESS CAPABILITIES
-========================================================= -->
+===================================================== -->
 
 <section class="section section-light">
 
@@ -1102,13 +1489,13 @@
             </div>
 
             <h2>
-                Supporting Businesses Across Multiple Needs
+                Supporting Different Business Requirements
             </h2>
 
             <p>
-                From connectivity to business communication
-                and procurement support, our solutions are
-                designed around practical business requirements.
+                From connectivity and communication to
+                GeM-related business activities, we help
+                organizations address practical requirements.
             </p>
 
         </div>
@@ -1128,8 +1515,8 @@
                 </h3>
 
                 <p>
-                    Business connectivity and telecom solutions
-                    for organizations and teams.
+                    Business connectivity and telecom
+                    solutions for organizations and teams.
                 </p>
 
             </div>
@@ -1160,12 +1547,12 @@
                 </div>
 
                 <h3>
-                    Procurement
+                    GeM Business
                 </h3>
 
                 <p>
-                    GeM portal services and procurement
-                    assistance based on your requirement.
+                    Support for GeM-related business activities
+                    through our partnership with Dugong.
                 </p>
 
             </div>
@@ -1182,11 +1569,12 @@
                 </h3>
 
                 <p>
-                    Solutions supporting businesses in domestic
-                    and international communication requirements.
+                    Solutions supporting domestic and
+                    international communication requirements.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1196,9 +1584,9 @@
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      GEM SERVICES
-========================================================= -->
+===================================================== -->
 
 <section class="section section-gray">
 
@@ -1218,33 +1606,30 @@
                 </div>
 
                 <h2>
-                    GeM Procurement Services
+                    GeM Business Services
                 </h2>
 
                 <p>
-
-                    Simplify your Government e-Marketplace
-                    requirements with professional business
-                    assistance.
-
+                    JB TECH SERVICES is building its presence
+                    on the Government e-Marketplace through
+                    our partnership with Dugong.
                 </p>
 
                 <p>
-
-                    JB TECH SERVICES provides GeM portal services
-                    through our stated Dugong authorization.
-
+                    Our GeM-related activities are focused on
+                    supporting business opportunities and
+                    requirements through this association.
                 </p>
 
 
                 <ul class="check-list">
 
                     <li>
-                        GeM portal assistance
+                        GeM-related business support
                     </li>
 
                     <li>
-                        Procurement support
+                        Business opportunity coordination
                     </li>
 
                     <li>
@@ -1252,7 +1637,7 @@
                     </li>
 
                     <li>
-                        Business requirement support
+                        Requirement-based assistance
                     </li>
 
                 </ul>
@@ -1274,25 +1659,22 @@
             <div class="feature-box">
 
                 <div class="card-icon">
-                    ✓
+                    🤝
                 </div>
 
                 <h3>
-                    Dugong Authorized GeM Services
+                    In Partnership with Dugong
                 </h3>
 
                 <p>
-
-                    We provide GeM-related services based on
-                    our stated Dugong authorization.
-
+                    JB TECH SERVICES is partnering with Dugong
+                    to build and support our presence on the
+                    Government e-Marketplace.
                 </p>
 
                 <p>
-
-                    Authorization documentation and relevant
-                    details can be provided where applicable.
-
+                    This partnership supports our participation
+                    in relevant GeM-related business opportunities.
                 </p>
 
 
@@ -1305,6 +1687,7 @@
 
             </div>
 
+
         </div>
 
     </div>
@@ -1313,9 +1696,9 @@
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      CLOUD COMMUNICATION
-========================================================= -->
+===================================================== -->
 
 <section class="section section-light">
 
@@ -1339,19 +1722,15 @@
                 </h3>
 
                 <p>
-
                     Modern businesses need communication systems
-                    that can support teams, customers and
-                    operations from different locations.
-
+                    that can work from different locations and
+                    support changing business requirements.
                 </p>
 
                 <p>
-
                     Through our cloud communication partnerships,
                     we provide solutions for domestic and
                     international business requirements.
-
                 </p>
 
             </div>
@@ -1364,11 +1743,9 @@
                 </h2>
 
                 <p>
-
                     Move beyond traditional communication
-                    systems with flexible cloud-based business
-                    communication solutions.
-
+                    systems with flexible cloud-based
+                    business communication solutions.
                 </p>
 
 
@@ -1409,6 +1786,7 @@
 
             </div>
 
+
         </div>
 
     </div>
@@ -1417,9 +1795,9 @@
 
 
 
-<!-- =========================================================
-     CONTACT CTA
-========================================================= -->
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
 
 <section class="cta">
 
@@ -1437,11 +1815,9 @@
 
 
         <p>
-
             Tell us what you need — whether it is business
             connectivity, telecom, cloud communication,
-            business calling or GeM support.
-
+            business calling or GeM-related support.
         </p>
 
 
@@ -1472,6 +1848,7 @@
 
             </a>
 
+
         </div>
 
 
@@ -1481,21 +1858,35 @@
                 Speak with JB TECH SERVICES
             </strong>
 
+
             <p style="margin-bottom:8px;">
+
                 📞
+
                 <a href="tel:+919017125139">
+
                     +91 90171 25139
+
                 </a>
+
             </p>
+
 
             <p style="margin-bottom:0;">
+
                 ✉
+
                 <a href="mailto:reachus@jbtechservices.in">
+
                     reachus@jbtechservices.in
+
                 </a>
+
             </p>
 
+
         </div>
+
 
     </div>
 
@@ -1503,9 +1894,9 @@
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer class="footer">
 
@@ -1524,11 +1915,9 @@
                 </h3>
 
                 <p>
-
                     Technology and business communication
                     solutions helping organizations connect,
                     communicate and grow.
-
                 </p>
 
                 <br>
@@ -1630,12 +2019,16 @@
 
 
                 <a href="tel:+919017125139">
+
                     📞 +91 90171 25139
+
                 </a>
 
 
                 <a href="mailto:reachus@jbtechservices.in">
+
                     ✉ reachus@jbtechservices.in
+
                 </a>
 
 
@@ -1662,7 +2055,6 @@
         </div>
 
 
-
         <div class="footer-bottom">
 
             © 2026 JB TECH SERVICES.
@@ -1670,15 +2062,16 @@
 
         </div>
 
+
     </div>
 
 </footer>
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      FLOATING WHATSAPP
-========================================================= -->
+===================================================== -->
 
 <a
     href="https://wa.me/919017125139"
@@ -1693,11 +2086,148 @@
 
 
 
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
+<!-- =====================================================
+     HERO SLIDER JAVASCRIPT
+===================================================== -->
 
-<script src="script.js"></script>
+<script>
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+            const slides =
+                document.querySelectorAll(
+                    ".hero-slide"
+                );
+
+            const dots =
+                document.querySelectorAll(
+                    ".hero-dot"
+                );
+
+            const heroSlider =
+                document.querySelector(
+                    ".hero-slider"
+                );
+
+            let currentSlide = 0;
+
+            let slideTimer;
+
+
+            function showSlide(index) {
+
+                slides.forEach(
+                    function (slide, i) {
+
+                        slide.classList.toggle(
+                            "active",
+                            i === index
+                        );
+
+                    }
+                );
+
+
+                dots.forEach(
+                    function (dot, i) {
+
+                        dot.classList.toggle(
+                            "active",
+                            i === index
+                        );
+
+                    }
+                );
+
+
+                currentSlide = index;
+
+            }
+
+
+            function nextSlide() {
+
+                const next =
+                    (currentSlide + 1)
+                    % slides.length;
+
+                showSlide(next);
+
+            }
+
+
+            function startSlider() {
+
+                clearInterval(slideTimer);
+
+                slideTimer =
+                    setInterval(
+                        nextSlide,
+                        5000
+                    );
+
+            }
+
+
+            dots.forEach(
+                function (dot) {
+
+                    dot.addEventListener(
+                        "click",
+                        function () {
+
+                            const slideNumber =
+                                Number(
+                                    dot.getAttribute(
+                                        "data-slide"
+                                    )
+                                );
+
+                            showSlide(
+                                slideNumber
+                            );
+
+                            startSlider();
+
+                        }
+                    );
+
+                }
+            );
+
+
+            heroSlider.addEventListener(
+                "mouseenter",
+                function () {
+
+                    clearInterval(
+                        slideTimer
+                    );
+
+                }
+            );
+
+
+            heroSlider.addEventListener(
+                "mouseleave",
+                function () {
+
+                    startSlider();
+
+                }
+            );
+
+
+            showSlide(0);
+
+            startSlider();
+
+        }
+    );
+
+</script>
 
 
 </body>
