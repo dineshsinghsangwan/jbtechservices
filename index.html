@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
 
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+          content="width=device-width, initial-scale=1.0">
 
     <title>JB TECH SERVICES | Business Technology Solutions</title>
 
     <meta name="description"
-        content="JB TECH SERVICES provides business connectivity, telecom, cloud communication and GeM business solutions.">
-
-    <meta name="keywords"
-        content="JB TECH SERVICES, business telecom, business internet, cloud communication, GeM services, business technology">
-
-    <meta name="author"
-        content="JB TECH SERVICES">
+          content="JB TECH SERVICES provides business connectivity, telecom, cloud communication and GeM business support solutions.">
 
     <link rel="canonical"
-        href="https://jbtechservices.in/">
+          href="https://jbtechservices.in/">
+
+    <link rel="icon"
+          href="images/favicon.png"
+          type="image/png">
 
     <style>
 
-        /* =========================================================
-           JB TECH SERVICES
-           HOMEPAGE ONLY
-           ========================================================= */
+        /* =====================================================
+           RESET
+        ===================================================== */
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         html {
@@ -39,63 +35,34 @@
         }
 
         body {
-            margin: 0;
             font-family:
-                Inter,
                 Arial,
                 Helvetica,
                 sans-serif;
 
-            color: #142033;
+            color: #101b2d;
             background: #ffffff;
+
+            line-height: 1.6;
         }
 
         a {
             text-decoration: none;
         }
 
-        button {
-            font-family: inherit;
-        }
 
-        .jb-home {
-            width: 100%;
-            overflow: hidden;
-
-            --navy: #071b33;
-            --navy2: #0b2d50;
-            --blue: #2474ff;
-            --blue-light: #70a4ff;
-            --text: #142033;
-            --muted: #667085;
-            --light: #f6f8fb;
-            --border: #e4e9f0;
-            --white: #ffffff;
-        }
-
-
-        /* =========================================================
-           CONTAINER
-           ========================================================= */
-
-        .jb-container {
-            width: min(1180px, calc(100% - 40px));
-            margin: auto;
-        }
-
-
-        /* =========================================================
+        /* =====================================================
            HEADER
-           ========================================================= */
+           SAME SIMPLE STYLE AS OTHER PAGES
+        ===================================================== */
 
-        .jb-header {
+        .site-header {
             width: 100%;
-            height: 82px;
+            height: 98px;
 
             background: #ffffff;
 
-            border-bottom:
-                1px solid #e8edf3;
+            border-bottom: 1px solid #e5e9ef;
 
             display: flex;
             align-items: center;
@@ -104,809 +71,647 @@
             z-index: 1000;
         }
 
-        .jb-header-inner {
-            width: min(1180px, calc(100% - 40px));
-            margin: auto;
+        .header-container {
+            width: min(1400px, calc(100% - 80px));
+
+            margin: 0 auto;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
 
+            gap: 40px;
+        }
+
+        .site-logo {
+            color: #10375f;
+
+            font-size: 30px;
+            font-weight: 800;
+
+            letter-spacing: -0.8px;
+
+            white-space: nowrap;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+
             gap: 30px;
         }
 
-        .jb-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .main-nav a {
+            color: #182235;
 
-            color: var(--navy);
-
-            font-size: 23px;
-            font-weight: 800;
-
-            letter-spacing: -0.5px;
-        }
-
-        .jb-logo-box {
-            width: 46px;
-            height: 46px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 13px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #092544,
-                    #123d68
-                );
-
-            color: white;
-
-            font-size: 17px;
-            font-weight: 800;
-
-            box-shadow:
-                0 8px 20px
-                rgba(7,27,51,0.15);
-        }
-
-        .jb-logo-text span {
-            display: block;
-
-            font-size: 9px;
-            letter-spacing: 3px;
-
-            color: var(--blue);
-
-            margin-top: 2px;
-        }
-
-
-        /* =========================================================
-           NAVIGATION
-           ========================================================= */
-
-        .jb-nav {
-            display: flex;
-            align-items: center;
-
-            gap: 27px;
-        }
-
-        .jb-nav a {
-            color: #344054;
-
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 650;
 
-            padding: 8px 0;
-
-            position: relative;
+            white-space: nowrap;
 
             transition:
                 color 0.25s ease;
         }
 
-        .jb-nav a::after {
-            content: "";
+        .main-nav a:hover {
+            color: #1769d2;
+        }
 
-            position: absolute;
+        .main-nav a.active {
+            color: #1769d2;
+        }
 
-            left: 0;
-            bottom: 0;
+        .quote-button {
+            padding: 17px 25px;
 
-            width: 0;
-            height: 2px;
+            background: #0c3158;
 
-            background: var(--blue);
+            color: #ffffff !important;
+
+            border-radius: 11px;
+
+            font-weight: 750 !important;
 
             transition:
-                width 0.25s ease;
+                background 0.25s ease,
+                transform 0.25s ease;
         }
 
-        .jb-nav a:hover {
-            color: var(--blue);
-        }
+        .quote-button:hover {
+            background: #1769d2;
 
-        .jb-nav a:hover::after {
-            width: 100%;
-        }
-
-        .jb-nav .jb-quote {
-            color: white;
-
-            background: var(--navy);
-
-            padding: 14px 21px;
-
-            border-radius: 10px;
-        }
-
-        .jb-nav .jb-quote::after {
-            display: none;
-        }
-
-        .jb-nav .jb-quote:hover {
-            color: white;
-
-            background: var(--blue);
-
-            transform:
-                translateY(-2px);
+            transform: translateY(-2px);
         }
 
 
-        /* =========================================================
-           MOBILE MENU
-           ========================================================= */
+        /* =====================================================
+           HERO SLIDER
+        ===================================================== */
 
-        .jb-menu {
-            display: none;
-
-            width: 43px;
-            height: 43px;
-
-            border:
-                1px solid #d8e0e8;
-
-            background: white;
-
-            border-radius: 9px;
-
-            cursor: pointer;
-
-            font-size: 22px;
-
-            color: var(--navy);
-        }
-
-
-        /* =========================================================
-           HERO
-           ========================================================= */
-
-        .jb-hero {
+        .hero {
             position: relative;
 
-            width: 100%;
-
-            min-height: 680px;
-
-            background:
-                radial-gradient(
-                    circle at 80% 48%,
-                    rgba(62,124,255,0.22),
-                    transparent 31%
-                ),
-
-                radial-gradient(
-                    circle at 65% 90%,
-                    rgba(36,116,255,0.10),
-                    transparent 35%
-                ),
-
-                linear-gradient(
-                    120deg,
-                    #061a30 0%,
-                    #092d50 52%,
-                    #122f64 100%
-                );
+            min-height: 650px;
 
             overflow: hidden;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    #071f39 0%,
+                    #0b3158 48%,
+                    #153e73 100%
+                );
+
+            color: #ffffff;
         }
 
-
-        /* decorative circles */
-
-        .jb-hero-circle {
-            position: absolute;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.08);
-
-            border-radius: 50%;
-
-            pointer-events: none;
-        }
-
-        .jb-circle-one {
-            width: 700px;
-            height: 700px;
-
-            right: -170px;
-            top: -120px;
-        }
-
-        .jb-circle-two {
-            width: 510px;
-            height: 510px;
-
-            right: 25px;
-            top: 80px;
-        }
-
-        .jb-circle-three {
-            width: 320px;
-            height: 320px;
-
-            right: 120px;
-            top: 175px;
-        }
-
-
-        /* =========================================================
-           SLIDES
-           ========================================================= */
-
-        .jb-slide {
+        .hero-slide {
             position: absolute;
 
             inset: 0;
 
-            display: flex;
-            align-items: center;
-
             opacity: 0;
+
             visibility: hidden;
 
-            transform:
-                translateX(35px);
+            transform: scale(1.03);
 
             transition:
                 opacity 0.8s ease,
-                transform 0.8s ease,
-                visibility 0.8s ease;
+                visibility 0.8s ease,
+                transform 1.2s ease;
         }
 
-        .jb-slide.active {
+        .hero-slide.active {
             opacity: 1;
+
             visibility: visible;
 
-            transform:
-                translateX(0);
+            transform: scale(1);
         }
 
-        .jb-hero-content {
+        .hero-inner {
+            width: min(1400px, calc(100% - 80px));
+
+            min-height: 650px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                0.9fr;
+
+            align-items: center;
+
+            gap: 70px;
+
             position: relative;
 
-            z-index: 20;
-
-            width: 58%;
-
-            padding-top: 20px;
+            z-index: 2;
         }
 
-        .jb-label {
-            display: inline-block;
+        .hero-content {
+            max-width: 720px;
+        }
 
-            margin-bottom: 20px;
+        .hero-label {
+            color: #75b2ff;
 
-            color:
-                var(--blue-light);
-
-            font-size: 12px;
+            font-size: 14px;
 
             font-weight: 800;
 
-            letter-spacing: 2.4px;
+            letter-spacing: 4px;
 
             text-transform: uppercase;
+
+            margin-bottom: 22px;
         }
 
-        .jb-hero-title {
-            margin: 0 0 24px;
-
-            color: white;
-
-            font-size:
-                clamp(
-                    48px,
-                    5.5vw,
-                    76px
-                );
+        .hero-title {
+            font-size: clamp(48px, 5vw, 78px);
 
             line-height: 1.02;
 
             letter-spacing: -3px;
 
-            font-weight: 850;
+            font-weight: 800;
+
+            margin-bottom: 28px;
         }
 
-        .jb-hero-title span {
-            color:
-                var(--blue-light);
+        .hero-title span {
+            color: #72a9ff;
         }
 
-        .jb-hero-text {
-            max-width: 660px;
+        .hero-text {
+            max-width: 680px;
 
-            color:
-                #d6e4f4;
-
-            font-size: 17px;
+            font-size: 19px;
 
             line-height: 1.75;
+
+            color: #dceaff;
+
+            margin-bottom: 36px;
         }
 
-
-        /* =========================================================
-           HERO BUTTONS
-           ========================================================= */
-
-        .jb-buttons {
+        .hero-buttons {
             display: flex;
 
+            gap: 15px;
+
             flex-wrap: wrap;
-
-            gap: 13px;
-
-            margin-top: 30px;
         }
 
-        .jb-button {
-            min-height: 53px;
-
+        .primary-button,
+        .secondary-button {
             display: inline-flex;
 
             align-items: center;
             justify-content: center;
 
-            padding:
-                0 23px;
+            min-height: 58px;
+
+            padding: 0 28px;
 
             border-radius: 10px;
 
-            font-size: 14px;
+            font-size: 16px;
 
             font-weight: 750;
 
             transition:
                 transform 0.25s ease,
-                box-shadow 0.25s ease,
                 background 0.25s ease;
         }
 
-        .jb-button-primary {
-            background:
-                var(--blue);
+        .primary-button {
+            background: #2378ff;
 
-            color: white;
-
-            box-shadow:
-                0 12px 30px
-                rgba(36,116,255,0.30);
-        }
-
-        .jb-button-primary:hover {
-            color: white;
-
-            background:
-                #1765eb;
-
-            transform:
-                translateY(-4px);
+            color: #ffffff;
 
             box-shadow:
-                0 17px 35px
-                rgba(36,116,255,0.38);
+                0 15px 35px rgba(0, 80, 210, 0.28);
         }
 
-        .jb-button-outline {
-            color: white;
+        .primary-button:hover {
+            background: #3888ff;
 
-            border:
-                1px solid
-                rgba(255,255,255,0.25);
-
-            background:
-                rgba(255,255,255,0.04);
+            transform: translateY(-3px);
         }
 
-        .jb-button-outline:hover {
-            color: white;
+        .secondary-button {
+            color: #ffffff;
 
-            background:
-                rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.3);
 
-            transform:
-                translateY(-4px);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .secondary-button:hover {
+            background: rgba(255,255,255,0.12);
+
+            transform: translateY(-3px);
         }
 
 
-        /* =========================================================
+        /* =====================================================
            HERO VISUAL
-           ========================================================= */
+        ===================================================== */
 
-        .jb-hero-visual {
-            position: absolute;
+        .hero-visual {
+            position: relative;
 
-            right: 3%;
+            height: 430px;
 
-            top: 50%;
+            display: flex;
 
-            width: 470px;
-            height: 470px;
+            align-items: center;
 
-            transform:
-                translateY(-50%);
-
-            z-index: 10;
+            justify-content: center;
         }
 
-        .jb-main-card {
+        .visual-circle {
             position: absolute;
 
-            left: 105px;
-            top: 95px;
+            width: 430px;
+            height: 430px;
 
-            width: 260px;
-            height: 300px;
+            border-radius: 50%;
 
-            padding: 32px;
+            border: 1px solid rgba(125,180,255,0.17);
+        }
 
-            border-radius: 24px;
+        .visual-circle.circle-two {
+            width: 330px;
+            height: 330px;
+        }
+
+        .visual-circle.circle-three {
+            width: 230px;
+            height: 230px;
+        }
+
+        .visual-card {
+            position: relative;
+
+            width: 300px;
+            min-height: 300px;
+
+            padding: 35px;
+
+            border-radius: 28px;
 
             background:
                 linear-gradient(
                     145deg,
-                    rgba(255,255,255,0.18),
-                    rgba(255,255,255,0.05)
+                    rgba(90,145,220,0.34),
+                    rgba(28,65,112,0.55)
                 );
 
-            border:
-                1px solid
-                rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.18);
+
+            backdrop-filter: blur(12px);
 
             box-shadow:
-                0 35px 80px
-                rgba(0,0,0,0.28);
-
-            backdrop-filter:
-                blur(14px);
-
-            transition:
-                transform 0.35s ease;
-        }
-
-        .jb-main-card:hover {
-            transform:
-                translateY(-8px)
-                scale(1.02);
-        }
-
-        .jb-card-logo {
-            width: 60px;
-            height: 60px;
+                0 35px 80px rgba(0,0,0,0.25);
 
             display: flex;
-            align-items: center;
+
+            flex-direction: column;
+
             justify-content: center;
 
-            border-radius: 16px;
+            z-index: 3;
+        }
+
+        .visual-logo {
+            width: 70px;
+            height: 70px;
+
+            border-radius: 18px;
 
             background:
                 linear-gradient(
                     135deg,
-                    #2474ff,
-                    #5b67ed
+                    #287aff,
+                    #5649e8
                 );
-
-            color: white;
-
-            font-size: 20px;
-            font-weight: 800;
-
-            margin-bottom: 26px;
-        }
-
-        .jb-card-small {
-            color:
-                #8db4e7;
-
-            font-size: 10px;
-
-            font-weight: 800;
-
-            letter-spacing: 1.8px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 10px;
-        }
-
-        .jb-card-title {
-            color: white;
-
-            font-size: 25px;
-
-            line-height: 1.3;
-
-            font-weight: 800;
-        }
-
-
-        /* =========================================================
-           FLOATING CARDS
-           ========================================================= */
-
-        .jb-float {
-            position: absolute;
-
-            min-width: 205px;
-
-            padding:
-                16px 19px;
-
-            border-radius: 15px;
-
-            background:
-                rgba(7,27,51,0.92);
-
-            border:
-                1px solid
-                rgba(255,255,255,0.13);
-
-            box-shadow:
-                0 18px 40px
-                rgba(0,0,0,0.24);
-
-            color: white;
-
-            transition:
-                transform 0.35s ease,
-                background 0.35s ease;
-        }
-
-        .jb-float:hover {
-            transform:
-                translateY(-9px)
-                scale(1.04);
-
-            background:
-                rgba(15,50,90,0.98);
-        }
-
-        .jb-float strong {
-            display: block;
-
-            margin-bottom: 5px;
-
-            font-size: 14px;
-        }
-
-        .jb-float span {
-            display: block;
-
-            color:
-                #aabbd0;
-
-            font-size: 11px;
-        }
-
-        .jb-float-one {
-            top: 50px;
-            right: -5px;
-        }
-
-        .jb-float-two {
-            left: 0;
-            bottom: 72px;
-        }
-
-        .jb-float-three {
-            right: -20px;
-            bottom: 20px;
-        }
-
-
-        /* =========================================================
-           HERO BOTTOM STRIP
-           ========================================================= */
-
-        .jb-hero-strip {
-            position: absolute;
-
-            left: 50%;
-            bottom: 0;
-
-            transform:
-                translateX(-50%);
-
-            width: min(1080px, calc(100% - 40px));
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            border-top:
-                1px solid
-                rgba(255,255,255,0.13);
-
-            z-index: 30;
-        }
-
-        .jb-strip-item {
-            padding:
-                19px 25px;
-
-            color: white;
-
-            border-right:
-                1px solid
-                rgba(255,255,255,0.12);
-        }
-
-        .jb-strip-item:last-child {
-            border-right: none;
-        }
-
-        .jb-strip-item strong {
-            display: block;
-
-            font-size: 14px;
-
-            margin-bottom: 4px;
-        }
-
-        .jb-strip-item span {
-            color:
-                #9db5d1;
-
-            font-size: 11px;
-        }
-
-
-        /* =========================================================
-           SLIDER DOTS
-           ========================================================= */
-
-        .jb-dots {
-            position: absolute;
-
-            left: 50%;
-
-            bottom: 92px;
-
-            transform:
-                translateX(-50%);
-
-            z-index: 50;
 
             display: flex;
 
-            gap: 9px;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 27px;
+
+            font-weight: 800;
+
+            margin-bottom: 28px;
         }
 
-        .jb-dot {
-            width: 9px;
-            height: 9px;
+        .visual-card small {
+            color: #9fc4ed;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            font-weight: 800;
+
+            margin-bottom: 12px;
+        }
+
+        .visual-card h3 {
+            font-size: 28px;
+
+            line-height: 1.25;
+        }
+
+
+        /* =====================================================
+           FLOATING HERO CARDS
+        ===================================================== */
+
+        .floating-card {
+            position: absolute;
+
+            z-index: 5;
+
+            min-width: 210px;
+
+            padding: 18px 20px;
+
+            border-radius: 16px;
+
+            background: #071d35;
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            box-shadow:
+                0 18px 45px rgba(0,0,0,0.25);
+
+            animation:
+                floatCard 4s ease-in-out infinite;
+        }
+
+        .floating-card strong {
+            display: block;
+
+            font-size: 15px;
+
+            margin-bottom: 3px;
+        }
+
+        .floating-card span {
+            color: #9fb8d4;
+
+            font-size: 12px;
+        }
+
+        .floating-one {
+            top: 55px;
+            right: 10px;
+        }
+
+        .floating-two {
+            bottom: 60px;
+            left: 5px;
+
+            animation-delay: 1s;
+        }
+
+        .floating-three {
+            bottom: 10px;
+            right: 0;
+
+            animation-delay: 2s;
+        }
+
+        @keyframes floatCard {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+
+        /* =====================================================
+           SLIDER CONTROLS
+        ===================================================== */
+
+        .slider-dots {
+            position: absolute;
+
+            left: 50%;
+
+            bottom: 28px;
+
+            transform: translateX(-50%);
+
+            display: flex;
+
+            gap: 10px;
+
+            z-index: 10;
+        }
+
+        .slider-dot {
+            width: 10px;
+            height: 10px;
 
             border-radius: 50%;
 
-            border:
-                1px solid
-                rgba(255,255,255,0.7);
+            border: 1px solid #ffffff;
 
             background: transparent;
 
             cursor: pointer;
 
             transition:
-                transform 0.25s ease,
+                width 0.25s ease,
                 background 0.25s ease;
         }
 
-        .jb-dot.active {
-            background: white;
+        .slider-dot.active {
+            width: 28px;
 
+            border-radius: 10px;
+
+            background: #ffffff;
+        }
+
+
+        /* =====================================================
+           SERVICE STRIP
+        ===================================================== */
+
+        .service-strip {
+            background: #ffffff;
+
+            border-bottom: 1px solid #e6ebf2;
+        }
+
+        .service-strip-inner {
+            width: min(1400px, calc(100% - 80px));
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+        }
+
+        .service-strip-item {
+            min-height: 115px;
+
+            padding: 28px 35px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            border-right: 1px solid #e6ebf2;
+
+            transition:
+                background 0.3s ease;
+        }
+
+        .service-strip-item:last-child {
+            border-right: none;
+        }
+
+        .service-strip-item:hover {
+            background: #f5f9ff;
+        }
+
+        .strip-icon {
+            width: 48px;
+            height: 48px;
+
+            border-radius: 13px;
+
+            background: #edf4ff;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 22px;
+
+            flex-shrink: 0;
+
+            transition:
+                transform 0.3s ease;
+        }
+
+        .service-strip-item:hover .strip-icon {
             transform:
-                scale(1.35);
+                scale(1.15)
+                rotate(5deg);
         }
 
-
-        /* =========================================================
-           SECTION COMMON
-           ========================================================= */
-
-        .jb-section {
-            padding:
-                95px 0;
-        }
-
-        .jb-section-light {
-            background:
-                #f7f9fc;
-        }
-
-        .jb-section-heading {
-            max-width: 720px;
-
-            margin:
-                0 auto 55px;
-
-            text-align: center;
-        }
-
-        .jb-section-label {
-            color:
-                var(--blue);
-
-            font-size: 12px;
-
-            font-weight: 800;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 12px;
-        }
-
-        .jb-section-title {
-            color:
-                var(--navy);
-
-            font-size:
-                clamp(32px, 4vw, 45px);
-
-            line-height: 1.15;
-
-            letter-spacing: -1.3px;
-
-            margin-bottom: 15px;
-
-            font-weight: 820;
-        }
-
-        .jb-section-description {
-            color:
-                var(--muted);
+        .strip-text strong {
+            display: block;
 
             font-size: 16px;
 
-            line-height: 1.75;
+            color: #102f52;
+        }
+
+        .strip-text span {
+            font-size: 13px;
+
+            color: #64748b;
         }
 
 
-        /* =========================================================
-           SERVICE CARDS
-           ========================================================= */
+        /* =====================================================
+           SERVICES SECTION
+        ===================================================== */
 
-        .jb-services-grid {
+        .services-section {
+            padding: 110px 0;
+        }
+
+        .section-container {
+            width: min(1400px, calc(100% - 80px));
+
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            max-width: 750px;
+
+            margin-bottom: 55px;
+        }
+
+        .section-label {
+            color: #2475e8;
+
+            font-size: 13px;
+
+            letter-spacing: 3px;
+
+            font-weight: 800;
+
+            margin-bottom: 13px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(36px, 4vw, 54px);
+
+            line-height: 1.12;
+
+            letter-spacing: -2px;
+
+            color: #0c2949;
+
+            margin-bottom: 18px;
+        }
+
+        .section-heading p {
+            color: #61738a;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+        .service-grid {
             display: grid;
 
             grid-template-columns:
                 repeat(3, 1fr);
 
-            gap: 23px;
+            gap: 22px;
         }
 
-        .jb-service-card {
+        .service-card {
+            padding: 36px;
+
+            border: 1px solid #dfe7f0;
+
+            border-radius: 20px;
+
+            background: #ffffff;
+
+            min-height: 285px;
+
             position: relative;
-
-            min-height: 300px;
-
-            padding:
-                32px 28px;
-
-            background: white;
-
-            border:
-                1px solid
-                var(--border);
-
-            border-radius: 18px;
-
-            box-shadow:
-                0 8px 25px
-                rgba(15,23,42,0.045);
 
             overflow: hidden;
 
@@ -916,925 +721,658 @@
                 border-color 0.35s ease;
         }
 
-        .jb-service-card::before {
+        .service-card::after {
             content: "";
 
             position: absolute;
 
-            left: 0;
-            top: 0;
+            width: 140px;
+            height: 140px;
 
-            width: 100%;
-            height: 4px;
+            right: -60px;
+            bottom: -60px;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    var(--blue),
-                    #71a5ff
-                );
+            border-radius: 50%;
 
-            transform:
-                scaleX(0);
-
-            transform-origin:
-                left;
+            background: #edf5ff;
 
             transition:
-                transform 0.35s ease;
+                transform 0.4s ease;
         }
 
-        .jb-service-card:hover {
-            transform:
-                translateY(-10px);
+        .service-card:hover {
+            transform: translateY(-9px);
 
-            border-color:
-                #c9d9ed;
+            border-color: #a8c9f5;
 
             box-shadow:
-                0 24px 50px
-                rgba(15,23,42,0.12);
+                0 25px 55px rgba(26,74,130,0.12);
         }
 
-        .jb-service-card:hover::before {
-            transform:
-                scaleX(1);
+        .service-card:hover::after {
+            transform: scale(1.8);
         }
 
-        .jb-service-icon {
-            width: 60px;
-            height: 60px;
+        .service-icon {
+            width: 62px;
+            height: 62px;
+
+            border-radius: 17px;
+
+            background: #edf4ff;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
-            border-radius: 16px;
+            font-size: 28px;
 
-            background:
-                #edf4ff;
-
-            color:
-                var(--blue);
-
-            font-size: 26px;
-
-            margin-bottom: 25px;
-
-            transition:
-                transform 0.35s ease,
-                background 0.35s ease,
-                color 0.35s ease;
-        }
-
-        .jb-service-card:hover
-        .jb-service-icon {
-            transform:
-                translateY(-5px)
-                scale(1.1);
-
-            background:
-                var(--blue);
-
-            color: white;
-        }
-
-        .jb-service-card h3 {
-            color:
-                var(--navy);
-
-            font-size: 21px;
-
-            margin-bottom: 11px;
-        }
-
-        .jb-service-card p {
-            color:
-                var(--muted);
-
-            font-size: 14px;
-
-            line-height: 1.7;
-        }
-
-        .jb-service-link {
-            display: inline-block;
-
-            margin-top: 20px;
-
-            color:
-                var(--blue);
-
-            font-size: 13px;
-
-            font-weight: 750;
-        }
-
-        .jb-service-link:hover {
-            text-decoration:
-                underline;
-        }
-
-
-        /* =========================================================
-           ABOUT / WHY SECTION
-           ========================================================= */
-
-        .jb-about-grid {
-            display: grid;
-
-            grid-template-columns:
-                0.9fr 1.1fr;
-
-            gap: 75px;
-
-            align-items: center;
-        }
-
-        .jb-about-visual {
-            min-height: 430px;
+            margin-bottom: 28px;
 
             position: relative;
 
-            border-radius: 24px;
-
-            background:
-                linear-gradient(
-                    140deg,
-                    #071b33,
-                    #123d70
-                );
-
-            overflow: hidden;
-
-            box-shadow:
-                0 25px 60px
-                rgba(7,27,51,0.20);
-        }
-
-        .jb-about-visual::before,
-        .jb-about-visual::after {
-            content: "";
-
-            position: absolute;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.10);
-
-            border-radius: 50%;
-        }
-
-        .jb-about-visual::before {
-            width: 420px;
-            height: 420px;
-
-            right: -140px;
-            top: -100px;
-        }
-
-        .jb-about-visual::after {
-            width: 270px;
-            height: 270px;
-
-            right: -50px;
-            top: 40px;
-        }
-
-        .jb-about-center {
-            position: absolute;
-
-            left: 50%;
-            top: 50%;
-
-            transform:
-                translate(-50%,-50%);
-
-            width: 190px;
-            height: 190px;
-
-            border-radius: 28px;
-
-            display: flex;
-            flex-direction: column;
-
-            align-items: center;
-            justify-content: center;
-
-            background:
-                rgba(255,255,255,0.10);
-
-            border:
-                1px solid
-                rgba(255,255,255,0.18);
-
-            backdrop-filter:
-                blur(10px);
-
-            color: white;
-
-            text-align: center;
-        }
-
-        .jb-about-center strong {
-            font-size: 32px;
-        }
-
-        .jb-about-center span {
-            margin-top: 7px;
-
-            color:
-                #9fc0e7;
-
-            font-size: 10px;
-
-            letter-spacing: 2px;
-
-            font-weight: 800;
-        }
-
-        .jb-about-content h2 {
-            color:
-                var(--navy);
-
-            font-size:
-                clamp(32px, 4vw, 45px);
-
-            line-height: 1.15;
-
-            margin-bottom: 20px;
-        }
-
-        .jb-about-content > p {
-            color:
-                var(--muted);
-
-            font-size: 16px;
-
-            line-height: 1.75;
-
-            margin-bottom: 28px;
-        }
-
-        .jb-check-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 14px;
-        }
-
-        .jb-check {
-            padding: 18px;
-
-            border:
-                1px solid
-                var(--border);
-
-            border-radius: 13px;
-
-            background: white;
+            z-index: 2;
 
             transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
+                transform 0.35s ease,
+                background 0.35s ease;
         }
 
-        .jb-check:hover {
+        .service-card:hover .service-icon {
             transform:
-                translateY(-5px);
+                translateY(-5px)
+                scale(1.12);
 
-            box-shadow:
-                0 13px 28px
-                rgba(15,23,42,0.08);
+            background: #dbeaff;
         }
 
-        .jb-check-icon {
-            color:
-                var(--blue);
+        .service-card h3 {
+            font-size: 23px;
 
-            font-size: 19px;
+            color: #0e2e52;
 
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+
+            position: relative;
+
+            z-index: 2;
         }
 
-        .jb-check strong {
-            display: block;
+        .service-card p {
+            color: #66788f;
 
-            color:
-                var(--navy);
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            position: relative;
+
+            z-index: 2;
+
+            margin-bottom: 18px;
+        }
+
+        .service-card a {
+            color: #1769d2;
+
+            font-weight: 750;
 
             font-size: 14px;
 
-            margin-bottom: 4px;
-        }
+            position: relative;
 
-        .jb-check span {
-            color:
-                var(--muted);
-
-            font-size: 12px;
-
-            line-height: 1.5;
+            z-index: 2;
         }
 
 
-        /* =========================================================
+        /* =====================================================
            PARTNERS
-           ========================================================= */
+        ===================================================== */
 
-        .jb-partners {
-            background:
-                #ffffff;
+        .partners-section {
+            padding: 110px 0;
 
-            padding:
-                90px 0;
+            background: #f7f9fc;
         }
 
-        .jb-partner-grid {
+        .partners-heading {
+            text-align: center;
+
+            max-width: 800px;
+
+            margin: 0 auto 60px;
+        }
+
+        .partners-heading .section-label {
+            display: block;
+        }
+
+        .partners-heading h2 {
+            font-size: clamp(36px, 4vw, 54px);
+
+            line-height: 1.1;
+
+            color: #0b2949;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 18px;
+        }
+
+        .partners-heading p {
+            color: #62758c;
+
+            font-size: 17px;
+        }
+
+        .partner-grid {
             display: grid;
 
             grid-template-columns:
                 repeat(5, 1fr);
 
-            gap: 15px;
+            gap: 20px;
         }
 
-        .jb-partner {
-            min-height: 125px;
+        .partner-card {
+            min-height: 225px;
+
+            background: #ffffff;
+
+            border: 1px solid #dce5ef;
+
+            border-radius: 20px;
 
             display: flex;
+
             flex-direction: column;
 
             align-items: center;
+
             justify-content: center;
 
+            padding: 25px;
+
             text-align: center;
-
-            padding: 18px;
-
-            border:
-                1px solid
-                var(--border);
-
-            border-radius: 15px;
-
-            background:
-                white;
-
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease,
-                border-color 0.3s ease;
-        }
-
-        .jb-partner:hover {
-            transform:
-                translateY(-8px);
-
-            border-color:
-                #c8d8ef;
-
-            box-shadow:
-                0 18px 35px
-                rgba(15,23,42,0.09);
-        }
-
-        .jb-partner-logo {
-            min-width: 80px;
-
-            padding:
-                10px 15px;
-
-            border-radius: 9px;
-
-            background:
-                #f3f6fa;
-
-            color:
-                var(--navy);
-
-            font-size: 18px;
-
-            font-weight: 850;
-
-            margin-bottom: 10px;
-        }
-
-        .jb-partner small {
-            color:
-                var(--muted);
-
-            font-size: 10px;
-        }
-
-
-        /* =========================================================
-           CTA
-           ========================================================= */
-
-        .jb-cta {
-            padding:
-                90px 0;
-
-            background:
-                linear-gradient(
-                    120deg,
-                    #071b33,
-                    #123d70
-                );
 
             position: relative;
 
             overflow: hidden;
 
-            text-align: center;
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
         }
 
-        .jb-cta::before {
+        .partner-card::before {
             content: "";
 
             position: absolute;
 
-            width: 500px;
-            height: 500px;
+            inset: 0;
 
-            right: -180px;
-            top: -230px;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.08);
-
-            border-radius: 50%;
-        }
-
-        .jb-cta-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .jb-cta h2 {
-            color: white;
-
-            font-size:
-                clamp(32px, 4vw, 46px);
-
-            margin-bottom: 15px;
-        }
-
-        .jb-cta p {
-            max-width: 680px;
-
-            margin:
-                0 auto 28px;
-
-            color:
-                #c9d9ec;
-
-            font-size: 16px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =========================================================
-           FOOTER
-           ========================================================= */
-
-        .jb-footer {
             background:
-                #061426;
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(44,123,255,0.08),
+                    transparent 65%
+                );
 
-            color: white;
-
-            padding:
-                65px 0 25px;
-        }
-
-        .jb-footer-grid {
-            display: grid;
-
-            grid-template-columns:
-                1.5fr 1fr 1fr 1fr;
-
-            gap: 40px;
-        }
-
-        .jb-footer h3 {
-            color: white;
-
-            font-size: 16px;
-
-            margin-bottom: 17px;
-        }
-
-        .jb-footer p,
-        .jb-footer a {
-            color:
-                #9eb1c8;
-
-            font-size: 13px;
-
-            line-height: 1.75;
-        }
-
-        .jb-footer a {
-            display: block;
-
-            margin-bottom: 8px;
+            opacity: 0;
 
             transition:
-                color 0.2s ease;
+                opacity 0.35s ease;
         }
 
-        .jb-footer a:hover {
-            color: white;
+        .partner-card:hover {
+            transform: translateY(-10px);
+
+            border-color: #a8c8ef;
+
+            box-shadow:
+                0 25px 50px rgba(27,69,116,0.13);
         }
 
-        .jb-footer-bottom {
-            margin-top: 45px;
-
-            padding-top: 22px;
-
-            border-top:
-                1px solid
-                rgba(255,255,255,0.10);
-
-            text-align: center;
-
-            color:
-                #71859e;
-
-            font-size: 12px;
+        .partner-card:hover::before {
+            opacity: 1;
         }
 
+        .partner-logo {
+            width: 125px;
+            height: 105px;
 
-        /* =========================================================
-           WHATSAPP
-           ========================================================= */
+            border-radius: 20px;
 
-        .jb-whatsapp {
-            position: fixed;
-
-            right: 23px;
-            bottom: 23px;
-
-            width: 60px;
-            height: 60px;
+            background: #f1f5fa;
 
             display: flex;
 
             align-items: center;
             justify-content: center;
 
-            border-radius: 50%;
+            position: relative;
+
+            z-index: 2;
+
+            margin-bottom: 18px;
+
+            transition:
+                transform 0.35s ease,
+                background 0.35s ease,
+                box-shadow 0.35s ease;
+        }
+
+        .partner-card:hover .partner-logo {
+            transform:
+                scale(1.08)
+                translateY(-5px);
+
+            background: #eaf3ff;
+
+            box-shadow:
+                0 12px 30px rgba(37,105,190,0.10);
+        }
+
+        .partner-logo span {
+            font-size: 27px;
+
+            font-weight: 900;
+
+            letter-spacing: -1px;
+
+            color: #0c2d50;
+        }
+
+        .partner-logo.tata span {
+            font-size: 25px;
+        }
+
+        .partner-logo.jio span {
+            font-size: 29px;
+        }
+
+        .partner-logo.vi span {
+            font-size: 34px;
+        }
+
+        .partner-logo.telecmi span {
+            font-size: 22px;
+        }
+
+        .partner-logo.gem span {
+            font-size: 29px;
+        }
+
+        .partner-card strong {
+            color: #102e50;
+
+            font-size: 16px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .partner-card small {
+            color: #718299;
+
+            font-size: 13px;
+
+            position: relative;
+
+            z-index: 2;
+
+            margin-top: 3px;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta-section {
+            padding: 100px 0;
+        }
+
+        .cta-box {
+            width: min(1400px, calc(100% - 80px));
+
+            margin: 0 auto;
+
+            border-radius: 28px;
+
+            padding: 70px;
 
             background:
-                #18a874;
+                linear-gradient(
+                    120deg,
+                    #082846,
+                    #123f72
+                );
 
-            color: white;
+            color: #ffffff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .cta-box::after {
+            content: "";
+
+            position: absolute;
+
+            width: 360px;
+            height: 360px;
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            border-radius: 50%;
+
+            right: -100px;
+            top: -180px;
+        }
+
+        .cta-content {
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .cta-content h2 {
+            font-size: clamp(32px, 4vw, 48px);
+
+            line-height: 1.15;
+
+            margin-bottom: 15px;
+        }
+
+        .cta-content p {
+            color: #c9dcf2;
+
+            font-size: 17px;
+        }
+
+        .cta-button {
+            position: relative;
+
+            z-index: 2;
+
+            flex-shrink: 0;
+
+            background: #ffffff;
+
+            color: #10375f;
+
+            padding: 18px 28px;
+
+            border-radius: 10px;
+
+            font-weight: 800;
+
+            transition:
+                transform 0.25s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .site-footer {
+            background: #071d34;
+
+            color: #ffffff;
+
+            padding: 45px 0;
+        }
+
+        .footer-container {
+            width: min(1400px, calc(100% - 80px));
+
+            margin: 0 auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .footer-brand {
+            font-size: 21px;
+
+            font-weight: 800;
+        }
+
+        .footer-copy {
+            color: #9eb3ca;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           WHATSAPP
+        ===================================================== */
+
+        .whatsapp-button {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 62px;
+            height: 62px;
+
+            border-radius: 50%;
+
+            background: #18a878;
+
+            color: #ffffff;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
 
             font-size: 27px;
 
-            z-index: 9999;
+            z-index: 2000;
 
             box-shadow:
-                0 12px 30px
-                rgba(0,0,0,0.22);
+                0 12px 35px rgba(0,0,0,0.22);
 
             transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
+                transform 0.3s ease;
         }
 
-        .jb-whatsapp:hover {
-            color: white;
-
+        .whatsapp-button:hover {
             transform:
-                translateY(-6px)
-                scale(1.07);
-
-            box-shadow:
-                0 18px 35px
-                rgba(0,0,0,0.28);
+                scale(1.12);
         }
 
 
-        /* =========================================================
-           ANIMATIONS
-           ========================================================= */
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
 
-        @keyframes jbFloat {
+        @media (max-width: 1150px) {
 
-            0% {
-                transform:
-                    translateY(0);
+            .main-nav {
+                gap: 18px;
             }
 
-            50% {
-                transform:
-                    translateY(-9px);
+            .main-nav a {
+                font-size: 14px;
             }
 
-            100% {
-                transform:
-                    translateY(0);
-            }
-        }
-
-        .jb-float-one {
-            animation:
-                jbFloat 4s ease-in-out infinite;
-        }
-
-        .jb-float-two {
-            animation:
-                jbFloat 4.7s ease-in-out infinite 0.5s;
-        }
-
-        .jb-float-three {
-            animation:
-                jbFloat 4.3s ease-in-out infinite 1s;
-        }
-
-
-        /* =========================================================
-           MOBILE
-           ========================================================= */
-
-        @media (max-width: 1050px) {
-
-            .jb-nav {
-                gap: 17px;
-            }
-
-            .jb-hero-content {
-                width: 61%;
-            }
-
-            .jb-hero-visual {
-                right: -2%;
-                transform:
-                    translateY(-50%)
-                    scale(0.86);
-            }
-
-            .jb-services-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .jb-partner-grid {
+            .partner-grid {
                 grid-template-columns:
                     repeat(3, 1fr);
             }
 
+            .hero-inner {
+                gap: 30px;
+            }
+
+            .hero-title {
+                font-size: 58px;
+            }
         }
 
 
-        @media (max-width: 850px) {
+        @media (max-width: 900px) {
 
-            .jb-header {
-                height: 72px;
+            .site-header {
+                height: 82px;
             }
 
-            .jb-menu {
-                display: block;
+            .header-container {
+                width: calc(100% - 35px);
             }
 
-            .jb-nav {
-                position: absolute;
+            .site-logo {
+                font-size: 24px;
+            }
 
-                top: 72px;
-                left: 20px;
-                right: 20px;
-
+            .main-nav {
                 display: none;
+            }
 
+            .hero,
+            .hero-inner {
+                min-height: auto;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+
+                padding-top: 90px;
+                padding-bottom: 90px;
+            }
+
+            .hero-content {
+                max-width: 800px;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .service-strip-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .service-strip-item {
+                border-right: none;
+
+                border-bottom: 1px solid #e6ebf2;
+            }
+
+            .service-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .cta-box {
                 flex-direction: column;
 
-                align-items: stretch;
+                align-items: flex-start;
 
-                gap: 0;
-
-                padding: 12px;
-
-                background: white;
-
-                border:
-                    1px solid
-                    var(--border);
-
-                border-radius: 13px;
-
-                box-shadow:
-                    0 20px 40px
-                    rgba(0,0,0,0.12);
+                padding: 50px 35px;
             }
-
-            .jb-nav.open {
-                display: flex;
-            }
-
-            .jb-nav a {
-                padding:
-                    13px 12px;
-            }
-
-            .jb-nav .jb-quote {
-                text-align: center;
-
-                margin-top: 5px;
-            }
-
-            .jb-hero {
-                min-height: 760px;
-            }
-
-            .jb-hero-content {
-                width: 100%;
-
-                padding-top: 20px;
-            }
-
-            .jb-hero-title {
-                font-size:
-                    clamp(42px, 10vw, 64px);
-
-                max-width: 650px;
-            }
-
-            .jb-hero-text {
-                max-width: 620px;
-            }
-
-            .jb-hero-visual {
-                opacity: 0.25;
-
-                right:
-                    -100px;
-
-                top: 54%;
-
-                transform:
-                    translateY(-50%)
-                    scale(0.85);
-            }
-
-            .jb-hero-strip {
-                grid-template-columns:
-                    repeat(3, 1fr);
-            }
-
-            .jb-about-grid {
-                grid-template-columns:
-                    1fr;
-
-                gap: 40px;
-            }
-
-            .jb-about-visual {
-                min-height: 350px;
-            }
-
-            .jb-footer-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
         }
 
 
         @media (max-width: 600px) {
 
-            .jb-container {
-                width:
-                    calc(100% - 30px);
+            .header-container,
+            .section-container,
+            .service-strip-inner,
+            .footer-container {
+                width: calc(100% - 35px);
             }
 
-            .jb-header-inner {
-                width:
-                    calc(100% - 30px);
+            .site-logo {
+                font-size: 21px;
             }
 
-            .jb-logo {
-                font-size: 19px;
+            .hero-inner {
+                padding-top: 70px;
+                padding-bottom: 80px;
             }
 
-            .jb-logo-box {
-                width: 41px;
-                height: 41px;
+            .hero-title {
+                font-size: 45px;
+
+                letter-spacing: -1.8px;
             }
 
-            .jb-hero {
-                min-height: 790px;
+            .hero-text {
+                font-size: 16px;
             }
 
-            .jb-hero-title {
-                font-size: 43px;
+            .hero-buttons {
+                flex-direction: column;
 
-                letter-spacing:
-                    -1.8px;
+                align-items: stretch;
             }
 
-            .jb-hero-text {
-                font-size: 15px;
-
-                line-height: 1.65;
+            .primary-button,
+            .secondary-button {
+                width: 100%;
             }
 
-            .jb-buttons {
-                flex-direction:
-                    column;
-
-                align-items:
-                    flex-start;
+            .services-section,
+            .partners-section {
+                padding: 75px 0;
             }
 
-            .jb-button {
-                width:
-                    auto;
-
-                min-width:
-                    210px;
+            .service-grid,
+            .partner-grid {
+                grid-template-columns: 1fr;
             }
 
-            .jb-hero-visual {
-                display: none;
+            .partner-card {
+                min-height: 210px;
             }
 
-            .jb-hero-strip {
-                width:
-                    calc(100% - 30px);
+            .cta-box {
+                width: calc(100% - 35px);
 
-                grid-template-columns:
-                    1fr;
-
-                border-top:
-                    1px solid
-                    rgba(255,255,255,0.12);
+                padding: 40px 25px;
             }
 
-            .jb-strip-item {
-                padding:
-                    12px 15px;
+            .footer-container {
+                flex-direction: column;
 
-                border-right: none;
-
-                border-bottom:
-                    1px solid
-                    rgba(255,255,255,0.10);
+                align-items: flex-start;
             }
 
-            .jb-strip-item:last-child {
-                border-bottom: none;
+            .whatsapp-button {
+                width: 56px;
+                height: 56px;
+
+                right: 18px;
+                bottom: 18px;
             }
-
-            .jb-dots {
-                bottom:
-                    190px;
-            }
-
-            .jb-section {
-                padding:
-                    70px 0;
-            }
-
-            .jb-services-grid {
-                grid-template-columns:
-                    1fr;
-            }
-
-            .jb-service-card {
-                min-height:
-                    260px;
-            }
-
-            .jb-check-grid {
-                grid-template-columns:
-                    1fr;
-            }
-
-            .jb-partner-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .jb-footer-grid {
-                grid-template-columns:
-                    1fr;
-            }
-
-            .jb-whatsapp {
-                width: 55px;
-                height: 55px;
-
-                right: 17px;
-                bottom: 17px;
-            }
-
         }
 
     </style>
@@ -1843,445 +1381,366 @@
 
 <body>
 
-<div class="jb-home">
 
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-    <!-- =========================================================
-         HEADER
-         ========================================================= -->
+<header class="site-header">
 
-    <header class="jb-header">
+    <div class="header-container">
 
-        <div class="jb-header-inner">
+        <a href="index.html"
+           class="site-logo">
+            JB TECH SERVICES
+        </a>
+
+        <nav class="main-nav">
 
             <a href="index.html"
-               class="jb-logo">
-
-                <div class="jb-logo-box">
-                    JB
-                </div>
-
-                <div class="jb-logo-text">
-
-                    JB TECH
-
-                    <span>
-                        SERVICES
-                    </span>
-
-                </div>
-
+               class="active">
+                Home
             </a>
 
+            <a href="about.html">
+                About Us
+            </a>
 
-            <button
-                class="jb-menu"
-                id="jbMenu"
-                aria-label="Open menu">
+            <a href="services.html">
+                Services
+            </a>
 
-                ☰
+            <a href="cloud-communication.html">
+                Cloud Communication
+            </a>
 
-            </button>
+            <a href="gem-services.html">
+                GeM Services
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="contact.html"
+               class="quote-button">
+                Get a Business Quote
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
 
 
-            <nav
-                class="jb-nav"
-                id="jbNav">
 
-                <a href="index.html">
-                    Home
-                </a>
+<!-- =========================================================
+     HERO SLIDER
+========================================================= -->
 
-                <a href="about.html">
-                    About
-                </a>
+<section class="hero">
 
-                <a href="services.html">
-                    Services
-                </a>
 
-                <a href="cloud-communication.html">
+    <!-- SLIDE 1 -->
+
+    <div class="hero-slide active">
+
+        <div class="hero-inner">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    Business Connectivity
+                </div>
+
+                <h1 class="hero-title">
+                    Reliable
+                    <span>Connectivity</span>
+                    for Business.
+                </h1>
+
+                <p class="hero-text">
+                    Business internet and telecom solutions
+                    designed to keep your organization
+                    connected and productive.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="services.html"
+                       class="primary-button">
+                        Explore Services →
+                    </a>
+
+                    <a href="contact.html"
+                       class="secondary-button">
+                        Talk to Us
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="visual-circle"></div>
+                <div class="visual-circle circle-two"></div>
+                <div class="visual-circle circle-three"></div>
+
+                <div class="visual-card">
+
+                    <div class="visual-logo">
+                        JB
+                    </div>
+
+                    <small>
+                        CONNECTIVITY
+                    </small>
+
+                    <h3>
+                        Connected.<br>
+                        Reliable.<br>
+                        Business-ready.
+                    </h3>
+
+                </div>
+
+                <div class="floating-card floating-one">
+                    <strong>Connectivity</strong>
+                    <span>Business Internet & Telecom</span>
+                </div>
+
+                <div class="floating-card floating-two">
+                    <strong>Telecom</strong>
+                    <span>Business Communication</span>
+                </div>
+
+                <div class="floating-card floating-three">
+                    <strong>Business Support</strong>
+                    <span>Practical Technology Solutions</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SLIDE 2 -->
+
+    <div class="hero-slide">
+
+        <div class="hero-inner">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
                     Cloud Communication
-                </a>
+                </div>
 
-                <a href="gem-services.html">
-                    GeM Services
-                </a>
+                <h2 class="hero-title">
+                    Modern
+                    <span>Business Calling</span>
+                    Solutions.
+                </h2>
 
-                <a href="contact.html">
-                    Contact
-                </a>
+                <p class="hero-text">
+                    Cloud telephony and communication
+                    solutions helping businesses connect
+                    teams and customers across domestic
+                    and international markets.
+                </p>
 
-                <a
-                    href="contact.html"
-                    class="jb-quote">
+                <div class="hero-buttons">
 
-                    Get a Quote
+                    <a href="cloud-communication.html"
+                       class="primary-button">
+                        Explore Cloud Solutions →
+                    </a>
 
-                </a>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-    <!-- =========================================================
-         HERO
-         ========================================================= -->
-
-    <section class="jb-hero">
-
-
-        <!-- decorative background -->
-
-        <div class="jb-hero-circle jb-circle-one"></div>
-
-        <div class="jb-hero-circle jb-circle-two"></div>
-
-        <div class="jb-hero-circle jb-circle-three"></div>
-
-
-        <!-- =====================================================
-             SLIDE 1
-             ===================================================== -->
-
-        <div class="jb-slide active">
-
-            <div class="jb-container">
-
-                <div class="jb-hero-content">
-
-                    <div class="jb-label">
-                        BUSINESS TECHNOLOGY SOLUTIONS
-                    </div>
-
-                    <h1 class="jb-hero-title">
-
-                        One Partner.
-                        <br>
-
-                        <span>
-                            Multiple Technology
-                        </span>
-
-                        <br>
-
-                        Solutions.
-
-                    </h1>
-
-                    <p class="jb-hero-text">
-
-                        Empowering businesses with reliable
-                        connectivity, telecom, cloud communication
-                        and digital business solutions through
-                        trusted technology partnerships.
-
-                    </p>
-
-
-                    <div class="jb-buttons">
-
-                        <a
-                            href="contact.html"
-                            class="jb-button jb-button-primary">
-
-                            Get a Business Quote
-                            →
-                        </a>
-
-                        <a
-                            href="https://wa.me/919017125139"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="jb-button jb-button-outline">
-
-                            Talk to Us on WhatsApp
-                            ↗
-
-                        </a>
-
-                    </div>
+                    <a href="contact.html"
+                       class="secondary-button">
+                        Request Information
+                    </a>
 
                 </div>
 
             </div>
 
-        </div>
 
+            <div class="hero-visual">
 
-        <!-- =====================================================
-             SLIDE 2
-             ===================================================== -->
+                <div class="visual-circle"></div>
+                <div class="visual-circle circle-two"></div>
+                <div class="visual-circle circle-three"></div>
 
-        <div class="jb-slide">
+                <div class="visual-card">
 
-            <div class="jb-container">
-
-                <div class="jb-hero-content">
-
-                    <div class="jb-label">
-                        BUSINESS CONNECTIVITY
+                    <div class="visual-logo">
+                        ☁
                     </div>
 
-                    <h2 class="jb-hero-title">
-
-                        Reliable
-                        <br>
-
-                        <span>
-                            Connectivity
-                        </span>
-
-                        For Business.
-
-                    </h2>
-
-                    <p class="jb-hero-text">
-
-                        Business internet, telecom and
-                        connectivity solutions designed around
-                        your organization's requirements.
-
-                    </p>
-
-                    <div class="jb-buttons">
-
-                        <a
-                            href="services.html"
-                            class="jb-button jb-button-primary">
-
-                            Explore Connectivity
-                            →
-
-                        </a>
-
-                        <a
-                            href="contact.html"
-                            class="jb-button jb-button-outline">
-
-                            Talk to Our Team
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- =====================================================
-             SLIDE 3
-             ===================================================== -->
-
-        <div class="jb-slide">
-
-            <div class="jb-container">
-
-                <div class="jb-hero-content">
-
-                    <div class="jb-label">
+                    <small>
                         CLOUD COMMUNICATION
-                    </div>
+                    </small>
 
-                    <h2 class="jb-hero-title">
+                    <h3>
+                        Smart.<br>
+                        Flexible.<br>
+                        Connected.
+                    </h3>
 
-                        Modern
-                        <br>
+                </div>
 
-                        <span>
-                            Business Calling
-                        </span>
+                <div class="floating-card floating-one">
+                    <strong>Cloud Communication</strong>
+                    <span>Modern Business Calling</span>
+                </div>
 
-                        Solutions.
+                <div class="floating-card floating-two">
+                    <strong>Domestic</strong>
+                    <span>Business Communication</span>
+                </div>
 
-                    </h2>
-
-                    <p class="jb-hero-text">
-
-                        Cloud telephony and communication
-                        solutions helping businesses connect
-                        teams and customers across domestic
-                        and international markets.
-
-                    </p>
-
-                    <div class="jb-buttons">
-
-                        <a
-                            href="cloud-communication.html"
-                            class="jb-button jb-button-primary">
-
-                            Explore Cloud Solutions
-                            →
-
-                        </a>
-
-                        <a
-                            href="contact.html"
-                            class="jb-button jb-button-outline">
-
-                            Request Information
-
-                        </a>
-
-                    </div>
-
+                <div class="floating-card floating-three">
+                    <strong>International</strong>
+                    <span>Communication Solutions</span>
                 </div>
 
             </div>
 
         </div>
 
+    </div>
 
-        <!-- =====================================================
-             SLIDE 4
-             ===================================================== -->
 
-        <div class="jb-slide">
 
-            <div class="jb-container">
+    <!-- SLIDE 3 -->
 
-                <div class="jb-hero-content">
+    <div class="hero-slide">
 
-                    <div class="jb-label">
-                        GEM BUSINESS SUPPORT
+        <div class="hero-inner">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    GeM Business Support
+                </div>
+
+                <h2 class="hero-title">
+                    Simplifying
+                    <span>GeM</span>
+                    Business Support.
+                </h2>
+
+                <p class="hero-text">
+                    Professional assistance for businesses
+                    dealing with Government e-Marketplace
+                    requirements and procurement support.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="gem-services.html"
+                       class="primary-button">
+                        Explore GeM Services →
+                    </a>
+
+                    <a href="contact.html"
+                       class="secondary-button">
+                        Discuss Your Requirement
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="visual-circle"></div>
+                <div class="visual-circle circle-two"></div>
+                <div class="visual-circle circle-three"></div>
+
+                <div class="visual-card">
+
+                    <div class="visual-logo">
+                        GeM
                     </div>
 
-                    <h2 class="jb-hero-title">
+                    <small>
+                        GOVERNMENT E-MARKETPLACE
+                    </small>
 
-                        Simplify Your
-                        <br>
+                    <h3>
+                        Organized.<br>
+                        Professional.<br>
+                        Business-focused.
+                    </h3>
 
-                        <span>
-                            GeM Requirements.
-                        </span>
+                </div>
 
-                    </h2>
+                <div class="floating-card floating-one">
+                    <strong>GeM Support</strong>
+                    <span>Portal Assistance</span>
+                </div>
 
-                    <p class="jb-hero-text">
+                <div class="floating-card floating-two">
+                    <strong>Procurement</strong>
+                    <span>Business Support</span>
+                </div>
 
-                        Professional assistance for businesses
-                        dealing with Government e-Marketplace
-                        requirements and procurement support.
-
-                    </p>
-
-                    <div class="jb-buttons">
-
-                        <a
-                            href="gem-services.html"
-                            class="jb-button jb-button-primary">
-
-                            Explore GeM Services
-                            →
-
-                        </a>
-
-                        <a
-                            href="contact.html"
-                            class="jb-button jb-button-outline">
-
-                            Discuss Requirement
-
-                        </a>
-
-                    </div>
-
+                <div class="floating-card floating-three">
+                    <strong>Authorization</strong>
+                    <span>Dugong Authorized Services</span>
                 </div>
 
             </div>
 
         </div>
 
+    </div>
 
-        <!-- =====================================================
-             HERO VISUAL
-             ===================================================== -->
 
-        <div class="jb-hero-visual">
 
-            <div class="jb-main-card">
+    <!-- SLIDER DOTS -->
 
-                <div class="jb-card-logo">
-                    JB
-                </div>
+    <div class="slider-dots">
 
-                <div class="jb-card-small">
-                    BUSINESS TECHNOLOGY
-                </div>
+        <button class="slider-dot active"
+                aria-label="Slide 1"></button>
 
-                <div class="jb-card-title">
+        <button class="slider-dot"
+                aria-label="Slide 2"></button>
 
-                    Connected.
-                    <br>
+        <button class="slider-dot"
+                aria-label="Slide 3"></button>
 
-                    Communicating.
-                    <br>
+    </div>
 
-                    Growing.
+</section>
 
-                </div>
 
+
+<!-- =========================================================
+     SERVICE STRIP
+========================================================= -->
+
+<section class="service-strip">
+
+    <div class="service-strip-inner">
+
+        <div class="service-strip-item">
+
+            <div class="strip-icon">
+                ◉
             </div>
 
-
-            <div
-                class="jb-float jb-float-one">
-
-                <strong>
-                    Connectivity
-                </strong>
-
-                <span>
-                    Business Internet & Telecom
-                </span>
-
-            </div>
-
-
-            <div
-                class="jb-float jb-float-two">
-
-                <strong>
-                    Cloud Communication
-                </strong>
-
-                <span>
-                    Modern Business Calling
-                </span>
-
-            </div>
-
-
-            <div
-                class="jb-float jb-float-three">
-
-                <strong>
-                    GeM
-                </strong>
-
-                <span>
-                    Business Support
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- =====================================================
-             HERO STRIP
-             ===================================================== -->
-
-        <div class="jb-hero-strip">
-
-            <div class="jb-strip-item">
+            <div class="strip-text">
 
                 <strong>
                     Telecom Connectivity
@@ -2293,701 +1752,468 @@
 
             </div>
 
-            <div class="jb-strip-item">
+        </div>
+
+
+        <div class="service-strip-item">
+
+            <div class="strip-icon">
+                ☁
+            </div>
+
+            <div class="strip-text">
 
                 <strong>
                     Cloud Communication
                 </strong>
 
                 <span>
-                    Domestic & International
+                    Modern Business Calling
                 </span>
 
             </div>
 
-            <div class="jb-strip-item">
+        </div>
+
+
+        <div class="service-strip-item">
+
+            <div class="strip-icon">
+                ◆
+            </div>
+
+            <div class="strip-text">
 
                 <strong>
                     GeM Business Support
                 </strong>
 
                 <span>
-                    Procurement Assistance
+                    Government e-Marketplace
                 </span>
 
             </div>
 
         </div>
 
+    </div>
 
-        <!-- =====================================================
-             SLIDER DOTS
-             ===================================================== -->
+</section>
 
-        <div class="jb-dots">
 
-            <button
-                class="jb-dot active"
-                data-slide="0"
-                aria-label="Slide 1">
-            </button>
 
-            <button
-                class="jb-dot"
-                data-slide="1"
-                aria-label="Slide 2">
-            </button>
+<!-- =========================================================
+     SERVICES
+========================================================= -->
 
-            <button
-                class="jb-dot"
-                data-slide="2"
-                aria-label="Slide 3">
-            </button>
+<section class="services-section">
 
-            <button
-                class="jb-dot"
-                data-slide="3"
-                aria-label="Slide 4">
-            </button>
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                WHAT WE DO
+            </div>
+
+            <h2>
+                Technology solutions
+                built around your business.
+            </h2>
+
+            <p>
+                Practical solutions covering connectivity,
+                communication and GeM-related business
+                requirements.
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="service-grid">
 
 
-    <!-- =========================================================
-         WHAT WE DO
-         ========================================================= -->
+            <article class="service-card">
 
-    <section class="jb-section">
-
-        <div class="jb-container">
-
-            <div class="jb-section-heading">
-
-                <div class="jb-section-label">
-                    WHAT WE DO
+                <div class="service-icon">
+                    ◉
                 </div>
 
-                <h2 class="jb-section-title">
-                    Technology Solutions
-                    Built Around Your Business
-                </h2>
-
-                <p class="jb-section-description">
-
-                    Practical technology solutions covering
-                    connectivity, communication and
-                    GeM-related business requirements.
-
-                </p>
-
-            </div>
-
-
-            <div class="jb-services-grid">
-
-
-                <!-- CONNECTIVITY -->
-
-                <article class="jb-service-card">
-
-                    <div class="jb-service-icon">
-                        ◉
-                    </div>
-
-                    <h3>
-                        Enterprise Connectivity
-                    </h3>
-
-                    <p>
-
-                        Reliable business connectivity and
-                        telecom solutions designed around
-                        your organization's requirements.
-
-                    </p>
-
-                    <a
-                        href="services.html"
-                        class="jb-service-link">
-
-                        Explore Connectivity →
-                    </a>
-
-                </article>
-
-
-                <!-- CLOUD -->
-
-                <article class="jb-service-card">
-
-                    <div class="jb-service-icon">
-                        ☁
-                    </div>
-
-                    <h3>
-                        Cloud Communication
-                    </h3>
-
-                    <p>
-
-                        Modern cloud telephony and business
-                        communication solutions for teams
-                        and customers.
-
-                    </p>
-
-                    <a
-                        href="cloud-communication.html"
-                        class="jb-service-link">
-
-                        Explore Cloud Solutions →
-                    </a>
-
-                </article>
-
-
-                <!-- GEM -->
-
-                <article class="jb-service-card">
-
-                    <div class="jb-service-icon">
-                        ◆
-                    </div>
-
-                    <h3>
-                        GeM Business Support
-                    </h3>
-
-                    <p>
-
-                        Structured assistance for businesses
-                        managing Government e-Marketplace
-                        related requirements.
-
-                    </p>
-
-                    <a
-                        href="gem-services.html"
-                        class="jb-service-link">
-
-                        Explore GeM Services →
-                    </a>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================================
-         WHY JB TECH SERVICES
-         ========================================================= -->
-
-    <section class="jb-section jb-section-light">
-
-        <div class="jb-container">
-
-            <div class="jb-about-grid">
-
-
-                <div class="jb-about-visual">
-
-                    <div class="jb-about-center">
-
-                        <strong>
-                            JB
-                        </strong>
-
-                        <span>
-                            BUSINESS TECHNOLOGY
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="jb-about-content">
-
-                    <div class="jb-section-label">
-                        WHY JB TECH SERVICES
-                    </div>
-
-                    <h2>
-                        One Business Partner.
-                        Multiple Solutions.
-                    </h2>
-
-                    <p>
-
-                        JB TECH SERVICES helps businesses
-                        simplify their technology requirements
-                        through practical connectivity,
-                        communication and procurement
-                        solutions.
-
-                    </p>
-
-
-                    <div class="jb-check-grid">
-
-
-                        <div class="jb-check">
-
-                            <div class="jb-check-icon">
-                                ✓
-                            </div>
-
-                            <strong>
-                                Business Focused
-                            </strong>
-
-                            <span>
-                                Solutions designed around
-                                business requirements.
-                            </span>
-
-                        </div>
-
-
-                        <div class="jb-check">
-
-                            <div class="jb-check-icon">
-                                ✓
-                            </div>
-
-                            <strong>
-                                Technology Partnerships
-                            </strong>
-
-                            <span>
-                                Access to established
-                                technology ecosystems.
-                            </span>
-
-                        </div>
-
-
-                        <div class="jb-check">
-
-                            <div class="jb-check-icon">
-                                ✓
-                            </div>
-
-                            <strong>
-                                Multiple Solutions
-                            </strong>
-
-                            <span>
-                                Connectivity, communication
-                                and GeM support.
-                            </span>
-
-                        </div>
-
-
-                        <div class="jb-check">
-
-                            <div class="jb-check-icon">
-                                ✓
-                            </div>
-
-                            <strong>
-                                Business Support
-                            </strong>
-
-                            <span>
-                                Professional assistance from
-                                requirement to solution.
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================================
-         PARTNERS / ECOSYSTEM
-         ========================================================= -->
-
-    <section class="jb-partners">
-
-        <div class="jb-container">
-
-            <div class="jb-section-heading">
-
-                <div class="jb-section-label">
-                    TECHNOLOGY ECOSYSTEM
-                </div>
-
-                <h2 class="jb-section-title">
-                    Trusted Technology Relationships
-                </h2>
-
-                <p class="jb-section-description">
-
-                    We work with established technology
-                    providers to help businesses access
-                    suitable solutions.
-
-                </p>
-
-            </div>
-
-
-            <div class="jb-partner-grid">
-
-
-                <div class="jb-partner">
-
-                    <div class="jb-partner-logo">
-                        TATA
-                    </div>
-
-                    <small>
-                        Telecom Partnership
-                    </small>
-
-                </div>
-
-
-                <div class="jb-partner">
-
-                    <div class="jb-partner-logo">
-                        JIO
-                    </div>
-
-                    <small>
-                        Connectivity Solutions
-                    </small>
-
-                </div>
-
-
-                <div class="jb-partner">
-
-                    <div class="jb-partner-logo">
-                        Vi
-                    </div>
-
-                    <small>
-                        Business Telecom
-                    </small>
-
-                </div>
-
-
-                <div class="jb-partner">
-
-                    <div class="jb-partner-logo">
-                        TeleCMI
-                    </div>
-
-                    <small>
-                        Cloud Communication
-                    </small>
-
-                </div>
-
-
-                <div class="jb-partner">
-
-                    <div class="jb-partner-logo">
-                        GeM
-                    </div>
-
-                    <small>
-                        Dugong Authorized Services
-                    </small>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================================
-         FINAL CTA
-         ========================================================= -->
-
-    <section class="jb-cta">
-
-        <div class="jb-container">
-
-            <div class="jb-cta-content">
-
-                <div class="jb-section-label">
-                    LET'S CONNECT
-                </div>
-
-                <h2>
-                    Have a Business Requirement?
-                </h2>
+                <h3>
+                    Enterprise Connectivity
+                </h3>
 
                 <p>
-
-                    Tell us what your business needs.
-                    We can help you explore the right
-                    connectivity, communication or
-                    GeM-related solution.
-
+                    Reliable business internet and
+                    connectivity solutions for different
+                    business requirements.
                 </p>
 
-                <div class="jb-buttons"
-                     style="justify-content:center;">
+                <a href="services.html">
+                    Explore Connectivity →
+                </a>
 
-                    <a
-                        href="contact.html"
-                        class="jb-button jb-button-primary">
+            </article>
 
-                        Get a Business Quote →
 
-                    </a>
 
-                    <a
-                        href="https://wa.me/919017125139"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="jb-button jb-button-outline">
+            <article class="service-card">
 
-                        WhatsApp Us ↗
-
-                    </a>
-
+                <div class="service-icon">
+                    ☁
                 </div>
 
-            </div>
+                <h3>
+                    Cloud Communication
+                </h3>
+
+                <p>
+                    Modern cloud telephony and business
+                    communication solutions for teams
+                    and customers.
+                </p>
+
+                <a href="cloud-communication.html">
+                    Explore Cloud Solutions →
+                </a>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    ◆
+                </div>
+
+                <h3>
+                    Telecom Solutions
+                </h3>
+
+                <p>
+                    Business telecom solutions through
+                    established technology and service
+                    relationships.
+                </p>
+
+                <a href="services.html">
+                    Explore Telecom →
+                </a>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    🛒
+                </div>
+
+                <h3>
+                    GeM Business Support
+                </h3>
+
+                <p>
+                    Professional assistance for
+                    Government e-Marketplace and
+                    procurement-related requirements.
+                </p>
+
+                <a href="gem-services.html">
+                    Explore GeM Services →
+                </a>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    ☎
+                </div>
+
+                <h3>
+                    Business Communication
+                </h3>
+
+                <p>
+                    Communication solutions designed
+                    to help businesses stay connected
+                    with customers and teams.
+                </p>
+
+                <a href="cloud-communication.html">
+                    Learn More →
+                </a>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <div class="service-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Business Technology Support
+                </h3>
+
+                <p>
+                    A practical technology partner for
+                    businesses looking for dependable
+                    solutions and support.
+                </p>
+
+                <a href="contact.html">
+                    Talk to Us →
+                </a>
+
+            </article>
+
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================================================
-         FOOTER
-         ========================================================= -->
 
-    <footer class="jb-footer">
+<!-- =========================================================
+     PARTNERS
+========================================================= -->
 
-        <div class="jb-container">
+<section class="partners-section">
 
-            <div class="jb-footer-grid">
+    <div class="section-container">
 
+        <div class="partners-heading">
 
-                <div>
+            <span class="section-label">
+                TECHNOLOGY ECOSYSTEM
+            </span>
 
-                    <h3>
-                        JB TECH SERVICES
-                    </h3>
+            <h2>
+                Trusted Technology
+                Relationships
+            </h2>
 
-                    <p>
-
-                        Business technology solutions
-                        covering connectivity, telecom,
-                        cloud communication and
-                        GeM-related requirements.
-
-                    </p>
-
-                    <p style="margin-top:15px;">
-
-                        Raj Nagar Part 2,
-                        Palam Village,
-                        South West Delhi,
-                        Delhi 110077
-
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Quick Links
-                    </h3>
-
-                    <a href="index.html">
-                        Home
-                    </a>
-
-                    <a href="about.html">
-                        About Us
-                    </a>
-
-                    <a href="services.html">
-                        Services
-                    </a>
-
-                    <a href="contact.html">
-                        Contact
-                    </a>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Solutions
-                    </h3>
-
-                    <a href="services.html">
-                        Telecom & Connectivity
-                    </a>
-
-                    <a href="cloud-communication.html">
-                        Cloud Communication
-                    </a>
-
-                    <a href="gem-services.html">
-                        GeM Services
-                    </a>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Contact
-                    </h3>
-
-                    <a href="tel:+919017125139">
-                        +91 90171 25139
-                    </a>
-
-                    <a href="mailto:Reachus@jbtechservices.com">
-                        Reachus@jbtechservices.com
-                    </a>
-
-                    <a
-                        href="https://wa.me/919017125139"
-                        target="_blank"
-                        rel="noopener noreferrer">
-
-                        WhatsApp
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="jb-footer-bottom">
-
-                © 2026 JB TECH SERVICES.
-                All Rights Reserved.
-
-            </div>
+            <p>
+                We work with established technology
+                providers to help businesses access
+                suitable solutions.
+            </p>
 
         </div>
 
-    </footer>
+
+        <div class="partner-grid">
 
 
-    <!-- =========================================================
-         WHATSAPP BUTTON
-         ========================================================= -->
+            <!-- TATA -->
 
-    <a
-        href="https://wa.me/919017125139"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="jb-whatsapp"
-        aria-label="Chat with JB TECH SERVICES on WhatsApp"
-        title="Chat with JB TECH SERVICES on WhatsApp">
+            <div class="partner-card">
 
-        ☎
+                <div class="partner-logo tata">
+                    <span>
+                        TATA
+                    </span>
+                </div>
 
-    </a>
+                <strong>
+                    TATA
+                </strong>
+
+                <small>
+                    Telecom Partnership
+                </small>
+
+            </div>
 
 
-</div>
+
+            <!-- JIO -->
+
+            <div class="partner-card">
+
+                <div class="partner-logo jio">
+                    <span>
+                        JIO
+                    </span>
+                </div>
+
+                <strong>
+                    JIO
+                </strong>
+
+                <small>
+                    Connectivity Solutions
+                </small>
+
+            </div>
 
 
-<!-- =============================================================
-     HOMEPAGE JAVASCRIPT
-     ============================================================= -->
+
+            <!-- VI -->
+
+            <div class="partner-card">
+
+                <div class="partner-logo vi">
+                    <span>
+                        Vi
+                    </span>
+                </div>
+
+                <strong>
+                    Vi
+                </strong>
+
+                <small>
+                    Business Telecom
+                </small>
+
+            </div>
+
+
+
+            <!-- TELECMI -->
+
+            <div class="partner-card">
+
+                <div class="partner-logo telecmi">
+                    <span>
+                        TeleCMI
+                    </span>
+                </div>
+
+                <strong>
+                    TeleCMI
+                </strong>
+
+                <small>
+                    Cloud Communication
+                </small>
+
+            </div>
+
+
+
+            <!-- GeM -->
+
+            <div class="partner-card">
+
+                <div class="partner-logo gem">
+                    <span>
+                        GeM
+                    </span>
+                </div>
+
+                <strong>
+                    GeM
+                </strong>
+
+                <small>
+                    Dugong Authorized Services
+                </small>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta-section">
+
+    <div class="cta-box">
+
+        <div class="cta-content">
+
+            <h2>
+                Looking for the right
+                business technology solution?
+            </h2>
+
+            <p>
+                Tell us what your business needs.
+                We'll help you find a suitable solution.
+            </p>
+
+        </div>
+
+        <a href="contact.html"
+           class="cta-button">
+            Get a Business Quote →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            JB TECH SERVICES
+        </div>
+
+        <div class="footer-copy">
+            © 2026 JB TECH SERVICES. All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     WHATSAPP
+========================================================= -->
+
+<a href="https://wa.me/919017125139"
+   class="whatsapp-button"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat with JB TECH SERVICES on WhatsApp">
+
+    ☎
+
+</a>
+
+
+
+<!-- =========================================================
+     SLIDER JAVASCRIPT
+========================================================= -->
 
 <script>
 
-(function () {
-
-    "use strict";
-
-
-    /* =========================================================
-       MOBILE MENU
-       ========================================================= */
-
-    const menu =
-        document.getElementById("jbMenu");
-
-    const nav =
-        document.getElementById("jbNav");
-
-
-    if (menu && nav) {
-
-        menu.addEventListener(
-            "click",
-            function () {
-
-                nav.classList.toggle("open");
-
-            }
-        );
-
-
-        nav.querySelectorAll("a")
-            .forEach(function (link) {
-
-                link.addEventListener(
-                    "click",
-                    function () {
-
-                        nav.classList.remove("open");
-
-                    }
-                );
-
-            });
-
-    }
-
-
-    /* =========================================================
-       HERO SLIDER
-       ========================================================= */
-
     const slides =
-        document.querySelectorAll(
-            ".jb-slide"
-        );
+        document.querySelectorAll(".hero-slide");
 
     const dots =
-        document.querySelectorAll(
-            ".jb-dot"
-        );
-
+        document.querySelectorAll(".slider-dot");
 
     let currentSlide = 0;
 
@@ -2996,24 +2222,8 @@
 
     function showSlide(index) {
 
-        if (!slides.length) {
-            return;
-        }
-
-
-        if (index >= slides.length) {
-            index = 0;
-        }
-
-
-        if (index < 0) {
-            index =
-                slides.length - 1;
-        }
-
-
         slides.forEach(
-            function (slide, i) {
+            function(slide, i) {
 
                 slide.classList.toggle(
                     "active",
@@ -3025,7 +2235,7 @@
 
 
         dots.forEach(
-            function (dot, i) {
+            function(dot, i) {
 
                 dot.classList.toggle(
                     "active",
@@ -3043,18 +2253,17 @@
 
     function nextSlide() {
 
-        showSlide(
-            currentSlide + 1
-        );
+        const next =
+            (currentSlide + 1) % slides.length;
+
+        showSlide(next);
 
     }
 
 
     function startSlider() {
 
-        clearInterval(
-            sliderTimer
-        );
+        clearInterval(sliderTimer);
 
         sliderTimer =
             setInterval(
@@ -3066,17 +2275,11 @@
 
 
     dots.forEach(
-        function (dot) {
+        function(dot, index) {
 
             dot.addEventListener(
                 "click",
-                function () {
-
-                    const index =
-                        parseInt(
-                            dot.dataset.slide,
-                            10
-                        );
+                function() {
 
                     showSlide(index);
 
@@ -3092,45 +2295,6 @@
     showSlide(0);
 
     startSlider();
-
-
-    /* =========================================================
-       PAUSE SLIDER WHEN MOUSE IS OVER HERO
-       ========================================================= */
-
-    const hero =
-        document.querySelector(
-            ".jb-hero"
-        );
-
-
-    if (hero) {
-
-        hero.addEventListener(
-            "mouseenter",
-            function () {
-
-                clearInterval(
-                    sliderTimer
-                );
-
-            }
-        );
-
-
-        hero.addEventListener(
-            "mouseleave",
-            function () {
-
-                startSlider();
-
-            }
-        );
-
-    }
-
-
-})();
 
 </script>
 
