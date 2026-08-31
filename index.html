@@ -1,54 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="JB TECH SERVICES provides business technology solutions including enterprise connectivity, telecom, cloud communication and GeM business support.">
-
-    <meta name="keywords"
-        content="JB TECH SERVICES, business internet, telecom, cloud communication, GeM services, business technology solutions">
-
-    <meta name="author" content="JB TECH SERVICES">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>JB TECH SERVICES | Business Technology Solutions</title>
 
+    <meta name="description"
+          content="JB TECH SERVICES provides business connectivity, telecom, cloud communication and GeM business solutions.">
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           HOMEPAGE ONLY
+           These styles affect only the new homepage components.
+        ===================================================== */
+
+        .home-hero {
+            position: relative;
+            min-height: 650px;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 80% 35%,
+                rgba(55,115,255,.22),
+                transparent 32%),
+                linear-gradient(120deg,#061525,#0b2345 55%,#112d63);
+        }
+
+        .hero-slider {
+            position: relative;
+            min-height: 650px;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(35px);
+            transition:
+                opacity .7s ease,
+                transform .7s ease,
+                visibility .7s ease;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .hero-slide-inner {
+            min-height: 650px;
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .home-hero .hero-label {
+            color: #79aaff;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .home-hero h1 {
+            color: #ffffff;
+            font-size: clamp(46px,5.5vw,78px);
+            line-height: 1.02;
+            margin: 0 0 25px;
+            letter-spacing: -2px;
+        }
+
+        .home-hero h1 span {
+            color: #73a7ff;
+        }
+
+        .home-hero .hero-description {
+            max-width: 650px;
+            color: #c8d5e8;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .home-hero .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .home-hero .btn {
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .home-hero .btn:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           HERO VISUAL
+        ===================================================== */
+
+        .hero-visual {
+            position: relative;
+            height: 470px;
+        }
+
+        .hero-center-card {
+            position: absolute;
+            width: 285px;
+            min-height: 230px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 24px;
+            padding: 35px;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(62,105,190,.65),
+                    rgba(22,52,101,.85)
+                );
+            border: 1px solid rgba(255,255,255,.16);
+            box-shadow:
+                0 35px 80px rgba(0,0,0,.3);
+            backdrop-filter: blur(12px);
+            z-index: 3;
+        }
+
+        .hero-center-icon {
+            width: 62px;
+            height: 62px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #236dff;
+            color: white;
+            font-size: 25px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            box-shadow: 0 12px 30px rgba(35,109,255,.4);
+            transition: transform .3s ease;
+        }
+
+        .hero-center-card:hover .hero-center-icon {
+            transform: rotate(-8deg) scale(1.12);
+        }
+
+        .hero-center-card small {
+            color: #8eb4ee;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-center-card h3 {
+            color: white;
+            font-size: 27px;
+            line-height: 1.2;
+            margin: 12px 0 0;
+        }
+
+
+        /* floating cards */
+
+        .floating-card {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            min-width: 205px;
+            padding: 16px 18px;
+            border-radius: 15px;
+            background: rgba(7,25,50,.92);
+            border: 1px solid rgba(255,255,255,.13);
+            box-shadow: 0 18px 45px rgba(0,0,0,.25);
+            color: white;
+            z-index: 5;
+            transition:
+                transform .3s ease,
+                border-color .3s ease,
+                box-shadow .3s ease;
+        }
+
+        .floating-card:hover {
+            transform: translateY(-8px) scale(1.04);
+            border-color: #5794ff;
+            box-shadow:
+                0 25px 55px rgba(30,100,255,.25);
+        }
+
+        .floating-card.one {
+            top: 65px;
+            left: 0;
+        }
+
+        .floating-card.two {
+            top: 210px;
+            right: -10px;
+        }
+
+        .floating-card.three {
+            bottom: 55px;
+            left: 65px;
+        }
+
+        .floating-icon {
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(45,106,255,.2);
+            color: #82aeff;
+            font-weight: 800;
+            transition: transform .3s ease;
+        }
+
+        .floating-card:hover .floating-icon {
+            transform: scale(1.15) rotate(8deg);
+        }
+
+        .floating-card strong {
+            display: block;
+            font-size: 14px;
+        }
+
+        .floating-card small {
+            display: block;
+            color: #91a5c1;
+            margin-top: 4px;
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           HERO SLIDER CONTROLS
+        ===================================================== */
+
+        .hero-controls {
+            position: absolute;
+            bottom: 35px;
+            left: 0;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .hero-dot {
+            width: 28px;
+            height: 4px;
+            border: 0;
+            padding: 0;
+            background: rgba(255,255,255,.25);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        .hero-dot.active {
+            width: 55px;
+            background: #3e82ff;
+        }
+
+
+        /* =====================================================
+           SIMPLE HOME SECTIONS
+        ===================================================== */
+
+        .home-intro {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .home-intro p {
+            color: #667085;
+            line-height: 1.75;
+        }
+
+        .home-services {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 24px;
+            margin-top: 45px;
+        }
+
+        .home-service-card {
+            position: relative;
+            padding: 32px;
+            border-radius: 20px;
+            background: white;
+            border: 1px solid #e7ebf1;
+            box-shadow: 0 10px 35px rgba(15,30,60,.06);
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease,
+                border-color .3s ease;
+        }
+
+        .home-service-card:hover {
+            transform: translateY(-10px);
+            border-color: #6d9eff;
+            box-shadow:
+                0 25px 55px rgba(25,75,160,.13);
+        }
+
+        .home-service-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #edf4ff;
+            color: #1769ff;
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            transition: transform .3s ease;
+        }
+
+        .home-service-card:hover .home-service-icon {
+            transform: translateY(-5px) scale(1.1) rotate(-5deg);
+        }
+
+        .home-service-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .home-service-card p {
+            color: #667085;
+            line-height: 1.65;
+            min-height: 78px;
+        }
+
+        .home-service-card a {
+            color: #1769ff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           PARTNER STRIP
+        ===================================================== */
+
+        .simple-partners {
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 14px;
+            margin-top: 40px;
+        }
+
+        .simple-partner {
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border: 1px solid #e5e9f0;
+            border-radius: 14px;
+            font-weight: 700;
+            color: #18283f;
+            transition: .3s ease;
+        }
+
+        .simple-partner:hover {
+            transform: translateY(-5px);
+            border-color: #5f94ff;
+            box-shadow: 0 15px 35px rgba(20,70,150,.1);
+        }
+
+
+        /* =====================================================
+           SIMPLE CTA
+        ===================================================== */
+
+        .home-cta {
+            background:
+                linear-gradient(120deg,#07182d,#12366c);
+            border-radius: 25px;
+            padding: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+        }
+
+        .home-cta h2 {
+            color: white;
+            margin: 0 0 10px;
+        }
+
+        .home-cta p {
+            color: #bdcbe0;
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 950px) {
+
+            .hero-slide-inner {
+                grid-template-columns: 1fr;
+                padding-top: 70px;
+                padding-bottom: 100px;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .home-hero,
+            .hero-slider,
+            .hero-slide-inner {
+                min-height: 600px;
+            }
+
+            .home-services {
+                grid-template-columns: 1fr;
+            }
+
+            .simple-partners {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .home-cta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .home-hero h1 {
+                font-size: 43px;
+                letter-spacing: -1px;
+            }
+
+            .home-hero .hero-description {
+                font-size: 16px;
+            }
+
+            .simple-partners {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .home-cta {
+                padding: 32px 24px;
+            }
+
+            .hero-controls {
+                bottom: 20px;
+            }
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<!-- =========================================================
+
+<!-- =====================================================
      HEADER
-========================================================= -->
+===================================================== -->
 
-<header class="site-header">
+<header class="navbar">
 
-    <div class="container header-inner">
+    <div class="container nav-container">
 
-        <!-- LOGO -->
-        <a href="index.html" class="logo">
-            <span class="logo-mark">JB</span>
-            <span class="logo-text">JB TECH SERVICES</span>
+        <a href="index.html"
+           class="logo">
+            JB TECH SERVICES
         </a>
 
-        <!-- MOBILE MENU BUTTON -->
+
         <button class="menu-toggle"
                 type="button"
-                aria-label="Open navigation menu">
+                aria-label="Open Menu">
             ☰
         </button>
 
-        <!-- NAVIGATION -->
-        <nav class="main-nav">
 
-            <a href="index.html" class="active">Home</a>
+        <nav class="nav-links">
 
-            <a href="about.html">About</a>
+            <a href="index.html">
+                Home
+            </a>
 
-            <a href="services.html">Services</a>
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
 
             <a href="cloud-communication.html">
                 Cloud Communication
@@ -62,7 +534,8 @@
                 Contact
             </a>
 
-            <a href="contact.html" class="nav-cta">
+            <a href="contact.html"
+               class="quote-btn">
                 Get a Quote
             </a>
 
@@ -73,104 +546,484 @@
 </header>
 
 
-<!-- =========================================================
-     HERO SECTION
-========================================================= -->
 
-<main>
+<!-- =====================================================
+     HERO SLIDER
+===================================================== -->
 
-<section class="hero">
+<section class="home-hero">
 
-    <div class="container hero-grid">
+    <div class="hero-slider">
 
-        <!-- HERO CONTENT -->
 
-        <div class="hero-content">
+        <!-- SLIDE 1 -->
 
-            <div class="eyebrow">
-                BUSINESS TECHNOLOGY SOLUTIONS
-            </div>
+        <div class="hero-slide active">
 
-            <h1>
-                One Partner.
-                <br>
-                Multiple Technology Solutions.
-            </h1>
+            <div class="container hero-slide-inner">
 
-            <p class="hero-description">
-                Empowering businesses with reliable connectivity,
-                cloud communication, telecom and digital business
-                solutions through trusted technology partnerships.
-            </p>
+                <div>
 
-            <div class="hero-buttons">
+                    <span class="hero-label">
+                        BUSINESS TECHNOLOGY SOLUTIONS
+                    </span>
 
-                <a href="contact.html" class="btn btn-primary">
-                    Get a Business Quote
-                    <span>→</span>
-                </a>
+                    <h1>
+                        One Partner.
+                        <br>
+                        <span>Multiple Solutions.</span>
+                    </h1>
 
-                <a href="https://wa.me/919017125139"
-                   class="btn btn-secondary"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Talk to Us on WhatsApp
-                    <span>↗</span>
-                </a>
+                    <p class="hero-description">
+                        Reliable connectivity, telecom and
+                        communication solutions designed around
+                        your business.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="contact.html"
+                           class="btn btn-primary">
+                            Get a Business Quote →
+                        </a>
+
+                        <a href="https://wa.me/919017125139"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-outline">
+                            WhatsApp Us ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="hero-center-card">
+
+                        <div class="hero-center-icon">
+                            JB
+                        </div>
+
+                        <small>
+                            BUSINESS TECHNOLOGY
+                        </small>
+
+                        <h3>
+                            Connected.<br>
+                            Communicating.<br>
+                            Growing.
+                        </h3>
+
+                    </div>
+
+
+                    <div class="floating-card one">
+
+                        <div class="floating-icon">
+                            ◎
+                        </div>
+
+                        <div>
+                            <strong>
+                                Connectivity
+                            </strong>
+
+                            <small>
+                                Business Internet & Telecom
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card two">
+
+                        <div class="floating-icon">
+                            ☁
+                        </div>
+
+                        <div>
+                            <strong>
+                                Cloud Communication
+                            </strong>
+
+                            <small>
+                                Modern Business Calling
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card three">
+
+                        <div class="floating-icon">
+                            ◆
+                        </div>
+
+                        <div>
+                            <strong>
+                                GeM
+                            </strong>
+
+                            <small>
+                                Business Support
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
 
-        <!-- HERO VISUAL -->
 
-        <div class="hero-visual">
+        <!-- SLIDE 2 -->
 
-            <div class="hero-orbit orbit-one"></div>
-            <div class="hero-orbit orbit-two"></div>
+        <div class="hero-slide">
 
-            <div class="hero-card hero-card-main">
+            <div class="container hero-slide-inner">
 
-                <div class="hero-card-icon">
-                    ◉
+                <div>
+
+                    <span class="hero-label">
+                        ENTERPRISE CONNECTIVITY
+                    </span>
+
+                    <h1>
+                        Keep Your
+                        <br>
+                        <span>Business Connected.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Business internet and telecom solutions
+                        for reliable day-to-day operations.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="services.html"
+                           class="btn btn-primary">
+                            Explore Services →
+                        </a>
+
+                        <a href="contact.html"
+                           class="btn btn-outline">
+                            Talk to Our Team
+                        </a>
+
+                    </div>
+
                 </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="hero-center-card">
+
+                        <div class="hero-center-icon">
+                            ◎
+                        </div>
+
+                        <small>
+                            CONNECTIVITY
+                        </small>
+
+                        <h3>
+                            Reliable.<br>
+                            Scalable.<br>
+                            Business Ready.
+                        </h3>
+
+                    </div>
+
+
+                    <div class="floating-card one">
+
+                        <div class="floating-icon">
+                            01
+                        </div>
+
+                        <div>
+                            <strong>
+                                Business Internet
+                            </strong>
+
+                            <small>
+                                Connectivity solutions
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card two">
+
+                        <div class="floating-icon">
+                            02
+                        </div>
+
+                        <div>
+                            <strong>
+                                Telecom
+                            </strong>
+
+                            <small>
+                                Enterprise solutions
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card three">
+
+                        <div class="floating-icon">
+                            03
+                        </div>
+
+                        <div>
+                            <strong>
+                                Support
+                            </strong>
+
+                            <small>
+                                Business assistance
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SLIDE 3 -->
+
+        <div class="hero-slide">
+
+            <div class="container hero-slide-inner">
+
+                <div>
+
+                    <span class="hero-label">
+                        CLOUD COMMUNICATION
+                    </span>
+
+                    <h1>
+                        Modern
+                        <br>
+                        <span>Business Communication.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Cloud communication and business calling
+                        solutions for domestic and international
+                        business requirements.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="cloud-communication.html"
+                           class="btn btn-primary">
+                            Explore Cloud Solutions →
+                        </a>
+
+                        <a href="contact.html"
+                           class="btn btn-outline">
+                            Discuss Your Requirement
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="hero-center-card">
+
+                        <div class="hero-center-icon">
+                            ☁
+                        </div>
+
+                        <small>
+                            CLOUD COMMUNICATION
+                        </small>
+
+                        <h3>
+                            Smarter.<br>
+                            Flexible.<br>
+                            Connected.
+                        </h3>
+
+                    </div>
+
+
+                    <div class="floating-card one">
+
+                        <div class="floating-icon">
+                            ☎
+                        </div>
+
+                        <div>
+                            <strong>
+                                Business Calling
+                            </strong>
+
+                            <small>
+                                Modern voice solutions
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card two">
+
+                        <div class="floating-icon">
+                            ↗
+                        </div>
+
+                        <div>
+                            <strong>
+                                International
+                            </strong>
+
+                            <small>
+                                Global communication
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card three">
+
+                        <div class="floating-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>
+                                Cloud Based
+                            </strong>
+
+                            <small>
+                                Flexible communication
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SLIDER DOTS -->
+
+        <div class="container">
+
+            <div class="hero-controls">
+
+                <button class="hero-dot active"
+                        data-slide="0"
+                        aria-label="Slide 1">
+                </button>
+
+                <button class="hero-dot"
+                        data-slide="1"
+                        aria-label="Slide 2">
+                </button>
+
+                <button class="hero-dot"
+                        data-slide="2"
+                        aria-label="Slide 3">
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BUSINESS AREAS
+===================================================== -->
+
+<section class="trust-strip">
+
+    <div class="container">
+
+        <div class="trust-grid">
+
+            <div class="trust-item">
+
+                <strong>
+                    Telecom
+                </strong>
 
                 <span>
                     Business Connectivity
                 </span>
 
+            </div>
+
+
+            <div class="trust-item">
+
                 <strong>
-                    Connected.
+                    Cloud
                 </strong>
 
-            </div>
-
-
-            <div class="hero-floating-card card-top">
-
-                <span class="floating-icon">
-                    ☁
+                <span>
+                    Communication Solutions
                 </span>
-
-                <div>
-                    <strong>Cloud Communication</strong>
-                    <small>Modern Business Calling</small>
-                </div>
 
             </div>
 
 
-            <div class="hero-floating-card card-bottom">
+            <div class="trust-item">
 
-                <span class="floating-icon">
-                    ◆
+                <strong>
+                    GeM
+                </strong>
+
+                <span>
+                    Business Support
                 </span>
 
-                <div>
-                    <strong>GeM Business Support</strong>
-                    <small>Dugong Authorized</small>
-                </div>
+            </div>
+
+
+            <div class="trust-item">
+
+                <strong>
+                    Support
+                </strong>
+
+                <span>
+                    One Technology Partner
+                </span>
 
             </div>
 
@@ -181,150 +1034,32 @@
 </section>
 
 
-<!-- =========================================================
-     TRUST / BUSINESS AREAS
-========================================================= -->
 
-<section class="business-strip">
+<!-- =====================================================
+     INTRO
+===================================================== -->
 
-    <div class="container">
-
-        <div class="business-strip-inner">
-
-            <div class="business-item">
-
-                <span class="business-number">
-                    01
-                </span>
-
-                <div>
-                    <strong>Telecom Connectivity</strong>
-                    <small>
-                        Business Internet & Telecom
-                    </small>
-                </div>
-
-            </div>
-
-
-            <div class="business-item">
-
-                <span class="business-number">
-                    02
-                </span>
-
-                <div>
-                    <strong>Cloud Communication</strong>
-                    <small>
-                        Domestic & International
-                    </small>
-                </div>
-
-            </div>
-
-
-            <div class="business-item">
-
-                <span class="business-number">
-                    03
-                </span>
-
-                <div>
-                    <strong>GeM Business Support</strong>
-                    <small>
-                        Dugong Authorized
-                    </small>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     INTRODUCTION
-========================================================= -->
-
-<section class="section intro-section">
+<section class="section section-light">
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="home-intro">
 
-            <div class="eyebrow">
+            <div class="section-kicker">
                 WHAT WE DO
             </div>
 
             <h2>
                 Technology Solutions
-                <br>
-                Built Around Your Business
+                Built For Business
             </h2>
 
             <p>
-                Practical business technology solutions covering
+                JB TECH SERVICES helps businesses with
                 connectivity, communication and GeM-related
-                requirements.
+                technology requirements through practical
+                business solutions.
             </p>
-
-        </div>
-
-
-        <div class="intro-grid">
-
-            <div class="intro-content">
-
-                <p>
-                    JB TECH SERVICES helps businesses simplify their
-                    connectivity, communication and technology
-                    requirements through practical and reliable
-                    solutions.
-                </p>
-
-                <p>
-                    Our objective is simple — connect businesses
-                    with the right technology solutions while
-                    providing responsive support throughout the
-                    customer journey.
-                </p>
-
-                <p>
-                    Through our telecom and cloud communication
-                    partnerships, we help businesses access
-                    solutions from established technology providers.
-                </p>
-
-                <a href="about.html" class="text-link">
-                    Know More About Us →
-                </a>
-
-            </div>
-
-
-            <div class="intro-highlight">
-
-                <div class="highlight-label">
-                    JB
-                </div>
-
-                <h3>
-                    Connected.
-                    <br>
-                    Communicating.
-                    <br>
-                    Growing.
-                </h3>
-
-                <p>
-                    Technology solutions designed around
-                    real business requirements.
-                </p>
-
-            </div>
 
         </div>
 
@@ -333,88 +1068,58 @@
 </section>
 
 
-<!-- =========================================================
-     SERVICES PREVIEW
-========================================================= -->
 
-<section class="section services-section">
+<!-- =====================================================
+     THREE MAIN SERVICES
+===================================================== -->
+
+<section class="section section-gray">
 
     <div class="container">
 
-        <div class="section-top">
+        <div class="section-title">
 
-            <div>
-
-                <div class="eyebrow">
-                    OUR SOLUTIONS
-                </div>
-
-                <h2>
-                    Solutions That
-                    <br>
-                    Keep Business Moving
-                </h2>
-
+            <div class="section-kicker">
+                OUR SOLUTIONS
             </div>
 
-            <a href="services.html" class="text-link">
-                View All Services →
-            </a>
+            <h2>
+                What We Can Help With
+            </h2>
 
         </div>
 
 
-        <div class="service-grid">
+        <div class="home-services">
 
 
-            <!-- SERVICE 01 -->
+            <article class="home-service-card">
 
-            <article class="service-card">
-
-                <div class="service-card-top">
-
-                    <span class="service-number">
-                        01
-                    </span>
-
-                    <span class="service-icon">
-                        ◉
-                    </span>
-
+                <div class="home-service-icon">
+                    ◎
                 </div>
 
                 <h3>
-                    Enterprise Connectivity
+                    Telecom Connectivity
                 </h3>
 
                 <p>
-                    Reliable connectivity solutions designed
-                    for businesses of different sizes and
-                    requirements.
+                    Business internet and telecom solutions
+                    designed around your connectivity needs.
                 </p>
 
-                <a href="services.html"
-                   class="card-link">
-                    Explore Connectivity →
+                <a href="services.html">
+                    Explore Services →
                 </a>
 
             </article>
 
 
-            <!-- SERVICE 02 -->
 
-            <article class="service-card featured">
+            <article class="home-service-card">
 
-                <div class="service-card-top">
-
-                    <span class="service-number">
-                        02
-                    </span>
-
-                    <span class="service-icon">
-                        ☁
-                    </span>
-
+                <div class="home-service-icon">
+                    ☁
                 </div>
 
                 <h3>
@@ -422,33 +1127,23 @@
                 </h3>
 
                 <p>
-                    Modern cloud-based communication solutions
-                    for business calling, collaboration and
-                    customer communication.
+                    Modern cloud communication and business
+                    calling solutions for domestic and
+                    international requirements.
                 </p>
 
-                <a href="cloud-communication.html"
-                   class="card-link">
-                    Explore Cloud Communication →
+                <a href="cloud-communication.html">
+                    Explore Cloud Solutions →
                 </a>
 
             </article>
 
 
-            <!-- SERVICE 03 -->
 
-            <article class="service-card">
+            <article class="home-service-card">
 
-                <div class="service-card-top">
-
-                    <span class="service-number">
-                        03
-                    </span>
-
-                    <span class="service-icon">
-                        ◆
-                    </span>
-
+                <div class="home-service-icon">
+                    ◆
                 </div>
 
                 <h3>
@@ -456,13 +1151,11 @@
                 </h3>
 
                 <p>
-                    Support for businesses looking to navigate
-                    GeM-related requirements with our stated
-                    Dugong authorization.
+                    GeM portal services and procurement support
+                    with our stated Dugong authorization.
                 </p>
 
-                <a href="gem-services.html"
-                   class="card-link">
+                <a href="gem-services.html">
                     Explore GeM Services →
                 </a>
 
@@ -476,251 +1169,54 @@
 </section>
 
 
-<!-- =========================================================
-     PARTNERSHIP SECTION
-========================================================= -->
 
-<section class="section partnership-section">
+<!-- =====================================================
+     PARTNERS
+===================================================== -->
 
-    <div class="container">
-
-        <div class="partnership-grid">
-
-            <div class="partnership-content">
-
-                <div class="eyebrow">
-                    TECHNOLOGY PARTNERSHIPS
-                </div>
-
-                <h2>
-                    Connected With
-                    <br>
-                    Trusted Technology Providers
-                </h2>
-
-                <p>
-                    JB TECH SERVICES works with established
-                    technology providers to help businesses
-                    access connectivity and communication
-                    solutions suited to their requirements.
-                </p>
-
-                <a href="about.html"
-                   class="text-link">
-                    Learn About JB TECH SERVICES →
-                </a>
-
-            </div>
-
-
-            <div class="partner-list">
-
-                <div class="partner-box">
-
-                    <div class="partner-symbol">
-                        T
-                    </div>
-
-                    <div>
-                        <strong>
-                            Tata Tele Business Services
-                        </strong>
-
-                        <span>
-                            Telecom & Business Connectivity
-                        </span>
-                    </div>
-
-                </div>
-
-
-                <div class="partner-box">
-
-                    <div class="partner-symbol">
-                        J
-                    </div>
-
-                    <div>
-                        <strong>
-                            Jio
-                        </strong>
-
-                        <span>
-                            Business Connectivity Solutions
-                        </span>
-                    </div>
-
-                </div>
-
-
-                <div class="partner-box">
-
-                    <div class="partner-symbol">
-                        V
-                    </div>
-
-                    <div>
-                        <strong>
-                            Vi
-                        </strong>
-
-                        <span>
-                            Enterprise & Business Solutions
-                        </span>
-                    </div>
-
-                </div>
-
-
-                <div class="partner-box">
-
-                    <div class="partner-symbol">
-                        D
-                    </div>
-
-                    <div>
-                        <strong>
-                            Dugong Authorized
-                        </strong>
-
-                        <span>
-                            GeM Portal Services
-                        </span>
-                    </div>
-
-                </div>
-
-
-                <div class="partner-box">
-
-                    <div class="partner-symbol">
-                        C
-                    </div>
-
-                    <div>
-                        <strong>
-                            Cloud Communication
-                        </strong>
-
-                        <span>
-                            Domestic & International Solutions
-                        </span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     WHY JB TECH SERVICES
-========================================================= -->
-
-<section class="section why-section">
+<section class="section section-light">
 
     <div class="container">
 
-        <div class="section-heading centered">
+        <div class="section-title">
 
-            <div class="eyebrow">
-                WHY JB TECH SERVICES
+            <div class="section-kicker">
+                PARTNERS & SOLUTIONS
             </div>
 
             <h2>
-                Business Technology.
-                <br>
-                Made Simpler.
+                Technology Ecosystem
             </h2>
 
             <p>
-                We focus on practical solutions, responsive
-                communication and long-term business relationships.
+                Our partnerships help us provide a broader
+                range of business technology solutions.
             </p>
 
         </div>
 
 
-        <div class="why-grid">
+        <div class="simple-partners">
 
-
-            <div class="why-card">
-
-                <span class="why-icon">
-                    ✓
-                </span>
-
-                <h3>
-                    Business Focused
-                </h3>
-
-                <p>
-                    Solutions selected around your business
-                    requirements rather than unnecessary
-                    complexity.
-                </p>
-
+            <div class="simple-partner">
+                Tata Tele Business Services
             </div>
 
-
-            <div class="why-card">
-
-                <span class="why-icon">
-                    ↗
-                </span>
-
-                <h3>
-                    Multiple Solutions
-                </h3>
-
-                <p>
-                    Connectivity, telecom, cloud communication
-                    and GeM support through one business partner.
-                </p>
-
+            <div class="simple-partner">
+                JioBusiness
             </div>
 
-
-            <div class="why-card">
-
-                <span class="why-icon">
-                    ◉
-                </span>
-
-                <h3>
-                    Responsive Support
-                </h3>
-
-                <p>
-                    Clear communication and practical support
-                    throughout the customer journey.
-                </p>
-
+            <div class="simple-partner">
+                Vi Business
             </div>
 
-
-            <div class="why-card">
-
-                <span class="why-icon">
-                    ◆
-                </span>
-
-                <h3>
-                    Trusted Partnerships
-                </h3>
-
-                <p>
-                    Access to established technology providers
-                    through our business partnerships.
-                </p>
-
+            <div class="simple-partner">
+                TeleCMI
             </div>
 
+            <div class="simple-partner">
+                Dugong Authorized
+            </div>
 
         </div>
 
@@ -729,38 +1225,32 @@
 </section>
 
 
-<!-- =========================================================
-     CALL TO ACTION
-========================================================= -->
 
-<section class="cta-section">
+<!-- =====================================================
+     SIMPLE CTA
+===================================================== -->
+
+<section class="section section-light">
 
     <div class="container">
 
-        <div class="cta-box">
+        <div class="home-cta">
 
-            <div class="cta-content">
-
-                <div class="eyebrow">
-                    LET'S WORK TOGETHER
-                </div>
+            <div>
 
                 <h2>
-                    Looking For The Right
-                    <br>
-                    Technology Solution?
+                    Have a Business Requirement?
                 </h2>
 
                 <p>
-                    Tell us about your business requirement
-                    and our team will help you explore the
-                    right solution.
+                    Tell us what you need. Let's find the
+                    right technology solution for your business.
                 </p>
 
             </div>
 
 
-            <div class="cta-actions">
+            <div class="hero-buttons">
 
                 <a href="contact.html"
                    class="btn btn-primary">
@@ -770,7 +1260,7 @@
                 <a href="https://wa.me/919017125139"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="btn btn-secondary">
+                   class="btn btn-outline">
                     WhatsApp Us ↗
                 </a>
 
@@ -782,12 +1272,11 @@
 
 </section>
 
-</main>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer class="site-footer">
 
@@ -796,15 +1285,11 @@
         <div class="footer-grid">
 
 
-            <!-- COMPANY -->
-
             <div class="footer-company">
 
-                <a href="index.html" class="footer-logo">
-                    <span class="logo-mark">JB</span>
-                    <span class="logo-text">
-                        JB TECH SERVICES
-                    </span>
+                <a href="index.html"
+                   class="footer-logo">
+                    JB TECH SERVICES
                 </a>
 
                 <p>
@@ -813,14 +1298,8 @@
                     digital business requirements.
                 </p>
 
-                <div class="footer-tagline">
-                    Connected. Communicating. Growing.
-                </div>
-
             </div>
 
-
-            <!-- QUICK LINKS -->
 
             <div class="footer-column">
 
@@ -847,8 +1326,6 @@
             </div>
 
 
-            <!-- SOLUTIONS -->
-
             <div class="footer-column">
 
                 <h3>
@@ -869,8 +1346,6 @@
 
             </div>
 
-
-            <!-- CONTACT -->
 
             <div class="footer-column">
 
@@ -920,9 +1395,10 @@
 </footer>
 
 
-<!-- =========================================================
-     FLOATING WHATSAPP
-========================================================= -->
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
 
 <a href="https://wa.me/919017125139"
    class="whatsapp-float"
@@ -930,22 +1406,106 @@
    rel="noopener noreferrer"
    aria-label="Chat with JB TECH SERVICES on WhatsApp">
 
-    <span class="whatsapp-icon">
+    <span>
         ☎
     </span>
 
-    <span class="whatsapp-text">
-        Chat on WhatsApp
+    <span>
+        Chat with us
     </span>
 
 </a>
 
 
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
+
+<!-- =====================================================
+     HOMEPAGE SLIDER JAVASCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slides =
+        document.querySelectorAll(".hero-slide");
+
+    const dots =
+        document.querySelectorAll(".hero-dot");
+
+    let currentSlide = 0;
+
+    let slideTimer;
+
+
+    function showSlide(index) {
+
+        slides.forEach(function(slide) {
+            slide.classList.remove("active");
+        });
+
+        dots.forEach(function(dot) {
+            dot.classList.remove("active");
+        });
+
+
+        slides[index].classList.add("active");
+
+        dots[index].classList.add("active");
+
+        currentSlide = index;
+    }
+
+
+    function nextSlide() {
+
+        let next = currentSlide + 1;
+
+        if (next >= slides.length) {
+            next = 0;
+        }
+
+        showSlide(next);
+    }
+
+
+    function startSlider() {
+
+        clearInterval(slideTimer);
+
+        slideTimer =
+            setInterval(nextSlide, 6000);
+    }
+
+
+    dots.forEach(function(dot) {
+
+        dot.addEventListener("click", function() {
+
+            const index =
+                Number(this.dataset.slide);
+
+            showSlide(index);
+
+            startSlider();
+
+        });
+
+    });
+
+
+    showSlide(0);
+
+    startSlider();
+
+});
+
+</script>
+
+
+<!-- EXISTING SITE JAVASCRIPT -->
 
 <script src="script.js"></script>
+
 
 </body>
 </html>
