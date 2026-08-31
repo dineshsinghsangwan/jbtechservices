@@ -1,332 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+        content="width=device-width, initial-scale=1.0">
 
-    <title>JB TECH SERVICES | Business Technology Solutions</title>
+    <title>
+        JB TECH SERVICES | Telecom, Cloud Communication & GeM Solutions
+    </title>
 
     <meta name="description"
-          content="JB TECH SERVICES provides business connectivity, telecom, cloud communication and GeM business support solutions.">
+        content="JB TECH SERVICES provides business connectivity, telecom, cloud communication, business calling and GeM-related solutions through a trusted technology ecosystem.">
+
+    <meta name="keywords"
+        content="JB TECH SERVICES, business connectivity, telecom services, cloud communication, cloud telephony, business calling, GeM services, Tata Tele Business Services, JioBusiness, Vi Business, TeleCMI, IHA Telephony">
+
+    <meta name="author"
+        content="JB TECH SERVICES">
+
+    <meta name="robots"
+        content="index, follow">
 
     <link rel="canonical"
-          href="https://jbtechservices.in/">
+        href="https://jbtechservices.in/">
 
-    <link rel="icon"
-          href="images/favicon.png"
-          type="image/png">
+    <!-- EXISTING WEBSITE STYLESHEET -->
+    <link rel="stylesheet"
+        href="style.css">
+
+
+    <!-- =====================================================
+         HOMEPAGE-ONLY STYLES
+         These styles are used ONLY by index.html.
+         They do not replace style.css.
+    ====================================================== -->
 
     <style>
 
         /* =====================================================
-           RESET
-        ===================================================== */
+           HOMEPAGE RESET
+        ====================================================== */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            color: #101b2d;
-            background: #ffffff;
-
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
+        .home-page {
+            overflow-x: hidden;
         }
 
 
         /* =====================================================
-           HEADER
-           SAME SIMPLE STYLE AS OTHER PAGES
-        ===================================================== */
+           HERO SLIDER
+        ====================================================== */
 
-        .site-header {
-            width: 100%;
-            height: 98px;
-
-            background: #ffffff;
-
-            border-bottom: 1px solid #e5e9ef;
-
-            display: flex;
-            align-items: center;
-
+        .home-hero {
             position: relative;
-            z-index: 1000;
+            min-height: 650px;
+            overflow: hidden;
+            background:
+                radial-gradient(
+                    circle at 78% 48%,
+                    rgba(44, 113, 220, 0.30),
+                    transparent 32%
+                ),
+                linear-gradient(
+                    120deg,
+                    #061a30 0%,
+                    #082d50 55%,
+                    #123e78 100%
+                );
+            color: #ffffff;
         }
 
-        .header-container {
-            width: min(1400px, calc(100% - 80px));
 
-            margin: 0 auto;
+        .home-slides {
+            position: relative;
+            min-height: 650px;
+        }
+
+
+        .home-slide {
+            position: absolute;
+            inset: 0;
 
             display: flex;
             align-items: center;
-            justify-content: space-between;
 
-            gap: 40px;
-        }
+            opacity: 0;
+            visibility: hidden;
 
-        .site-logo {
-            color: #10375f;
-
-            font-size: 30px;
-            font-weight: 800;
-
-            letter-spacing: -0.8px;
-
-            white-space: nowrap;
-        }
-
-        .main-nav {
-            display: flex;
-            align-items: center;
-
-            gap: 30px;
-        }
-
-        .main-nav a {
-            color: #182235;
-
-            font-size: 16px;
-            font-weight: 650;
-
-            white-space: nowrap;
+            transform: translateX(35px);
 
             transition:
-                color 0.25s ease;
+                opacity 0.7s ease,
+                transform 0.7s ease,
+                visibility 0.7s ease;
         }
 
-        .main-nav a:hover {
-            color: #1769d2;
+
+        .home-slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
         }
 
-        .main-nav a.active {
-            color: #1769d2;
+
+        .home-slide::before {
+            content: "";
+
+            position: absolute;
+
+            width: 650px;
+            height: 650px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            right: -150px;
+            top: -40px;
         }
 
-        .quote-button {
-            padding: 17px 25px;
 
-            background: #0c3158;
+        .home-slide::after {
+            content: "";
+
+            position: absolute;
+
+            width: 420px;
+            height: 420px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,0.06);
+
+            right: 50px;
+            top: 90px;
+        }
+
+
+        .home-hero-grid {
+
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.05fr)
+                minmax(400px, 0.95fr);
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+
+        .home-hero-content {
+
+            position: relative;
+
+            z-index: 5;
+
+            padding:
+                80px 0
+                105px;
+        }
+
+
+        .home-label {
+
+            display: inline-block;
+
+            margin-bottom: 18px;
+
+            color: #72b1ff;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            letter-spacing: 2.2px;
+
+            text-transform: uppercase;
+        }
+
+
+        .home-hero h1 {
+
+            margin: 0 0 24px;
+
+            color: #ffffff;
+
+            font-size:
+                clamp(46px, 5.2vw, 72px);
+
+            line-height: 1.04;
+
+            letter-spacing: -2px;
+
+            max-width: 720px;
+        }
+
+
+        .home-hero h1 span {
+
+            color: #6da6ff;
+        }
+
+
+        .home-hero-text {
+
+            max-width: 650px;
+
+            margin: 0;
+
+            color: #d8e8fa;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+
+        .home-hero-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+
+            margin-top: 32px;
+        }
+
+
+        .home-hero-buttons a {
+
+            text-decoration: none;
+        }
+
+
+        .home-btn-primary {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 56px;
+
+            padding:
+                0 27px;
+
+            border-radius: 10px;
+
+            background: #2478ff;
 
             color: #ffffff !important;
 
-            border-radius: 11px;
+            font-weight: 700;
 
-            font-weight: 750 !important;
+            box-shadow:
+                0 12px 30px
+                rgba(36,120,255,0.25);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+
+        .home-btn-primary:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 18px 38px
+                rgba(36,120,255,0.35);
+        }
+
+
+        .home-btn-outline {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 56px;
+
+            padding:
+                0 27px;
+
+            border-radius: 10px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.25);
+
+            background:
+                rgba(255,255,255,0.04);
+
+            color: #ffffff !important;
+
+            font-weight: 700;
 
             transition:
                 background 0.25s ease,
                 transform 0.25s ease;
         }
 
-        .quote-button:hover {
-            background: #1769d2;
 
-            transform: translateY(-2px);
-        }
-
-
-        /* =====================================================
-           HERO SLIDER
-        ===================================================== */
-
-        .hero {
-            position: relative;
-
-            min-height: 650px;
-
-            overflow: hidden;
+        .home-btn-outline:hover {
 
             background:
-                linear-gradient(
-                    110deg,
-                    #071f39 0%,
-                    #0b3158 48%,
-                    #153e73 100%
-                );
+                rgba(255,255,255,0.10);
 
-            color: #ffffff;
-        }
-
-        .hero-slide {
-            position: absolute;
-
-            inset: 0;
-
-            opacity: 0;
-
-            visibility: hidden;
-
-            transform: scale(1.03);
-
-            transition:
-                opacity 0.8s ease,
-                visibility 0.8s ease,
-                transform 1.2s ease;
-        }
-
-        .hero-slide.active {
-            opacity: 1;
-
-            visibility: visible;
-
-            transform: scale(1);
-        }
-
-        .hero-inner {
-            width: min(1400px, calc(100% - 80px));
-
-            min-height: 650px;
-
-            margin: 0 auto;
-
-            display: grid;
-
-            grid-template-columns:
-                1fr
-                0.9fr;
-
-            align-items: center;
-
-            gap: 70px;
-
-            position: relative;
-
-            z-index: 2;
-        }
-
-        .hero-content {
-            max-width: 720px;
-        }
-
-        .hero-label {
-            color: #75b2ff;
-
-            font-size: 14px;
-
-            font-weight: 800;
-
-            letter-spacing: 4px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 22px;
-        }
-
-        .hero-title {
-            font-size: clamp(48px, 5vw, 78px);
-
-            line-height: 1.02;
-
-            letter-spacing: -3px;
-
-            font-weight: 800;
-
-            margin-bottom: 28px;
-        }
-
-        .hero-title span {
-            color: #72a9ff;
-        }
-
-        .hero-text {
-            max-width: 680px;
-
-            font-size: 19px;
-
-            line-height: 1.75;
-
-            color: #dceaff;
-
-            margin-bottom: 36px;
-        }
-
-        .hero-buttons {
-            display: flex;
-
-            gap: 15px;
-
-            flex-wrap: wrap;
-        }
-
-        .primary-button,
-        .secondary-button {
-            display: inline-flex;
-
-            align-items: center;
-            justify-content: center;
-
-            min-height: 58px;
-
-            padding: 0 28px;
-
-            border-radius: 10px;
-
-            font-size: 16px;
-
-            font-weight: 750;
-
-            transition:
-                transform 0.25s ease,
-                background 0.25s ease;
-        }
-
-        .primary-button {
-            background: #2378ff;
-
-            color: #ffffff;
-
-            box-shadow:
-                0 15px 35px rgba(0, 80, 210, 0.28);
-        }
-
-        .primary-button:hover {
-            background: #3888ff;
-
-            transform: translateY(-3px);
-        }
-
-        .secondary-button {
-            color: #ffffff;
-
-            border: 1px solid rgba(255,255,255,0.3);
-
-            background: rgba(255,255,255,0.05);
-        }
-
-        .secondary-button:hover {
-            background: rgba(255,255,255,0.12);
-
-            transform: translateY(-3px);
+            transform:
+                translateY(-3px);
         }
 
 
         /* =====================================================
            HERO VISUAL
-        ===================================================== */
+        ====================================================== */
 
-        .hero-visual {
+        .home-visual {
+
             position: relative;
 
-            height: 430px;
+            z-index: 4;
+
+            min-height: 480px;
 
             display: flex;
 
@@ -335,363 +342,582 @@
             justify-content: center;
         }
 
-        .visual-circle {
-            position: absolute;
 
-            width: 430px;
-            height: 430px;
+        .home-visual-core {
 
-            border-radius: 50%;
-
-            border: 1px solid rgba(125,180,255,0.17);
-        }
-
-        .visual-circle.circle-two {
-            width: 330px;
-            height: 330px;
-        }
-
-        .visual-circle.circle-three {
-            width: 230px;
-            height: 230px;
-        }
-
-        .visual-card {
-            position: relative;
-
-            width: 300px;
-            min-height: 300px;
-
-            padding: 35px;
+            width: 310px;
+            height: 310px;
 
             border-radius: 28px;
 
             background:
                 linear-gradient(
                     145deg,
-                    rgba(90,145,220,0.34),
-                    rgba(28,65,112,0.55)
+                    rgba(255,255,255,0.17),
+                    rgba(255,255,255,0.06)
                 );
 
-            border: 1px solid rgba(255,255,255,0.18);
-
-            backdrop-filter: blur(12px);
+            border:
+                1px solid
+                rgba(255,255,255,0.20);
 
             box-shadow:
-                0 35px 80px rgba(0,0,0,0.25);
+                0 35px 80px
+                rgba(0,0,0,0.22);
+
+            backdrop-filter:
+                blur(10px);
 
             display: flex;
 
             flex-direction: column;
 
+            align-items: center;
+
             justify-content: center;
 
-            z-index: 3;
+            text-align: center;
         }
 
-        .visual-logo {
+
+        .home-core-jb {
+
             width: 70px;
             height: 70px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
 
             border-radius: 18px;
 
             background:
                 linear-gradient(
-                    135deg,
-                    #287aff,
-                    #5649e8
+                    145deg,
+                    #326cff,
+                    #5644e8
                 );
 
-            display: flex;
+            color: #ffffff;
 
-            align-items: center;
-            justify-content: center;
+            font-size: 24px;
 
-            font-size: 27px;
+            font-weight: 900;
 
-            font-weight: 800;
+            margin-bottom: 24px;
 
-            margin-bottom: 28px;
+            box-shadow:
+                0 15px 30px
+                rgba(50,108,255,0.30);
         }
 
-        .visual-card small {
-            color: #9fc4ed;
 
-            font-size: 12px;
+        .home-core-small {
+
+            color: #9fc4ec;
+
+            font-size: 13px;
+
+            font-weight: 800;
 
             letter-spacing: 2px;
 
-            font-weight: 800;
+            text-transform: uppercase;
 
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
-        .visual-card h3 {
-            font-size: 28px;
 
-            line-height: 1.25;
+        .home-core-title {
+
+            max-width: 220px;
+
+            color: #ffffff;
+
+            font-size: 27px;
+
+            line-height: 1.2;
+
+            font-weight: 800;
         }
 
 
         /* =====================================================
-           FLOATING HERO CARDS
-        ===================================================== */
+           FLOATING SERVICE CARDS
+        ====================================================== */
 
-        .floating-card {
+        .home-float-card {
+
             position: absolute;
 
-            z-index: 5;
+            display: flex;
 
-            min-width: 210px;
+            align-items: center;
 
-            padding: 18px 20px;
+            gap: 13px;
 
-            border-radius: 16px;
+            min-width: 205px;
 
-            background: #071d35;
+            padding:
+                15px 18px;
 
-            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 15px;
+
+            background:
+                rgba(5,25,48,0.93);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.12);
 
             box-shadow:
-                0 18px 45px rgba(0,0,0,0.25);
-
-            animation:
-                floatCard 4s ease-in-out infinite;
-        }
-
-        .floating-card strong {
-            display: block;
-
-            font-size: 15px;
-
-            margin-bottom: 3px;
-        }
-
-        .floating-card span {
-            color: #9fb8d4;
-
-            font-size: 12px;
-        }
-
-        .floating-one {
-            top: 55px;
-            right: 10px;
-        }
-
-        .floating-two {
-            bottom: 60px;
-            left: 5px;
-
-            animation-delay: 1s;
-        }
-
-        .floating-three {
-            bottom: 10px;
-            right: 0;
-
-            animation-delay: 2s;
-        }
-
-        @keyframes floatCard {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-
-        /* =====================================================
-           SLIDER CONTROLS
-        ===================================================== */
-
-        .slider-dots {
-            position: absolute;
-
-            left: 50%;
-
-            bottom: 28px;
-
-            transform: translateX(-50%);
-
-            display: flex;
-
-            gap: 10px;
-
-            z-index: 10;
-        }
-
-        .slider-dot {
-            width: 10px;
-            height: 10px;
-
-            border-radius: 50%;
-
-            border: 1px solid #ffffff;
-
-            background: transparent;
-
-            cursor: pointer;
-
-            transition:
-                width 0.25s ease,
-                background 0.25s ease;
-        }
-
-        .slider-dot.active {
-            width: 28px;
-
-            border-radius: 10px;
-
-            background: #ffffff;
-        }
-
-
-        /* =====================================================
-           SERVICE STRIP
-        ===================================================== */
-
-        .service-strip {
-            background: #ffffff;
-
-            border-bottom: 1px solid #e6ebf2;
-        }
-
-        .service-strip-inner {
-            width: min(1400px, calc(100% - 80px));
-
-            margin: 0 auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-        }
-
-        .service-strip-item {
-            min-height: 115px;
-
-            padding: 28px 35px;
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 18px;
-
-            border-right: 1px solid #e6ebf2;
-
-            transition:
-                background 0.3s ease;
-        }
-
-        .service-strip-item:last-child {
-            border-right: none;
-        }
-
-        .service-strip-item:hover {
-            background: #f5f9ff;
-        }
-
-        .strip-icon {
-            width: 48px;
-            height: 48px;
-
-            border-radius: 13px;
-
-            background: #edf4ff;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            font-size: 22px;
-
-            flex-shrink: 0;
+                0 20px 45px
+                rgba(0,0,0,0.20);
 
             transition:
                 transform 0.3s ease;
         }
 
-        .service-strip-item:hover .strip-icon {
+
+        .home-float-card:hover {
+
             transform:
-                scale(1.15)
-                rotate(5deg);
+                translateY(-8px) scale(1.03);
         }
 
-        .strip-text strong {
+
+        .home-float-icon {
+
+            width: 43px;
+            height: 43px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background:
+                rgba(49,111,255,0.18);
+
+            color: #8ebcff;
+
+            font-size: 19px;
+        }
+
+
+        .home-float-card strong {
+
             display: block;
 
-            font-size: 16px;
+            color: #ffffff;
 
-            color: #102f52;
+            font-size: 14px;
+
+            margin-bottom: 4px;
         }
 
-        .strip-text span {
-            font-size: 13px;
 
-            color: #64748b;
+        .home-float-card span {
+
+            color: #9fb5cf;
+
+            font-size: 12px;
+        }
+
+
+        .home-float-one {
+
+            top: 70px;
+            right: -15px;
+        }
+
+
+        .home-float-two {
+
+            bottom: 80px;
+            left: 10px;
+        }
+
+
+        .home-float-three {
+
+            bottom: 5px;
+            right: 15px;
         }
 
 
         /* =====================================================
-           SERVICES SECTION
-        ===================================================== */
+           SLIDER DOTS
+        ====================================================== */
 
-        .services-section {
-            padding: 110px 0;
+        .home-dots {
+
+            position: absolute;
+
+            z-index: 20;
+
+            bottom: 27px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            display: flex;
+
+            gap: 9px;
         }
 
-        .section-container {
-            width: min(1400px, calc(100% - 80px));
 
-            margin: 0 auto;
+        .home-dot {
+
+            width: 10px;
+            height: 10px;
+
+            padding: 0;
+
+            border: 1px solid
+                rgba(255,255,255,0.75);
+
+            border-radius: 50%;
+
+            background:
+                transparent;
+
+            cursor: pointer;
         }
 
-        .section-heading {
-            max-width: 750px;
 
-            margin-bottom: 55px;
+        .home-dot.active {
+
+            background: #ffffff;
+
+            transform:
+                scale(1.25);
         }
 
-        .section-label {
-            color: #2475e8;
+
+        /* =====================================================
+           QUICK SERVICE STRIP
+        ====================================================== */
+
+        .home-service-strip {
+
+            background: #f7f9fc;
+
+            border-bottom:
+                1px solid #e4e8ef;
+        }
+
+
+        .home-service-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 0;
+        }
+
+
+        .home-service-item {
+
+            padding:
+                27px 22px;
+
+            text-align: center;
+
+            border-right:
+                1px solid #e4e8ef;
+        }
+
+
+        .home-service-item:last-child {
+
+            border-right: none;
+        }
+
+
+        .home-service-item strong {
+
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: #0b2d4f;
+
+            font-size: 16px;
+        }
+
+
+        .home-service-item span {
+
+            color: #6b7c91;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           HOMEPAGE SECTION
+        ====================================================== */
+
+        .home-section {
+
+            padding:
+                100px 0;
+        }
+
+
+        .home-section-light {
+
+            background: #ffffff;
+        }
+
+
+        .home-section-soft {
+
+            background: #f7f9fc;
+        }
+
+
+        .home-section-dark {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071e36,
+                    #0c3157
+                );
+
+            color: #ffffff;
+        }
+
+
+        .home-section-heading {
+
+            max-width: 760px;
+
+            margin:
+                0 auto 55px;
+
+            text-align: center;
+        }
+
+
+        .home-kicker {
+
+            display: block;
+
+            margin-bottom: 11px;
+
+            color: #2478ff;
 
             font-size: 13px;
 
-            letter-spacing: 3px;
-
             font-weight: 800;
 
-            margin-bottom: 13px;
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
         }
 
-        .section-heading h2 {
-            font-size: clamp(36px, 4vw, 54px);
 
-            line-height: 1.12;
+        .home-section-heading h2 {
 
-            letter-spacing: -2px;
+            margin:
+                0 0 15px;
 
-            color: #0c2949;
+            color: #0b2038;
 
-            margin-bottom: 18px;
+            font-size:
+                clamp(32px, 4vw, 46px);
+
+            line-height: 1.15;
         }
 
-        .section-heading p {
-            color: #61738a;
+
+        .home-section-dark
+        .home-section-heading h2 {
+
+            color: #ffffff;
+        }
+
+
+        .home-section-heading p {
+
+            margin: 0;
+
+            color: #64748b;
 
             font-size: 17px;
 
             line-height: 1.7;
         }
 
-        .service-grid {
+
+        .home-section-dark
+        .home-section-heading p {
+
+            color: #b9cee4;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ====================================================== */
+
+        .home-intro-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .home-intro-copy h2 {
+
+            margin:
+                0 0 20px;
+
+            color: #0b2038;
+
+            font-size:
+                clamp(32px, 4vw, 46px);
+
+            line-height: 1.15;
+        }
+
+
+        .home-intro-copy p {
+
+            color: #64748b;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+
+        .home-intro-link {
+
+            display: inline-flex;
+
+            margin-top: 12px;
+
+            color: #1769aa;
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+
+        .home-intro-panel {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .home-mini-card {
+
+            padding: 27px;
+
+            border:
+                1px solid #e2e8f0;
+
+            border-radius: 18px;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 12px 30px
+                rgba(15,23,42,0.06);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+
+        .home-mini-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 20px 40px
+                rgba(15,23,42,0.10);
+        }
+
+
+        .home-mini-icon {
+
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: #edf4ff;
+
+            color: #2478ff;
+
+            font-size: 23px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .home-mini-card h3 {
+
+            margin:
+                0 0 9px;
+
+            color: #0b2038;
+
+            font-size: 19px;
+        }
+
+
+        .home-mini-card p {
+
+            margin: 0;
+
+            color: #68798e;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           SOLUTION CARDS
+        ====================================================== */
+
+        .home-solution-grid {
+
             display: grid;
 
             grid-template-columns:
@@ -700,189 +926,190 @@
             gap: 22px;
         }
 
-        .service-card {
-            padding: 36px;
 
-            border: 1px solid #dfe7f0;
+        .home-solution-card {
+
+            position: relative;
+
+            padding: 34px;
+
+            min-height: 245px;
+
+            border:
+                1px solid #e2e8f0;
 
             border-radius: 20px;
 
             background: #ffffff;
 
-            min-height: 285px;
-
-            position: relative;
-
-            overflow: hidden;
-
             transition:
-                transform 0.35s ease,
-                box-shadow 0.35s ease,
-                border-color 0.35s ease;
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
         }
 
-        .service-card::after {
-            content: "";
+
+        .home-solution-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                #bfd8ff;
+
+            box-shadow:
+                0 22px 45px
+                rgba(15,23,42,0.10);
+        }
+
+
+        .home-solution-number {
 
             position: absolute;
 
-            width: 140px;
-            height: 140px;
+            top: 24px;
+            right: 27px;
 
-            right: -60px;
-            bottom: -60px;
+            color: #d6e0ec;
 
-            border-radius: 50%;
+            font-size: 13px;
 
-            background: #edf5ff;
+            font-weight: 800;
 
-            transition:
-                transform 0.4s ease;
+            letter-spacing: 1px;
         }
 
-        .service-card:hover {
-            transform: translateY(-9px);
 
-            border-color: #a8c9f5;
+        .home-solution-card h3 {
 
-            box-shadow:
-                0 25px 55px rgba(26,74,130,0.12);
+            margin:
+                0 0 10px;
+
+            color: #0b2038;
+
+            font-size: 21px;
         }
 
-        .service-card:hover::after {
-            transform: scale(1.8);
-        }
 
-        .service-icon {
-            width: 62px;
-            height: 62px;
+        .home-solution-card p {
 
-            border-radius: 17px;
+            margin:
+                0 0 20px;
 
-            background: #edf4ff;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            font-size: 28px;
-
-            margin-bottom: 28px;
-
-            position: relative;
-
-            z-index: 2;
-
-            transition:
-                transform 0.35s ease,
-                background 0.35s ease;
-        }
-
-        .service-card:hover .service-icon {
-            transform:
-                translateY(-5px)
-                scale(1.12);
-
-            background: #dbeaff;
-        }
-
-        .service-card h3 {
-            font-size: 23px;
-
-            color: #0e2e52;
-
-            margin-bottom: 12px;
-
-            position: relative;
-
-            z-index: 2;
-        }
-
-        .service-card p {
-            color: #66788f;
-
-            font-size: 15px;
-
-            line-height: 1.7;
-
-            position: relative;
-
-            z-index: 2;
-
-            margin-bottom: 18px;
-        }
-
-        .service-card a {
-            color: #1769d2;
-
-            font-weight: 750;
+            color: #68798e;
 
             font-size: 14px;
 
-            position: relative;
+            line-height: 1.7;
+        }
 
-            z-index: 2;
+
+        .home-card-link {
+
+            color: #1769aa;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           WHY SECTION
+        ====================================================== */
+
+        .home-why-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .home-why-card {
+
+            padding: 31px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            border-radius: 18px;
+
+            background:
+                rgba(255,255,255,0.055);
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease;
+        }
+
+
+        .home-why-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            background:
+                rgba(255,255,255,0.09);
+        }
+
+
+        .home-why-card .home-mini-icon {
+
+            background:
+                rgba(91,154,255,0.16);
+
+            color: #83b7ff;
+        }
+
+
+        .home-why-card h3 {
+
+            margin:
+                0 0 10px;
+
+            color: #ffffff;
+
+            font-size: 19px;
+        }
+
+
+        .home-why-card p {
+
+            margin: 0;
+
+            color: #b6c9dd;
+
+            font-size: 14px;
+
+            line-height: 1.7;
         }
 
 
         /* =====================================================
            PARTNERS
-        ===================================================== */
+        ====================================================== */
 
-        .partners-section {
-            padding: 110px 0;
+        .home-partner-grid {
 
-            background: #f7f9fc;
-        }
-
-        .partners-heading {
-            text-align: center;
-
-            max-width: 800px;
-
-            margin: 0 auto 60px;
-        }
-
-        .partners-heading .section-label {
-            display: block;
-        }
-
-        .partners-heading h2 {
-            font-size: clamp(36px, 4vw, 54px);
-
-            line-height: 1.1;
-
-            color: #0b2949;
-
-            letter-spacing: -2px;
-
-            margin-bottom: 18px;
-        }
-
-        .partners-heading p {
-            color: #62758c;
-
-            font-size: 17px;
-        }
-
-        .partner-grid {
             display: grid;
 
             grid-template-columns:
                 repeat(5, 1fr);
 
-            gap: 20px;
+            gap: 18px;
         }
 
-        .partner-card {
-            min-height: 225px;
 
-            background: #ffffff;
+        .home-partner-card {
 
-            border: 1px solid #dce5ef;
-
-            border-radius: 20px;
+            min-height: 190px;
 
             display: flex;
 
@@ -892,513 +1119,692 @@
 
             justify-content: center;
 
-            padding: 25px;
-
             text-align: center;
 
-            position: relative;
+            padding: 25px 15px;
 
-            overflow: hidden;
+            border:
+                1px solid #dfe6ef;
 
-            transition:
-                transform 0.35s ease,
-                box-shadow 0.35s ease,
-                border-color 0.35s ease;
-        }
+            border-radius: 18px;
 
-        .partner-card::before {
-            content: "";
-
-            position: absolute;
-
-            inset: 0;
-
-            background:
-                radial-gradient(
-                    circle at 50% 0%,
-                    rgba(44,123,255,0.08),
-                    transparent 65%
-                );
-
-            opacity: 0;
+            background: #ffffff;
 
             transition:
-                opacity 0.35s ease;
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
         }
 
-        .partner-card:hover {
-            transform: translateY(-10px);
 
-            border-color: #a8c8ef;
+        .home-partner-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                #b9d5ff;
 
             box-shadow:
-                0 25px 50px rgba(27,69,116,0.13);
+                0 20px 40px
+                rgba(15,23,42,0.10);
         }
 
-        .partner-card:hover::before {
-            opacity: 1;
-        }
 
-        .partner-logo {
+        .home-partner-logo {
+
             width: 125px;
-            height: 105px;
-
-            border-radius: 20px;
-
-            background: #f1f5fa;
+            height: 75px;
 
             display: flex;
 
             align-items: center;
             justify-content: center;
 
-            position: relative;
+            margin-bottom: 17px;
 
-            z-index: 2;
+            border-radius: 14px;
 
-            margin-bottom: 18px;
+            background:
+                #f1f5f9;
 
-            transition:
-                transform 0.35s ease,
-                background 0.35s ease,
-                box-shadow 0.35s ease;
-        }
+            color: #0b2d4f;
 
-        .partner-card:hover .partner-logo {
-            transform:
-                scale(1.08)
-                translateY(-5px);
-
-            background: #eaf3ff;
-
-            box-shadow:
-                0 12px 30px rgba(37,105,190,0.10);
-        }
-
-        .partner-logo span {
             font-size: 27px;
 
             font-weight: 900;
 
-            letter-spacing: -1px;
-
-            color: #0c2d50;
+            letter-spacing: -0.5px;
         }
 
-        .partner-logo.tata span {
+
+        .home-partner-card:nth-child(2)
+        .home-partner-logo {
+
+            color: #d71920;
+        }
+
+
+        .home-partner-card:nth-child(3)
+        .home-partner-logo {
+
+            color: #e60012;
+        }
+
+
+        .home-partner-card:nth-child(4)
+        .home-partner-logo {
+
+            color: #1769aa;
+
+            font-size: 23px;
+        }
+
+
+        .home-partner-card:nth-child(5)
+        .home-partner-logo {
+
+            color: #166534;
+        }
+
+
+        .home-partner-card h3 {
+
+            margin:
+                0 0 5px;
+
+            color: #0b2038;
+
+            font-size: 16px;
+        }
+
+
+        .home-partner-card p {
+
+            margin: 0;
+
+            color: #6b7c91;
+
+            font-size: 12px;
+
+            line-height: 1.5;
+        }
+
+
+        .home-partner-extra {
+
+            margin-top: 18px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .home-partner-wide {
+
+            padding: 25px;
+
+            border:
+                1px solid #dfe6ef;
+
+            border-radius: 18px;
+
+            background: #ffffff;
+        }
+
+
+        .home-partner-wide strong {
+
+            display: block;
+
+            color: #0b2038;
+
+            font-size: 18px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .home-partner-wide span {
+
+            color: #6b7c91;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           CAPABILITIES
+        ====================================================== */
+
+        .home-capability-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .home-capability {
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            background: #ffffff;
+
+            border:
+                1px solid #e1e8f0;
+        }
+
+
+        .home-capability h3 {
+
+            margin:
+                0 0 9px;
+
+            color: #0b2038;
+
+            font-size: 18px;
+        }
+
+
+        .home-capability p {
+
+            margin: 0;
+
+            color: #68798e;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           BUSINESS SUPPORT
+        ====================================================== */
+
+        .home-support {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+
+        .home-support h2 {
+
+            margin:
+                0 0 18px;
+
+            color: #0b2038;
+
+            font-size:
+                clamp(31px, 4vw, 45px);
+
+            line-height: 1.15;
+        }
+
+
+        .home-support p {
+
+            color: #68798e;
+
+            line-height: 1.8;
+        }
+
+
+        .home-check-list {
+
+            list-style: none;
+
+            margin:
+                24px 0 0;
+
+            padding: 0;
+        }
+
+
+        .home-check-list li {
+
+            position: relative;
+
+            padding-left: 29px;
+
+            margin: 13px 0;
+
+            color: #31475e;
+
+            font-size: 15px;
+        }
+
+
+        .home-check-list li::before {
+
+            content: "✓";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 0;
+
+            color: #2478ff;
+
+            font-weight: 900;
+        }
+
+
+        .home-support-box {
+
+            padding: 40px;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #092747,
+                    #16457c
+                );
+
+            box-shadow:
+                0 25px 60px
+                rgba(15,35,60,0.16);
+        }
+
+
+        .home-support-box h3 {
+
+            margin:
+                0 0 14px;
+
+            color: #ffffff;
+
             font-size: 25px;
         }
 
-        .partner-logo.jio span {
-            font-size: 29px;
-        }
 
-        .partner-logo.vi span {
-            font-size: 34px;
-        }
+        .home-support-box p {
 
-        .partner-logo.telecmi span {
-            font-size: 22px;
-        }
+            color: #c5d8ec;
 
-        .partner-logo.gem span {
-            font-size: 29px;
-        }
-
-        .partner-card strong {
-            color: #102e50;
-
-            font-size: 16px;
-
-            position: relative;
-
-            z-index: 2;
-        }
-
-        .partner-card small {
-            color: #718299;
-
-            font-size: 13px;
-
-            position: relative;
-
-            z-index: 2;
-
-            margin-top: 3px;
+            margin-bottom: 24px;
         }
 
 
         /* =====================================================
            CTA
-        ===================================================== */
+        ====================================================== */
 
-        .cta-section {
-            padding: 100px 0;
-        }
+        .home-final-cta {
 
-        .cta-box {
-            width: min(1400px, calc(100% - 80px));
-
-            margin: 0 auto;
-
-            border-radius: 28px;
-
-            padding: 70px;
+            padding:
+                95px 0;
 
             background:
                 linear-gradient(
-                    120deg,
-                    #082846,
-                    #123f72
+                    135deg,
+                    #0a2d50,
+                    #174c85
                 );
 
             color: #ffffff;
 
+            text-align: center;
+        }
+
+
+        .home-final-cta h2 {
+
+            max-width: 760px;
+
+            margin:
+                0 auto 17px;
+
+            color: #ffffff;
+
+            font-size:
+                clamp(32px, 4vw, 48px);
+
+            line-height: 1.15;
+        }
+
+
+        .home-final-cta p {
+
+            max-width: 650px;
+
+            margin:
+                0 auto;
+
+            color: #c8dcf0;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+
+        .home-final-buttons {
+
             display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+
+            margin-top: 30px;
+        }
+
+
+        .home-final-buttons a {
+
+            text-decoration: none;
+        }
+
+
+        .home-white-btn {
+
+            display: inline-flex;
 
             align-items: center;
 
-            justify-content: space-between;
+            justify-content: center;
 
-            gap: 40px;
+            min-height: 55px;
 
-            position: relative;
-
-            overflow: hidden;
-        }
-
-        .cta-box::after {
-            content: "";
-
-            position: absolute;
-
-            width: 360px;
-            height: 360px;
-
-            border: 1px solid rgba(255,255,255,0.1);
-
-            border-radius: 50%;
-
-            right: -100px;
-            top: -180px;
-        }
-
-        .cta-content {
-            position: relative;
-
-            z-index: 2;
-        }
-
-        .cta-content h2 {
-            font-size: clamp(32px, 4vw, 48px);
-
-            line-height: 1.15;
-
-            margin-bottom: 15px;
-        }
-
-        .cta-content p {
-            color: #c9dcf2;
-
-            font-size: 17px;
-        }
-
-        .cta-button {
-            position: relative;
-
-            z-index: 2;
-
-            flex-shrink: 0;
-
-            background: #ffffff;
-
-            color: #10375f;
-
-            padding: 18px 28px;
+            padding:
+                0 27px;
 
             border-radius: 10px;
 
-            font-weight: 800;
+            background: #ffffff;
 
-            transition:
-                transform 0.25s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-        }
-
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
-
-        .site-footer {
-            background: #071d34;
-
-            color: #ffffff;
-
-            padding: 45px 0;
-        }
-
-        .footer-container {
-            width: min(1400px, calc(100% - 80px));
-
-            margin: 0 auto;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 30px;
-        }
-
-        .footer-brand {
-            font-size: 21px;
+            color: #0b3156 !important;
 
             font-weight: 800;
         }
 
-        .footer-copy {
-            color: #9eb3ca;
 
-            font-size: 13px;
-        }
+        .home-transparent-btn {
 
-
-        /* =====================================================
-           WHATSAPP
-        ===================================================== */
-
-        .whatsapp-button {
-            position: fixed;
-
-            right: 25px;
-            bottom: 25px;
-
-            width: 62px;
-            height: 62px;
-
-            border-radius: 50%;
-
-            background: #18a878;
-
-            color: #ffffff;
-
-            display: flex;
+            display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
-            font-size: 27px;
+            min-height: 55px;
 
-            z-index: 2000;
+            padding:
+                0 27px;
 
-            box-shadow:
-                0 12px 35px rgba(0,0,0,0.22);
+            border-radius: 10px;
 
-            transition:
-                transform 0.3s ease;
-        }
+            border:
+                1px solid
+                rgba(255,255,255,0.30);
 
-        .whatsapp-button:hover {
-            transform:
-                scale(1.12);
+            color: #ffffff !important;
+
+            font-weight: 800;
         }
 
 
         /* =====================================================
            RESPONSIVE
-        ===================================================== */
+        ====================================================== */
 
-        @media (max-width: 1150px) {
+        @media (max-width: 1050px) {
 
-            .main-nav {
-                gap: 18px;
+            .home-hero-grid {
+
+                grid-template-columns: 1fr;
             }
 
-            .main-nav a {
-                font-size: 14px;
+
+            .home-visual {
+
+                display: none;
             }
 
-            .partner-grid {
+
+            .home-hero-content {
+
+                max-width: 850px;
+
+                margin: auto;
+
+                text-align: center;
+            }
+
+
+            .home-hero-text {
+
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+            .home-hero-buttons {
+
+                justify-content: center;
+            }
+
+
+            .home-partner-grid {
+
                 grid-template-columns:
                     repeat(3, 1fr);
             }
 
-            .hero-inner {
-                gap: 30px;
-            }
 
-            .hero-title {
-                font-size: 58px;
+            .home-capability-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
         }
 
 
-        @media (max-width: 900px) {
+        @media (max-width: 850px) {
 
-            .site-header {
-                height: 82px;
-            }
+            .home-intro-grid,
+            .home-support {
 
-            .header-container {
-                width: calc(100% - 35px);
-            }
-
-            .site-logo {
-                font-size: 24px;
-            }
-
-            .main-nav {
-                display: none;
-            }
-
-            .hero,
-            .hero-inner {
-                min-height: auto;
-            }
-
-            .hero-inner {
                 grid-template-columns: 1fr;
 
-                padding-top: 90px;
-                padding-bottom: 90px;
+                gap: 40px;
             }
 
-            .hero-content {
-                max-width: 800px;
-            }
 
-            .hero-visual {
-                display: none;
-            }
+            .home-solution-grid,
+            .home-why-grid {
 
-            .service-strip-inner {
-                grid-template-columns: 1fr;
-            }
-
-            .service-strip-item {
-                border-right: none;
-
-                border-bottom: 1px solid #e6ebf2;
-            }
-
-            .service-grid {
                 grid-template-columns:
                     repeat(2, 1fr);
             }
 
-            .cta-box {
-                flex-direction: column;
 
-                align-items: flex-start;
+            .home-service-grid {
 
-                padding: 50px 35px;
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .home-service-item {
+
+                border-bottom:
+                    1px solid #e4e8ef;
             }
         }
 
 
         @media (max-width: 600px) {
 
-            .header-container,
-            .section-container,
-            .service-strip-inner,
-            .footer-container {
-                width: calc(100% - 35px);
+            .home-hero,
+            .home-slides {
+
+                min-height: 650px;
             }
 
-            .site-logo {
-                font-size: 21px;
+
+            .home-hero-content {
+
+                padding:
+                    65px 0 95px;
             }
 
-            .hero-inner {
-                padding-top: 70px;
-                padding-bottom: 80px;
+
+            .home-hero h1 {
+
+                font-size: 43px;
+
+                letter-spacing: -1px;
             }
 
-            .hero-title {
-                font-size: 45px;
 
-                letter-spacing: -1.8px;
-            }
+            .home-hero-text {
 
-            .hero-text {
                 font-size: 16px;
             }
 
-            .hero-buttons {
+
+            .home-hero-buttons {
+
                 flex-direction: column;
 
                 align-items: stretch;
             }
 
-            .primary-button,
-            .secondary-button {
+
+            .home-hero-buttons a {
+
                 width: 100%;
             }
 
-            .services-section,
-            .partners-section {
-                padding: 75px 0;
+
+            .home-section {
+
+                padding:
+                    75px 0;
             }
 
-            .service-grid,
-            .partner-grid {
+
+            .home-intro-panel {
+
                 grid-template-columns: 1fr;
             }
 
-            .partner-card {
-                min-height: 210px;
+
+            .home-solution-grid,
+            .home-why-grid,
+            .home-capability-grid {
+
+                grid-template-columns: 1fr;
             }
 
-            .cta-box {
-                width: calc(100% - 35px);
 
-                padding: 40px 25px;
+            .home-partner-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
-            .footer-container {
-                flex-direction: column;
 
-                align-items: flex-start;
+            .home-partner-extra {
+
+                grid-template-columns: 1fr;
             }
 
-            .whatsapp-button {
-                width: 56px;
-                height: 56px;
 
-                right: 18px;
-                bottom: 18px;
+            .home-service-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .home-service-item {
+
+                border-right: none;
+            }
+
+
+            .home-partner-logo {
+
+                width: 105px;
+                height: 65px;
+
+                font-size: 22px;
+            }
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .home-slide,
+            .home-solution-card,
+            .home-mini-card,
+            .home-partner-card,
+            .home-why-card,
+            .home-float-card {
+
+                transition: none;
             }
         }
 
     </style>
+
 </head>
 
 
-<body>
+<body class="home-page">
 
 
-<!-- =========================================================
+<!-- =====================================================
      HEADER
-========================================================= -->
+     SAME HEADER STRUCTURE AS OTHER WORKING PAGES
+====================================================== -->
 
-<header class="site-header">
+<header class="navbar">
 
-    <div class="header-container">
+    <div class="container nav-container">
 
         <a href="index.html"
-           class="site-logo">
+           class="logo">
+
             JB TECH SERVICES
+
         </a>
 
-        <nav class="main-nav">
 
-            <a href="index.html"
-               class="active">
+        <div class="menu-toggle">
+
+            ☰
+
+        </div>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">
                 Home
             </a>
 
@@ -1423,8 +1829,10 @@
             </a>
 
             <a href="contact.html"
-               class="quote-button">
+               class="quote-btn">
+
                 Get a Business Quote
+
             </a>
 
         </nav>
@@ -1435,290 +1843,693 @@
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      HERO SLIDER
-========================================================= -->
+====================================================== -->
 
-<section class="hero">
+<section class="home-hero">
 
-
-    <!-- SLIDE 1 -->
-
-    <div class="hero-slide active">
-
-        <div class="hero-inner">
-
-            <div class="hero-content">
-
-                <div class="hero-label">
-                    Business Connectivity
-                </div>
-
-                <h1 class="hero-title">
-                    Reliable
-                    <span>Connectivity</span>
-                    for Business.
-                </h1>
-
-                <p class="hero-text">
-                    Business internet and telecom solutions
-                    designed to keep your organization
-                    connected and productive.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="services.html"
-                       class="primary-button">
-                        Explore Services →
-                    </a>
-
-                    <a href="contact.html"
-                       class="secondary-button">
-                        Talk to Us
-                    </a>
-
-                </div>
-
-            </div>
+    <div class="home-slides">
 
 
-            <div class="hero-visual">
+        <!-- =================================================
+             SLIDE 1
+        ================================================== -->
 
-                <div class="visual-circle"></div>
-                <div class="visual-circle circle-two"></div>
-                <div class="visual-circle circle-three"></div>
+        <div class="home-slide active">
 
-                <div class="visual-card">
+            <div class="container">
 
-                    <div class="visual-logo">
-                        JB
+                <div class="home-hero-grid">
+
+
+                    <div class="home-hero-content">
+
+                        <span class="home-label">
+                            Business Technology Solutions
+                        </span>
+
+
+                        <h1>
+
+                            One Partner.
+                            <br>
+
+                            Multiple
+                            <span>
+                                Technology
+                            </span>
+                            Solutions.
+
+                        </h1>
+
+
+                        <p class="home-hero-text">
+
+                            Connecting businesses with reliable
+                            connectivity, telecom, cloud communication
+                            and digital business solutions through a
+                            trusted technology ecosystem.
+
+                        </p>
+
+
+                        <div class="home-hero-buttons">
+
+                            <a href="contact.html"
+                               class="home-btn-primary">
+
+                                Get a Business Quote →
+                                
+                            </a>
+
+
+                            <a href="https://wa.me/919017125139"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="home-btn-outline">
+
+                                Talk to Us on WhatsApp ↗
+
+                            </a>
+
+                        </div>
+
                     </div>
 
-                    <small>
-                        CONNECTIVITY
-                    </small>
 
-                    <h3>
-                        Connected.<br>
-                        Reliable.<br>
-                        Business-ready.
-                    </h3>
+                    <div class="home-visual">
 
-                </div>
+                        <div class="home-visual-core">
 
-                <div class="floating-card floating-one">
-                    <strong>Connectivity</strong>
-                    <span>Business Internet & Telecom</span>
-                </div>
+                            <div class="home-core-jb">
+                                JB
+                            </div>
 
-                <div class="floating-card floating-two">
-                    <strong>Telecom</strong>
-                    <span>Business Communication</span>
-                </div>
+                            <div class="home-core-small">
+                                Business Technology
+                            </div>
 
-                <div class="floating-card floating-three">
-                    <strong>Business Support</strong>
-                    <span>Practical Technology Solutions</span>
+                            <div class="home-core-title">
+
+                                Connected.
+                                <br>
+                                Communicating.
+                                <br>
+                                Growing.
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="home-float-card home-float-one">
+
+                            <div class="home-float-icon">
+                                ◉
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Connectivity
+                                </strong>
+
+                                <span>
+                                    Business Internet & Telecom
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="home-float-card home-float-two">
+
+                            <div class="home-float-icon">
+                                ☁
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Cloud Communication
+                                </strong>
+
+                                <span>
+                                    Modern Business Calling
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="home-float-card home-float-three">
+
+                            <div class="home-float-icon">
+                                ◆
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    GeM
+                                </strong>
+
+                                <span>
+                                    Business Support
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </div>
 
 
+        <!-- =================================================
+             SLIDE 2
+        ================================================== -->
 
-    <!-- SLIDE 2 -->
+        <div class="home-slide">
 
-    <div class="hero-slide">
+            <div class="container">
 
-        <div class="hero-inner">
-
-            <div class="hero-content">
-
-                <div class="hero-label">
-                    Cloud Communication
-                </div>
-
-                <h2 class="hero-title">
-                    Modern
-                    <span>Business Calling</span>
-                    Solutions.
-                </h2>
-
-                <p class="hero-text">
-                    Cloud telephony and communication
-                    solutions helping businesses connect
-                    teams and customers across domestic
-                    and international markets.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="cloud-communication.html"
-                       class="primary-button">
-                        Explore Cloud Solutions →
-                    </a>
-
-                    <a href="contact.html"
-                       class="secondary-button">
-                        Request Information
-                    </a>
-
-                </div>
-
-            </div>
+                <div class="home-hero-grid">
 
 
-            <div class="hero-visual">
+                    <div class="home-hero-content">
 
-                <div class="visual-circle"></div>
-                <div class="visual-circle circle-two"></div>
-                <div class="visual-circle circle-three"></div>
+                        <span class="home-label">
+                            Enterprise Telecom
+                        </span>
 
-                <div class="visual-card">
 
-                    <div class="visual-logo">
-                        ☁
+                        <h1>
+
+                            Reliable
+                            <span>
+                                Connectivity
+                            </span>
+                            <br>
+
+                            For Your Business.
+
+                        </h1>
+
+
+                        <p class="home-hero-text">
+
+                            Business telecom and connectivity
+                            solutions designed around your
+                            organization's communication and
+                            operational requirements.
+
+                        </p>
+
+
+                        <div class="home-hero-buttons">
+
+                            <a href="services.html"
+                               class="home-btn-primary">
+
+                                Explore Telecom Services →
+
+                            </a>
+
+
+                            <a href="contact.html"
+                               class="home-btn-outline">
+
+                                Discuss Your Requirement
+
+                            </a>
+
+                        </div>
+
                     </div>
 
-                    <small>
-                        CLOUD COMMUNICATION
-                    </small>
 
-                    <h3>
-                        Smart.<br>
-                        Flexible.<br>
-                        Connected.
-                    </h3>
+                    <div class="home-visual">
 
-                </div>
+                        <div class="home-visual-core">
 
-                <div class="floating-card floating-one">
-                    <strong>Cloud Communication</strong>
-                    <span>Modern Business Calling</span>
-                </div>
+                            <div class="home-core-jb">
+                                JB
+                            </div>
 
-                <div class="floating-card floating-two">
-                    <strong>Domestic</strong>
-                    <span>Business Communication</span>
-                </div>
+                            <div class="home-core-small">
+                                Enterprise Connectivity
+                            </div>
 
-                <div class="floating-card floating-three">
-                    <strong>International</strong>
-                    <span>Communication Solutions</span>
+                            <div class="home-core-title">
+
+                                Reliable.
+                                <br>
+                                Secure.
+                                <br>
+                                Business Ready.
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="home-float-card home-float-one">
+
+                            <div class="home-float-icon">
+                                ◉
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Enterprise Internet
+                                </strong>
+
+                                <span>
+                                    Business Connectivity
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="home-float-card home-float-two">
+
+                            <div class="home-float-icon">
+                                ◎
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Telecom
+                                </strong>
+
+                                <span>
+                                    Business Solutions
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="home-float-card home-float-three">
+
+                            <div class="home-float-icon">
+                                +
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Business Support
+                                </strong>
+
+                                <span>
+                                    Requirement Based
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </div>
 
 
+        <!-- =================================================
+             SLIDE 3
+        ================================================== -->
 
-    <!-- SLIDE 3 -->
+        <div class="home-slide">
 
-    <div class="hero-slide">
+            <div class="container">
 
-        <div class="hero-inner">
-
-            <div class="hero-content">
-
-                <div class="hero-label">
-                    GeM Business Support
-                </div>
-
-                <h2 class="hero-title">
-                    Simplifying
-                    <span>GeM</span>
-                    Business Support.
-                </h2>
-
-                <p class="hero-text">
-                    Professional assistance for businesses
-                    dealing with Government e-Marketplace
-                    requirements and procurement support.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="gem-services.html"
-                       class="primary-button">
-                        Explore GeM Services →
-                    </a>
-
-                    <a href="contact.html"
-                       class="secondary-button">
-                        Discuss Your Requirement
-                    </a>
-
-                </div>
-
-            </div>
+                <div class="home-hero-grid">
 
 
-            <div class="hero-visual">
+                    <div class="home-hero-content">
 
-                <div class="visual-circle"></div>
-                <div class="visual-circle circle-two"></div>
-                <div class="visual-circle circle-three"></div>
+                        <span class="home-label">
+                            Cloud Communication
+                        </span>
 
-                <div class="visual-card">
 
-                    <div class="visual-logo">
-                        GeM
+                        <h1>
+
+                            Modern
+                            <span>
+                                Business Calling
+                            </span>
+
+                            <br>
+
+                            Solutions.
+
+                        </h1>
+
+
+                        <p class="home-hero-text">
+
+                            Cloud telephony and communication
+                            solutions helping businesses connect
+                            teams and customers across domestic
+                            and international markets.
+
+                        </p>
+
+
+                        <div class="home-hero-buttons">
+
+                            <a href="cloud-communication.html"
+                               class="home-btn-primary">
+
+                                Explore Cloud Solutions →
+
+                            </a>
+
+
+                            <a href="contact.html"
+                               class="home-btn-outline">
+
+                                Request Information
+
+                            </a>
+
+                        </div>
+
                     </div>
 
-                    <small>
-                        GOVERNMENT E-MARKETPLACE
-                    </small>
 
-                    <h3>
-                        Organized.<br>
-                        Professional.<br>
-                        Business-focused.
-                    </h3>
+                    <div class="home-visual">
 
-                </div>
+                        <div class="home-visual-core">
 
-                <div class="floating-card floating-one">
-                    <strong>GeM Support</strong>
-                    <span>Portal Assistance</span>
-                </div>
+                            <div class="home-core-jb">
+                                JB
+                            </div>
 
-                <div class="floating-card floating-two">
-                    <strong>Procurement</strong>
-                    <span>Business Support</span>
-                </div>
+                            <div class="home-core-small">
+                                Cloud Communication
+                            </div>
 
-                <div class="floating-card floating-three">
-                    <strong>Authorization</strong>
-                    <span>Dugong Authorized Services</span>
+                            <div class="home-core-title">
+
+                                Smarter.
+                                <br>
+                                Flexible.
+                                <br>
+                                Connected.
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="home-float-card home-float-one">
+
+                            <div class="home-float-icon">
+                                ☁
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Cloud Telephony
+                                </strong>
+
+                                <span>
+                                    Modern Business Calling
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="home-float-card home-float-two">
+
+                            <div class="home-float-icon">
+                                ☎
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Business Calling
+                                </strong>
+
+                                <span>
+                                    Customer Communication
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="home-float-card home-float-three">
+
+                            <div class="home-float-icon">
+                                ↗
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    International
+                                </strong>
+
+                                <span>
+                                    Global Communication
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </div>
 
+
+        <!-- =================================================
+             SLIDE 4
+        ================================================== -->
+
+        <div class="home-slide">
+
+            <div class="container">
+
+                <div class="home-hero-grid">
+
+
+                    <div class="home-hero-content">
+
+                        <span class="home-label">
+                            Government e-Marketplace
+                        </span>
+
+
+                        <h1>
+
+                            Supporting Your
+                            <span>
+                                GeM
+                            </span>
+
+                            <br>
+
+                            Business Requirements.
+
+                        </h1>
+
+
+                        <p class="home-hero-text">
+
+                            Professional support for businesses
+                            dealing with Government e-Marketplace
+                            requirements through our association
+                            with Dugong.
+
+                        </p>
+
+
+                        <div class="home-hero-buttons">
+
+                            <a href="gem-services.html"
+                               class="home-btn-primary">
+
+                                Explore GeM Services →
+
+                            </a>
+
+
+                            <a href="contact.html"
+                               class="home-btn-outline">
+
+                                Discuss Your Requirement
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="home-visual">
+
+                        <div class="home-visual-core">
+
+                            <div class="home-core-jb">
+                                GeM
+                            </div>
+
+                            <div class="home-core-small">
+                                Business Support
+                            </div>
+
+                            <div class="home-core-title">
+
+                                Organized.
+                                <br>
+                                Practical.
+                                <br>
+                                Business Focused.
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="home-float-card home-float-one">
+
+                            <div class="home-float-icon">
+                                ◆
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    GeM Assistance
+                                </strong>
+
+                                <span>
+                                    Business Requirements
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="home-float-card home-float-two">
+
+                            <div class="home-float-icon">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Procurement Support
+                                </strong>
+
+                                <span>
+                                    Requirement Coordination
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="home-float-card home-float-three">
+
+                            <div class="home-float-icon">
+                                +
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Dugong Association
+                                </strong>
+
+                                <span>
+                                    GeM Related Activities
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
 
 
     <!-- SLIDER DOTS -->
 
-    <div class="slider-dots">
+    <div class="home-dots">
 
-        <button class="slider-dot active"
-                aria-label="Slide 1"></button>
+        <button
+            type="button"
+            class="home-dot active"
+            data-slide="0"
+            aria-label="Slide 1">
+        </button>
 
-        <button class="slider-dot"
-                aria-label="Slide 2"></button>
+        <button
+            type="button"
+            class="home-dot"
+            data-slide="1"
+            aria-label="Slide 2">
+        </button>
 
-        <button class="slider-dot"
-                aria-label="Slide 3"></button>
+        <button
+            type="button"
+            class="home-dot"
+            data-slide="2"
+            aria-label="Slide 3">
+        </button>
+
+        <button
+            type="button"
+            class="home-dot"
+            data-slide="3"
+            aria-label="Slide 4">
+        </button>
 
     </div>
 
@@ -1726,21 +2537,17 @@
 
 
 
-<!-- =========================================================
-     SERVICE STRIP
-========================================================= -->
+<!-- =====================================================
+     QUICK SERVICE STRIP
+====================================================== -->
 
-<section class="service-strip">
+<section class="home-service-strip">
 
-    <div class="service-strip-inner">
+    <div class="container">
 
-        <div class="service-strip-item">
+        <div class="home-service-grid">
 
-            <div class="strip-icon">
-                ◉
-            </div>
-
-            <div class="strip-text">
+            <div class="home-service-item">
 
                 <strong>
                     Telecom Connectivity
@@ -1752,44 +2559,41 @@
 
             </div>
 
-        </div>
 
-
-        <div class="service-strip-item">
-
-            <div class="strip-icon">
-                ☁
-            </div>
-
-            <div class="strip-text">
+            <div class="home-service-item">
 
                 <strong>
                     Cloud Communication
                 </strong>
 
                 <span>
-                    Modern Business Calling
+                    Domestic & International
                 </span>
 
             </div>
 
-        </div>
 
-
-        <div class="service-strip-item">
-
-            <div class="strip-icon">
-                ◆
-            </div>
-
-            <div class="strip-text">
+            <div class="home-service-item">
 
                 <strong>
-                    GeM Business Support
+                    Business Calling
                 </strong>
 
                 <span>
-                    Government e-Marketplace
+                    Modern Communication Solutions
+                </span>
+
+            </div>
+
+
+            <div class="home-service-item">
+
+                <strong>
+                    GeM Services
+                </strong>
+
+                <span>
+                    Business Support
                 </span>
 
             </div>
@@ -1802,40 +2606,193 @@
 
 
 
-<!-- =========================================================
-     SERVICES
-========================================================= -->
+<!-- =====================================================
+     INTRODUCTION
+====================================================== -->
 
-<section class="services-section">
+<section class="home-section home-section-light">
 
-    <div class="section-container">
+    <div class="container">
 
-        <div class="section-heading">
+        <div class="home-intro-grid">
 
-            <div class="section-label">
-                WHAT WE DO
+
+            <div class="home-intro-copy">
+
+                <span class="home-kicker">
+                    What We Do
+                </span>
+
+
+                <h2>
+                    Technology Solutions
+                    Built Around Your Business
+                </h2>
+
+
+                <p>
+
+                    JB TECH SERVICES helps businesses simplify
+                    their connectivity, communication and
+                    procurement requirements through practical
+                    technology solutions.
+
+                </p>
+
+
+                <p>
+
+                    Through our telecom and cloud communication
+                    partnerships, we help businesses access
+                    solutions from established technology
+                    providers.
+
+                </p>
+
+
+                <p>
+
+                    We also provide GeM-related business support
+                    through our association with Dugong.
+
+                </p>
+
+
+                <a href="about.html"
+                   class="home-intro-link">
+
+                    Know More About Us →
+
+                </a>
+
             </div>
 
+
+            <div class="home-intro-panel">
+
+
+                <div class="home-mini-card">
+
+                    <div class="home-mini-icon">
+                        ◉
+                    </div>
+
+                    <h3>
+                        Connectivity
+                    </h3>
+
+                    <p>
+                        Business Internet and telecom
+                        solutions for modern organizations.
+                    </p>
+
+                </div>
+
+
+                <div class="home-mini-card">
+
+                    <div class="home-mini-icon">
+                        ☁
+                    </div>
+
+                    <h3>
+                        Cloud Communication
+                    </h3>
+
+                    <p>
+                        Cloud-based business communication
+                        and calling solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="home-mini-card">
+
+                    <div class="home-mini-icon">
+                        ☎
+                    </div>
+
+                    <h3>
+                        Business Calling
+                    </h3>
+
+                    <p>
+                        Communication solutions for
+                        teams and customers.
+                    </p>
+
+                </div>
+
+
+                <div class="home-mini-card">
+
+                    <div class="home-mini-icon">
+                        ◆
+                    </div>
+
+                    <h3>
+                        GeM Support
+                    </h3>
+
+                    <p>
+                        Assistance for relevant
+                        GeM-related requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CORE SOLUTIONS
+====================================================== -->
+
+<section class="home-section home-section-soft">
+
+    <div class="container">
+
+
+        <div class="home-section-heading">
+
+            <span class="home-kicker">
+                Our Solutions
+            </span>
+
             <h2>
-                Technology solutions
-                built around your business.
+                Everything Your Business Needs
+                to Stay Connected
             </h2>
 
             <p>
-                Practical solutions covering connectivity,
-                communication and GeM-related business
-                requirements.
+
+                Practical technology solutions covering
+                connectivity, communication and
+                GeM-related business requirements.
+
             </p>
 
         </div>
 
 
-        <div class="service-grid">
+        <div class="home-solution-grid">
 
 
-            <article class="service-card">
+            <div class="home-solution-card">
 
-                <div class="service-icon">
+                <span class="home-solution-number">
+                    01
+                </span>
+
+                <div class="home-mini-icon">
                     ◉
                 </div>
 
@@ -1844,22 +2801,30 @@
                 </h3>
 
                 <p>
-                    Reliable business internet and
-                    connectivity solutions for different
-                    business requirements.
+
+                    Reliable connectivity solutions designed
+                    for businesses of different sizes and
+                    requirements.
+
                 </p>
 
-                <a href="services.html">
+                <a href="services.html"
+                   class="home-card-link">
+
                     Explore Connectivity →
+
                 </a>
 
-            </article>
+            </div>
 
 
+            <div class="home-solution-card">
 
-            <article class="service-card">
+                <span class="home-solution-number">
+                    02
+                </span>
 
-                <div class="service-icon">
+                <div class="home-mini-icon">
                     ☁
                 </div>
 
@@ -1868,47 +2833,31 @@
                 </h3>
 
                 <p>
+
                     Modern cloud telephony and business
                     communication solutions for teams
                     and customers.
+
                 </p>
 
-                <a href="cloud-communication.html">
+                <a href="cloud-communication.html"
+                   class="home-card-link">
+
                     Explore Cloud Solutions →
+
                 </a>
 
-            </article>
+            </div>
 
 
+            <div class="home-solution-card">
 
-            <article class="service-card">
+                <span class="home-solution-number">
+                    03
+                </span>
 
-                <div class="service-icon">
+                <div class="home-mini-icon">
                     ◆
-                </div>
-
-                <h3>
-                    Telecom Solutions
-                </h3>
-
-                <p>
-                    Business telecom solutions through
-                    established technology and service
-                    relationships.
-                </p>
-
-                <a href="services.html">
-                    Explore Telecom →
-                </a>
-
-            </article>
-
-
-
-            <article class="service-card">
-
-                <div class="service-icon">
-                    🛒
                 </div>
 
                 <h3>
@@ -1916,22 +2865,544 @@
                 </h3>
 
                 <p>
-                    Professional assistance for
-                    Government e-Marketplace and
-                    procurement-related requirements.
+
+                    Professional support for businesses
+                    dealing with Government e-Marketplace
+                    requirements.
+
                 </p>
 
-                <a href="gem-services.html">
+                <a href="gem-services.html"
+                   class="home-card-link">
+
                     Explore GeM Services →
+
                 </a>
 
-            </article>
+            </div>
+
+
+            <div class="home-solution-card">
+
+                <span class="home-solution-number">
+                    04
+                </span>
+
+                <div class="home-mini-icon">
+                    ☎
+                </div>
+
+                <h3>
+                    Business Calling
+                </h3>
+
+                <p>
+
+                    Professional voice and communication
+                    solutions helping businesses connect
+                    with teams and customers.
+
+                </p>
+
+                <a href="cloud-communication.html"
+                   class="home-card-link">
+
+                    Learn More →
+
+                </a>
+
+            </div>
+
+
+            <div class="home-solution-card">
+
+                <span class="home-solution-number">
+                    05
+                </span>
+
+                <div class="home-mini-icon">
+                    ◎
+                </div>
+
+                <h3>
+                    International Communication
+                </h3>
+
+                <p>
+
+                    Communication solutions supporting
+                    businesses serving customers across
+                    international markets.
+
+                </p>
+
+                <a href="cloud-communication.html"
+                   class="home-card-link">
+
+                    Discover Solutions →
+
+                </a>
+
+            </div>
+
+
+            <div class="home-solution-card">
+
+                <span class="home-solution-number">
+                    06
+                </span>
+
+                <div class="home-mini-icon">
+                    +
+                </div>
+
+                <h3>
+                    Business Support
+                </h3>
+
+                <p>
+
+                    Requirement identification,
+                    solution coordination and
+                    business assistance.
+
+                </p>
+
+                <a href="contact.html"
+                   class="home-card-link">
+
+                    Talk to Us →
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
 
 
 
-            <article class="service-card">
+<!-- =====================================================
+     WHY JB TECH SERVICES
+====================================================== -->
 
-                <div class="service-icon">
+<section class="home-section home-section-dark">
+
+    <div class="container">
+
+
+        <div class="home-section-heading">
+
+            <span class="home-kicker">
+                Why JB TECH SERVICES
+            </span>
+
+            <h2>
+                One Partner. Multiple Solutions.
+            </h2>
+
+            <p>
+
+                We combine technology relationships,
+                business understanding and responsive
+                support to help organizations find
+                suitable solutions.
+
+            </p>
+
+        </div>
+
+
+        <div class="home-why-grid">
+
+
+            <div class="home-why-card">
+
+                <div class="home-mini-icon">
+                    ◇
+                </div>
+
+                <h3>
+                    Multiple Technology Solutions
+                </h3>
+
+                <p>
+
+                    Access connectivity, telecom,
+                    cloud communication and GeM-related
+                    business support through one partner.
+
+                </p>
+
+            </div>
+
+
+            <div class="home-why-card">
+
+                <div class="home-mini-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Business-Focused Approach
+                </h3>
+
+                <p>
+
+                    We focus on understanding the actual
+                    requirement before discussing a
+                    suitable solution.
+
+                </p>
+
+            </div>
+
+
+            <div class="home-why-card">
+
+                <div class="home-mini-icon">
+                    ◎
+                </div>
+
+                <h3>
+                    Technology Ecosystem
+                </h3>
+
+                <p>
+
+                    Our relationships with established
+                    technology providers help us offer
+                    a broader range of solutions.
+
+                </p>
+
+            </div>
+
+
+            <div class="home-why-card">
+
+                <div class="home-mini-icon">
+                    ↗
+                </div>
+
+                <h3>
+                    Domestic & International
+                </h3>
+
+                <p>
+
+                    Support for applicable domestic and
+                    international communication
+                    requirements.
+
+                </p>
+
+            </div>
+
+
+            <div class="home-why-card">
+
+                <div class="home-mini-icon">
+                    ♢
+                </div>
+
+                <h3>
+                    Personalized Assistance
+                </h3>
+
+                <p>
+
+                    Professional assistance from
+                    requirement identification through
+                    solution coordination.
+
+                </p>
+
+            </div>
+
+
+            <div class="home-why-card">
+
+                <div class="home-mini-icon">
+                    ∞
+                </div>
+
+                <h3>
+                    Long-Term Support
+                </h3>
+
+                <p>
+
+                    Our focus is on building useful
+                    and lasting business relationships.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TECHNOLOGY PARTNERS
+====================================================== -->
+
+<section class="home-section home-section-light">
+
+    <div class="container">
+
+
+        <div class="home-section-heading">
+
+            <span class="home-kicker">
+                Technology Ecosystem
+            </span>
+
+            <h2>
+                Our Technology & Service Partners
+            </h2>
+
+            <p>
+
+                We work with established technology and
+                service providers to help businesses
+                access suitable solutions.
+
+            </p>
+
+        </div>
+
+
+        <div class="home-partner-grid">
+
+
+            <div class="home-partner-card">
+
+                <div class="home-partner-logo">
+                    TATA
+                </div>
+
+                <h3>
+                    Tata Tele Business Services
+                </h3>
+
+                <p>
+                    Telecom Partnership
+                </p>
+
+            </div>
+
+
+            <div class="home-partner-card">
+
+                <div class="home-partner-logo">
+                    Jio
+                </div>
+
+                <h3>
+                    JioBusiness
+                </h3>
+
+                <p>
+                    Connectivity Solutions
+                </p>
+
+            </div>
+
+
+            <div class="home-partner-card">
+
+                <div class="home-partner-logo">
+                    Vi
+                </div>
+
+                <h3>
+                    Vi Business
+                </h3>
+
+                <p>
+                    Business Telecom
+                </p>
+
+            </div>
+
+
+            <div class="home-partner-card">
+
+                <div class="home-partner-logo">
+                    TeleCMI
+                </div>
+
+                <h3>
+                    TeleCMI
+                </h3>
+
+                <p>
+                    Cloud Communication
+                </p>
+
+            </div>
+
+
+            <div class="home-partner-card">
+
+                <div class="home-partner-logo">
+                    GeM
+                </div>
+
+                <h3>
+                    Dugong
+                </h3>
+
+                <p>
+                    GeM Related Services
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="home-partner-extra">
+
+
+            <div class="home-partner-wide">
+
+                <strong>
+                    IHA Telephony
+                </strong>
+
+                <span>
+                    Cloud communication and telephony solutions.
+                </span>
+
+            </div>
+
+
+            <div class="home-partner-wide">
+
+                <strong>
+                    Technology & Service Ecosystem
+                </strong>
+
+                <span>
+                    Supporting business connectivity,
+                    telecom, cloud communication and
+                    GeM-related requirements.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BUSINESS CAPABILITIES
+====================================================== -->
+
+<section class="home-section home-section-soft">
+
+    <div class="container">
+
+
+        <div class="home-section-heading">
+
+            <span class="home-kicker">
+                Our Capabilities
+            </span>
+
+            <h2>
+                Supporting Different Business Requirements
+            </h2>
+
+            <p>
+
+                Solutions designed around practical
+                business connectivity, communication
+                and support requirements.
+
+            </p>
+
+        </div>
+
+
+        <div class="home-capability-grid">
+
+
+            <div class="home-capability">
+
+                <div class="home-mini-icon">
+                    ◉
+                </div>
+
+                <h3>
+                    Business Internet
+                </h3>
+
+                <p>
+                    Connectivity solutions for
+                    business operations and teams.
+                </p>
+
+            </div>
+
+
+            <div class="home-capability">
+
+                <div class="home-mini-icon">
+                    ◎
+                </div>
+
+                <h3>
+                    Enterprise Connectivity
+                </h3>
+
+                <p>
+                    Connectivity options based on
+                    organizational requirements.
+                </p>
+
+            </div>
+
+
+            <div class="home-capability">
+
+                <div class="home-mini-icon">
+                    ☁
+                </div>
+
+                <h3>
+                    Cloud Telephony
+                </h3>
+
+                <p>
+                    Cloud communication and business
+                    calling solutions.
+                </p>
+
+            </div>
+
+
+            <div class="home-capability">
+
+                <div class="home-mini-icon">
                     ☎
                 </div>
 
@@ -1940,40 +3411,184 @@
                 </h3>
 
                 <p>
-                    Communication solutions designed
-                    to help businesses stay connected
-                    with customers and teams.
+                    Communication solutions for
+                    teams and customers.
                 </p>
 
-                <a href="cloud-communication.html">
-                    Learn More →
-                </a>
-
-            </article>
+            </div>
 
 
+            <div class="home-capability">
 
-            <article class="service-card">
+                <div class="home-mini-icon">
+                    ↗
+                </div>
 
-                <div class="service-icon">
+                <h3>
+                    International Communication
+                </h3>
+
+                <p>
+                    Support for applicable
+                    international requirements.
+                </p>
+
+            </div>
+
+
+            <div class="home-capability">
+
+                <div class="home-mini-icon">
+                    ◆
+                </div>
+
+                <h3>
+                    GeM Business Support
+                </h3>
+
+                <p>
+                    Assistance related to relevant
+                    Government e-Marketplace requirements.
+                </p>
+
+            </div>
+
+
+            <div class="home-capability">
+
+                <div class="home-mini-icon">
                     ✓
                 </div>
 
                 <h3>
-                    Business Technology Support
+                    Requirement Coordination
                 </h3>
 
                 <p>
-                    A practical technology partner for
-                    businesses looking for dependable
-                    solutions and support.
+                    Understanding and coordinating
+                    suitable business solutions.
                 </p>
 
-                <a href="contact.html">
-                    Talk to Us →
+            </div>
+
+
+            <div class="home-capability">
+
+                <div class="home-mini-icon">
+                    +
+                </div>
+
+                <h3>
+                    Business Assistance
+                </h3>
+
+                <p>
+                    Practical support for your
+                    technology requirements.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GEM SECTION
+====================================================== -->
+
+<section class="home-section home-section-light">
+
+    <div class="container">
+
+        <div class="home-support">
+
+
+            <div>
+
+                <span class="home-kicker">
+                    Government e-Marketplace
+                </span>
+
+
+                <h2>
+                    GeM Business Support
+                    Made More Practical
+                </h2>
+
+
+                <p>
+
+                    JB TECH SERVICES provides assistance
+                    for businesses dealing with relevant
+                    Government e-Marketplace requirements
+                    through our association with Dugong.
+
+                </p>
+
+
+                <ul class="home-check-list">
+
+                    <li>
+                        GeM-related business support
+                    </li>
+
+                    <li>
+                        Procurement support
+                    </li>
+
+                    <li>
+                        Requirement coordination
+                    </li>
+
+                    <li>
+                        Product and service coordination
+                    </li>
+
+                </ul>
+
+
+                <br>
+
+
+                <a href="gem-services.html"
+                   class="home-btn-primary">
+
+                    Explore GeM Services →
+
                 </a>
 
-            </article>
+            </div>
+
+
+            <div class="home-support-box">
+
+                <h3>
+                    Need GeM Assistance?
+                </h3>
+
+                <p>
+
+                    Tell us about your requirement and
+                    our team can discuss the relevant
+                    support available for your business.
+
+                </p>
+
+
+                <a href="contact.html"
+                   class="home-white-btn">
+
+                    Discuss Your Requirement →
+
+                </a>
+
+            </div>
 
 
         </div>
@@ -1984,142 +3599,89 @@
 
 
 
-<!-- =========================================================
-     PARTNERS
-========================================================= -->
+<!-- =====================================================
+     CLOUD COMMUNICATION
+====================================================== -->
 
-<section class="partners-section">
+<section class="home-section home-section-soft">
 
-    <div class="section-container">
+    <div class="container">
 
-        <div class="partners-heading">
-
-            <span class="section-label">
-                TECHNOLOGY ECOSYSTEM
-            </span>
-
-            <h2>
-                Trusted Technology
-                Relationships
-            </h2>
-
-            <p>
-                We work with established technology
-                providers to help businesses access
-                suitable solutions.
-            </p>
-
-        </div>
+        <div class="home-support">
 
 
-        <div class="partner-grid">
+            <div class="home-support-box">
+
+                <h3>
+                    Modern Business Communication
+                </h3>
+
+                <p>
+
+                    Cloud-based communication solutions
+                    can help businesses support teams,
+                    customers and changing communication
+                    requirements.
+
+                </p>
 
 
-            <!-- TATA -->
+                <a href="cloud-communication.html"
+                   class="home-white-btn">
 
-            <div class="partner-card">
+                    Explore Cloud Solutions →
 
-                <div class="partner-logo tata">
-                    <span>
-                        TATA
-                    </span>
-                </div>
-
-                <strong>
-                    TATA
-                </strong>
-
-                <small>
-                    Telecom Partnership
-                </small>
+                </a>
 
             </div>
 
 
+            <div>
 
-            <!-- JIO -->
-
-            <div class="partner-card">
-
-                <div class="partner-logo jio">
-                    <span>
-                        JIO
-                    </span>
-                </div>
-
-                <strong>
-                    JIO
-                </strong>
-
-                <small>
-                    Connectivity Solutions
-                </small>
-
-            </div>
-
-
-
-            <!-- VI -->
-
-            <div class="partner-card">
-
-                <div class="partner-logo vi">
-                    <span>
-                        Vi
-                    </span>
-                </div>
-
-                <strong>
-                    Vi
-                </strong>
-
-                <small>
-                    Business Telecom
-                </small>
-
-            </div>
-
-
-
-            <!-- TELECMI -->
-
-            <div class="partner-card">
-
-                <div class="partner-logo telecmi">
-                    <span>
-                        TeleCMI
-                    </span>
-                </div>
-
-                <strong>
-                    TeleCMI
-                </strong>
-
-                <small>
+                <span class="home-kicker">
                     Cloud Communication
-                </small>
-
-            </div>
+                </span>
 
 
+                <h2>
+                    Communicate
+                    Without Boundaries
+                </h2>
 
-            <!-- GeM -->
 
-            <div class="partner-card">
+                <p>
 
-                <div class="partner-logo gem">
-                    <span>
-                        GeM
-                    </span>
-                </div>
+                    Through our cloud communication
+                    partnerships, we provide solutions
+                    for applicable domestic and
+                    international business requirements.
 
-                <strong>
-                    GeM
-                </strong>
+                </p>
 
-                <small>
-                    Dugong Authorized Services
-                </small>
+
+                <ul class="home-check-list">
+
+                    <li>
+                        Cloud telephony
+                    </li>
+
+                    <li>
+                        Business calling
+                    </li>
+
+                    <li>
+                        Customer communication
+                    </li>
+
+                    <li>
+                        Domestic communication
+                    </li>
+
+                    <li>
+                        International communication
+                    </li>
+
+                </ul>
 
             </div>
 
@@ -2132,32 +3694,50 @@
 
 
 
-<!-- =========================================================
-     CTA
-========================================================= -->
+<!-- =====================================================
+     FINAL CTA
+====================================================== -->
 
-<section class="cta-section">
+<section class="home-final-cta">
 
-    <div class="cta-box">
+    <div class="container">
 
-        <div class="cta-content">
+        <h2>
+            Looking for the Right
+            Business Technology Solution?
+        </h2>
 
-            <h2>
-                Looking for the right
-                business technology solution?
-            </h2>
 
-            <p>
-                Tell us what your business needs.
-                We'll help you find a suitable solution.
-            </p>
+        <p>
+
+            Tell us what your business needs.
+            We'll help you identify a suitable
+            solution.
+
+        </p>
+
+
+        <div class="home-final-buttons">
+
+
+            <a href="contact.html"
+               class="home-white-btn">
+
+                Get a Business Quote →
+
+            </a>
+
+
+            <a href="https://wa.me/919017125139"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="home-transparent-btn">
+
+                Talk to Us on WhatsApp ↗
+
+            </a>
 
         </div>
-
-        <a href="contact.html"
-           class="cta-button">
-            Get a Business Quote →
-        </a>
 
     </div>
 
@@ -2165,20 +3745,171 @@
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+     SAME STRUCTURE AS OTHER WORKING PAGES
+====================================================== -->
 
-<footer class="site-footer">
+<footer class="footer">
 
-    <div class="footer-container">
+    <div class="container">
 
-        <div class="footer-brand">
-            JB TECH SERVICES
+
+        <div class="footer-grid">
+
+
+            <!-- COMPANY -->
+
+            <div>
+
+                <h3>
+                    JB TECH SERVICES
+                </h3>
+
+
+                <p>
+
+                    Technology and business communication
+                    solutions helping organizations connect,
+                    communicate and grow.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+                    📍 South West Delhi, Delhi
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+
+                <a href="services.html">
+                    Services
+                </a>
+
+
+                <a href="cloud-communication.html">
+                    Cloud Communication
+                </a>
+
+
+                <a href="gem-services.html">
+                    GeM Services
+                </a>
+
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- SOLUTIONS -->
+
+            <div>
+
+                <h3>
+                    Solutions
+                </h3>
+
+
+                <a href="services.html">
+                    Telecom Services
+                </a>
+
+
+                <a href="cloud-communication.html">
+                    Cloud Communication
+                </a>
+
+
+                <a href="cloud-communication.html">
+                    Business Calling
+                </a>
+
+
+                <a href="gem-services.html">
+                    GeM Services
+                </a>
+
+
+                <a href="contact.html">
+                    Business Solutions
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+
+                <a href="tel:+919017125139">
+                    📞 +91 90171 25139
+                </a>
+
+
+                <a href="mailto:reachus@jbtechservices.in">
+                    ✉ reachus@jbtechservices.in
+                </a>
+
+
+                <a href="https://wa.me/919017125139"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    💬 WhatsApp Us
+
+                </a>
+
+
+                <p>
+
+                    RZH 715B, Raj Nagar Part 2,<br>
+                    Palam Village, South West Delhi,<br>
+                    Delhi – 110077
+
+                </p>
+
+            </div>
+
+
         </div>
 
-        <div class="footer-copy">
-            © 2026 JB TECH SERVICES. All rights reserved.
+
+        <div class="footer-bottom">
+
+            © 2026 JB TECH SERVICES.
+            All Rights Reserved.
+
         </div>
 
     </div>
@@ -2187,117 +3918,192 @@
 
 
 
-<!-- =========================================================
-     WHATSAPP
-========================================================= -->
+<!-- =====================================================
+     FLOATING WHATSAPP
+====================================================== -->
 
 <a href="https://wa.me/919017125139"
-   class="whatsapp-button"
    target="_blank"
-   rel="noopener"
-   aria-label="Chat with JB TECH SERVICES on WhatsApp">
+   rel="noopener noreferrer"
+   class="chat-button"
+   title="Chat with JB TECH SERVICES on WhatsApp">
 
-    ☎
+    💬
 
 </a>
 
 
 
-<!-- =========================================================
-     SLIDER JAVASCRIPT
-========================================================= -->
+<!-- =====================================================
+     EXISTING WEBSITE JAVASCRIPT
+====================================================== -->
+
+<script src="script.js"></script>
+
+
+
+<!-- =====================================================
+     HOMEPAGE SLIDER JAVASCRIPT
+====================================================== -->
 
 <script>
 
-    const slides =
-        document.querySelectorAll(".hero-slide");
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
-    const dots =
-        document.querySelectorAll(".slider-dot");
-
-    let currentSlide = 0;
-
-    let sliderTimer;
-
-
-    function showSlide(index) {
-
-        slides.forEach(
-            function(slide, i) {
-
-                slide.classList.toggle(
-                    "active",
-                    i === index
-                );
-
-            }
-        );
-
-
-        dots.forEach(
-            function(dot, i) {
-
-                dot.classList.toggle(
-                    "active",
-                    i === index
-                );
-
-            }
-        );
-
-
-        currentSlide = index;
-
-    }
-
-
-    function nextSlide() {
-
-        const next =
-            (currentSlide + 1) % slides.length;
-
-        showSlide(next);
-
-    }
-
-
-    function startSlider() {
-
-        clearInterval(sliderTimer);
-
-        sliderTimer =
-            setInterval(
-                nextSlide,
-                5500
+        const slides =
+            document.querySelectorAll(
+                ".home-slide"
             );
 
-    }
+
+        const dots =
+            document.querySelectorAll(
+                ".home-dot"
+            );
 
 
-    dots.forEach(
-        function(dot, index) {
+        const hero =
+            document.querySelector(
+                ".home-hero"
+            );
 
-            dot.addEventListener(
-                "click",
-                function() {
 
-                    showSlide(index);
+        if (
+            !slides.length ||
+            !dots.length ||
+            !hero
+        ) {
+            return;
+        }
 
-                    startSlider();
+
+        let currentSlide = 0;
+
+        let slideTimer;
+
+
+        function showSlide(index) {
+
+            slides.forEach(
+                function (slide, i) {
+
+                    slide.classList.toggle(
+                        "active",
+                        i === index
+                    );
 
                 }
             );
 
+
+            dots.forEach(
+                function (dot, i) {
+
+                    dot.classList.toggle(
+                        "active",
+                        i === index
+                    );
+
+                }
+            );
+
+
+            currentSlide = index;
         }
-    );
 
 
-    showSlide(0);
+        function nextSlide() {
 
-    startSlider();
+            const next =
+                (
+                    currentSlide + 1
+                )
+                %
+                slides.length;
+
+
+            showSlide(next);
+        }
+
+
+        function startSlider() {
+
+            clearInterval(
+                slideTimer
+            );
+
+
+            slideTimer =
+                setInterval(
+                    nextSlide,
+                    5500
+                );
+        }
+
+
+        dots.forEach(
+            function (dot) {
+
+                dot.addEventListener(
+                    "click",
+                    function () {
+
+                        const slideNumber =
+                            Number(
+                                dot.getAttribute(
+                                    "data-slide"
+                                )
+                            );
+
+
+                        showSlide(
+                            slideNumber
+                        );
+
+
+                        startSlider();
+
+                    }
+                );
+
+            }
+        );
+
+
+        hero.addEventListener(
+            "mouseenter",
+            function () {
+
+                clearInterval(
+                    slideTimer
+                );
+
+            }
+        );
+
+
+        hero.addEventListener(
+            "mouseleave",
+            function () {
+
+                startSlider();
+
+            }
+        );
+
+
+        showSlide(0);
+
+        startSlider();
+
+    }
+);
 
 </script>
 
 
 </body>
+
 </html>
