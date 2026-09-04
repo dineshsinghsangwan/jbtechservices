@@ -9,9 +9,9 @@
     <title>Contact Us | JB TECH SERVICES</title>
 
     <meta name="description"
-        content="Contact JB TECH SERVICES for telecom, cloud communication and GeM procurement solutions.">
+        content="Contact JB TECH SERVICES for telecom, cloud communication, IT solutions and GeM procurement support.">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -60,7 +60,7 @@
                     Contact
                 </a>
 
-                <a href="contact.html" class="quote-btn">
+                <a href="#contactForm" class="quote-btn">
                     Get a Business Quote
                 </a>
 
@@ -117,9 +117,9 @@
 
                     <p>
                         Whether you need telecom connectivity,
-                        cloud communication, business calling or
-                        GeM support, our team is ready to understand
-                        your requirement.
+                        cloud communication, business calling,
+                        IT solutions or GeM support, our team is
+                        ready to understand your requirement.
                     </p>
 
 
@@ -252,14 +252,19 @@
 
 
                 <!-- =================================
-                     CONTACT FORM
+                     CONTACT / ENQUIRY FORM
                 ================================== -->
 
                 <div class="contact-form">
 
-                    <h3 style="margin-bottom:25px;">
-                        Send Us a Message
+                    <h3 style="margin-bottom:10px;">
+                        Send Us Your Requirement
                     </h3>
+
+                    <p style="margin-bottom:25px;">
+                        Fill in the details below and our team will
+                        contact you regarding your business requirement.
+                    </p>
 
 
                     <form id="contactForm">
@@ -272,7 +277,7 @@
                             <div class="form-group">
 
                                 <label for="name">
-                                    Full Name
+                                    Full Name *
                                 </label>
 
                                 <input
@@ -280,6 +285,7 @@
                                     id="name"
                                     name="name"
                                     placeholder="Enter your name"
+                                    autocomplete="name"
                                     required>
 
                             </div>
@@ -295,7 +301,8 @@
                                     type="text"
                                     id="company"
                                     name="company"
-                                    placeholder="Enter company name">
+                                    placeholder="Enter company name"
+                                    autocomplete="organization">
 
                             </div>
 
@@ -303,21 +310,22 @@
 
 
 
-                        <!-- EMAIL + PHONE -->
+                        <!-- MOBILE + EMAIL -->
 
                         <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="email">
-                                    Email Address
+                                <label for="mobile">
+                                    Mobile Number *
                                 </label>
 
                                 <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="Enter your email"
+                                    type="tel"
+                                    id="mobile"
+                                    name="mobile"
+                                    placeholder="Enter mobile number"
+                                    autocomplete="tel"
                                     required>
 
                             </div>
@@ -325,15 +333,16 @@
 
                             <div class="form-group">
 
-                                <label for="phone">
-                                    Phone Number
+                                <label for="email">
+                                    Email Address *
                                 </label>
 
                                 <input
-                                    type="tel"
-                                    id="phone"
-                                    name="phone"
-                                    placeholder="Enter phone number"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    autocomplete="email"
                                     required>
 
                             </div>
@@ -347,7 +356,7 @@
                         <div class="form-group">
 
                             <label for="service">
-                                What do you need help with?
+                                Service Required *
                             </label>
 
                             <select
@@ -359,31 +368,43 @@
                                     Select a service
                                 </option>
 
-                                <option value="enterprise-telecom">
+                                <option value="Internet & Connectivity">
+                                    Internet & Connectivity
+                                </option>
+
+                                <option value="Enterprise Telecom">
                                     Enterprise Telecom
                                 </option>
 
-                                <option value="business-connectivity">
-                                    Business Connectivity
+                                <option value="Cloud Telephony">
+                                    Cloud Telephony
                                 </option>
 
-                                <option value="cloud-communication">
-                                    Cloud Communication
+                                <option value="Contact Center Solutions">
+                                    Contact Center Solutions
                                 </option>
 
-                                <option value="business-calling">
-                                    Business Calling
+                                <option value="Enterprise Mobility">
+                                    Enterprise Mobility
                                 </option>
 
-                                <option value="international-communication">
-                                    International Communication
+                                <option value="Business Communication">
+                                    Business Communication
                                 </option>
 
-                                <option value="gem-services">
-                                    GeM Services
+                                <option value="IT & Computing">
+                                    IT & Computing
                                 </option>
 
-                                <option value="other">
+                                <option value="Networking & Security">
+                                    Networking & Security
+                                </option>
+
+                                <option value="Government & GeM">
+                                    Government & GeM
+                                </option>
+
+                                <option value="Other Business Requirement">
                                     Other Business Requirement
                                 </option>
 
@@ -393,20 +414,121 @@
 
 
 
-                        <!-- MESSAGE -->
+                        <!-- USERS + LOCATION -->
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="users">
+                                    Number of Users
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="users"
+                                    name="users"
+                                    placeholder="Example: 25 users">
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="location">
+                                    Service Location
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="location"
+                                    name="location"
+                                    placeholder="City / Location">
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- BUDGET -->
 
                         <div class="form-group">
 
-                            <label for="message">
-                                Message
+                            <label for="budget">
+                                Approximate Budget
+                            </label>
+
+                            <select
+                                id="budget"
+                                name="budget">
+
+                                <option value="Not specified">
+                                    Select budget (optional)
+                                </option>
+
+                                <option value="Below ₹25,000">
+                                    Below ₹25,000
+                                </option>
+
+                                <option value="₹25,000 - ₹50,000">
+                                    ₹25,000 - ₹50,000
+                                </option>
+
+                                <option value="₹50,000 - ₹1,00,000">
+                                    ₹50,000 - ₹1,00,000
+                                </option>
+
+                                <option value="₹1,00,000 - ₹5,00,000">
+                                    ₹1,00,000 - ₹5,00,000
+                                </option>
+
+                                <option value="Above ₹5,00,000">
+                                    Above ₹5,00,000
+                                </option>
+
+                                <option value="Need consultation">
+                                    Need Consultation
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- REQUIREMENT -->
+
+                        <div class="form-group">
+
+                            <label for="requirement">
+                                Tell Us About Your Requirement *
                             </label>
 
                             <textarea
-                                id="message"
-                                name="message"
-                                placeholder="Tell us about your requirement..."
+                                id="requirement"
+                                name="requirement"
+                                placeholder="Please describe your business requirement..."
                                 required></textarea>
 
+                        </div>
+
+
+
+                        <!-- STATUS MESSAGE -->
+
+                        <div
+                            id="formStatus"
+                            role="status"
+                            aria-live="polite"
+                            style="
+                                display:none;
+                                margin-bottom:18px;
+                                padding:12px 15px;
+                                border-radius:6px;
+                                font-size:14px;
+                                line-height:1.5;
+                            ">
                         </div>
 
 
@@ -415,12 +537,24 @@
 
                         <button
                             type="submit"
+                            id="submitButton"
                             class="btn btn-primary"
                             style="width:100%;">
 
                             Send Enquiry
 
                         </button>
+
+
+                        <p style="
+                            margin-top:15px;
+                            font-size:13px;
+                            color:#666;
+                            text-align:center;
+                        ">
+                            Your enquiry will be sent securely to
+                            reachus@jbtechservices.in
+                        </p>
 
 
                     </form>
@@ -518,7 +652,8 @@
                         business communication requirements.
                     </p>
 
-                    <a href="services.html"
+                    <a
+                        href="services.html"
                         class="learn-more">
 
                         Explore Telecom →
@@ -545,7 +680,8 @@
                         communication solutions.
                     </p>
 
-                    <a href="cloud-communication.html"
+                    <a
+                        href="cloud-communication.html"
                         class="learn-more">
 
                         Explore Cloud Solutions →
@@ -564,15 +700,16 @@
                     </div>
 
                     <h3>
-                        GeM Services
+                        Government & GeM
                     </h3>
 
                     <p>
-                        GeM portal and procurement support with
-                        Dugong authorized services.
+                        Technology solutions and support for
+                        Government and GeM-related business requirements.
                     </p>
 
-                    <a href="gem-services.html"
+                    <a
+                        href="gem-services.html"
                         class="learn-more">
 
                         Explore GeM Services →
@@ -580,6 +717,7 @@
                     </a>
 
                 </div>
+
 
             </div>
 
@@ -597,7 +735,8 @@
 
         <div class="container">
 
-            <div class="card"
+            <div
+                class="card"
                 style="
                     max-width:850px;
                     margin:auto;
@@ -617,8 +756,8 @@
                 </h3>
 
                 <p>
-                    Send us your business requirement directly
-                    on WhatsApp and our team will get back to you.
+                    You can also contact JB TECH SERVICES directly
+                    on WhatsApp for a quick conversation.
                 </p>
 
                 <br>
@@ -811,9 +950,21 @@
 
 
 
-    <!-- JAVASCRIPT -->
+    <!-- =========================================
+         EMAILJS
+    ========================================== -->
 
-    <script src="script.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+
+    <!-- =========================================
+         MAIN JAVASCRIPT
+    ========================================== -->
+
+    <script src="JS/script.js"></script>
+
 
 </body>
 
