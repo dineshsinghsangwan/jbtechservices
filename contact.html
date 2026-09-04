@@ -938,16 +938,187 @@
          EMAILJS
     ========================================== -->
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 
     <!-- =========================================
-         MAIN JAVASCRIPT
+         CONTACT PAGE JAVASCRIPT
+         EmailJS enquiry submission
     ========================================== -->
 
-    <script src="script.js"></script>
+    <script>
+
+        /*
+         * EMAILJS CONFIGURATION
+         */
+
+        const EMAILJS_PUBLIC_KEY = 'nT6VAsPKFWv9SyMRl';
+        const EMAILJS_SERVICE_ID = 'service_c5qxx6m';
+        const EMAILJS_TEMPLATE_ID = 'template_npaqjwo';
+
+
+        /*
+         * INITIALIZE EMAILJS
+         */
+
+        emailjs.init({
+            publicKey: EMAILJS_PUBLIC_KEY
+        });
+
+
+        /*
+         * CONTACT FORM
+         */
+
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        const submitButton = document.getElementById('submitButton');
+
+
+        /*
+         * FORM SUBMISSION
+         */
+
+        contactForm.addEventListener('submit', function (event) {
+
+            event.preventDefault();
+
+
+            /*
+             * Prevent multiple clicks
+             */
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending Enquiry...';
+
+
+            /*
+             * Hide previous message
+             */
+
+            formStatus.style.display = 'none';
+            formStatus.textContent = '';
+
+
+            /*
+             * Send complete form to EmailJS
+             */
+
+            emailjs.sendForm(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
+                contactForm
+            )
+
+            .then(function (response) {
+
+                console.log(
+                    'EmailJS SUCCESS:',
+                    response.status,
+                    response.text
+                );
+
+
+                /*
+                 * Success message
+                 */
+
+                formStatus.style.display = 'block';
+                formStatus.style.background = '#e8f7ee';
+                formStatus.style.color = '#176b3a';
+                formStatus.style.border = '1px solid #b7e4c7';
+
+                formStatus.textContent =
+                    'Thank you! Your enquiry has been sent successfully. Our team will contact you shortly.';
+
+
+                /*
+                 * Clear form
+                 */
+
+                contactForm.reset();
+
+
+                /*
+                 * Restore button
+                 */
+
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Enquiry';
+
+            })
+
+
+            .catch(function (error) {
+
+                console.error(
+                    'EmailJS ERROR:',
+                    error
+                );
+
+
+                /*
+                 * Error message
+                 */
+
+                formStatus.style.display = 'block';
+                formStatus.style.background = '#fff0f0';
+                formStatus.style.color = '#a52828';
+                formStatus.style.border = '1px solid #f0b8b8';
+
+                formStatus.textContent =
+                    'Sorry, we could not send your enquiry right now. Please try again or contact us on WhatsApp.';
+
+
+                /*
+                 * Restore button
+                 */
+
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Enquiry';
+
+            });
+
+        });
+
+
+        /*
+         * MOBILE NAVIGATION
+         *
+         * Kept here because this Contact page
+         * does not need to load script.js.
+         */
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+
+        if (menuToggle && navLinks) {
+
+            menuToggle.addEventListener('click', function () {
+
+                navLinks.classList.toggle('active');
+
+            });
+
+
+            const navigationLinks =
+                navLinks.querySelectorAll('a');
+
+
+            navigationLinks.forEach(function (link) {
+
+                link.addEventListener('click', function () {
+
+                    navLinks.classList.remove('active');
+
+                });
+
+            });
+
+        }
+
+    </script>
 
 
 </body>
