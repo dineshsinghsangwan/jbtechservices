@@ -14,10 +14,15 @@ const navLinks = document.querySelector('.nav-links');
 if (menuToggle && navLinks) {
 
     menuToggle.addEventListener('click', function () {
+
         navLinks.classList.toggle('active');
+
     });
 
 }
+
+
+/* Close mobile menu after clicking a link */
 
 document.querySelectorAll('.nav-links a').forEach(function (link) {
 
@@ -37,7 +42,15 @@ document.querySelectorAll('.nav-links a').forEach(function (link) {
 ========================================= */
 
 const EMAILJS_PUBLIC_KEY = 'nT6VAsPKFWv9SyMRl';
-const EMAILJS_SERVICE_ID = 'service_c5qxx6m';
+
+/*
+   IMPORTANT:
+   This is the exact Service ID shown
+   in the EmailJS dashboard.
+*/
+
+const EMAILJS_SERVICE_ID = 'service_c5qzx6m';
+
 const EMAILJS_TEMPLATE_ID = 'template_npaqjwo';
 
 
@@ -45,16 +58,16 @@ const EMAILJS_TEMPLATE_ID = 'template_npaqjwo';
    CONTACT FORM
 ========================================= */
 
-const contactForm = document.getElementById('contactForm');
-const submitButton = document.getElementById('submitButton');
-const formStatus = document.getElementById('formStatus');
+const contactForm = document.querySelector('#contactForm');
+const submitButton = document.querySelector('#submitButton');
+const formStatus = document.querySelector('#formStatus');
 
 
 if (contactForm) {
 
     /*
-       Initialize EmailJS
-    */
+     * Initialize EmailJS
+     */
 
     if (typeof emailjs !== 'undefined') {
 
@@ -66,101 +79,118 @@ if (contactForm) {
 
 
     /*
-       Submit Contact Form
-    */
+     * Submit enquiry
+     */
 
     contactForm.addEventListener('submit', function (event) {
 
         event.preventDefault();
 
 
+        /*
+         * Prevent duplicate submissions
+         */
+
+        if (submitButton && submitButton.disabled) {
+            return;
+        }
+
+
+        /*
+         * Check EmailJS library
+         */
+
+        if (typeof emailjs === 'undefined') {
+
+            if (formStatus) {
+
+                formStatus.style.display = 'block';
+                formStatus.style.background = '#fff0f0';
+                formStatus.style.color = '#a52828';
+                formStatus.style.border = '1px solid #f0b8b8';
+
+                formStatus.textContent =
+                    'The enquiry service could not be loaded. Please try again or contact us on WhatsApp.';
+
+            }
+
+            return;
+        }
+
+
+        /*
+         * Change button while sending
+         */
+
         if (submitButton) {
 
             submitButton.disabled = true;
-            submitButton.textContent = 'Sending...';
+            submitButton.textContent = 'Sending Enquiry...';
 
         }
 
+
+        /*
+         * Clear previous status
+         */
 
         if (formStatus) {
 
-            formStatus.style.display = 'block';
-            formStatus.textContent = 'Sending your enquiry...';
+            formStatus.style.display = 'none';
+            formStatus.textContent = '';
 
         }
 
 
         /*
-           Collect form values
-        */
+         * Send form through EmailJS
+         *
+         * The form fields are automatically
+         * collected using their name="" values.
+         */
 
-        const name = document.getElementById('name').value.trim();
-        const company = document.getElementById('company').value.trim();
-        const mobile = document.getElementById('mobile').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const service = document.getElementById('service').value;
-        const users = document.getElementById('users').value.trim();
-        const location = document.getElementById('location').value.trim();
-        const budget = document.getElementById('budget').value;
-        const requirement = document.getElementById('requirement').value.trim();
-
-
-        /*
-           Send enquiry through EmailJS
-        */
-
-        emailjs.send(
+        emailjs.sendForm(
             EMAILJS_SERVICE_ID,
             EMAILJS_TEMPLATE_ID,
-            {
-                name: name,
-                company: company,
-                mobile: mobile,
-                email: email,
-                service: service,
-                users: users,
-                location: location,
-                budget: budget,
-                requirement: requirement
-            },
-            {
-                publicKey: EMAILJS_PUBLIC_KEY
-            }
+            contactForm
         )
 
         .then(function (response) {
 
             console.log(
-                'Enquiry sent successfully:',
+                'EMAILJS SUCCESS:',
                 response.status,
                 response.text
             );
 
 
             /*
-               SUCCESS MESSAGE
-            */
+             * Show success message
+             */
 
             if (formStatus) {
 
                 formStatus.style.display = 'block';
+                formStatus.style.background = '#e8f7ee';
+                formStatus.style.color = '#176b3a';
+                formStatus.style.border = '1px solid #b7e4c7';
 
                 formStatus.textContent =
-                    'Thank you! Your enquiry has been sent successfully. Our team will get back to you shortly.';
+                    'Thank you! Your enquiry has been sent successfully. Our team will contact you shortly.';
 
             }
 
 
             /*
-               Clear form
-            */
+             * Clear form
+             */
 
             contactForm.reset();
 
 
             /*
-               Restore button
-            */
+             * Restore button
+             */
 
             if (submitButton) {
 
@@ -171,24 +201,35 @@ if (contactForm) {
 
         })
 
+
         .catch(function (error) {
 
-            console.error('EmailJS submission failed:', error);
+            console.error(
+                'EMAILJS ERROR:',
+                error
+            );
 
 
             /*
-               User-friendly message
-            */
+             * Show actual EmailJS error in console
+             */
 
             if (formStatus) {
 
                 formStatus.style.display = 'block';
+                formStatus.style.background = '#fff0f0';
+                formStatus.style.color = '#a52828';
+                formStatus.style.border = '1px solid #f0b8b8';
 
                 formStatus.textContent =
-                    'We could not send your enquiry at the moment. Please try again or contact us on WhatsApp.';
+                    'We could not send your enquiry. Please try again or contact us on WhatsApp.';
 
             }
 
+
+            /*
+             * Restore button
+             */
 
             if (submitButton) {
 
@@ -214,14 +255,11 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
         const targetId = this.getAttribute('href');
 
-
         if (!targetId || targetId === '#') {
             return;
         }
 
-
         const target = document.querySelector(targetId);
-
 
         if (target) {
 
