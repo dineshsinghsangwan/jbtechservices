@@ -12,13 +12,13 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 if (menuToggle && navLinks) {
+
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
+
 }
 
-
-/* Close mobile menu after clicking a link */
 
 document.querySelectorAll('.nav-links a').forEach(link => {
 
@@ -38,9 +38,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 ========================================= */
 
 const EMAILJS_PUBLIC_KEY = 'nT6VAsPKFWv9SyMRl';
-
 const EMAILJS_SERVICE_ID = 'service_c5qxx6m';
-
 const EMAILJS_TEMPLATE_ID = 'template_npaqjwo';
 
 
@@ -49,18 +47,34 @@ const EMAILJS_TEMPLATE_ID = 'template_npaqjwo';
 ========================================= */
 
 const contactForm = document.querySelector('#contactForm');
-
 const submitButton = document.querySelector('#submitButton');
-
 const formStatus = document.querySelector('#formStatus');
 
 
 if (contactForm) {
 
+    /*
+       Check whether EmailJS library loaded
+    */
 
-    /* Initialize EmailJS */
+    if (typeof emailjs === 'undefined') {
 
-    if (typeof emailjs !== 'undefined') {
+        console.error('EmailJS library was not loaded.');
+
+        if (formStatus) {
+
+            formStatus.style.display = 'block';
+
+            formStatus.textContent =
+                'Email service could not be loaded. Please refresh the page and try again.';
+
+        }
+
+    } else {
+
+        /*
+           Initialize EmailJS
+        */
 
         emailjs.init({
             publicKey: EMAILJS_PUBLIC_KEY
@@ -69,21 +83,27 @@ if (contactForm) {
     }
 
 
-    /* Submit Contact Form */
+    /*
+       Form submission
+    */
 
     contactForm.addEventListener('submit', function (event) {
 
         event.preventDefault();
 
 
-        /* Prevent double clicking */
+        /*
+           Prevent double submission
+        */
 
         if (submitButton && submitButton.disabled) {
             return;
         }
 
 
-        /* Check EmailJS */
+        /*
+           Check EmailJS
+        */
 
         if (typeof emailjs === 'undefined') {
 
@@ -92,7 +112,7 @@ if (contactForm) {
                 formStatus.style.display = 'block';
 
                 formStatus.textContent =
-                    'Unable to connect to the enquiry service. Please try again or contact us on WhatsApp.';
+                    'Email service is not available. Please try again later or contact us on WhatsApp.';
 
             }
 
@@ -100,29 +120,31 @@ if (contactForm) {
         }
 
 
-        /* Button loading state */
+        /*
+           Show Sending status
+        */
 
         if (submitButton) {
 
             submitButton.disabled = true;
-
             submitButton.textContent = 'Sending...';
 
         }
 
 
-        /* Hide previous status */
-
         if (formStatus) {
 
-            formStatus.style.display = 'none';
+            formStatus.style.display = 'block';
 
-            formStatus.textContent = '';
+            formStatus.textContent =
+                'Sending your enquiry...';
 
         }
 
 
-        /* Send form through EmailJS */
+        /*
+           Send form through EmailJS
+        */
 
         emailjs.sendForm(
             EMAILJS_SERVICE_ID,
@@ -130,10 +152,14 @@ if (contactForm) {
             contactForm
         )
 
-        .then(function () {
+        .then(function (response) {
 
+            console.log(
+                'EMAILJS SUCCESS:',
+                response.status,
+                response.text
+            );
 
-            /* Success message */
 
             if (formStatus) {
 
@@ -145,17 +171,12 @@ if (contactForm) {
             }
 
 
-            /* Clear form */
-
             contactForm.reset();
 
-
-            /* Restore button */
 
             if (submitButton) {
 
                 submitButton.disabled = false;
-
                 submitButton.textContent = 'Send Enquiry';
 
             }
@@ -165,28 +186,34 @@ if (contactForm) {
 
         .catch(function (error) {
 
+            /*
+               IMPORTANT:
+               Show the REAL EmailJS error
+            */
 
-            console.error('EmailJS Error:', error);
+            console.error('EMAILJS ERROR:', error);
 
+            console.error('ERROR STATUS:', error.status);
 
-            /* Error message */
+            console.error('ERROR TEXT:', error.text);
+
 
             if (formStatus) {
 
                 formStatus.style.display = 'block';
 
                 formStatus.textContent =
-                    'Sorry, we could not send your enquiry right now. Please try again or contact us on WhatsApp.';
+                    'EmailJS Error ' +
+                    (error.status || '') +
+                    ': ' +
+                    (error.text || 'Unable to send enquiry.');
 
             }
 
 
-            /* Restore button */
-
             if (submitButton) {
 
                 submitButton.disabled = false;
-
                 submitButton.textContent = 'Send Enquiry';
 
             }
@@ -220,6 +247,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         if (target) {
 
             event.preventDefault();
+
 
             target.scrollIntoView({
                 behavior: 'smooth',
