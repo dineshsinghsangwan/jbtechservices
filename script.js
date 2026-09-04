@@ -12,28 +12,20 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 if (menuToggle && navLinks) {
-
-    menuToggle.addEventListener('click', function () {
-
+    menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-
     });
-
 }
 
 
-/* =========================================
-   CLOSE MOBILE MENU AFTER CLICKING A LINK
-========================================= */
+/* Close mobile menu after clicking a link */
 
-document.querySelectorAll('.nav-links a').forEach(function (link) {
+document.querySelectorAll('.nav-links a').forEach(link => {
 
-    link.addEventListener('click', function () {
+    link.addEventListener('click', () => {
 
         if (navLinks) {
-
             navLinks.classList.remove('active');
-
         }
 
     });
@@ -53,19 +45,6 @@ const EMAILJS_TEMPLATE_ID = 'template_npaqjwo';
 
 
 /* =========================================
-   INITIALIZE EMAILJS
-========================================= */
-
-if (typeof emailjs !== 'undefined') {
-
-    emailjs.init({
-        publicKey: EMAILJS_PUBLIC_KEY
-    });
-
-}
-
-
-/* =========================================
    CONTACT FORM
 ========================================= */
 
@@ -78,62 +57,72 @@ const formStatus = document.querySelector('#formStatus');
 
 if (contactForm) {
 
+
+    /* Initialize EmailJS */
+
+    if (typeof emailjs !== 'undefined') {
+
+        emailjs.init({
+            publicKey: EMAILJS_PUBLIC_KEY
+        });
+
+    }
+
+
+    /* Submit Contact Form */
+
     contactForm.addEventListener('submit', function (event) {
 
         event.preventDefault();
 
 
-        /* =========================================
-           CHECK EMAILJS
-        ========================================= */
+        /* Prevent double clicking */
 
-        if (typeof emailjs === 'undefined') {
-
-            showFormError(
-                'The enquiry service could not be loaded. Please try again or contact us at reachus@jbtechservices.in.'
-            );
-
+        if (submitButton && submitButton.disabled) {
             return;
-
         }
 
 
-        /* =========================================
-           DISABLE BUTTON WHILE SENDING
-        ========================================= */
+        /* Check EmailJS */
+
+        if (typeof emailjs === 'undefined') {
+
+            if (formStatus) {
+
+                formStatus.style.display = 'block';
+
+                formStatus.textContent =
+                    'Unable to connect to the enquiry service. Please try again or contact us on WhatsApp.';
+
+            }
+
+            return;
+        }
+
+
+        /* Button loading state */
 
         if (submitButton) {
 
             submitButton.disabled = true;
 
-            submitButton.textContent = 'Sending Enquiry...';
+            submitButton.textContent = 'Sending...';
 
         }
 
 
-        /* =========================================
-           STATUS MESSAGE
-        ========================================= */
+        /* Hide previous status */
 
         if (formStatus) {
 
-            formStatus.style.display = 'block';
+            formStatus.style.display = 'none';
 
-            formStatus.style.backgroundColor = '#eef4ff';
-
-            formStatus.style.color = '#1f3c68';
-
-            formStatus.style.border = '1px solid #cbd9ee';
-
-            formStatus.textContent =
-                'Please wait while we send your enquiry...';
+            formStatus.textContent = '';
 
         }
 
 
-        /* =========================================
-           SEND FORM THROUGH EMAILJS
-        ========================================= */
+        /* Send form through EmailJS */
 
         emailjs.sendForm(
             EMAILJS_SERVICE_ID,
@@ -144,32 +133,24 @@ if (contactForm) {
         .then(function () {
 
 
-            /* =========================================
-               SUCCESS
-            ========================================= */
+            /* Success message */
 
             if (formStatus) {
 
                 formStatus.style.display = 'block';
 
-                formStatus.style.backgroundColor = '#eaf8ef';
-
-                formStatus.style.color = '#176b3a';
-
-                formStatus.style.border = '1px solid #b9e4c8';
-
                 formStatus.textContent =
-                    'Thank you! Your enquiry has been sent successfully. Our team will contact you shortly.';
+                    'Thank you! Your enquiry has been sent successfully. Our team will get back to you shortly.';
 
             }
 
 
-            /* RESET FORM */
+            /* Clear form */
 
             contactForm.reset();
 
 
-            /* RESTORE BUTTON */
+            /* Restore button */
 
             if (submitButton) {
 
@@ -179,40 +160,28 @@ if (contactForm) {
 
             }
 
-
-            /* SCROLL TO SUCCESS MESSAGE */
-
-            if (formStatus) {
-
-                formStatus.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center'
-                });
-
-            }
-
-
         })
+
 
         .catch(function (error) {
 
 
-            /* =========================================
-               ERROR
-            ========================================= */
-
-            console.error(
-                'EmailJS Error:',
-                error
-            );
+            console.error('EmailJS Error:', error);
 
 
-            showFormError(
-                'Sorry, we could not send your enquiry right now. Please try again or email us directly at reachus@jbtechservices.in.'
-            );
+            /* Error message */
+
+            if (formStatus) {
+
+                formStatus.style.display = 'block';
+
+                formStatus.textContent =
+                    'Sorry, we could not send your enquiry right now. Please try again or contact us on WhatsApp.';
+
+            }
 
 
-            /* RESTORE BUTTON */
+            /* Restore button */
 
             if (submitButton) {
 
@@ -230,51 +199,29 @@ if (contactForm) {
 
 
 /* =========================================
-   FORM ERROR FUNCTION
+   SMOOTH SCROLLING
 ========================================= */
 
-function showFormError(message) {
+document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-    if (formStatus) {
-
-        formStatus.style.display = 'block';
-
-        formStatus.style.backgroundColor = '#fff0f0';
-
-        formStatus.style.color = '#a12626';
-
-        formStatus.style.border = '1px solid #efc2c2';
-
-        formStatus.textContent = message;
-
-    }
-
-}
-
-
-/* =========================================
-   SMOOTH SCROLL FOR PAGE ANCHORS
-========================================= */
-
-document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-
-    anchor.addEventListener('click', function (event) {
+    link.addEventListener('click', function (event) {
 
         const targetId = this.getAttribute('href');
 
+
         if (!targetId || targetId === '#') {
-
             return;
-
         }
 
-        const targetElement = document.querySelector(targetId);
 
-        if (targetElement) {
+        const target = document.querySelector(targetId);
+
+
+        if (target) {
 
             event.preventDefault();
 
-            targetElement.scrollIntoView({
+            target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
