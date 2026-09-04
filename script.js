@@ -13,16 +13,15 @@ const navLinks = document.querySelector('.nav-links');
 
 if (menuToggle && navLinks) {
 
-    menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('click', function () {
         navLinks.classList.toggle('active');
     });
 
 }
 
+document.querySelectorAll('.nav-links a').forEach(function (link) {
 
-document.querySelectorAll('.nav-links a').forEach(link => {
-
-    link.addEventListener('click', () => {
+    link.addEventListener('click', function () {
 
         if (navLinks) {
             navLinks.classList.remove('active');
@@ -46,35 +45,18 @@ const EMAILJS_TEMPLATE_ID = 'template_npaqjwo';
    CONTACT FORM
 ========================================= */
 
-const contactForm = document.querySelector('#contactForm');
-const submitButton = document.querySelector('#submitButton');
-const formStatus = document.querySelector('#formStatus');
+const contactForm = document.getElementById('contactForm');
+const submitButton = document.getElementById('submitButton');
+const formStatus = document.getElementById('formStatus');
 
 
 if (contactForm) {
 
     /*
-       Check whether EmailJS library loaded
+       Initialize EmailJS
     */
 
-    if (typeof emailjs === 'undefined') {
-
-        console.error('EmailJS library was not loaded.');
-
-        if (formStatus) {
-
-            formStatus.style.display = 'block';
-
-            formStatus.textContent =
-                'Email service could not be loaded. Please refresh the page and try again.';
-
-        }
-
-    } else {
-
-        /*
-           Initialize EmailJS
-        */
+    if (typeof emailjs !== 'undefined') {
 
         emailjs.init({
             publicKey: EMAILJS_PUBLIC_KEY
@@ -84,45 +66,13 @@ if (contactForm) {
 
 
     /*
-       Form submission
+       Submit Contact Form
     */
 
     contactForm.addEventListener('submit', function (event) {
 
         event.preventDefault();
 
-
-        /*
-           Prevent double submission
-        */
-
-        if (submitButton && submitButton.disabled) {
-            return;
-        }
-
-
-        /*
-           Check EmailJS
-        */
-
-        if (typeof emailjs === 'undefined') {
-
-            if (formStatus) {
-
-                formStatus.style.display = 'block';
-
-                formStatus.textContent =
-                    'Email service is not available. Please try again later or contact us on WhatsApp.';
-
-            }
-
-            return;
-        }
-
-
-        /*
-           Show Sending status
-        */
 
         if (submitButton) {
 
@@ -135,31 +85,61 @@ if (contactForm) {
         if (formStatus) {
 
             formStatus.style.display = 'block';
-
-            formStatus.textContent =
-                'Sending your enquiry...';
+            formStatus.textContent = 'Sending your enquiry...';
 
         }
 
 
         /*
-           Send form through EmailJS
+           Collect form values
         */
 
-        emailjs.sendForm(
+        const name = document.getElementById('name').value.trim();
+        const company = document.getElementById('company').value.trim();
+        const mobile = document.getElementById('mobile').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const service = document.getElementById('service').value;
+        const users = document.getElementById('users').value.trim();
+        const location = document.getElementById('location').value.trim();
+        const budget = document.getElementById('budget').value;
+        const requirement = document.getElementById('requirement').value.trim();
+
+
+        /*
+           Send enquiry through EmailJS
+        */
+
+        emailjs.send(
             EMAILJS_SERVICE_ID,
             EMAILJS_TEMPLATE_ID,
-            contactForm
+            {
+                name: name,
+                company: company,
+                mobile: mobile,
+                email: email,
+                service: service,
+                users: users,
+                location: location,
+                budget: budget,
+                requirement: requirement
+            },
+            {
+                publicKey: EMAILJS_PUBLIC_KEY
+            }
         )
 
         .then(function (response) {
 
             console.log(
-                'EMAILJS SUCCESS:',
+                'Enquiry sent successfully:',
                 response.status,
                 response.text
             );
 
+
+            /*
+               SUCCESS MESSAGE
+            */
 
             if (formStatus) {
 
@@ -171,8 +151,16 @@ if (contactForm) {
             }
 
 
+            /*
+               Clear form
+            */
+
             contactForm.reset();
 
+
+            /*
+               Restore button
+            */
 
             if (submitButton) {
 
@@ -183,30 +171,21 @@ if (contactForm) {
 
         })
 
-
         .catch(function (error) {
 
+            console.error('EmailJS submission failed:', error);
+
+
             /*
-               IMPORTANT:
-               Show the REAL EmailJS error
+               User-friendly message
             */
-
-            console.error('EMAILJS ERROR:', error);
-
-            console.error('ERROR STATUS:', error.status);
-
-            console.error('ERROR TEXT:', error.text);
-
 
             if (formStatus) {
 
                 formStatus.style.display = 'block';
 
                 formStatus.textContent =
-                    'EmailJS Error ' +
-                    (error.status || '') +
-                    ': ' +
-                    (error.text || 'Unable to send enquiry.');
+                    'We could not send your enquiry at the moment. Please try again or contact us on WhatsApp.';
 
             }
 
@@ -229,7 +208,7 @@ if (contactForm) {
    SMOOTH SCROLLING
 ========================================= */
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
     link.addEventListener('click', function (event) {
 
@@ -247,7 +226,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         if (target) {
 
             event.preventDefault();
-
 
             target.scrollIntoView({
                 behavior: 'smooth',
