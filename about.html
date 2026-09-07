@@ -8,17 +8,15 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-
-    <!-- =====================================================
-         PRIMARY SEO
-    ====================================================== -->
-
     <title>
-        About JB TECH SERVICES | Business Telecom & Technology Solutions
+        About JB TECH SERVICES | Business Technology & Telecom Solutions
     </title>
 
     <meta name="description"
-          content="Learn about JB TECH SERVICES, a Delhi-based business technology and communication solutions provider focused on telecom connectivity, cloud communication, business calling and GeM-related support.">
+          content="Learn about JB TECH SERVICES, a Delhi-based business technology and communication solutions provider focused on telecom connectivity, cloud communication, business calling and GeM-related services.">
+
+    <meta name="author"
+          content="JB TECH SERVICES">
 
     <meta name="robots"
           content="index, follow">
@@ -27,26 +25,13 @@
           href="https://jbtechservices.in/about.html">
 
 
-    <!-- =====================================================
-         WEBSITE INFORMATION
-    ====================================================== -->
-
-    <meta name="author"
-          content="JB TECH SERVICES">
-
-    <meta name="theme-color"
-          content="#0b2d4f">
-
-
-    <!-- =====================================================
-         OPEN GRAPH
-    ====================================================== -->
+    <!-- OPEN GRAPH -->
 
     <meta property="og:title"
-          content="About JB TECH SERVICES | Business Telecom & Technology Solutions">
+          content="About JB TECH SERVICES | Business Technology & Telecom Solutions">
 
     <meta property="og:description"
-          content="Learn how JB TECH SERVICES helps businesses with connectivity, telecom, cloud communication, business calling and GeM-related requirements.">
+          content="Learn about JB TECH SERVICES and our business-focused approach to connectivity, telecom, cloud communication, business calling and GeM-related requirements.">
 
     <meta property="og:type"
           content="website">
@@ -57,156 +42,1741 @@
     <meta property="og:site_name"
           content="JB TECH SERVICES">
 
-    <meta property="og:locale"
-          content="en_IN">
+    <meta name="theme-color"
+          content="#0a2d4f">
 
 
-    <!-- =====================================================
-         TWITTER / SOCIAL SHARING
-    ====================================================== -->
-
-    <meta name="twitter:card"
-          content="summary">
-
-    <meta name="twitter:title"
-          content="About JB TECH SERVICES | Business Telecom & Technology Solutions">
-
-    <meta name="twitter:description"
-          content="JB TECH SERVICES helps businesses with telecom connectivity, cloud communication, business calling and GeM-related requirements.">
-
-
-    <!-- =====================================================
-         ORGANIZATION STRUCTURED DATA
-    ====================================================== -->
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://jbtechservices.in/#organization",
-        "name": "JB TECH SERVICES",
-        "url": "https://jbtechservices.in/",
-        "description": "Business technology and communication solutions provider focused on telecom connectivity, cloud communication, business calling and GeM-related support.",
-        "telephone": "+91-9017125139",
-        "email": "reachus@jbtechservices.in",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "RZH 715B, Raj Nagar Part 2, Palam Village",
-            "addressLocality": "South West Delhi",
-            "addressRegion": "Delhi",
-            "postalCode": "110077",
-            "addressCountry": "IN"
-        },
-        "areaServed": {
-            "@type": "City",
-            "name": "Delhi"
-        }
-    }
-    </script>
-
-
-    <!-- =====================================================
-         WEBPAGE STRUCTURED DATA
-    ====================================================== -->
+    <!-- STRUCTURED DATA -->
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "AboutPage",
-        "@id": "https://jbtechservices.in/about.html#aboutpage",
         "name": "About JB TECH SERVICES",
         "url": "https://jbtechservices.in/about.html",
-        "description": "About JB TECH SERVICES and its business technology, telecom, cloud communication and GeM-related solutions.",
-        "isPartOf": {
-            "@type": "WebSite",
+        "description": "About JB TECH SERVICES, a business technology and communication solutions provider.",
+        "mainEntity": {
+            "@type": "Organization",
             "name": "JB TECH SERVICES",
-            "url": "https://jbtechservices.in/"
-        },
-        "about": {
-            "@id": "https://jbtechservices.in/#organization"
+            "url": "https://jbtechservices.in/",
+            "telephone": "+91-9017125139",
+            "email": "reachus@jbtechservices.in",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "RZH 715B, Raj Nagar Part 2, Palam Village",
+                "addressLocality": "South West Delhi",
+                "addressRegion": "Delhi",
+                "postalCode": "110077",
+                "addressCountry": "IN"
+            }
         }
     }
     </script>
 
 
-    <!-- =====================================================
-         MAIN WEBSITE STYLESHEET
-    ====================================================== -->
-
     <link rel="stylesheet"
           href="style.css">
+
+
+    <!-- =====================================================
+         ABOUT PAGE DESIGN
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           BASE
+        ====================================================== */
+
+        .about-page {
+            overflow-x: hidden;
+        }
+
+        .about-page *,
+        .about-page *::before,
+        .about-page *::after {
+            box-sizing: border-box;
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .about-hero {
+            position: relative;
+
+            min-height: 590px;
+
+            display: flex;
+            align-items: center;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 80% 40%,
+                    rgba(61,145,255,0.25),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 10% 100%,
+                    rgba(26,177,255,0.08),
+                    transparent 28%
+                ),
+                linear-gradient(
+                    120deg,
+                    #061b31 0%,
+                    #092f52 55%,
+                    #12477d 100%
+                );
+
+            color: #ffffff;
+        }
+
+
+        .about-hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 680px;
+            height: 680px;
+
+            right: -235px;
+            top: -245px;
+
+            border:
+                1px solid rgba(255,255,255,0.08);
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 0 65px rgba(255,255,255,0.018),
+                0 0 0 130px rgba(255,255,255,0.012);
+
+            pointer-events: none;
+        }
+
+
+        .about-hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 350px;
+            height: 350px;
+
+            left: -180px;
+            bottom: -230px;
+
+            border:
+                1px solid rgba(255,255,255,0.06);
+
+            border-radius: 50%;
+        }
+
+
+        .about-hero .container {
+            position: relative;
+
+            z-index: 3;
+        }
+
+
+        .about-hero-grid {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.05fr)
+                minmax(400px, 0.95fr);
+
+            gap: 65px;
+
+            align-items: center;
+        }
+
+
+        .about-hero-content {
+            padding: 75px 0;
+        }
+
+
+        .about-kicker {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 19px;
+
+            color: #70b5ff;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .about-kicker::before {
+            content: "";
+
+            width: 30px;
+            height: 2px;
+
+            background: #70b5ff;
+        }
+
+
+        .about-hero h1 {
+            margin: 0 0 23px;
+
+            color: #ffffff;
+
+            font-size:
+                clamp(42px, 5vw, 64px);
+
+            line-height: 1.05;
+
+            letter-spacing: -2.2px;
+
+            font-weight: 850;
+        }
+
+
+        .about-hero h1 span {
+            color: #70b5ff;
+        }
+
+
+        .about-hero-text {
+            max-width: 650px;
+
+            margin: 0 0 30px;
+
+            color: #d4e5f6;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+
+        .about-hero-buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 13px;
+        }
+
+
+        .about-btn-primary,
+        .about-btn-outline {
+            min-height: 53px;
+
+            padding: 0 23px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 9px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+        }
+
+
+        .about-btn-primary {
+            background: #ffffff;
+
+            color: #0a3157 !important;
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.18);
+        }
+
+
+        .about-btn-primary:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 20px 42px rgba(0,0,0,0.25);
+        }
+
+
+        .about-btn-outline {
+            border:
+                1px solid rgba(255,255,255,0.30);
+
+            background:
+                rgba(255,255,255,0.04);
+
+            color: #ffffff !important;
+        }
+
+
+        .about-btn-outline:hover {
+            transform: translateY(-3px);
+
+            background:
+                rgba(255,255,255,0.10);
+        }
+
+
+        /* =====================================================
+           HERO VISUAL
+        ====================================================== */
+
+        .about-visual {
+            position: relative;
+
+            min-height: 445px;
+        }
+
+
+        .about-visual-ring {
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            width: 320px;
+            height: 320px;
+
+            border:
+                1px solid rgba(114,180,255,0.22);
+
+            border-radius: 50%;
+        }
+
+
+        .about-visual-ring::before,
+        .about-visual-ring::after {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            border:
+                1px solid rgba(114,180,255,0.10);
+
+            border-radius: 50%;
+        }
+
+
+        .about-visual-ring::before {
+            width: 440px;
+            height: 440px;
+        }
+
+
+        .about-visual-ring::after {
+            width: 545px;
+            height: 545px;
+        }
+
+
+        .about-visual-core {
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            width: 205px;
+            height: 205px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            border:
+                1px solid rgba(255,255,255,0.20);
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle at 30% 25%,
+                    rgba(96,176,255,0.30),
+                    transparent 45%
+                ),
+                linear-gradient(
+                    145deg,
+                    #144a82,
+                    #071d34
+                );
+
+            box-shadow:
+                0 30px 70px rgba(0,0,0,0.28),
+                inset 0 0 45px rgba(77,154,255,0.10);
+
+            z-index: 3;
+
+            animation:
+                aboutCoreFloat 5s ease-in-out infinite;
+        }
+
+
+        @keyframes aboutCoreFloat {
+
+            0%,
+            100% {
+                transform:
+                    translate(-50%, -50%)
+                    translateY(0);
+            }
+
+            50% {
+                transform:
+                    translate(-50%, -50%)
+                    translateY(-8px);
+            }
+        }
+
+
+        .about-core-mark {
+            width: 58px;
+            height: 58px;
+
+            margin-bottom: 12px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background:
+                rgba(255,255,255,0.10);
+
+            color: #8ac4ff;
+
+            font-size: 25px;
+
+            font-weight: 900;
+        }
+
+
+        .about-visual-core strong {
+            color: #ffffff;
+
+            font-size: 17px;
+        }
+
+
+        .about-visual-core span {
+            margin-top: 5px;
+
+            color: #a9c9e7;
+
+            font-size: 9px;
+
+            letter-spacing: 1.3px;
+
+            text-transform: uppercase;
+        }
+
+
+        .about-floating-card {
+            position: absolute;
+
+            z-index: 5;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            min-width: 195px;
+
+            padding: 13px 15px;
+
+            border:
+                1px solid rgba(255,255,255,0.14);
+
+            border-radius: 12px;
+
+            background:
+                rgba(5,25,46,0.78);
+
+            backdrop-filter: blur(12px);
+
+            box-shadow:
+                0 20px 40px rgba(0,0,0,0.20);
+
+            animation:
+                aboutFloat 4.5s ease-in-out infinite;
+        }
+
+
+        .about-floating-icon {
+            width: 38px;
+            height: 38px;
+
+            flex: 0 0 38px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background:
+                rgba(90,166,255,0.13);
+
+            color: #78b9ff;
+
+            font-size: 18px;
+        }
+
+
+        .about-floating-card strong {
+            display: block;
+
+            color: #ffffff;
+
+            font-size: 13px;
+        }
+
+
+        .about-floating-card small {
+            display: block;
+
+            margin-top: 3px;
+
+            color: #a8c5df;
+
+            font-size: 10px;
+        }
+
+
+        .about-float-one {
+            left: 0;
+            top: 42px;
+
+            animation-delay: -0.7s;
+        }
+
+
+        .about-float-two {
+            right: -5px;
+            top: 160px;
+
+            animation-delay: -2s;
+        }
+
+
+        .about-float-three {
+            left: 25px;
+            bottom: 28px;
+
+            animation-delay: -3.1s;
+        }
+
+
+        @keyframes aboutFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-9px);
+            }
+        }
+
+
+        /* =====================================================
+           SECTIONS
+        ====================================================== */
+
+        .about-section {
+            padding: 95px 0;
+        }
+
+
+        .about-section-white {
+            background: #ffffff;
+        }
+
+
+        .about-section-soft {
+            background: #f7f9fc;
+        }
+
+
+        .about-section-heading {
+            max-width: 800px;
+
+            margin:
+                0 auto 52px;
+
+            text-align: center;
+        }
+
+
+        .about-section-label {
+            display: block;
+
+            margin-bottom: 11px;
+
+            color: #2177e8;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        .about-section-heading h2 {
+            margin: 0 0 15px;
+
+            color: #0a2340;
+
+            font-size:
+                clamp(31px, 4vw, 47px);
+
+            line-height: 1.12;
+
+            letter-spacing: -1.3px;
+        }
+
+
+        .about-section-heading p {
+            margin: 0;
+
+            color: #66788c;
+
+            font-size: 16px;
+
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           COMPANY INTRO
+        ====================================================== */
+
+        .about-intro-grid {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.05fr)
+                minmax(340px, 0.95fr);
+
+            gap: 65px;
+
+            align-items: center;
+        }
+
+
+        .about-intro-copy h2 {
+            margin: 0 0 20px;
+
+            color: #0a2340;
+
+            font-size:
+                clamp(31px, 3.5vw, 44px);
+
+            line-height: 1.12;
+
+            letter-spacing: -1px;
+        }
+
+
+        .about-intro-copy p {
+            margin: 0 0 16px;
+
+            color: #68798d;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        .about-intro-panel {
+            padding: 36px;
+
+            border-radius: 21px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #edf5ff,
+                    #f8fbff
+                );
+
+            border:
+                1px solid #dce8f5;
+        }
+
+
+        .about-intro-icon {
+            width: 58px;
+            height: 58px;
+
+            margin-bottom: 20px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background: #ffffff;
+
+            color: #2478ff;
+
+            font-size: 25px;
+
+            box-shadow:
+                0 10px 25px rgba(15,35,60,0.06);
+        }
+
+
+        .about-intro-panel h3 {
+            margin: 0 0 11px;
+
+            color: #0a2340;
+
+            font-size: 23px;
+        }
+
+
+        .about-intro-panel p {
+            margin: 0;
+
+            color: #68798d;
+
+            font-size: 14px;
+
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           CAPABILITIES
+        ====================================================== */
+
+        .about-capability-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .about-capability {
+            position: relative;
+
+            min-height: 255px;
+
+            padding: 29px;
+
+            overflow: hidden;
+
+            border:
+                1px solid #e0e7ef;
+
+            border-radius: 18px;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 12px 35px rgba(15,23,42,0.045);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+
+        .about-capability:hover {
+            transform: translateY(-7px);
+
+            border-color: #c3dbf8;
+
+            box-shadow:
+                0 24px 48px rgba(15,35,60,0.10);
+        }
+
+
+        .about-capability::after {
+            content: "";
+
+            position: absolute;
+
+            width: 125px;
+            height: 125px;
+
+            right: -65px;
+            bottom: -65px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(36,120,255,0.10),
+                    transparent 68%
+                );
+        }
+
+
+        .about-capability-icon {
+            width: 51px;
+            height: 51px;
+
+            margin-bottom: 18px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: #edf4ff;
+
+            color: #2478ff;
+
+            font-size: 21px;
+        }
+
+
+        .about-capability h3 {
+            margin: 0 0 10px;
+
+            color: #0a2340;
+
+            font-size: 19px;
+        }
+
+
+        .about-capability p {
+            margin: 0;
+
+            color: #68798d;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           WHY JB TECH SERVICES
+        ====================================================== */
+
+        .about-why-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 17px;
+        }
+
+
+        .about-why-card {
+            padding: 27px;
+
+            border:
+                1px solid #e0e7ef;
+
+            border-radius: 17px;
+
+            background: #ffffff;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .about-why-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 20px 40px rgba(15,23,42,0.08);
+        }
+
+
+        .about-why-icon {
+            width: 46px;
+            height: 46px;
+
+            margin-bottom: 17px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: #edf4ff;
+
+            color: #2478ff;
+
+            font-size: 19px;
+        }
+
+
+        .about-why-card h3 {
+            margin: 0 0 8px;
+
+            color: #0a2340;
+
+            font-size: 16px;
+        }
+
+
+        .about-why-card p {
+            margin: 0;
+
+            color: #6a7b8f;
+
+            font-size: 12px;
+
+            line-height: 1.65;
+        }
+
+
+        /* =====================================================
+           APPROACH
+        ====================================================== */
+
+        .about-process {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+
+            position: relative;
+        }
+
+
+        .about-process::before {
+            content: "";
+
+            position: absolute;
+
+            left: 12%;
+            right: 12%;
+
+            top: 34px;
+
+            height: 1px;
+
+            background: #d6e0ea;
+        }
+
+
+        .about-process-step {
+            position: relative;
+
+            z-index: 2;
+
+            text-align: center;
+        }
+
+
+        .about-process-number {
+            width: 68px;
+            height: 68px;
+
+            margin:
+                0 auto 19px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border:
+                5px solid #ffffff;
+
+            border-radius: 50%;
+
+            background: #0c3d6c;
+
+            color: #ffffff;
+
+            font-size: 15px;
+
+            font-weight: 900;
+
+            box-shadow:
+                0 0 0 1px #d4dfeb;
+        }
+
+
+        .about-process-step h3 {
+            margin: 0 0 8px;
+
+            color: #0a2340;
+
+            font-size: 17px;
+        }
+
+
+        .about-process-step p {
+            max-width: 215px;
+
+            margin: 0 auto;
+
+            color: #68798d;
+
+            font-size: 12px;
+
+            line-height: 1.65;
+        }
+
+
+        /* =====================================================
+           BUSINESS FOCUS
+        ====================================================== */
+
+        .about-focus {
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(60,143,248,0.19),
+                    transparent 32%
+                ),
+                linear-gradient(
+                    135deg,
+                    #071d33,
+                    #0e3d69
+                );
+
+            color: #ffffff;
+        }
+
+
+        .about-focus-grid {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                minmax(300px, 0.75fr);
+
+            gap: 65px;
+
+            align-items: center;
+        }
+
+
+        .about-focus-copy .about-section-label {
+            color: #70b5ff;
+        }
+
+
+        .about-focus-copy h2 {
+            margin: 0 0 17px;
+
+            color: #ffffff;
+
+            font-size:
+                clamp(31px, 4vw, 47px);
+
+            line-height: 1.12;
+
+            letter-spacing: -1px;
+        }
+
+
+        .about-focus-copy p {
+            margin: 0;
+
+            color: #c6d9ec;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        .about-focus-list {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin: 25px 0 0;
+
+            padding: 0;
+
+            list-style: none;
+        }
+
+
+        .about-focus-list li {
+            position: relative;
+
+            padding: 14px 15px 14px 38px;
+
+            border:
+                1px solid rgba(255,255,255,0.12);
+
+            border-radius: 10px;
+
+            background:
+                rgba(255,255,255,0.045);
+
+            color: #d5e5f4;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+
+        .about-focus-list li::before {
+            content: "✓";
+
+            position: absolute;
+
+            left: 14px;
+
+            color: #70b5ff;
+
+            font-weight: 900;
+        }
+
+
+        .about-focus-panel {
+            padding: 34px;
+
+            border:
+                1px solid rgba(255,255,255,0.13);
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,0.055);
+
+            backdrop-filter: blur(10px);
+        }
+
+
+        .about-focus-panel h3 {
+            margin: 0 0 13px;
+
+            color: #ffffff;
+
+            font-size: 22px;
+        }
+
+
+        .about-focus-panel p {
+            margin: 0;
+
+            color: #bdd3e7;
+
+            font-size: 13px;
+
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           FAQ
+        ====================================================== */
+
+        .about-faq-section {
+            background: #f7f9fc;
+        }
+
+
+        .about-faq-list {
+            max-width: 900px;
+
+            margin: 0 auto;
+        }
+
+
+        .about-faq-item {
+            margin-bottom: 12px;
+
+            overflow: hidden;
+
+            border:
+                1px solid #e0e7ef;
+
+            border-radius: 12px;
+
+            background: #ffffff;
+        }
+
+
+        .about-faq-question {
+            width: 100%;
+
+            padding: 20px 22px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            border: 0;
+
+            background: #ffffff;
+
+            color: #0a2340;
+
+            text-align: left;
+
+            cursor: pointer;
+        }
+
+
+        .about-faq-question:hover {
+            background: #f9fbff;
+        }
+
+
+        .about-faq-question strong {
+            display: block !important;
+
+            color: #0a2340;
+
+            font-size: 15px;
+
+            line-height: 1.45;
+        }
+
+
+        .about-faq-chevron {
+            display: flex !important;
+
+            flex: 0 0 25px;
+
+            width: 25px;
+            height: 25px;
+
+            align-items: center;
+            justify-content: center;
+
+            color: #2478ff;
+
+            font-size: 21px;
+
+            transition:
+                transform 0.25s ease;
+        }
+
+
+        .about-faq-question[aria-expanded="true"]
+        .about-faq-chevron {
+            transform: rotate(180deg);
+        }
+
+
+        .about-faq-question::after {
+            content: none !important;
+
+            display: none !important;
+        }
+
+
+        .about-faq-answer {
+            padding: 0 22px 20px;
+
+            color: #68798d;
+
+            font-size: 13px;
+
+            line-height: 1.75;
+        }
+
+
+        .about-faq-answer p {
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .about-final-cta {
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 100px 0;
+
+            background:
+                radial-gradient(
+                    circle at 70% 0%,
+                    rgba(88,166,255,0.20),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #082c4e,
+                    #164d84
+                );
+
+            text-align: center;
+        }
+
+
+        .about-final-cta h2 {
+            max-width: 790px;
+
+            margin:
+                0 auto 16px;
+
+            color: #ffffff;
+
+            font-size:
+                clamp(32px, 4vw, 48px);
+
+            line-height: 1.12;
+
+            letter-spacing: -1px;
+        }
+
+
+        .about-final-cta p {
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color: #c8dbed;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+        }
+
+
+        .about-final-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 13px;
+
+            margin-top: 29px;
+        }
+
+
+        .about-white-btn,
+        .about-whatsapp-btn {
+            min-height: 53px;
+
+            padding: 0 24px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 9px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 800;
+        }
+
+
+        .about-white-btn {
+            background: #ffffff;
+
+            color: #0a3157 !important;
+        }
+
+
+        .about-whatsapp-btn {
+            border:
+                1px solid rgba(255,255,255,0.30);
+
+            background:
+                rgba(255,255,255,0.05);
+
+            color: #ffffff !important;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 1050px) {
+
+            .about-hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-hero-content {
+                max-width: 780px;
+
+                margin: 0 auto;
+
+                text-align: center;
+            }
+
+            .about-kicker {
+                justify-content: center;
+            }
+
+            .about-hero-text {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .about-hero-buttons {
+                justify-content: center;
+            }
+
+            .about-visual {
+                max-width: 620px;
+
+                width: 100%;
+
+                margin: 0 auto;
+            }
+
+            .about-why-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .about-process {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .about-process::before {
+                display: none;
+            }
+
+        }
+
+
+        @media (max-width: 850px) {
+
+            .about-intro-grid,
+            .about-focus-grid {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+            .about-capability-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .about-hero {
+                min-height: 700px;
+            }
+
+            .about-hero-content {
+                padding: 60px 0 20px;
+            }
+
+            .about-hero h1 {
+                font-size: 40px;
+
+                letter-spacing: -1.4px;
+            }
+
+            .about-hero-text {
+                font-size: 15px;
+            }
+
+            .about-hero-buttons {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .about-hero-buttons a {
+                width: 100%;
+            }
+
+            .about-visual {
+                min-height: 350px;
+            }
+
+            .about-visual-ring {
+                width: 245px;
+                height: 245px;
+            }
+
+            .about-visual-ring::before {
+                width: 330px;
+                height: 330px;
+            }
+
+            .about-visual-ring::after {
+                width: 405px;
+                height: 405px;
+            }
+
+            .about-visual-core {
+                width: 160px;
+                height: 160px;
+            }
+
+            .about-core-mark {
+                width: 45px;
+                height: 45px;
+
+                font-size: 20px;
+            }
+
+            .about-visual-core strong {
+                font-size: 13px;
+            }
+
+            .about-visual-core span {
+                font-size: 7px;
+            }
+
+            .about-floating-card {
+                min-width: 150px;
+
+                padding: 10px;
+            }
+
+            .about-floating-card strong {
+                font-size: 11px;
+            }
+
+            .about-floating-card small {
+                display: none;
+            }
+
+            .about-floating-icon {
+                width: 32px;
+                height: 32px;
+
+                flex-basis: 32px;
+
+                font-size: 15px;
+            }
+
+            .about-float-one {
+                left: 0;
+                top: 12px;
+            }
+
+            .about-float-two {
+                right: 0;
+                top: 112px;
+            }
+
+            .about-float-three {
+                left: 0;
+                bottom: 8px;
+            }
+
+            .about-section {
+                padding: 72px 0;
+            }
+
+            .about-capability-grid,
+            .about-why-grid,
+            .about-process {
+                grid-template-columns: 1fr;
+            }
+
+            .about-focus-list {
+                grid-template-columns: 1fr;
+            }
+
+            .about-final-buttons {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .about-final-buttons a {
+                width: 100%;
+            }
+
+        }
+
+
+        @media (max-width: 430px) {
+
+            .about-hero h1 {
+                font-size: 35px;
+            }
+
+            .about-visual {
+                min-height: 320px;
+            }
+
+            .about-visual-ring {
+                width: 210px;
+                height: 210px;
+            }
+
+            .about-visual-ring::before {
+                width: 280px;
+                height: 280px;
+            }
+
+            .about-visual-ring::after {
+                width: 350px;
+                height: 350px;
+            }
+
+            .about-visual-core {
+                width: 140px;
+                height: 140px;
+            }
+
+            .about-floating-card {
+                min-width: 135px;
+            }
+
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .about-visual-core,
+            .about-floating-card,
+            .about-capability,
+            .about-why-card {
+                animation: none;
+
+                transition: none;
+            }
+
+        }
+
+    </style>
 
 </head>
 
 
-<body>
+<body class="about-page">
 
 
 <!-- =====================================================
-     NAVIGATION
+     HEADER
 ====================================================== -->
 
 <header class="navbar">
 
     <div class="container nav-container">
 
-
         <a href="index.html"
-           class="logo"
-           aria-label="JB TECH SERVICES Home">
+           class="logo">
 
             JB TECH SERVICES
 
         </a>
 
 
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false">
+        <div class="menu-toggle"
+             aria-label="Open navigation menu"
+             aria-expanded="false">
 
             ☰
 
-        </button>
+        </div>
 
 
-        <nav class="nav-links"
-             aria-label="Main navigation">
-
+        <nav class="nav-links">
 
             <a href="index.html">
                 Home
             </a>
 
-
-            <a href="about.html"
-               aria-current="page">
-
+            <a href="about.html">
                 About Us
-
             </a>
-
 
             <a href="services.html">
                 Services
             </a>
 
-
             <a href="cloud-communication.html">
                 Cloud Communication
             </a>
-
 
             <a href="gem-services.html">
                 GeM Services
             </a>
 
-
             <a href="contact.html">
                 Contact
             </a>
-
 
             <a href="contact.html"
                class="quote-btn">
@@ -214,7 +1784,6 @@
                 Get a Business Quote
 
             </a>
-
 
         </nav>
 
@@ -225,26 +1794,157 @@
 
 
 <!-- =====================================================
-     PAGE HEADER
+     HERO
 ====================================================== -->
 
-<section class="page-header">
+<section class="about-hero">
 
     <div class="container">
 
-
-        <h1>
-            About JB TECH SERVICES
-        </h1>
+        <div class="about-hero-grid">
 
 
-        <p>
+            <div class="about-hero-content">
 
-            Business technology, telecom and communication
-            solutions for modern organizations.
+                <span class="about-kicker">
+                    About JB TECH SERVICES
+                </span>
 
-        </p>
 
+                <h1>
+
+                    Technology
+                    <span>
+                        Built Around Business.
+                    </span>
+
+                </h1>
+
+
+                <p class="about-hero-text">
+
+                    JB TECH SERVICES helps organizations simplify
+                    connectivity, communication and related
+                    technology requirements through practical,
+                    business-focused solutions.
+
+                </p>
+
+
+                <div class="about-hero-buttons">
+
+                    <a href="services.html"
+                       class="about-btn-primary">
+
+                        Explore Our Services →
+
+                    </a>
+
+
+                    <a href="contact.html"
+                       class="about-btn-outline">
+
+                        Talk to Our Team
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO VISUAL -->
+
+            <div class="about-visual">
+
+
+                <div class="about-visual-ring">
+                </div>
+
+
+                <div class="about-visual-core">
+
+                    <div class="about-core-mark">
+                        JB
+                    </div>
+
+                    <strong>
+                        Business Technology
+                    </strong>
+
+                    <span>
+                        Connect • Communicate • Grow
+                    </span>
+
+                </div>
+
+
+                <div class="about-floating-card about-float-one">
+
+                    <div class="about-floating-icon">
+                        ◉
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Connectivity
+                        </strong>
+
+                        <small>
+                            Business telecom solutions
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-floating-card about-float-two">
+
+                    <div class="about-floating-icon">
+                        ☁
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Cloud Communication
+                        </strong>
+
+                        <small>
+                            Modern business calling
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-floating-card about-float-three">
+
+                    <div class="about-floating-icon">
+                        ◆
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            GeM Support
+                        </strong>
+
+                        <small>
+                            Requirement-based assistance
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -253,43 +1953,44 @@
 
 
 <!-- =====================================================
-     ABOUT COMPANY
+     COMPANY INTRO
 ====================================================== -->
 
-<section class="section section-light">
+<section class="about-section about-section-white">
 
     <div class="container">
 
 
-        <div class="two-column">
+        <div class="about-intro-grid">
 
 
-            <!-- COMPANY INTRODUCTION -->
+            <div class="about-intro-copy">
 
-            <div>
-
-
-                <div class="card-icon">
-                    🏢
-                </div>
-
-
-                <span class="section-label">
-                    ABOUT US
+                <span class="about-section-label">
+                    Who We Are
                 </span>
 
 
                 <h2>
-                    Technology Solutions Built Around Business Needs
+                    A Technology Partner Focused on Business Requirements
                 </h2>
 
 
                 <p>
 
                     JB TECH SERVICES is a business technology and
-                    communication solutions provider focused on
-                    helping organizations simplify their
-                    connectivity, communication and technology
+                    communication solutions provider focused on helping
+                    organizations simplify their connectivity,
+                    communication and technology requirements.
+
+                </p>
+
+
+                <p>
+
+                    We work around areas such as telecom connectivity,
+                    business communication, cloud communication,
+                    business calling and relevant GeM-related
                     requirements.
 
                 </p>
@@ -297,76 +1998,40 @@
 
                 <p>
 
-                    We help businesses explore practical solutions
-                    across telecom connectivity, business
-                    communication, cloud communication and
-                    related technology requirements.
+                    Our approach is straightforward: understand the
+                    requirement first, identify the relevant technology
+                    direction and help coordinate the appropriate
+                    solution.
 
                 </p>
-
-
-                <p>
-
-                    We also support relevant GeM-related business
-                    and procurement requirements according to
-                    the specific needs of the organization.
-
-                </p>
-
 
             </div>
 
 
+            <div class="about-intro-panel">
 
-            <!-- OUR PHILOSOPHY -->
-
-            <div class="card">
-
-
-                <div class="card-icon">
-                    💡
+                <div class="about-intro-icon">
+                    ◇
                 </div>
 
 
                 <h3>
-                    Technology That Works for Business
+                    Technology That Makes Business Easier
                 </h3>
 
 
                 <p>
 
-                    Business technology should solve a real
-                    operational requirement rather than add
-                    unnecessary complexity.
+                    Business technology should solve real operational
+                    problems. We focus on understanding the requirement
+                    rather than pushing a one-size-fits-all solution.
 
                 </p>
-
-
-                <p>
-
-                    Our approach is straightforward:
-
-                    <strong>
-                        understand the requirement first,
-                        then identify a suitable direction.
-                    </strong>
-
-                </p>
-
-
-                <p>
-
-                    This helps keep the conversation focused on
-                    what the business actually needs.
-
-                </p>
-
 
             </div>
 
 
         </div>
-
 
     </div>
 
@@ -378,184 +2043,162 @@
      WHAT WE DO
 ====================================================== -->
 
-<section class="section section-gray">
+<section class="about-section about-section-soft">
 
     <div class="container">
 
 
-        <div class="section-title">
+        <div class="about-section-heading">
 
-
-            <span class="section-label">
-                OUR CAPABILITIES
+            <span class="about-section-label">
+                What We Do
             </span>
 
 
             <h2>
-                What We Do
+                Solutions Across Connectivity & Communication
             </h2>
 
 
             <p>
 
-                Our solutions are centered around business
-                connectivity, communication and relevant
-                technology requirements.
+                Our service areas are centered around the technology
+                businesses use to stay connected, communicate with
+                customers and manage relevant requirements.
 
             </p>
-
 
         </div>
 
 
-        <div class="cards">
+        <div class="about-capability-grid">
 
 
-            <!-- TELECOM -->
+            <article class="about-capability">
 
-            <article class="card">
-
-
-                <div class="card-icon">
-                    📡
+                <div class="about-capability-icon">
+                    ◉
                 </div>
 
-
                 <h3>
-                    Telecom & Connectivity
+                    Business Connectivity
                 </h3>
-
 
                 <p>
 
-                    Business connectivity and telecom solutions
-                    for organizations that depend on reliable
-                    communication infrastructure.
+                    Business internet and connectivity solutions
+                    designed around organizational requirements,
+                    locations and usage needs.
 
                 </p>
-
-
-                <a href="services.html"
-                   class="text-link">
-
-                    Explore Services →
-
-                </a>
-
 
             </article>
 
 
+            <article class="about-capability">
 
-            <!-- CLOUD COMMUNICATION -->
-
-            <article class="card">
-
-
-                <div class="card-icon">
-                    ☁️
+                <div class="about-capability-icon">
+                    ☎
                 </div>
 
+                <h3>
+                    Telecom & Business Calling
+                </h3>
+
+                <p>
+
+                    Business telecom and calling solutions that
+                    support everyday communication with customers,
+                    teams and partners.
+
+                </p>
+
+            </article>
+
+
+            <article class="about-capability">
+
+                <div class="about-capability-icon">
+                    ☁
+                </div>
 
                 <h3>
                     Cloud Communication
                 </h3>
 
-
                 <p>
 
-                    Cloud communication, cloud telephony and
-                    business calling solutions for modern
-                    business communication requirements.
+                    Cloud telephony and communication options
+                    for businesses looking for flexible communication
+                    capabilities.
 
                 </p>
-
-
-                <a href="cloud-communication.html"
-                   class="text-link">
-
-                    Explore Cloud Communication →
-
-                </a>
-
 
             </article>
 
 
+            <article class="about-capability">
 
-            <!-- BUSINESS CALLING -->
-
-            <article class="card">
-
-
-                <div class="card-icon">
-                    📞
+                <div class="about-capability-icon">
+                    ↗
                 </div>
-
 
                 <h3>
-                    Business Calling
+                    International Communication
                 </h3>
-
 
                 <p>
 
-                    Business calling and communication options
-                    designed around customer, team and
-                    operational communication needs.
+                    Applicable communication options for businesses
+                    with international calling or communication
+                    requirements.
 
                 </p>
-
-
-                <a href="cloud-communication.html"
-                   class="text-link">
-
-                    Explore Business Calling →
-
-                </a>
-
 
             </article>
 
 
+            <article class="about-capability">
 
-            <!-- GeM -->
-
-            <article class="card">
-
-
-                <div class="card-icon">
-                    🏛️
+                <div class="about-capability-icon">
+                    ◆
                 </div>
-
 
                 <h3>
                     GeM Services
                 </h3>
 
-
                 <p>
 
-                    GeM-related assistance, procurement support
-                    and business coordination according to the
-                    customer's requirement.
+                    GeM-related assistance, procurement support and
+                    business coordination based on the requirement.
 
                 </p>
 
+            </article>
 
-                <a href="gem-services.html"
-                   class="text-link">
 
-                    Explore GeM Services →
+            <article class="about-capability">
 
-                </a>
+                <div class="about-capability-icon">
+                    ◎
+                </div>
 
+                <h3>
+                    Requirement Coordination
+                </h3>
+
+                <p>
+
+                    A clear, requirement-focused approach to discussing
+                    technology and business communication needs.
+
+                </p>
 
             </article>
 
 
         </div>
-
 
     </div>
 
@@ -564,126 +2207,243 @@
 
 
 <!-- =====================================================
-     OUR APPROACH
+     WHY JB TECH SERVICES
 ====================================================== -->
 
-<section class="section section-light">
+<section class="about-section about-section-white">
 
     <div class="container">
 
 
-        <div class="section-title">
+        <div class="about-section-heading">
 
-
-            <span class="section-label">
-                OUR APPROACH
+            <span class="about-section-label">
+                Why Work With Us
             </span>
 
 
             <h2>
-                Understand. Recommend. Support.
+                A Practical Approach to Business Technology
             </h2>
 
 
             <p>
 
-                We focus on the requirement before moving toward
-                a technology solution.
+                We focus on making technology decisions easier to
+                understand and better aligned with the business
+                requirement.
 
             </p>
-
 
         </div>
 
 
-        <div class="cards">
+        <div class="about-why-grid">
 
 
-            <!-- STEP 1 -->
+            <article class="about-why-card">
 
-            <article class="card">
-
-
-                <div class="card-icon">
-                    01
+                <div class="about-why-icon">
+                    ◎
                 </div>
 
+                <h3>
+                    Requirement First
+                </h3>
+
+                <p>
+
+                    We start by understanding what the business
+                    actually needs before discussing technology.
+
+                </p>
+
+            </article>
+
+
+            <article class="about-why-card">
+
+                <div class="about-why-icon">
+                    ◇
+                </div>
+
+                <h3>
+                    Practical Solutions
+                </h3>
+
+                <p>
+
+                    We focus on solutions that make sense for
+                    the organization's operational requirements.
+
+                </p>
+
+            </article>
+
+
+            <article class="about-why-card">
+
+                <div class="about-why-icon">
+                    ↗
+                </div>
+
+                <h3>
+                    Flexible Thinking
+                </h3>
+
+                <p>
+
+                    Different businesses have different requirements,
+                    so we avoid unnecessary one-size-fits-all thinking.
+
+                </p>
+
+            </article>
+
+
+            <article class="about-why-card">
+
+                <div class="about-why-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Clear Coordination
+                </h3>
+
+                <p>
+
+                    We aim to keep communication and next steps
+                    clear throughout the requirement.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     APPROACH
+====================================================== -->
+
+<section class="about-section about-section-soft">
+
+    <div class="container">
+
+
+        <div class="about-section-heading">
+
+            <span class="about-section-label">
+                How We Work
+            </span>
+
+
+            <h2>
+                Understand. Recommend. Coordinate. Support.
+            </h2>
+
+
+            <p>
+
+                Our approach is designed to keep business technology
+                discussions straightforward and requirement-focused.
+
+            </p>
+
+        </div>
+
+
+        <div class="about-process">
+
+
+            <div class="about-process-step">
+
+                <div class="about-process-number">
+                    01
+                </div>
 
                 <h3>
                     Understand
                 </h3>
 
-
                 <p>
 
-                    We understand the business, communication
-                    requirements and operational needs before
-                    discussing a solution.
+                    We listen to the business requirement,
+                    operational need and communication challenge.
 
                 </p>
 
-
-            </article>
-
+            </div>
 
 
-            <!-- STEP 2 -->
+            <div class="about-process-step">
 
-            <article class="card">
-
-
-                <div class="card-icon">
+                <div class="about-process-number">
                     02
                 </div>
-
 
                 <h3>
                     Recommend
                 </h3>
 
-
                 <p>
 
-                    We help identify a practical technology or
-                    communication direction based on the
-                    requirement.
+                    We discuss relevant technology and service
+                    options based on the requirement.
 
                 </p>
 
-
-            </article>
-
+            </div>
 
 
-            <!-- STEP 3 -->
+            <div class="about-process-step">
 
-            <article class="card">
-
-
-                <div class="card-icon">
+                <div class="about-process-number">
                     03
                 </div>
 
+                <h3>
+                    Coordinate
+                </h3>
+
+                <p>
+
+                    We help coordinate the applicable service,
+                    solution or next step.
+
+                </p>
+
+            </div>
+
+
+            <div class="about-process-step">
+
+                <div class="about-process-number">
+                    04
+                </div>
 
                 <h3>
                     Support
                 </h3>
 
-
                 <p>
 
-                    We remain a point of coordination as the
-                    requirement moves forward within the
-                    agreed scope.
+                    We remain available for relevant business
+                    technology and communication assistance.
 
                 </p>
 
-
-            </article>
+            </div>
 
 
         </div>
-
 
     </div>
 
@@ -695,222 +2455,87 @@
      BUSINESS FOCUS
 ====================================================== -->
 
-<section class="section section-gray">
+<section class="about-section about-focus">
 
     <div class="container">
 
 
-        <div class="two-column">
+        <div class="about-focus-grid">
 
 
-            <div>
+            <div class="about-focus-copy">
 
-
-                <span class="section-label">
-                    BUSINESS FOCUS
+                <span class="about-section-label">
+                    Our Business Focus
                 </span>
 
 
                 <h2>
-                    One Point of Coordination for Multiple Requirements
+                    Technology That Helps Businesses Stay Connected
                 </h2>
 
 
                 <p>
 
-                    Businesses often need more than one technology
-                    capability to keep their operations connected.
+                    Our focus is on business connectivity,
+                    communication and related technology
+                    requirements that support everyday operations.
 
                 </p>
 
 
-                <p>
-
-                    Connectivity, telecom, business calling,
-                    cloud communication and procurement-related
-                    requirements can all involve different
-                    considerations.
-
-                </p>
-
-
-                <p>
-
-                    JB TECH SERVICES aims to make that process
-                    simpler by first understanding the requirement
-                    and then helping identify the relevant
-                    direction.
-
-                </p>
-
-
-            </div>
-
-
-
-            <div class="card">
-
-
-                <h3>
-                    Our Core Focus
-                </h3>
-
-
-                <ul>
+                <ul class="about-focus-list">
 
                     <li>
-                        Business connectivity
+                        Business Connectivity
                     </li>
 
                     <li>
-                        Telecom solutions
+                        Telecom Solutions
                     </li>
 
                     <li>
-                        Cloud communication
+                        Cloud Communication
                     </li>
 
                     <li>
-                        Business calling
+                        Business Calling
                     </li>
 
                     <li>
-                        International communication
+                        International Communication
                     </li>
 
                     <li>
-                        GeM-related support
+                        GeM-Related Support
                     </li>
 
                 </ul>
 
+            </div>
+
+
+            <div class="about-focus-panel">
+
+                <h3>
+                    One Point of Coordination
+                </h3>
+
+
+                <p>
+
+                    Businesses often have to deal with different
+                    communication and technology requirements at
+                    the same time. JB TECH SERVICES aims to simplify
+                    that process by providing a clear point of
+                    coordination around relevant requirements.
+
+                </p>
 
             </div>
 
 
         </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     WHY BUSINESSES CAN START WITH US
-====================================================== -->
-
-<section class="section section-light">
-
-    <div class="container">
-
-
-        <div class="section-title">
-
-
-            <span class="section-label">
-                WHY JB TECH SERVICES
-            </span>
-
-
-            <h2>
-                A Requirement-First Approach
-            </h2>
-
-
-            <p>
-
-                We keep the initial conversation focused on your
-                business requirement instead of pushing a
-                one-size-fits-all solution.
-
-            </p>
-
-
-        </div>
-
-
-        <div class="cards">
-
-
-            <article class="card">
-
-
-                <div class="card-icon">
-                    🎯
-                </div>
-
-
-                <h3>
-                    Requirement Focused
-                </h3>
-
-
-                <p>
-
-                    We begin by understanding what the business
-                    actually needs.
-
-                </p>
-
-
-            </article>
-
-
-
-            <article class="card">
-
-
-                <div class="card-icon">
-                    🔗
-                </div>
-
-
-                <h3>
-                    Connected Solutions
-                </h3>
-
-
-                <p>
-
-                    We cover multiple business technology areas,
-                    from connectivity and telecom to cloud
-                    communication and GeM support.
-
-                </p>
-
-
-            </article>
-
-
-
-            <article class="card">
-
-
-                <div class="card-icon">
-                    💬
-                </div>
-
-
-                <h3>
-                    Clear Communication
-                </h3>
-
-
-                <p>
-
-                    We aim to keep requirements, options and
-                    next steps clear throughout the discussion.
-
-                </p>
-
-
-            </article>
-
-
-        </div>
-
 
     </div>
 
@@ -922,175 +2547,221 @@
      FAQ
 ====================================================== -->
 
-<section class="section section-gray">
+<section class="about-section about-faq-section">
 
     <div class="container">
 
 
-        <div class="section-title">
+        <div class="about-section-heading">
 
-
-            <span class="section-label">
+            <span class="about-section-label">
                 FAQ
             </span>
 
 
             <h2>
-                Frequently Asked Questions
+                Questions About JB TECH SERVICES
             </h2>
 
+
+            <p>
+
+                A few common questions about our business,
+                services and approach.
+
+            </p>
 
         </div>
 
 
-        <div class="faq-list">
+        <div class="faq-list about-faq-list">
 
 
-            <!-- FAQ 1 -->
-
-            <div class="faq-item">
-
+            <div class="faq-item about-faq-item">
 
                 <button
                     type="button"
-                    class="faq-question">
+                    class="faq-question about-faq-question">
 
-                    What kind of business technology solutions do you provide?
+                    <strong>
+                        What does JB TECH SERVICES do?
+                    </strong>
 
-                    <span>
-                        +
+                    <span
+                        class="about-faq-chevron"
+                        aria-hidden="true">
+
+                        ⌄
+
                     </span>
 
                 </button>
 
 
-                <div class="faq-answer">
+                <div class="faq-answer about-faq-answer">
 
                     <p>
 
                         JB TECH SERVICES helps businesses with
                         connectivity, telecom, cloud communication,
-                        business calling and GeM-related technology
-                        requirements.
+                        business calling, international communication
+                        and relevant GeM-related requirements.
 
                     </p>
 
                 </div>
-
 
             </div>
 
 
 
-            <!-- FAQ 2 -->
-
-            <div class="faq-item">
-
+            <div class="faq-item about-faq-item">
 
                 <button
                     type="button"
-                    class="faq-question">
+                    class="faq-question about-faq-question">
 
-                    Can you help businesses choose a suitable connectivity solution?
+                    <strong>
+                        Where is JB TECH SERVICES based?
+                    </strong>
 
-                    <span>
-                        +
+                    <span
+                        class="about-faq-chevron"
+                        aria-hidden="true">
+
+                        ⌄
+
                     </span>
 
                 </button>
 
 
-                <div class="faq-answer">
+                <div class="faq-answer about-faq-answer">
 
                     <p>
 
-                        Yes. We first understand the business
-                        requirement and then help identify a
-                        suitable connectivity or communication
-                        solution.
+                        JB TECH SERVICES is based in South West Delhi,
+                        Delhi, India.
 
                     </p>
 
                 </div>
-
 
             </div>
 
 
 
-            <!-- FAQ 3 -->
-
-            <div class="faq-item">
-
+            <div class="faq-item about-faq-item">
 
                 <button
                     type="button"
-                    class="faq-question">
+                    class="faq-question about-faq-question">
 
-                    Do you provide cloud communication and business calling solutions?
+                    <strong>
+                        Do you work with businesses of different sizes?
+                    </strong>
 
-                    <span>
-                        +
+                    <span
+                        class="about-faq-chevron"
+                        aria-hidden="true">
+
+                        ⌄
+
                     </span>
 
                 </button>
 
 
-                <div class="faq-answer">
+                <div class="faq-answer about-faq-answer">
 
                     <p>
 
-                        Yes. JB TECH SERVICES helps organizations
-                        explore cloud communication, cloud
-                        telephony and business calling solutions
-                        based on their operational requirements.
+                        Yes. Requirements can vary significantly between
+                        businesses, so our approach is based on understanding
+                        the organization's specific connectivity and
+                        communication needs.
 
                     </p>
 
                 </div>
-
 
             </div>
 
 
 
-            <!-- FAQ 4 -->
-
-            <div class="faq-item">
-
+            <div class="faq-item about-faq-item">
 
                 <button
                     type="button"
-                    class="faq-question">
+                    class="faq-question about-faq-question">
 
-                    Do you provide GeM-related support?
+                    <strong>
+                        Can you help us choose a suitable technology solution?
+                    </strong>
 
-                    <span>
-                        +
+                    <span
+                        class="about-faq-chevron"
+                        aria-hidden="true">
+
+                        ⌄
+
                     </span>
 
                 </button>
 
 
-                <div class="faq-answer">
+                <div class="faq-answer about-faq-answer">
 
                     <p>
 
-                        Yes. We provide GeM-related assistance,
-                        procurement support and business
-                        coordination according to the customer's
-                        requirement.
+                        We can discuss your requirement and help identify
+                        relevant technology and service options appropriate
+                        to the requirement.
 
                     </p>
 
                 </div>
 
+            </div>
+
+
+
+            <div class="faq-item about-faq-item">
+
+                <button
+                    type="button"
+                    class="faq-question about-faq-question">
+
+                    <strong>
+                        How can I contact JB TECH SERVICES?
+                    </strong>
+
+                    <span
+                        class="about-faq-chevron"
+                        aria-hidden="true">
+
+                        ⌄
+
+                    </span>
+
+                </button>
+
+
+                <div class="faq-answer about-faq-answer">
+
+                    <p>
+
+                        You can contact us through our business quote
+                        form, phone, email or WhatsApp.
+
+                    </p>
+
+                </div>
 
             </div>
 
 
         </div>
-
 
     </div>
 
@@ -1102,37 +2773,46 @@
      FINAL CTA
 ====================================================== -->
 
-<section class="cta">
+<section class="about-final-cta">
 
     <div class="container">
 
 
-        <span class="section-label">
-            LET'S TALK
-        </span>
-
-
         <h2>
-            Have a Business Technology Requirement?
+            Let's Discuss Your Business Technology Requirement
         </h2>
 
 
         <p>
 
-            Tell us what your organization needs. We'll
-            understand the requirement and help identify
-            the right direction.
+            Tell us what your organization needs.
+            We'll understand the requirement and discuss
+            the appropriate technology direction.
 
         </p>
 
 
-        <a href="contact.html"
-           class="btn btn-primary">
+        <div class="about-final-buttons">
 
-            Get a Business Quote
 
-        </a>
+            <a href="contact.html"
+               class="about-white-btn">
 
+                Get a Business Quote →
+
+            </a>
+
+
+            <a href="https://wa.me/919017125139"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="about-whatsapp-btn">
+
+                Talk to Us on WhatsApp ↗
+
+            </a>
+
+        </div>
 
     </div>
 
@@ -1152,116 +2832,91 @@
         <div class="footer-grid">
 
 
-            <!-- COMPANY -->
-
             <div>
-
 
                 <h3>
                     JB TECH SERVICES
                 </h3>
 
-
                 <p>
 
-                    Business technology, telecom and communication
-                    solutions helping organizations connect,
-                    communicate and grow.
+                    Business technology, telecom and
+                    communication solutions helping
+                    organizations connect, communicate
+                    and grow.
 
                 </p>
-
 
                 <p>
                     South West Delhi, Delhi
                 </p>
 
-
             </div>
 
 
-
-            <!-- QUICK LINKS -->
-
             <div>
-
 
                 <h3>
                     Quick Links
                 </h3>
 
-
                 <a href="index.html">
                     Home
                 </a>
-
 
                 <a href="about.html">
                     About Us
                 </a>
 
-
                 <a href="services.html">
                     Services
                 </a>
-
 
                 <a href="cloud-communication.html">
                     Cloud Communication
                 </a>
 
-
                 <a href="gem-services.html">
                     GeM Services
                 </a>
-
 
                 <a href="contact.html">
                     Contact
                 </a>
 
-
             </div>
 
 
-
-            <!-- SOLUTIONS -->
-
             <div>
-
 
                 <h3>
                     Solutions
                 </h3>
 
-
                 <a href="services.html">
                     Business Connectivity
                 </a>
-
-
-                <a href="cloud-communication.html">
-                    Cloud Communication
-                </a>
-
 
                 <a href="services.html#international-communication">
                     International Communication
                 </a>
 
+                <a href="cloud-communication.html">
+                    Cloud Communication
+                </a>
+
+                <a href="cloud-communication.html">
+                    Business Calling
+                </a>
 
                 <a href="gem-services.html">
                     GeM Services
                 </a>
 
-
             </div>
 
 
-
-            <!-- CONTACT -->
-
             <div>
-
 
                 <h3>
                     Contact
@@ -1295,12 +2950,10 @@
 
                 </p>
 
-
             </div>
 
 
         </div>
-
 
 
         <div class="footer-bottom">
@@ -1309,7 +2962,6 @@
             All Rights Reserved.
 
         </div>
-
 
     </div>
 
@@ -1321,23 +2973,18 @@
      FLOATING WHATSAPP
 ====================================================== -->
 
-<a
-    href="https://wa.me/919017125139"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="chat-button"
-    title="Chat with JB TECH SERVICES on WhatsApp"
-    aria-label="Chat with JB TECH SERVICES on WhatsApp">
+<a href="https://wa.me/919017125139"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="chat-button"
+   title="Chat with JB TECH SERVICES on WhatsApp"
+   aria-label="Chat with JB TECH SERVICES on WhatsApp">
 
     💬
 
 </a>
 
 
-
-<!-- =====================================================
-     SHARED JAVASCRIPT
-====================================================== -->
 
 <script src="script.js"></script>
 
