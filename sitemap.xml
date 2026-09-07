@@ -2,32 +2,26 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <!-- Homepage -->
     <url>
         <loc>https://jbtechservices.in/</loc>
     </url>
 
-    <!-- About -->
     <url>
         <loc>https://jbtechservices.in/about.html</loc>
     </url>
 
-    <!-- Services -->
     <url>
         <loc>https://jbtechservices.in/services.html</loc>
     </url>
 
-    <!-- Cloud Communication -->
     <url>
         <loc>https://jbtechservices.in/cloud-communication.html</loc>
     </url>
 
-    <!-- GeM Services -->
     <url>
         <loc>https://jbtechservices.in/gem-services.html</loc>
     </url>
 
-    <!-- Contact -->
     <url>
         <loc>https://jbtechservices.in/contact.html</loc>
     </url>
