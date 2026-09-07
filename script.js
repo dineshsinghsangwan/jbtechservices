@@ -1,189 +1,138 @@
 /* =========================================================
    JB TECH SERVICES
    Main Website JavaScript
-   Version: Modern Website Foundation
+   Version: 2026
 ========================================================= */
 
-
-/* =========================================================
-   RUN AFTER DOM IS READY
-========================================================= */
-
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
 
 
     /* =====================================================
        MOBILE NAVIGATION
-    ===================================================== */
+    ====================================================== */
 
     const menuToggle =
-        document.querySelector(".menu-toggle");
+        document.querySelector('.menu-toggle');
 
     const navLinks =
-        document.querySelector(".nav-links");
+        document.querySelector('.nav-links');
 
 
     if (menuToggle && navLinks) {
 
-        /*
-         * Accessibility state
-         */
+        menuToggle.addEventListener('click', function () {
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
+            const isOpen =
+                navLinks.classList.toggle('active');
 
 
-        /*
-         * Mobile menu toggle
-         */
-
-        menuToggle.addEventListener(
-            "click",
-            function () {
-
-                const isOpen =
-                    navLinks.classList.toggle("active");
+            menuToggle.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+            );
 
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    String(isOpen)
-                );
+            menuToggle.setAttribute(
+                'aria-label',
+                isOpen
+                    ? 'Close navigation menu'
+                    : 'Open navigation menu'
+            );
+
+        });
 
 
-                /*
-                 * Optional accessibility label
-                 */
+        /* Close after clicking navigation link */
+
+        navLinks.querySelectorAll('a').forEach(function (link) {
+
+            link.addEventListener('click', function () {
+
+                navLinks.classList.remove('active');
 
                 menuToggle.setAttribute(
-                    "aria-label",
-                    isOpen
-                        ? "Close navigation menu"
-                        : "Open navigation menu"
+                    'aria-expanded',
+                    'false'
                 );
 
-            }
-        );
-
-
-        /*
-         * Close menu after selecting a navigation link
-         */
-
-        navLinks
-            .querySelectorAll("a")
-            .forEach(function (link) {
-
-                link.addEventListener(
-                    "click",
-                    function () {
-
-                        navLinks.classList.remove("active");
-
-                        menuToggle.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                        menuToggle.setAttribute(
-                            "aria-label",
-                            "Open navigation menu"
-                        );
-
-                    }
+                menuToggle.setAttribute(
+                    'aria-label',
+                    'Open navigation menu'
                 );
 
             });
 
-
-        /*
-         * Close menu when clicking outside it
-         */
-
-        document.addEventListener(
-            "click",
-            function (event) {
-
-                const clickedInsideMenu =
-                    navLinks.contains(event.target);
-
-                const clickedToggle =
-                    menuToggle.contains(event.target);
+        });
 
 
-                if (
-                    !clickedInsideMenu &&
-                    !clickedToggle
-                ) {
+        /* Close when clicking outside */
 
-                    navLinks.classList.remove("active");
+        document.addEventListener('click', function (event) {
 
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
+            if (
+                navLinks.classList.contains('active') &&
+                !navLinks.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
 
-                    menuToggle.setAttribute(
-                        "aria-label",
-                        "Open navigation menu"
-                    );
+                navLinks.classList.remove('active');
 
-                }
+                menuToggle.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
+
+                menuToggle.setAttribute(
+                    'aria-label',
+                    'Open navigation menu'
+                );
 
             }
-        );
+
+        });
 
 
-        /*
-         * Close mobile menu with Escape key
-         */
+        /* Close with Escape */
 
-        document.addEventListener(
-            "keydown",
-            function (event) {
+        document.addEventListener('keydown', function (event) {
 
-                if (event.key === "Escape") {
+            if (event.key === 'Escape') {
 
-                    navLinks.classList.remove("active");
+                navLinks.classList.remove('active');
 
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
+                menuToggle.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
 
-                    menuToggle.setAttribute(
-                        "aria-label",
-                        "Open navigation menu"
-                    );
-
-                    menuToggle.focus();
-
-                }
+                menuToggle.setAttribute(
+                    'aria-label',
+                    'Open navigation menu'
+                );
 
             }
-        );
+
+        });
 
     }
 
 
+
     /* =====================================================
        FAQ ACCORDION
-       Future-ready for the new FAQ sections
-    ===================================================== */
+    ====================================================== */
 
     const faqItems =
-        document.querySelectorAll(".faq-item");
+        document.querySelectorAll('.faq-item');
 
 
-    faqItems.forEach(function (item) {
+    faqItems.forEach(function (item, index) {
 
         const question =
-            item.querySelector(".faq-question");
+            item.querySelector('.faq-question');
 
         const answer =
-            item.querySelector(".faq-answer");
+            item.querySelector('.faq-answer');
 
 
         if (!question || !answer) {
@@ -191,348 +140,127 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        /*
-         * Initial accessibility state
-         */
-
-        question.setAttribute(
-            "aria-expanded",
-            item.classList.contains("active")
-                ? "true"
-                : "false"
-        );
-
-
-        question.setAttribute(
-            "type",
-            "button"
-        );
-
-
-        /*
-         * Give each answer an ID if it doesn't already have one
-         */
+        /* Generate an ID when one is not already present */
 
         if (!answer.id) {
 
             answer.id =
-                "faq-answer-" +
-                Math.random()
-                    .toString(36)
-                    .slice(2, 10);
+                'faq-answer-' + (index + 1);
 
         }
 
 
         question.setAttribute(
-            "aria-controls",
+            'aria-controls',
             answer.id
         );
 
 
-        /*
-         * FAQ click
-         */
-
-        question.addEventListener(
-            "click",
-            function () {
-
-                const isOpen =
-                    item.classList.contains("active");
-
-
-                /*
-                 * Close all other FAQ items
-                 *
-                 * This keeps the FAQ clean and avoids
-                 * opening many answers at once.
-                 */
-
-                faqItems.forEach(
-                    function (otherItem) {
-
-                        if (otherItem !== item) {
-
-                            otherItem.classList.remove(
-                                "active"
-                            );
-
-
-                            const otherQuestion =
-                                otherItem.querySelector(
-                                    ".faq-question"
-                                );
-
-
-                            if (otherQuestion) {
-
-                                otherQuestion.setAttribute(
-                                    "aria-expanded",
-                                    "false"
-                                );
-
-                            }
-
-                        }
-
-                    }
-                );
-
-
-                /*
-                 * Toggle selected FAQ
-                 */
-
-                item.classList.toggle(
-                    "active",
-                    !isOpen
-                );
-
-
-                question.setAttribute(
-                    "aria-expanded",
-                    String(!isOpen)
-                );
-
-            }
+        question.setAttribute(
+            'aria-expanded',
+            'false'
         );
 
+
+        answer.hidden = true;
+
+
+        question.addEventListener('click', function () {
+
+            const isOpen =
+                question.getAttribute('aria-expanded')
+                === 'true';
+
+
+            /* Close all other FAQ items */
+
+            faqItems.forEach(function (otherItem) {
+
+                if (otherItem !== item) {
+
+                    const otherQuestion =
+                        otherItem.querySelector('.faq-question');
+
+                    const otherAnswer =
+                        otherItem.querySelector('.faq-answer');
+
+
+                    if (otherQuestion && otherAnswer) {
+
+                        otherQuestion.setAttribute(
+                            'aria-expanded',
+                            'false'
+                        );
+
+                        otherAnswer.hidden = true;
+
+                        otherItem.classList.remove('active');
+
+                    }
+
+                }
+
+            });
+
+
+            /* Toggle current item */
+
+            question.setAttribute(
+                'aria-expanded',
+                isOpen ? 'false' : 'true'
+            );
+
+
+            answer.hidden = isOpen;
+
+            item.classList.toggle(
+                'active',
+                !isOpen
+            );
+
+        });
+
     });
+
 
 
     /* =====================================================
        SMOOTH SCROLLING
-    ===================================================== */
+    ====================================================== */
 
     const internalLinks =
-        document.querySelectorAll(
-            'a[href^="#"]'
-        );
-
-
-    const prefersReducedMotion =
-        window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches;
+        document.querySelectorAll('a[href^="#"]');
 
 
     internalLinks.forEach(function (link) {
 
-        link.addEventListener(
-            "click",
-            function (event) {
+        link.addEventListener('click', function (event) {
 
-                const targetId =
-                    this.getAttribute("href");
+            const targetId =
+                this.getAttribute('href');
 
-
-                /*
-                 * Ignore empty anchors
-                 */
-
-                if (
-                    !targetId ||
-                    targetId === "#"
-                ) {
-
-                    return;
-
-                }
-
-
-                const target =
-                    document.querySelector(targetId);
-
-
-                if (!target) {
-                    return;
-                }
-
-
-                event.preventDefault();
-
-
-                target.scrollIntoView({
-
-                    behavior:
-                        prefersReducedMotion
-                            ? "auto"
-                            : "smooth",
-
-                    block: "start"
-
-                });
-
-
-                /*
-                 * Update URL hash without causing
-                 * another automatic jump.
-                 */
-
-                if (
-                    window.history &&
-                    window.history.replaceState
-                ) {
-
-                    window.history.replaceState(
-                        null,
-                        "",
-                        targetId
-                    );
-
-                }
-
-            }
-        );
-
-    });
-
-
-    /* =====================================================
-       EMAILJS CONFIGURATION
-    ===================================================== */
-
-    const EMAILJS_PUBLIC_KEY =
-        "nT6VAsPKFWv9SyMRl";
-
-
-    const EMAILJS_SERVICE_ID =
-        "service_c5qzx6m";
-
-
-    const EMAILJS_TEMPLATE_ID =
-        "template_npaqjwo";
-
-
-    /* =====================================================
-       CONTACT FORM
-    ===================================================== */
-
-    const contactForm =
-        document.querySelector("#contactForm");
-
-
-    const submitButton =
-        document.querySelector("#submitButton");
-
-
-    const formStatus =
-        document.querySelector("#formStatus");
-
-
-    /*
-     * No contact form on this page?
-     *
-     * That's normal for Home, About, Services etc.
-     */
-
-    if (!contactForm) {
-        return;
-    }
-
-
-    /* =====================================================
-       FORM HELPER
-    ===================================================== */
-
-    function showFormStatus(
-        message,
-        type
-    ) {
-
-        if (!formStatus) {
-            return;
-        }
-
-
-        formStatus.style.display = "block";
-
-
-        if (type === "success") {
-
-            formStatus.style.background =
-                "#e8f7ee";
-
-            formStatus.style.color =
-                "#176b3a";
-
-            formStatus.style.border =
-                "1px solid #b7e4c7";
-
-        } else {
-
-            formStatus.style.background =
-                "#fff0f0";
-
-            formStatus.style.color =
-                "#a52828";
-
-            formStatus.style.border =
-                "1px solid #f0b8b8";
-
-        }
-
-
-        formStatus.textContent =
-            message;
-
-    }
-
-
-    /* =====================================================
-       CHECK EMAILJS
-    ===================================================== */
-
-    if (
-        typeof emailjs === "undefined"
-    ) {
-
-        console.error(
-            "JB TECH SERVICES: EmailJS library failed to load."
-        );
-
-
-        showFormStatus(
-            "The enquiry service could not be loaded. Please contact us on WhatsApp.",
-            "error"
-        );
-
-
-        return;
-    }
-
-
-    /* =====================================================
-       INITIALIZE EMAILJS
-    ===================================================== */
-
-    emailjs.init({
-
-        publicKey:
-            EMAILJS_PUBLIC_KEY
-
-    });
-
-
-    /* =====================================================
-       FORM SUBMISSION
-    ===================================================== */
-
-    contactForm.addEventListener(
-        "submit",
-        function (event) {
-
-            event.preventDefault();
-
-
-            /*
-             * Prevent duplicate submissions
-             */
 
             if (
-                submitButton &&
-                submitButton.disabled
+                !targetId ||
+                targetId === '#'
+            ) {
+                return;
+            }
+
+
+            const target =
+                document.querySelector(targetId);
+
+
+            if (!target) {
+                return;
+            }
+
+
+            if (
+                window.matchMedia(
+                    '(prefers-reduced-motion: reduce)'
+                ).matches
             ) {
 
                 return;
@@ -540,232 +268,298 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            /*
-             * Loading state
-             */
+            event.preventDefault();
 
-            if (submitButton) {
 
-                submitButton.disabled = true;
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
 
-                submitButton.setAttribute(
-                    "aria-busy",
-                    "true"
+
+            /* Keep URL hash without causing a jump */
+
+            if (
+                window.history &&
+                window.history.replaceState
+            ) {
+
+                window.history.replaceState(
+                    null,
+                    '',
+                    targetId
                 );
 
-                submitButton.textContent =
-                    "Sending Enquiry...";
+            }
+
+        });
+
+    });
+
+
+
+    /* =====================================================
+       EMAILJS CONTACT FORM
+    ====================================================== */
+
+    const contactForm =
+        document.querySelector('#contactForm');
+
+
+    const submitButton =
+        document.querySelector('#submitButton');
+
+
+    const formStatus =
+        document.querySelector('#formStatus');
+
+
+    if (contactForm) {
+
+
+        /* -------------------------------------------------
+           EMAILJS CONFIGURATION
+        -------------------------------------------------- */
+
+        const EMAILJS_PUBLIC_KEY =
+            'nT6VAsPKFWv9SyMRl';
+
+
+        const EMAILJS_SERVICE_ID =
+            'service_c5qzx6m';
+
+
+        const EMAILJS_TEMPLATE_ID =
+            'template_npaqjwo';
+
+
+
+        /* -------------------------------------------------
+           STATUS MESSAGE HELPER
+        -------------------------------------------------- */
+
+        function showFormStatus(
+            message,
+            type
+        ) {
+
+            if (!formStatus) {
+                return;
+            }
+
+
+            formStatus.style.display =
+                'block';
+
+
+            if (type === 'success') {
+
+                formStatus.style.background =
+                    '#e8f7ee';
+
+                formStatus.style.color =
+                    '#176b3a';
+
+                formStatus.style.border =
+                    '1px solid #b7e4c7';
+
+            } else {
+
+                formStatus.style.background =
+                    '#fff0f0';
+
+                formStatus.style.color =
+                    '#a52828';
+
+                formStatus.style.border =
+                    '1px solid #f0b8b8';
 
             }
 
 
-            /*
-             * Hide previous status
-             */
+            formStatus.textContent =
+                message;
 
-            if (formStatus) {
-
-                formStatus.style.display =
-                    "none";
-
-                formStatus.textContent =
-                    "";
-
-            }
+        }
 
 
-            /*
-             * Collect form fields
-             *
-             * These IDs match the current
-             * JB TECH SERVICES contact form.
-             */
 
-            const nameField =
-                document.getElementById("name");
+        /* -------------------------------------------------
+           INITIALIZE EMAILJS
+        -------------------------------------------------- */
 
-            const companyField =
-                document.getElementById("company");
+        if (typeof emailjs === 'undefined') {
 
-            const mobileField =
-                document.getElementById("mobile");
-
-            const emailField =
-                document.getElementById("email");
-
-            const serviceField =
-                document.getElementById("service");
-
-            const usersField =
-                document.getElementById("users");
-
-            const locationField =
-                document.getElementById("location");
-
-            const budgetField =
-                document.getElementById("budget");
-
-            const requirementField =
-                document.getElementById("requirement");
-
-
-            /*
-             * Safely read values
-             */
-
-            const templateParams = {
-
-                name:
-                    nameField
-                        ? nameField.value.trim()
-                        : "",
-
-                company:
-                    companyField
-                        ? companyField.value.trim()
-                        : "",
-
-                mobile:
-                    mobileField
-                        ? mobileField.value.trim()
-                        : "",
-
-                email:
-                    emailField
-                        ? emailField.value.trim()
-                        : "",
-
-                service:
-                    serviceField
-                        ? serviceField.value
-                        : "",
-
-                users:
-                    usersField
-                        ? usersField.value.trim()
-                        : "",
-
-                location:
-                    locationField
-                        ? locationField.value.trim()
-                        : "",
-
-                budget:
-                    budgetField
-                        ? budgetField.value
-                        : "",
-
-                requirement:
-                    requirementField
-                        ? requirementField.value.trim()
-                        : ""
-
-            };
-
-
-            console.log(
-                "JB TECH SERVICES enquiry:",
-                templateParams
+            showFormStatus(
+                'The enquiry service could not be loaded. Please try again or contact us on WhatsApp.',
+                'error'
             );
 
+        } else {
 
-            /* =================================================
-               SEND TO EMAILJS
-            ================================================= */
-
-            emailjs.send(
-                EMAILJS_SERVICE_ID,
-                EMAILJS_TEMPLATE_ID,
-                templateParams
-            )
-
-
-            .then(function (response) {
-
-                console.log(
-                    "EMAILJS SUCCESS:",
-                    response.status,
-                    response.text
-                );
-
-
-                /*
-                 * Success message
-                 */
-
-                showFormStatus(
-                    "Thank you! Your enquiry has been sent successfully. Our team will contact you shortly.",
-                    "success"
-                );
-
-
-                /*
-                 * Clear form
-                 */
-
-                contactForm.reset();
-
-
-                /*
-                 * Restore button
-                 */
-
-                if (submitButton) {
-
-                    submitButton.disabled =
-                        false;
-
-                    submitButton.removeAttribute(
-                        "aria-busy"
-                    );
-
-                    submitButton.textContent =
-                        "Send Enquiry";
-
-                }
-
-            })
-
-
-            .catch(function (error) {
-
-                console.error(
-                    "EMAILJS ERROR:",
-                    error
-                );
-
-
-                /*
-                 * Error message
-                 */
-
-                showFormStatus(
-                    "We could not send your enquiry. Please try again or contact us on WhatsApp.",
-                    "error"
-                );
-
-
-                /*
-                 * Restore button
-                 */
-
-                if (submitButton) {
-
-                    submitButton.disabled =
-                        false;
-
-                    submitButton.removeAttribute(
-                        "aria-busy"
-                    );
-
-                    submitButton.textContent =
-                        "Send Enquiry";
-
-                }
-
+            emailjs.init({
+                publicKey: EMAILJS_PUBLIC_KEY
             });
 
         }
-    );
+
+
+
+        /* -------------------------------------------------
+           FORM SUBMISSION
+        -------------------------------------------------- */
+
+        contactForm.addEventListener(
+            'submit',
+            function (event) {
+
+                event.preventDefault();
+
+
+                /* Prevent duplicate submission */
+
+                if (
+                    submitButton &&
+                    submitButton.disabled
+                ) {
+
+                    return;
+
+                }
+
+
+                /* Check EmailJS */
+
+                if (
+                    typeof emailjs === 'undefined'
+                ) {
+
+                    showFormStatus(
+                        'The enquiry service could not be loaded. Please try again or contact us on WhatsApp.',
+                        'error'
+                    );
+
+                    return;
+
+                }
+
+
+                /* Loading state */
+
+                if (submitButton) {
+
+                    submitButton.disabled =
+                        true;
+
+                    submitButton.textContent =
+                        'Sending Enquiry...';
+
+                }
+
+
+                if (formStatus) {
+
+                    formStatus.style.display =
+                        'none';
+
+                    formStatus.textContent =
+                        '';
+
+                }
+
+
+                /* Send the complete HTML form */
+
+                emailjs.sendForm(
+                    EMAILJS_SERVICE_ID,
+                    EMAILJS_TEMPLATE_ID,
+                    contactForm
+                )
+
+                .then(function (response) {
+
+                    console.log(
+                        'EMAILJS SUCCESS:',
+                        response.status,
+                        response.text
+                    );
+
+
+                    showFormStatus(
+                        'Thank you! Your enquiry has been sent successfully. Our team will contact you shortly.',
+                        'success'
+                    );
+
+
+                    contactForm.reset();
+
+
+                    if (submitButton) {
+
+                        submitButton.disabled =
+                            false;
+
+                        submitButton.textContent =
+                            'Send Enquiry';
+
+                    }
+
+                })
+
+
+                .catch(function (error) {
+
+                    console.error(
+                        'EMAILJS ERROR:',
+                        error
+                    );
+
+
+                    showFormStatus(
+                        'We could not send your enquiry. Please try again or contact us on WhatsApp.',
+                        'error'
+                    );
+
+
+                    if (submitButton) {
+
+                        submitButton.disabled =
+                            false;
+
+                        submitButton.textContent =
+                            'Send Enquiry';
+
+                    }
+
+                });
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       EXTERNAL LINK SAFETY
+    ====================================================== */
+
+    document
+        .querySelectorAll('a[target="_blank"]')
+        .forEach(function (link) {
+
+            if (
+                !link.hasAttribute('rel')
+            ) {
+
+                link.setAttribute(
+                    'rel',
+                    'noopener noreferrer'
+                );
+
+            }
+
+        });
+
 
 });
