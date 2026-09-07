@@ -1582,3 +1582,17 @@ p {
     }
 
 }
+/* HOMEPAGE FAQ TEXT FIX */
+
+.home-faq-question .faq-question-text {
+    display: block !important;
+}
+
+.home-faq-question .home-faq-chevron {
+    display: flex !important;
+}
+
+.home-faq-question::after {
+    content: none !important;
+    display: none !important;
+}
