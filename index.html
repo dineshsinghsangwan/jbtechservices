@@ -5,1900 +5,205 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
-        JB TECH SERVICES | Telecom, Cloud Communication & GeM Solutions
+        JB TECH SERVICES | Business Connectivity, Telecom & Cloud Communication
     </title>
 
     <meta name="description"
-        content="JB TECH SERVICES provides business connectivity, telecom, cloud communication, business calling and GeM-related solutions through a trusted technology ecosystem.">
-
-    <meta name="keywords"
-        content="JB TECH SERVICES, business connectivity, telecom services, cloud communication, cloud telephony, business calling, GeM services, Tata Tele Business Services, JioBusiness, Vi Business, TeleCMI, IHA Telephony">
-
-    <meta name="author"
-        content="JB TECH SERVICES">
+        content="JB TECH SERVICES provides business connectivity, telecom, business calling, cloud communication, international communication and GeM-related solutions for businesses.">
 
     <meta name="robots"
         content="index, follow">
 
+    <meta name="author"
+        content="JB TECH SERVICES">
+
     <link rel="canonical"
         href="https://jbtechservices.in/">
+
+    <!-- OPEN GRAPH -->
+
     <meta property="og:title"
-    content="JB TECH SERVICES | Telecom, Cloud Communication & GeM Solutions">
+        content="JB TECH SERVICES | Business Technology Solutions">
 
-<meta property="og:description"
-    content="JB TECH SERVICES provides business connectivity, telecom, cloud communication, business calling and GeM-related support in Delhi.">
+    <meta property="og:description"
+        content="Business connectivity, telecom, business calling, cloud communication, international communication and GeM-related solutions.">
 
-<meta property="og:type"
-    content="website">
+    <meta property="og:type"
+        content="website">
 
-<meta property="og:url"
-    content="https://jbtechservices.in/">
+    <meta property="og:url"
+        content="https://jbtechservices.in/">
 
-<meta property="og:site_name"
-    content="JB TECH SERVICES">
+    <meta property="og:site_name"
+        content="JB TECH SERVICES">
 
-<meta name="theme-color"
-    content="#0b2d4f">
 
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "JB TECH SERVICES",
-    "url": "https://jbtechservices.in/",
-    "email": "reachus@jbtechservices.in",
-    "telephone": "+91 90171 25139",
-    "areaServed": {
-        "@type": "City",
-        "name": "Delhi"
+    <!-- ORGANIZATION STRUCTURED DATA -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "JB TECH SERVICES",
+        "url": "https://jbtechservices.in/",
+        "email": "reachus@jbtechservices.in",
+        "telephone": "+91-9017125139",
+        "description": "Business connectivity, telecom, business calling, cloud communication, international communication and GeM-related solutions.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "RZH 715B, Raj Nagar Part 2, Palam Village",
+            "addressLocality": "South West Delhi",
+            "addressRegion": "Delhi",
+            "postalCode": "110077",
+            "addressCountry": "IN"
+        }
     }
-}
-</script>
+    </script>
 
-    <!-- EXISTING WEBSITE STYLESHEET -->
+
+    <!-- WEBSITE STRUCTURED DATA -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "JB TECH SERVICES",
+        "url": "https://jbtechservices.in/"
+    }
+    </script>
+
+
+    <!-- MAIN STYLESHEET -->
+
     <link rel="stylesheet"
-        href="style.css">
-
-
-    <!-- =====================================================
-         HOMEPAGE-ONLY STYLES
-         These styles are used ONLY by index.html.
-         They do not replace style.css.
-    ====================================================== -->
-
-    <style>
-
-        /* =====================================================
-           HOMEPAGE RESET
-        ====================================================== */
-
-        .home-page {
-            overflow-x: hidden;
-        }
-
-
-        /* =====================================================
-           HERO SLIDER
-        ====================================================== */
-
-        .home-hero {
-            position: relative;
-            min-height: 650px;
-            overflow: hidden;
-            background:
-                radial-gradient(
-                    circle at 78% 48%,
-                    rgba(44, 113, 220, 0.30),
-                    transparent 32%
-                ),
-                linear-gradient(
-                    120deg,
-                    #061a30 0%,
-                    #082d50 55%,
-                    #123e78 100%
-                );
-            color: #ffffff;
-        }
-
-
-        .home-slides {
-            position: relative;
-            min-height: 650px;
-        }
-
-
-        .home-slide {
-            position: absolute;
-            inset: 0;
-
-            display: flex;
-            align-items: center;
-
-            opacity: 0;
-            visibility: hidden;
-
-            transform: translateX(35px);
-
-            transition:
-                opacity 0.7s ease,
-                transform 0.7s ease,
-                visibility 0.7s ease;
-        }
-
-
-        .home-slide.active {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(0);
-        }
-
-
-        .home-slide::before {
-            content: "";
-
-            position: absolute;
-
-            width: 650px;
-            height: 650px;
-
-            border-radius: 50%;
-
-            border: 1px solid rgba(255,255,255,0.08);
-
-            right: -150px;
-            top: -40px;
-        }
-
-
-        .home-slide::after {
-            content: "";
-
-            position: absolute;
-
-            width: 420px;
-            height: 420px;
-
-            border-radius: 50%;
-
-            border: 1px solid rgba(255,255,255,0.06);
-
-            right: 50px;
-            top: 90px;
-        }
-
-
-        .home-hero-grid {
-
-            width: 100%;
-
-            display: grid;
-
-            grid-template-columns:
-                minmax(0, 1.05fr)
-                minmax(400px, 0.95fr);
-
-            gap: 50px;
-
-            align-items: center;
-        }
-
-
-        .home-hero-content {
-
-            position: relative;
-
-            z-index: 5;
-
-            padding:
-                80px 0
-                105px;
-        }
-
-
-        .home-label {
-
-            display: inline-block;
-
-            margin-bottom: 18px;
-
-            color: #72b1ff;
-
-            font-size: 14px;
-
-            font-weight: 800;
-
-            letter-spacing: 2.2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .home-hero h1 {
-
-            margin: 0 0 24px;
-
-            color: #ffffff;
-
-            font-size:
-                clamp(46px, 5.2vw, 72px);
-
-            line-height: 1.04;
-
-            letter-spacing: -2px;
-
-            max-width: 720px;
-        }
-
-
-        .home-hero h1 span {
-
-            color: #6da6ff;
-        }
-
-
-        .home-hero-text {
-
-            max-width: 650px;
-
-            margin: 0;
-
-            color: #d8e8fa;
-
-            font-size: 18px;
-
-            line-height: 1.7;
-        }
-
-
-        .home-hero-buttons {
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 14px;
-
-            margin-top: 32px;
-        }
-
-
-        .home-hero-buttons a {
-
-            text-decoration: none;
-        }
-
-
-        .home-btn-primary {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            min-height: 56px;
-
-            padding:
-                0 27px;
-
-            border-radius: 10px;
-
-            background: #2478ff;
-
-            color: #ffffff !important;
-
-            font-weight: 700;
-
-            box-shadow:
-                0 12px 30px
-                rgba(36,120,255,0.25);
-
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-
-        .home-btn-primary:hover {
-
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 18px 38px
-                rgba(36,120,255,0.35);
-        }
-
-
-        .home-btn-outline {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            min-height: 56px;
-
-            padding:
-                0 27px;
-
-            border-radius: 10px;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.25);
-
-            background:
-                rgba(255,255,255,0.04);
-
-            color: #ffffff !important;
-
-            font-weight: 700;
-
-            transition:
-                background 0.25s ease,
-                transform 0.25s ease;
-        }
-
-
-        .home-btn-outline:hover {
-
-            background:
-                rgba(255,255,255,0.10);
-
-            transform:
-                translateY(-3px);
-        }
-
-
-        /* =====================================================
-           HERO VISUAL
-        ====================================================== */
-
-        .home-visual {
-
-            position: relative;
-
-            z-index: 4;
-
-            min-height: 480px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-        }
-
-
-        .home-visual-core {
-
-            width: 310px;
-            height: 310px;
-
-            border-radius: 28px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,0.17),
-                    rgba(255,255,255,0.06)
-                );
-
-            border:
-                1px solid
-                rgba(255,255,255,0.20);
-
-            box-shadow:
-                0 35px 80px
-                rgba(0,0,0,0.22);
-
-            backdrop-filter:
-                blur(10px);
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            justify-content: center;
-
-            text-align: center;
-        }
-
-
-        .home-core-jb {
-
-            width: 70px;
-            height: 70px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 18px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #326cff,
-                    #5644e8
-                );
-
-            color: #ffffff;
-
-            font-size: 24px;
-
-            font-weight: 900;
-
-            margin-bottom: 24px;
-
-            box-shadow:
-                0 15px 30px
-                rgba(50,108,255,0.30);
-        }
-
-
-        .home-core-small {
-
-            color: #9fc4ec;
-
-            font-size: 13px;
-
-            font-weight: 800;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 14px;
-        }
-
-
-        .home-core-title {
-
-            max-width: 220px;
-
-            color: #ffffff;
-
-            font-size: 27px;
-
-            line-height: 1.2;
-
-            font-weight: 800;
-        }
-
-
-        /* =====================================================
-           FLOATING SERVICE CARDS
-        ====================================================== */
-
-        .home-float-card {
-
-            position: absolute;
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 13px;
-
-            min-width: 205px;
-
-            padding:
-                15px 18px;
-
-            border-radius: 15px;
-
-            background:
-                rgba(5,25,48,0.93);
-
-            border:
-                1px solid
-                rgba(255,255,255,0.12);
-
-            box-shadow:
-                0 20px 45px
-                rgba(0,0,0,0.20);
-
-            transition:
-                transform 0.3s ease;
-        }
-
-
-        .home-float-card:hover {
-
-            transform:
-                translateY(-8px) scale(1.03);
-        }
-
-
-        .home-float-icon {
-
-            width: 43px;
-            height: 43px;
-
-            flex-shrink: 0;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 12px;
-
-            background:
-                rgba(49,111,255,0.18);
-
-            color: #8ebcff;
-
-            font-size: 19px;
-        }
-
-
-        .home-float-card strong {
-
-            display: block;
-
-            color: #ffffff;
-
-            font-size: 14px;
-
-            margin-bottom: 4px;
-        }
-
-
-        .home-float-card span {
-
-            color: #9fb5cf;
-
-            font-size: 12px;
-        }
-
-
-        .home-float-one {
-
-            top: 70px;
-            right: -15px;
-        }
-
-
-        .home-float-two {
-
-            bottom: 80px;
-            left: 10px;
-        }
-
-
-        .home-float-three {
-
-            bottom: 5px;
-            right: 15px;
-        }
-
-
-        /* =====================================================
-           SLIDER DOTS
-        ====================================================== */
-
-        .home-dots {
-
-            position: absolute;
-
-            z-index: 20;
-
-            bottom: 27px;
-
-            left: 50%;
-
-            transform:
-                translateX(-50%);
-
-            display: flex;
-
-            gap: 9px;
-        }
-
-
-        .home-dot {
-
-            width: 10px;
-            height: 10px;
-
-            padding: 0;
-
-            border: 1px solid
-                rgba(255,255,255,0.75);
-
-            border-radius: 50%;
-
-            background:
-                transparent;
-
-            cursor: pointer;
-        }
-
-
-        .home-dot.active {
-
-            background: #ffffff;
-
-            transform:
-                scale(1.25);
-        }
-
-
-        /* =====================================================
-           QUICK SERVICE STRIP
-        ====================================================== */
-
-        .home-service-strip {
-
-            background: #f7f9fc;
-
-            border-bottom:
-                1px solid #e4e8ef;
-        }
-
-
-        .home-service-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 0;
-        }
-
-
-        .home-service-item {
-
-            padding:
-                27px 22px;
-
-            text-align: center;
-
-            border-right:
-                1px solid #e4e8ef;
-        }
-
-
-        .home-service-item:last-child {
-
-            border-right: none;
-        }
-
-
-        .home-service-item strong {
-
-            display: block;
-
-            margin-bottom: 5px;
-
-            color: #0b2d4f;
-
-            font-size: 16px;
-        }
-
-
-        .home-service-item span {
-
-            color: #6b7c91;
-
-            font-size: 13px;
-        }
-
-
-        /* =====================================================
-           HOMEPAGE SECTION
-        ====================================================== */
-
-        .home-section {
-
-            padding:
-                100px 0;
-        }
-
-
-        .home-section-light {
-
-            background: #ffffff;
-        }
-
-
-        .home-section-soft {
-
-            background: #f7f9fc;
-        }
-
-
-        .home-section-dark {
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #071e36,
-                    #0c3157
-                );
-
-            color: #ffffff;
-        }
-
-
-        .home-section-heading {
-
-            max-width: 760px;
-
-            margin:
-                0 auto 55px;
-
-            text-align: center;
-        }
-
-
-        .home-kicker {
-
-            display: block;
-
-            margin-bottom: 11px;
-
-            color: #2478ff;
-
-            font-size: 13px;
-
-            font-weight: 800;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .home-section-heading h2 {
-
-            margin:
-                0 0 15px;
-
-            color: #0b2038;
-
-            font-size:
-                clamp(32px, 4vw, 46px);
-
-            line-height: 1.15;
-        }
-
-
-        .home-section-dark
-        .home-section-heading h2 {
-
-            color: #ffffff;
-        }
-
-
-        .home-section-heading p {
-
-            margin: 0;
-
-            color: #64748b;
-
-            font-size: 17px;
-
-            line-height: 1.7;
-        }
-
-
-        .home-section-dark
-        .home-section-heading p {
-
-            color: #b9cee4;
-        }
-
-
-        /* =====================================================
-           INTRO
-        ====================================================== */
-
-        .home-intro-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
-            gap: 70px;
-
-            align-items: center;
-        }
-
-
-        .home-intro-copy h2 {
-
-            margin:
-                0 0 20px;
-
-            color: #0b2038;
-
-            font-size:
-                clamp(32px, 4vw, 46px);
-
-            line-height: 1.15;
-        }
-
-
-        .home-intro-copy p {
-
-            color: #64748b;
-
-            font-size: 16px;
-
-            line-height: 1.8;
-        }
-
-
-        .home-intro-link {
-
-            display: inline-flex;
-
-            margin-top: 12px;
-
-            color: #1769aa;
-
-            font-weight: 700;
-
-            text-decoration: none;
-        }
-
-
-        .home-intro-panel {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 18px;
-        }
-
-
-        .home-mini-card {
-
-            padding: 27px;
-
-            border:
-                1px solid #e2e8f0;
-
-            border-radius: 18px;
-
-            background: #ffffff;
-
-            box-shadow:
-                0 12px 30px
-                rgba(15,23,42,0.06);
-
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-
-        .home-mini-card:hover {
-
-            transform:
-                translateY(-7px);
-
-            box-shadow:
-                0 20px 40px
-                rgba(15,23,42,0.10);
-        }
-
-
-        .home-mini-icon {
-
-            width: 52px;
-            height: 52px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 14px;
-
-            background: #edf4ff;
-
-            color: #2478ff;
-
-            font-size: 23px;
-
-            margin-bottom: 18px;
-        }
-
-
-        .home-mini-card h3 {
-
-            margin:
-                0 0 9px;
-
-            color: #0b2038;
-
-            font-size: 19px;
-        }
-
-
-        .home-mini-card p {
-
-            margin: 0;
-
-            color: #68798e;
-
-            font-size: 14px;
-
-            line-height: 1.6;
-        }
-
-
-        /* =====================================================
-           SOLUTION CARDS
-        ====================================================== */
-
-        .home-solution-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 22px;
-        }
-
-
-        .home-solution-card {
-
-            position: relative;
-
-            padding: 34px;
-
-            min-height: 245px;
-
-            border:
-                1px solid #e2e8f0;
-
-            border-radius: 20px;
-
-            background: #ffffff;
-
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease,
-                border-color 0.3s ease;
-        }
-
-
-        .home-solution-card:hover {
-
-            transform:
-                translateY(-8px);
-
-            border-color:
-                #bfd8ff;
-
-            box-shadow:
-                0 22px 45px
-                rgba(15,23,42,0.10);
-        }
-
-
-        .home-solution-number {
-
-            position: absolute;
-
-            top: 24px;
-            right: 27px;
-
-            color: #d6e0ec;
-
-            font-size: 13px;
-
-            font-weight: 800;
-
-            letter-spacing: 1px;
-        }
-
-
-        .home-solution-card h3 {
-
-            margin:
-                0 0 10px;
-
-            color: #0b2038;
-
-            font-size: 21px;
-        }
-
-
-        .home-solution-card p {
-
-            margin:
-                0 0 20px;
-
-            color: #68798e;
-
-            font-size: 14px;
-
-            line-height: 1.7;
-        }
-
-
-        .home-card-link {
-
-            color: #1769aa;
-
-            font-size: 14px;
-
-            font-weight: 800;
-
-            text-decoration: none;
-        }
-
-
-        /* =====================================================
-           WHY SECTION
-        ====================================================== */
-
-        .home-why-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 22px;
-        }
-
-
-        .home-why-card {
-
-            padding: 31px;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.12);
-
-            border-radius: 18px;
-
-            background:
-                rgba(255,255,255,0.055);
-
-            transition:
-                transform 0.3s ease,
-                background 0.3s ease;
-        }
-
-
-        .home-why-card:hover {
-
-            transform:
-                translateY(-7px);
-
-            background:
-                rgba(255,255,255,0.09);
-        }
-
-
-        .home-why-card .home-mini-icon {
-
-            background:
-                rgba(91,154,255,0.16);
-
-            color: #83b7ff;
-        }
-
-
-        .home-why-card h3 {
-
-            margin:
-                0 0 10px;
-
-            color: #ffffff;
-
-            font-size: 19px;
-        }
-
-
-        .home-why-card p {
-
-            margin: 0;
-
-            color: #b6c9dd;
-
-            font-size: 14px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =====================================================
-           PARTNERS
-        ====================================================== */
-
-        .home-partner-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(5, 1fr);
-
-            gap: 18px;
-        }
-
-
-        .home-partner-card {
-
-            min-height: 190px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            justify-content: center;
-
-            text-align: center;
-
-            padding: 25px 15px;
-
-            border:
-                1px solid #dfe6ef;
-
-            border-radius: 18px;
-
-            background: #ffffff;
-
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease,
-                border-color 0.3s ease;
-        }
-
-
-        .home-partner-card:hover {
-
-            transform:
-                translateY(-8px);
-
-            border-color:
-                #b9d5ff;
-
-            box-shadow:
-                0 20px 40px
-                rgba(15,23,42,0.10);
-        }
-
-
-        .home-partner-logo {
-
-            width: 125px;
-            height: 75px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            margin-bottom: 17px;
-
-            border-radius: 14px;
-
-            background:
-                #f1f5f9;
-
-            color: #0b2d4f;
-
-            font-size: 27px;
-
-            font-weight: 900;
-
-            letter-spacing: -0.5px;
-        }
-
-
-        .home-partner-card:nth-child(2)
-        .home-partner-logo {
-
-            color: #d71920;
-        }
-
-
-        .home-partner-card:nth-child(3)
-        .home-partner-logo {
-
-            color: #e60012;
-        }
-
-
-        .home-partner-card:nth-child(4)
-        .home-partner-logo {
-
-            color: #1769aa;
-
-            font-size: 23px;
-        }
-
-
-        .home-partner-card:nth-child(5)
-        .home-partner-logo {
-
-            color: #166534;
-        }
-
-
-        .home-partner-card h3 {
-
-            margin:
-                0 0 5px;
-
-            color: #0b2038;
-
-            font-size: 16px;
-        }
-
-
-        .home-partner-card p {
-
-            margin: 0;
-
-            color: #6b7c91;
-
-            font-size: 12px;
-
-            line-height: 1.5;
-        }
-
-
-        .home-partner-extra {
-
-            margin-top: 18px;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 18px;
-        }
-
-
-        .home-partner-wide {
-
-            padding: 25px;
-
-            border:
-                1px solid #dfe6ef;
-
-            border-radius: 18px;
-
-            background: #ffffff;
-        }
-
-
-        .home-partner-wide strong {
-
-            display: block;
-
-            color: #0b2038;
-
-            font-size: 18px;
-
-            margin-bottom: 7px;
-        }
-
-
-        .home-partner-wide span {
-
-            color: #6b7c91;
-
-            font-size: 14px;
-        }
-
-
-        /* =====================================================
-           CAPABILITIES
-        ====================================================== */
-
-        .home-capability-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 20px;
-        }
-
-
-        .home-capability {
-
-            padding: 30px;
-
-            border-radius: 18px;
-
-            background: #ffffff;
-
-            border:
-                1px solid #e1e8f0;
-        }
-
-
-        .home-capability h3 {
-
-            margin:
-                0 0 9px;
-
-            color: #0b2038;
-
-            font-size: 18px;
-        }
-
-
-        .home-capability p {
-
-            margin: 0;
-
-            color: #68798e;
-
-            font-size: 14px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =====================================================
-           BUSINESS SUPPORT
-        ====================================================== */
-
-        .home-support {
-
-            display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
-            gap: 50px;
-
-            align-items: center;
-        }
-
-
-        .home-support h2 {
-
-            margin:
-                0 0 18px;
-
-            color: #0b2038;
-
-            font-size:
-                clamp(31px, 4vw, 45px);
-
-            line-height: 1.15;
-        }
-
-
-        .home-support p {
-
-            color: #68798e;
-
-            line-height: 1.8;
-        }
-
-
-        .home-check-list {
-
-            list-style: none;
-
-            margin:
-                24px 0 0;
-
-            padding: 0;
-        }
-
-
-        .home-check-list li {
-
-            position: relative;
-
-            padding-left: 29px;
-
-            margin: 13px 0;
-
-            color: #31475e;
-
-            font-size: 15px;
-        }
-
-
-        .home-check-list li::before {
-
-            content: "✓";
-
-            position: absolute;
-
-            left: 0;
-
-            top: 0;
-
-            color: #2478ff;
-
-            font-weight: 900;
-        }
-
-
-        .home-support-box {
-
-            padding: 40px;
-
-            border-radius: 22px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #092747,
-                    #16457c
-                );
-
-            box-shadow:
-                0 25px 60px
-                rgba(15,35,60,0.16);
-        }
-
-
-        .home-support-box h3 {
-
-            margin:
-                0 0 14px;
-
-            color: #ffffff;
-
-            font-size: 25px;
-        }
-
-
-        .home-support-box p {
-
-            color: #c5d8ec;
-
-            margin-bottom: 24px;
-        }
-
-
-        /* =====================================================
-           CTA
-        ====================================================== */
-
-        .home-final-cta {
-
-            padding:
-                95px 0;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #0a2d50,
-                    #174c85
-                );
-
-            color: #ffffff;
-
-            text-align: center;
-        }
-
-
-        .home-final-cta h2 {
-
-            max-width: 760px;
-
-            margin:
-                0 auto 17px;
-
-            color: #ffffff;
-
-            font-size:
-                clamp(32px, 4vw, 48px);
-
-            line-height: 1.15;
-        }
-
-
-        .home-final-cta p {
-
-            max-width: 650px;
-
-            margin:
-                0 auto;
-
-            color: #c8dcf0;
-
-            font-size: 17px;
-
-            line-height: 1.7;
-        }
-
-
-        .home-final-buttons {
-
-            display: flex;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 14px;
-
-            margin-top: 30px;
-        }
-
-
-        .home-final-buttons a {
-
-            text-decoration: none;
-        }
-
-
-        .home-white-btn {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            min-height: 55px;
-
-            padding:
-                0 27px;
-
-            border-radius: 10px;
-
-            background: #ffffff;
-
-            color: #0b3156 !important;
-
-            font-weight: 800;
-        }
-
-
-        .home-transparent-btn {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            min-height: 55px;
-
-            padding:
-                0 27px;
-
-            border-radius: 10px;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.30);
-
-            color: #ffffff !important;
-
-            font-weight: 800;
-        }
-
-
-        /* =====================================================
-           RESPONSIVE
-        ====================================================== */
-
-        @media (max-width: 1050px) {
-
-            .home-hero-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .home-visual {
-
-                display: none;
-            }
-
-
-            .home-hero-content {
-
-                max-width: 850px;
-
-                margin: auto;
-
-                text-align: center;
-            }
-
-
-            .home-hero-text {
-
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-
-            .home-hero-buttons {
-
-                justify-content: center;
-            }
-
-
-            .home-partner-grid {
-
-                grid-template-columns:
-                    repeat(3, 1fr);
-            }
-
-
-            .home-capability-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-        }
-
-
-        @media (max-width: 850px) {
-
-            .home-intro-grid,
-            .home-support {
-
-                grid-template-columns: 1fr;
-
-                gap: 40px;
-            }
-
-
-            .home-solution-grid,
-            .home-why-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .home-service-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .home-service-item {
-
-                border-bottom:
-                    1px solid #e4e8ef;
-            }
-        }
-
-
-        @media (max-width: 600px) {
-
-            .home-hero,
-            .home-slides {
-
-                min-height: 650px;
-            }
-
-
-            .home-hero-content {
-
-                padding:
-                    65px 0 95px;
-            }
-
-
-            .home-hero h1 {
-
-                font-size: 43px;
-
-                letter-spacing: -1px;
-            }
-
-
-            .home-hero-text {
-
-                font-size: 16px;
-            }
-
-
-            .home-hero-buttons {
-
-                flex-direction: column;
-
-                align-items: stretch;
-            }
-
-
-            .home-hero-buttons a {
-
-                width: 100%;
-            }
-
-
-            .home-section {
-
-                padding:
-                    75px 0;
-            }
-
-
-            .home-intro-panel {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .home-solution-grid,
-            .home-why-grid,
-            .home-capability-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .home-partner-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .home-partner-extra {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .home-service-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .home-service-item {
-
-                border-right: none;
-            }
-
-
-            .home-partner-logo {
-
-                width: 105px;
-                height: 65px;
-
-                font-size: 22px;
-            }
-        }
-
-
-        @media (prefers-reduced-motion: reduce) {
-
-            .home-slide,
-            .home-solution-card,
-            .home-mini-card,
-            .home-partner-card,
-            .home-why-card,
-            .home-float-card {
-
-                transition: none;
-            }
-        }
-
-    </style>
+        href="css/style.css">
 
 </head>
 
 
-<body class="home-page">
+<body>
 
 
-<!-- =====================================================
-     HEADER
-     SAME HEADER STRUCTURE AS OTHER WORKING PAGES
-====================================================== -->
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
 
-<header class="navbar">
+    <header class="navbar">
 
-    <div class="container nav-container">
+        <div class="container nav-container">
 
-        <a href="index.html"
-           class="logo">
+            <a href="index.html"
+                class="logo"
+                aria-label="JB TECH SERVICES Home">
 
-            JB TECH SERVICES
+                JB TECH SERVICES
 
-        </a>
+            </a>
 
 
-        <div class="menu-toggle">
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation">
 
-            ☰
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <nav
+                class="nav-links"
+                id="primary-navigation"
+                aria-label="Primary navigation">
+
+                <a href="index.html"
+                    class="active"
+                    aria-current="page">
+
+                    Home
+
+                </a>
+
+
+                <a href="about.html">
+
+                    About Us
+
+                </a>
+
+
+                <a href="services.html">
+
+                    Services
+
+                </a>
+
+
+                <a href="cloud-communication.html">
+
+                    Cloud Communication
+
+                </a>
+
+
+                <a href="gem-services.html">
+
+                    GeM Services
+
+                </a>
+
+
+                <a href="contact.html">
+
+                    Contact
+
+                </a>
+
+
+                <a href="contact.html"
+                    class="quote-btn">
+
+                    Get a Business Quote
+
+                </a>
+
+            </nav>
 
         </div>
 
-
-        <nav class="nav-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About Us
-            </a>
-
-            <a href="services.html">
-                Services
-            </a>
-
-            <a href="cloud-communication.html">
-                Cloud Communication
-            </a>
-
-            <a href="gem-services.html">
-                GeM Services
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-            <a href="contact.html"
-               class="quote-btn">
-
-                Get a Business Quote
-
-            </a>
-
-        </nav>
-
-    </div>
-
-</header>
+    </header>
 
 
 
-<!-- =====================================================
-     HERO SLIDER
-====================================================== -->
-
-<section class="home-hero">
-
-    <div class="home-slides">
+    <main>
 
 
-        <!-- =================================================
-             SLIDE 1
-        ================================================== -->
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
 
-        <div class="home-slide active">
+        <section class="home-hero">
 
             <div class="container">
 
                 <div class="home-hero-grid">
 
 
+                    <!-- HERO CONTENT -->
+
                     <div class="home-hero-content">
 
-                        <span class="home-label">
-                            Business Technology Solutions
+                        <span class="home-kicker">
+
+                            BUSINESS CONNECTIVITY & COMMUNICATION
+
                         </span>
 
 
@@ -1907,21 +212,16 @@
                             One Partner.
                             <br>
 
-                            Multiple
-                            <span>
-                                Technology
-                            </span>
-                            Solutions.
+                            Multiple Technology Solutions.
 
                         </h1>
 
 
-                        <p class="home-hero-text">
+                        <p>
 
-                            Connecting businesses with reliable
-                            connectivity, telecom, cloud communication
-                            and digital business solutions through a
-                            trusted technology ecosystem.
+                            Business connectivity, telecom, business calling,
+                            cloud communication and related technology solutions
+                            designed around your business requirements.
 
                         </p>
 
@@ -1929,57 +229,25 @@
                         <div class="home-hero-buttons">
 
                             <a href="contact.html"
-                               class="home-btn-primary">
+                                class="home-primary-btn">
 
                                 Get a Business Quote →
-                                
+
                             </a>
 
 
-                            <a href="https://wa.me/919017125139"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="home-btn-outline">
+                            <a href="services.html"
+                                class="home-secondary-btn">
 
-                                Talk to Us on WhatsApp ↗
+                                Explore Our Services
 
                             </a>
 
                         </div>
 
-                    </div>
 
+                        <div class="home-hero-points">
 
-                    <div class="home-visual">
-
-                        <div class="home-visual-core">
-
-                            <div class="home-core-jb">
-                                JB
-                            </div>
-
-                            <div class="home-core-small">
-                                Business Technology
-                            </div>
-
-                            <div class="home-core-title">
-
-                                Connected.
-                                <br>
-                                Communicating.
-                                <br>
-                                Growing.
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="home-float-card home-float-one">
-
-                            <div class="home-float-icon">
-                                ◉
-                            </div>
 
                             <div>
 
@@ -1988,50 +256,147 @@
                                 </strong>
 
                                 <span>
-                                    Business Internet & Telecom
+                                    Business-ready solutions
                                 </span>
 
                             </div>
 
-                        </div>
-
-
-                        <div class="home-float-card home-float-two">
-
-                            <div class="home-float-icon">
-                                ☁
-                            </div>
 
                             <div>
 
                                 <strong>
-                                    Cloud Communication
+                                    Communication
                                 </strong>
 
                                 <span>
-                                    Modern Business Calling
+                                    Stay connected
                                 </span>
 
                             </div>
 
-                        </div>
-
-
-                        <div class="home-float-card home-float-three">
-
-                            <div class="home-float-icon">
-                                ◆
-                            </div>
 
                             <div>
 
                                 <strong>
-                                    GeM
+                                    Support
                                 </strong>
 
                                 <span>
-                                    Business Support
+                                    Requirement-focused
                                 </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- HERO VISUAL -->
+
+                    <div class="home-hero-visual">
+
+                        <div class="home-network-panel">
+
+
+                            <div class="home-network-header">
+
+                                <span>
+                                    BUSINESS TECHNOLOGY
+                                </span>
+
+                                <span class="home-status">
+                                    ●
+                                </span>
+
+                            </div>
+
+
+                            <div class="home-network">
+
+                                <div class="home-network-center">
+
+                                    JB
+
+                                </div>
+
+
+                                <div class="home-network-node home-node-one">
+
+                                    NET
+
+                                </div>
+
+
+                                <div class="home-network-node home-node-two">
+
+                                    VOICE
+
+                                </div>
+
+
+                                <div class="home-network-node home-node-three">
+
+                                    CLOUD
+
+                                </div>
+
+
+                                <div class="home-network-node home-node-four">
+
+                                    GLOBAL
+
+                                </div>
+
+
+                                <span class="home-network-line line-a"></span>
+
+                                <span class="home-network-line line-b"></span>
+
+                                <span class="home-network-line line-c"></span>
+
+                                <span class="home-network-line line-d"></span>
+
+                            </div>
+
+
+                            <div class="home-network-footer">
+
+
+                                <div>
+
+                                    <strong>
+                                        01
+                                    </strong>
+
+                                    Connectivity
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong>
+                                        02
+                                    </strong>
+
+                                    Communication
+
+                                </div>
+
+
+                                <div>
+
+                                    <strong>
+                                        03
+                                    </strong>
+
+                                    Technology
+
+                                </div>
+
 
                             </div>
 
@@ -2043,317 +408,690 @@
 
             </div>
 
-        </div>
+        </section>
 
 
 
-        <!-- =================================================
-             SLIDE 2
-        ================================================== -->
+        <!-- =====================================================
+             BUSINESS POSITIONING
+        ====================================================== -->
 
-        <div class="home-slide">
+        <section class="home-section">
 
             <div class="container">
 
-                <div class="home-hero-grid">
+
+                <div class="home-section-heading centered">
+
+                    <span class="home-kicker">
+
+                        BUILT AROUND YOUR BUSINESS
+
+                    </span>
 
 
-                    <div class="home-hero-content">
+                    <h2>
 
-                        <span class="home-label">
-                            Enterprise Telecom
-                        </span>
+                        Built for businesses that depend
+                        on being connected
 
-
-                        <h1>
-
-                            Reliable
-                            <span>
-                                Connectivity
-                            </span>
-                            <br>
-
-                            For Your Business.
-
-                        </h1>
+                    </h2>
 
 
-                      <p class="home-hero-text">
+                    <p>
 
-    Professional support for businesses
-    dealing with Government e-Marketplace
-    and procurement-related requirements.
+                        Technology should support the way your business works.
+                        JB TECH SERVICES helps businesses explore connectivity,
+                        communication and procurement-related technology
+                        requirements through a practical, requirement-focused
+                        approach.
 
-</p>
-
-
-                        <div class="home-hero-buttons">
-
-                            <a href="services.html"
-                               class="home-btn-primary">
-
-                                Explore Telecom Services →
-
-                            </a>
-
-
-                            <a href="contact.html"
-                               class="home-btn-outline">
-
-                                Discuss Your Requirement
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="home-visual">
-
-                        <div class="home-visual-core">
-
-                            <div class="home-core-jb">
-                                JB
-                            </div>
-
-                            <div class="home-core-small">
-                                Enterprise Connectivity
-                            </div>
-
-                            <div class="home-core-title">
-
-                                Reliable.
-                                <br>
-                                Secure.
-                                <br>
-                                Business Ready.
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="home-float-card home-float-one">
-
-                            <div class="home-float-icon">
-                                ◉
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Enterprise Internet
-                                </strong>
-
-                                <span>
-                                    Business Connectivity
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="home-float-card home-float-two">
-
-                            <div class="home-float-icon">
-                                ◎
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Telecom
-                                </strong>
-
-                                <span>
-                                    Business Solutions
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="home-float-card home-float-three">
-
-                            <div class="home-float-icon">
-                                +
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Business Support
-                                </strong>
-
-                                <span>
-                                    Requirement Based
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
+                    </p>
 
                 </div>
 
-            </div>
 
-        </div>
-
+                <div class="home-mini-grid">
 
 
-        <!-- =================================================
-             SLIDE 3
-        ================================================== -->
+                    <!-- CARD 01 -->
 
-        <div class="home-slide">
+                    <div class="home-mini-card">
 
-            <div class="container">
+                        <div class="home-mini-number">
+                            01
+                        </div>
 
-                <div class="home-hero-grid">
-
-
-                    <div class="home-hero-content">
-
-                        <span class="home-label">
-                            Cloud Communication
-                        </span>
+                        <div class="home-mini-icon">
+                            ◉
+                        </div>
 
 
-                        <h1>
+                        <h3>
 
-                            Modern
-                            <span>
-                                Business Calling
-                            </span>
+                            Enterprise Connectivity
 
-                            <br>
-
-                            Solutions.
-
-                        </h1>
+                        </h3>
 
 
-                        <p class="home-hero-text">
+                        <p>
 
-                            Cloud telephony and communication
-                            solutions helping businesses connect
-                            teams and customers across domestic
-                            and international markets.
+                            Connectivity solutions for businesses that need
+                            dependable internet and telecom services.
 
                         </p>
 
 
-                        <div class="home-hero-buttons">
+                        <a href="services.html#enterprise-connectivity">
 
-                            <a href="cloud-communication.html"
-                               class="home-btn-primary">
+                            Explore Connectivity →
 
-                                Explore Cloud Solutions →
-
-                            </a>
-
-
-                            <a href="contact.html"
-                               class="home-btn-outline">
-
-                                Request Information
-
-                            </a>
-
-                        </div>
+                        </a>
 
                     </div>
 
 
-                    <div class="home-visual">
 
-                        <div class="home-visual-core">
+                    <!-- CARD 02 -->
 
-                            <div class="home-core-jb">
-                                JB
-                            </div>
+                    <div class="home-mini-card">
 
-                            <div class="home-core-small">
-                                Cloud Communication
-                            </div>
+                        <div class="home-mini-number">
+                            02
+                        </div>
 
-                            <div class="home-core-title">
+                        <div class="home-mini-icon">
+                            ☁
+                        </div>
 
-                                Smarter.
-                                <br>
-                                Flexible.
-                                <br>
-                                Connected.
 
-                            </div>
+                        <h3>
+
+                            Cloud Communication
+
+                        </h3>
+
+
+                        <p>
+
+                            Cloud-based communication and business calling
+                            solutions for modern teams.
+
+                        </p>
+
+
+                        <a href="cloud-communication.html">
+
+                            Explore Cloud Communication →
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- CARD 03 -->
+
+                    <div class="home-mini-card">
+
+                        <div class="home-mini-number">
+                            03
+                        </div>
+
+                        <div class="home-mini-icon">
+                            ◆
+                        </div>
+
+
+                        <h3>
+
+                            GeM Support
+
+                        </h3>
+
+
+                        <p>
+
+                            Assistance for relevant GeM-related business
+                            and procurement requirements.
+
+                        </p>
+
+
+                        <a href="gem-services.html">
+
+                            Explore GeM Services →
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CORE SOLUTIONS
+        ====================================================== -->
+
+        <section class="home-section home-section-soft">
+
+            <div class="container">
+
+
+                <div class="home-section-heading">
+
+                    <span class="home-kicker">
+
+                        OUR SOLUTIONS
+
+                    </span>
+
+
+                    <h2>
+
+                        Everything Your Business Needs
+                        to Stay Connected
+
+                    </h2>
+
+
+                    <p>
+
+                        Practical technology solutions covering connectivity,
+                        communication and GeM-related business requirements.
+
+                    </p>
+
+                </div>
+
+
+                <div class="home-solution-grid">
+
+
+                    <!-- 01 -->
+
+                    <article class="home-solution-card">
+
+                        <span class="home-solution-number">
+                            01
+                        </span>
+
+
+                        <div class="home-mini-icon">
+                            ◉
+                        </div>
+
+
+                        <h3>
+
+                            Enterprise Connectivity
+
+                        </h3>
+
+
+                        <p>
+
+                            Reliable connectivity solutions designed for
+                            businesses with different office, user and
+                            operational requirements.
+
+                        </p>
+
+
+                        <a href="services.html#enterprise-connectivity"
+                            class="home-card-link">
+
+                            Explore Connectivity →
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- 02 -->
+
+                    <article class="home-solution-card">
+
+                        <span class="home-solution-number">
+                            02
+                        </span>
+
+
+                        <div class="home-mini-icon">
+                            ☁
+                        </div>
+
+
+                        <h3>
+
+                            Cloud Communication
+
+                        </h3>
+
+
+                        <p>
+
+                            Modern cloud telephony and business communication
+                            solutions for teams and customer communication.
+
+                        </p>
+
+
+                        <a href="cloud-communication.html"
+                            class="home-card-link">
+
+                            Explore Cloud Solutions →
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- 03 -->
+
+                    <article class="home-solution-card">
+
+                        <span class="home-solution-number">
+                            03
+                        </span>
+
+
+                        <div class="home-mini-icon">
+                            ◆
+                        </div>
+
+
+                        <h3>
+
+                            GeM Business Support
+
+                        </h3>
+
+
+                        <p>
+
+                            Professional support for businesses dealing with
+                            relevant Government e-Marketplace requirements.
+
+                        </p>
+
+
+                        <a href="gem-services.html"
+                            class="home-card-link">
+
+                            Explore GeM Services →
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- 04 -->
+
+                    <article class="home-solution-card">
+
+                        <span class="home-solution-number">
+                            04
+                        </span>
+
+
+                        <div class="home-mini-icon">
+                            ☎
+                        </div>
+
+
+                        <h3>
+
+                            Business Calling
+
+                        </h3>
+
+
+                        <p>
+
+                            Professional voice and communication solutions
+                            helping businesses connect with teams and customers.
+
+                        </p>
+
+
+                        <a href="cloud-communication.html"
+                            class="home-card-link">
+
+                            Learn More →
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- 05 -->
+
+                    <article class="home-solution-card">
+
+                        <span class="home-solution-number">
+                            05
+                        </span>
+
+
+                        <div class="home-mini-icon">
+                            ◎
+                        </div>
+
+
+                        <h3>
+
+                            International Communication
+
+                        </h3>
+
+
+                        <p>
+
+                            Communication solutions supporting businesses
+                            serving customers and markets across locations.
+
+                        </p>
+
+
+                        <a href="services.html#international-communication"
+                            class="home-card-link">
+
+                            Explore International Solutions →
+
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             UNDERSTAND / RECOMMEND / SUPPORT
+        ====================================================== -->
+
+        <section class="home-section home-dark-section">
+
+            <div class="container">
+
+
+                <div class="home-approach-grid">
+
+
+                    <div class="home-approach-heading">
+
+                        <span class="home-kicker">
+
+                            OUR APPROACH
+
+                        </span>
+
+
+                        <h2>
+
+                            Understand.
+                            <br>
+
+                            Recommend.
+                            <br>
+
+                            Support.
+
+                        </h2>
+
+                    </div>
+
+
+                    <div class="home-approach-content">
+
+                        <p>
+
+                            Every business has different connectivity and
+                            communication requirements. We start by understanding
+                            the requirement before identifying an appropriate
+                            direction.
+
+                        </p>
+
+
+                        <a href="about.html"
+                            class="home-outline-btn">
+
+                            Learn About Us →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="home-approach-cards">
+
+
+                    <article>
+
+                        <span>
+                            01
+                        </span>
+
+
+                        <h3>
+
+                            Understand
+
+                        </h3>
+
+
+                        <p>
+
+                            Understand your business requirement, existing
+                            setup, locations, users and communication needs.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <article>
+
+                        <span>
+                            02
+                        </span>
+
+
+                        <h3>
+
+                            Recommend
+
+                        </h3>
+
+
+                        <p>
+
+                            Help evaluate suitable connectivity, communication
+                            and technology options based on the requirement.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <article>
+
+                        <span>
+                            03
+                        </span>
+
+
+                        <h3>
+
+                            Support
+
+                        </h3>
+
+
+                        <p>
+
+                            Stay focused on helping you move forward with
+                            the selected business solution.
+
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             BUSINESS COMMUNICATION
+        ====================================================== -->
+
+        <section class="home-section">
+
+            <div class="container">
+
+
+                <div class="home-feature-grid">
+
+
+                    <div class="home-feature-content">
+
+                        <span class="home-kicker">
+
+                            BUSINESS COMMUNICATION
+
+                        </span>
+
+
+                        <h2>
+
+                            Keep your business connected
+                            wherever communication takes place
+
+                        </h2>
+
+
+                        <p>
+
+                            Modern businesses may need to communicate across
+                            offices, teams, customers and different markets.
+                            The right communication setup can make those
+                            interactions easier to manage.
+
+                        </p>
+
+
+                        <p>
+
+                            JB TECH SERVICES helps businesses explore business
+                            calling, cloud communication and international
+                            communication requirements.
+
+                        </p>
+
+
+                        <a href="cloud-communication.html"
+                            class="home-primary-btn">
+
+                            Explore Cloud Communication →
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="home-feature-panel">
+
+
+                        <div class="home-feature-header">
+
+                            BUSINESS COMMUNICATION
+
+                            <span>
+                                05
+                            </span>
 
                         </div>
 
 
-                        <div class="home-float-card home-float-one">
+                        <div class="home-feature-list">
 
-                            <div class="home-float-icon">
-                                ☁
-                            </div>
 
                             <div>
-
-                                <strong>
-                                    Cloud Telephony
-                                </strong>
 
                                 <span>
-                                    Modern Business Calling
+                                    01
                                 </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="home-float-card home-float-two">
-
-                            <div class="home-float-icon">
-                                ☎
-                            </div>
-
-                            <div>
 
                                 <strong>
                                     Business Calling
                                 </strong>
 
-                                <span>
-                                    Customer Communication
-                                </span>
+                                <p>
+                                    Professional voice communication.
+                                </p>
 
                             </div>
 
-                        </div>
-
-
-                        <div class="home-float-card home-float-three">
-
-                            <div class="home-float-icon">
-                                ↗
-                            </div>
 
                             <div>
 
-                                <strong>
-                                    International
-                                </strong>
-
                                 <span>
-                                    Global Communication
+                                    02
                                 </span>
 
+                                <strong>
+                                    Cloud Communication
+                                </strong>
+
+                                <p>
+                                    Flexible cloud-based communication.
+                                </p>
+
                             </div>
+
+
+                            <div>
+
+                                <span>
+                                    03
+                                </span>
+
+                                <strong>
+                                    International Communication
+                                </strong>
+
+                                <p>
+                                    Communication across locations and markets.
+                                </p>
+
+                            </div>
+
 
                         </div>
 
@@ -2363,159 +1101,518 @@
 
             </div>
 
-        </div>
+        </section>
 
 
 
-        <!-- =================================================
-             SLIDE 4
-        ================================================== -->
+        <!-- =====================================================
+             TECHNOLOGY ECOSYSTEM
+        ====================================================== -->
 
-        <div class="home-slide">
+        <section class="home-section home-section-soft">
 
             <div class="container">
 
-                <div class="home-hero-grid">
+
+                <div class="home-section-heading centered">
+
+                    <span class="home-kicker">
+
+                        TECHNOLOGY ECOSYSTEM
+
+                    </span>
 
 
-                    <div class="home-hero-content">
+                    <h2>
 
-                        <span class="home-label">
-                            Government e-Marketplace
+                        Technology options aligned
+                        with business requirements
+
+                    </h2>
+
+
+                    <p>
+
+                        Business requirements can involve connectivity,
+                        telecom, cloud communication and procurement.
+                        We help you focus on the solution that fits the
+                        requirement.
+
+                    </p>
+
+                </div>
+
+
+                <div class="home-ecosystem-grid">
+
+
+                    <div class="home-ecosystem-card">
+
+                        <span>
+                            01
+                        </span>
+
+                        <h3>
+                            Business Connectivity
+                        </h3>
+
+                        <p>
+                            Enterprise internet and connectivity requirements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="home-ecosystem-card">
+
+                        <span>
+                            02
+                        </span>
+
+                        <h3>
+                            Business Telecom
+                        </h3>
+
+                        <p>
+                            Telecom and business communication requirements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="home-ecosystem-card">
+
+                        <span>
+                            03
+                        </span>
+
+                        <h3>
+                            Cloud Communication
+                        </h3>
+
+                        <p>
+                            Cloud-based business calling and communication.
+                        </p>
+
+                    </div>
+
+
+                    <div class="home-ecosystem-card">
+
+                        <span>
+                            04
+                        </span>
+
+                        <h3>
+                            International Communication
+                        </h3>
+
+                        <p>
+                            Communication requirements involving international reach.
+                        </p>
+
+                    </div>
+
+
+                    <div class="home-ecosystem-card">
+
+                        <span>
+                            05
+                        </span>
+
+                        <h3>
+                            GeM Services
+                        </h3>
+
+                        <p>
+                            GeM-related business and procurement support.
+                        </p>
+
+                    </div>
+
+
+                    <div class="home-ecosystem-card">
+
+                        <span>
+                            06
+                        </span>
+
+                        <h3>
+                            Business Technology
+                        </h3>
+
+                        <p>
+                            Requirement-focused technology guidance.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             WHY JB TECH SERVICES
+        ====================================================== -->
+
+        <section class="home-section">
+
+            <div class="container">
+
+
+                <div class="home-section-heading">
+
+                    <span class="home-kicker">
+
+                        WHY JB TECH SERVICES
+
+                    </span>
+
+
+                    <h2>
+
+                        A practical approach to
+                        business technology
+
+                    </h2>
+
+
+                    <p>
+
+                        We focus on understanding the requirement first,
+                        then helping businesses explore suitable technology
+                        solutions.
+
+                    </p>
+
+                </div>
+
+
+                <div class="home-benefits-grid">
+
+
+                    <div class="home-benefit">
+
+                        <span>
+                            01
+                        </span>
+
+                        <h3>
+                            Business Focused
+                        </h3>
+
+                        <p>
+                            Solutions are considered around your actual
+                            business requirement.
+                        </p>
+
+                    </div>
+
+
+                    <div class="home-benefit">
+
+                        <span>
+                            02
+                        </span>
+
+                        <h3>
+                            Multiple Solution Areas
+                        </h3>
+
+                        <p>
+                            Connectivity, communication and GeM-related
+                            requirements in one place.
+                        </p>
+
+                    </div>
+
+
+                    <div class="home-benefit">
+
+                        <span>
+                            03
+                        </span>
+
+                        <h3>
+                            Clear Communication
+                        </h3>
+
+                        <p>
+                            Straightforward discussion about requirements,
+                            options and next steps.
+                        </p>
+
+                    </div>
+
+
+                    <div class="home-benefit">
+
+                        <span>
+                            04
+                        </span>
+
+                        <h3>
+                            Requirement Led
+                        </h3>
+
+                        <p>
+                            We start with understanding what your business
+                            actually needs.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FAQ
+        ====================================================== -->
+
+        <section class="home-section home-section-soft">
+
+            <div class="container">
+
+
+                <div class="home-faq-grid">
+
+
+                    <div class="home-faq-intro">
+
+                        <span class="home-kicker">
+
+                            FAQ
+
                         </span>
 
 
-                        <h1>
+                        <h2>
 
-                            Supporting Your
-                            <span>
-                                GeM
-                            </span>
+                            Questions businesses ask
+                            before getting in touch
 
-                            <br>
-
-                            Business Requirements.
-
-                        </h1>
+                        </h2>
 
 
-                        <p class="home-hero-text">
+                        <p>
 
-                            Professional support for businesses
-                            dealing with Government e-Marketplace
-                            and procurement-related requirements.
+                            A few common questions about connectivity,
+                            communication and GeM-related requirements.
 
                         </p>
 
 
-                        <div class="home-hero-buttons">
+                        <a href="contact.html"
+                            class="home-card-link">
 
-                            <a href="gem-services.html"
-                               class="home-btn-primary">
+                            Have another question? →
 
-                                Explore GeM Services →
-
-                            </a>
-
-
-                            <a href="contact.html"
-                               class="home-btn-outline">
-
-                                Discuss Your Requirement
-
-                            </a>
-
-                        </div>
+                        </a>
 
                     </div>
 
 
-                    <div class="home-visual">
 
-                        <div class="home-visual-core">
-
-                            <div class="home-core-jb">
-                                GeM
-                            </div>
-
-                            <div class="home-core-small">
-                                Business Support
-                            </div>
-
-                            <div class="home-core-title">
-
-                                Organized.
-                                <br>
-                                Practical.
-                                <br>
-                                Business Focused.
-
-                            </div>
-
-                        </div>
+                    <div class="faq-list">
 
 
-                        <div class="home-float-card home-float-one">
+                        <!-- FAQ 01 -->
 
-                            <div class="home-float-icon">
-                                ◆
-                            </div>
+                        <div class="faq-item">
 
-                            <div>
-
-                                <strong>
-                                    GeM Assistance
-                                </strong>
+                            <button
+                                class="faq-question"
+                                type="button">
 
                                 <span>
-                                    Business Requirements
+
+                                    What services does JB TECH SERVICES provide?
+
                                 </span>
+
+                                <span class="faq-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+
+                            <div class="faq-answer">
+
+                                <p>
+
+                                    JB TECH SERVICES focuses on business
+                                    connectivity, telecom, business calling,
+                                    cloud communication, international
+                                    communication and GeM-related services.
+
+                                </p>
 
                             </div>
 
                         </div>
 
 
-                        <div class="home-float-card home-float-two">
 
-                            <div class="home-float-icon">
-                                ✓
-                            </div>
+                        <!-- FAQ 02 -->
 
-                            <div>
+                        <div class="faq-item">
 
-                                <strong>
-                                    Procurement Support
-                                </strong>
+                            <button
+                                class="faq-question"
+                                type="button">
 
                                 <span>
-                                    Requirement Coordination
+
+                                    Can you help us choose a business connectivity solution?
+
                                 </span>
 
+                                <span class="faq-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+
+                            <div class="faq-answer">
+
+                                <p>
+
+                                    Yes. We can understand your business
+                                    requirement, locations, users and
+                                    connectivity needs and help you explore
+                                    suitable options.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- FAQ 03 -->
+
+                        <div class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button">
+
+                                <span>
+
+                                    What is cloud communication?
+
+                                </span>
+
+                                <span class="faq-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+
+                            <div class="faq-answer">
+
+                                <p>
+
+                                    Cloud communication refers to communication
+                                    services delivered through cloud-based
+                                    platforms, including business calling and
+                                    related communication capabilities.
+
+                                </p>
+
                             </div>
 
                         </div>
 
 
-                        <div class="home-float-card home-float-three">
 
-                            <div class="home-float-icon">
-                                +
-                            </div>
+                        <!-- FAQ 04 -->
 
-                            <div>
+                        <div class="faq-item">
 
-                               <strong>
-    GeM Support
-</strong>
+                            <button
+                                class="faq-question"
+                                type="button">
 
-<span>
-    Procurement & Marketplace Support
-</span>
+                                <span>
+
+                                    Do you provide GeM-related support?
+
+                                </span>
+
+                                <span class="faq-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+
+                            <div class="faq-answer">
+
+                                <p>
+
+                                    Yes. JB TECH SERVICES provides support
+                                    related to relevant GeM requirements.
+                                    Contact us to discuss your specific need.
+
+                                </p>
 
                             </div>
 
                         </div>
+
+
+
+                        <!-- FAQ 05 -->
+
+                        <div class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button">
+
+                                <span>
+
+                                    How can I discuss my business requirement?
+
+                                </span>
+
+                                <span class="faq-icon">
+                                    +
+                                </span>
+
+                            </button>
+
+
+                            <div class="faq-answer">
+
+                                <p>
+
+                                    You can contact us through the Contact
+                                    page, call us directly, send your
+                                    requirement or connect with us on WhatsApp.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
 
                     </div>
 
@@ -2523,1612 +1620,311 @@
 
             </div>
 
-        </div>
+        </section>
 
 
-    </div>
 
+        <!-- =====================================================
+             FINAL CTA
+        ====================================================== -->
 
-    <!-- SLIDER DOTS -->
+        <section class="home-final-cta">
 
-    <div class="home-dots">
+            <div class="container">
 
-        <button
-            type="button"
-            class="home-dot active"
-            data-slide="0"
-            aria-label="Slide 1">
-        </button>
 
-        <button
-            type="button"
-            class="home-dot"
-            data-slide="1"
-            aria-label="Slide 2">
-        </button>
+                <div class="home-final-content">
 
-        <button
-            type="button"
-            class="home-dot"
-            data-slide="2"
-            aria-label="Slide 3">
-        </button>
+                    <span class="home-kicker">
 
-        <button
-            type="button"
-            class="home-dot"
-            data-slide="3"
-            aria-label="Slide 4">
-        </button>
+                        LET'S TALK BUSINESS
 
-    </div>
+                    </span>
 
-</section>
 
+                    <h2>
 
+                        Looking for the Right
+                        <br>
+                        Business Technology Solution?
 
-<!-- =====================================================
-     QUICK SERVICE STRIP
-====================================================== -->
+                    </h2>
 
-<section class="home-service-strip">
-
-    <div class="container">
-
-        <div class="home-service-grid">
-
-            <div class="home-service-item">
-
-                <strong>
-                    Telecom Connectivity
-                </strong>
-
-                <span>
-                    Business Internet & Telecom
-                </span>
-
-            </div>
-
-
-            <div class="home-service-item">
-
-                <strong>
-                    Cloud Communication
-                </strong>
-
-                <span>
-                    Domestic & International
-                </span>
-
-            </div>
-
-
-            <div class="home-service-item">
-
-                <strong>
-                    Business Calling
-                </strong>
-
-                <span>
-                    Modern Communication Solutions
-                </span>
-
-            </div>
-
-
-            <div class="home-service-item">
-
-                <strong>
-                    GeM Services
-                </strong>
-
-                <span>
-                    Business Support
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     INTRODUCTION
-====================================================== -->
-
-<section class="home-section home-section-light">
-
-    <div class="container">
-
-        <div class="home-intro-grid">
-
-
-            <div class="home-intro-copy">
-
-                <span class="home-kicker">
-                    What We Do
-                </span>
-
-
-                <h2>
-                    Technology Solutions
-                    Built Around Your Business
-                </h2>
-
-
-                <p>
-
-                    JB TECH SERVICES helps businesses simplify
-                    their connectivity, communication and
-                    procurement requirements through practical
-                    technology solutions.
-
-                </p>
-
-
-                <p>
-Through our technology ecosystem, we help businesses
-access connectivity, telecom and cloud communication
-solutions from established technology providers.
-
-                </p>
-
-
-                <p>
-
-                    We also provide GeM-related business support
-    for relevant procurement and Government
-    e-Marketplace requirements.
-
-                </p>
-
-
-                <a href="about.html"
-                   class="home-intro-link">
-
-                    Know More About Us →
-
-                </a>
-
-            </div>
-
-
-            <div class="home-intro-panel">
-
-
-                <div class="home-mini-card">
-
-                    <div class="home-mini-icon">
-                        ◉
-                    </div>
-
-                    <h3>
-                        Connectivity
-                    </h3>
 
                     <p>
-                        Business Internet and telecom
-                        solutions for modern organizations.
+
+                        Tell us what your business needs.
+                        We'll help you identify a suitable solution.
+
+                    </p>
+
+
+                    <div class="home-final-buttons">
+
+
+                        <a href="contact.html"
+                            class="home-white-btn">
+
+                            Get a Business Quote →
+
+                        </a>
+
+
+                        <a href="https://wa.me/919017125139"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="home-transparent-btn">
+
+                            Talk to Us on WhatsApp ↗
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+
+            <div class="footer-grid">
+
+
+                <!-- COMPANY -->
+
+                <div>
+
+                    <h3>
+
+                        JB TECH SERVICES
+
+                    </h3>
+
+
+                    <p>
+
+                        Technology and business communication
+                        solutions helping organizations connect,
+                        communicate and grow.
+
+                    </p>
+
+
+                    <p>
+
+                        📍 South West Delhi, Delhi
+
                     </p>
 
                 </div>
 
 
-                <div class="home-mini-card">
 
-                    <div class="home-mini-icon">
-                        ☁
-                    </div>
+                <!-- QUICK LINKS -->
+
+                <div>
 
                     <h3>
+
+                        Quick Links
+
+                    </h3>
+
+
+                    <a href="index.html">
+
+                        Home
+
+                    </a>
+
+
+                    <a href="about.html">
+
+                        About Us
+
+                    </a>
+
+
+                    <a href="services.html">
+
+                        Services
+
+                    </a>
+
+
+                    <a href="cloud-communication.html">
+
                         Cloud Communication
-                    </h3>
 
-                    <p>
-                        Cloud-based business communication
-                        and calling solutions.
-                    </p>
+                    </a>
+
+
+                    <a href="gem-services.html">
+
+                        GeM Services
+
+                    </a>
+
+
+                    <a href="contact.html">
+
+                        Contact
+
+                    </a>
 
                 </div>
 
 
-                <div class="home-mini-card">
 
-                    <div class="home-mini-icon">
-                        ☎
-                    </div>
+                <!-- SOLUTIONS -->
+
+                <div>
 
                     <h3>
+
+                        Solutions
+
+                    </h3>
+
+
+                    <a href="services.html#enterprise-connectivity">
+
+                        Enterprise Connectivity
+
+                    </a>
+
+
+                    <a href="cloud-communication.html">
+
+                        Cloud Communication
+
+                    </a>
+
+
+                    <a href="cloud-communication.html">
+
                         Business Calling
-                    </h3>
 
-                    <p>
-                        Communication solutions for
-                        teams and customers.
-                    </p>
+                    </a>
+
+
+                    <a href="services.html#international-communication">
+
+                        International Communication
+
+                    </a>
+
+
+                    <a href="gem-services.html">
+
+                        GeM Services
+
+                    </a>
 
                 </div>
 
 
-                <div class="home-mini-card">
 
-                    <div class="home-mini-icon">
-                        ◆
-                    </div>
+                <!-- CONTACT -->
+
+                <div>
 
                     <h3>
-                        GeM Support
+
+                        Contact
+
                     </h3>
 
+
+                    <a href="tel:+919017125139">
+
+                        📞 +91 90171 25139
+
+                    </a>
+
+
+                    <a href="mailto:reachus@jbtechservices.in">
+
+                        ✉ reachus@jbtechservices.in
+
+                    </a>
+
+
+                    <a href="https://wa.me/919017125139"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        💬 WhatsApp Us
+
+                    </a>
+
+
                     <p>
-                        Assistance for relevant
-                        GeM-related requirements.
+
+                        RZH 715B, Raj Nagar Part 2,
+                        <br>
+                        Palam Village, South West Delhi,
+                        <br>
+                        Delhi – 110077
+
                     </p>
 
                 </div>
 
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                © 2026 JB TECH SERVICES.
+                All Rights Reserved.
+
             </div>
 
         </div>
 
-    </div>
+    </footer>
 
-</section>
 
 
+    <!-- =====================================================
+         FLOATING WHATSAPP
+    ====================================================== -->
 
-<!-- =====================================================
-     CORE SOLUTIONS
-====================================================== -->
+    <a
+        href="https://wa.me/919017125139"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="chat-button"
+        title="Chat with JB TECH SERVICES on WhatsApp"
+        aria-label="Chat with JB TECH SERVICES on WhatsApp">
 
-<section class="home-section home-section-soft">
+        💬
 
-    <div class="container">
+    </a>
 
 
-        <div class="home-section-heading">
 
-            <span class="home-kicker">
-                Our Solutions
-            </span>
+    <!-- =====================================================
+         SHARED JAVASCRIPT
+    ====================================================== -->
 
-            <h2>
-                Everything Your Business Needs
-                to Stay Connected
-            </h2>
-
-            <p>
-
-                Practical technology solutions covering
-                connectivity, communication and
-                GeM-related business requirements.
-
-            </p>
-
-        </div>
-
-
-        <div class="home-solution-grid">
-
-
-            <div class="home-solution-card">
-
-                <span class="home-solution-number">
-                    01
-                </span>
-
-                <div class="home-mini-icon">
-                    ◉
-                </div>
-
-                <h3>
-                    Enterprise Connectivity
-                </h3>
-
-                <p>
-
-                    Reliable connectivity solutions designed
-                    for businesses of different sizes and
-                    requirements.
-
-                </p>
-
-                <a href="services.html"
-                   class="home-card-link">
-
-                    Explore Connectivity →
-
-                </a>
-
-            </div>
-
-
-            <div class="home-solution-card">
-
-                <span class="home-solution-number">
-                    02
-                </span>
-
-                <div class="home-mini-icon">
-                    ☁
-                </div>
-
-                <h3>
-                    Cloud Communication
-                </h3>
-
-                <p>
-
-                    Modern cloud telephony and business
-                    communication solutions for teams
-                    and customers.
-
-                </p>
-
-                <a href="cloud-communication.html"
-                   class="home-card-link">
-
-                    Explore Cloud Solutions →
-
-                </a>
-
-            </div>
-
-
-            <div class="home-solution-card">
-
-                <span class="home-solution-number">
-                    03
-                </span>
-
-                <div class="home-mini-icon">
-                    ◆
-                </div>
-
-                <h3>
-                    GeM Business Support
-                </h3>
-
-                <p>
-
-                    Professional support for businesses
-                    dealing with Government e-Marketplace
-                    requirements.
-
-                </p>
-
-                <a href="gem-services.html"
-                   class="home-card-link">
-
-                    Explore GeM Services →
-
-                </a>
-
-            </div>
-
-
-            <div class="home-solution-card">
-
-                <span class="home-solution-number">
-                    04
-                </span>
-
-                <div class="home-mini-icon">
-                    ☎
-                </div>
-
-                <h3>
-                    Business Calling
-                </h3>
-
-                <p>
-
-                    Professional voice and communication
-                    solutions helping businesses connect
-                    with teams and customers.
-
-                </p>
-
-                <a href="cloud-communication.html"
-                   class="home-card-link">
-
-                    Learn More →
-
-                </a>
-
-            </div>
-
-
-            <div class="home-solution-card">
-
-                <span class="home-solution-number">
-                    05
-                </span>
-
-                <div class="home-mini-icon">
-                    ◎
-                </div>
-
-                <h3>
-                    International Communication
-                </h3>
-
-                <p>
-
-                    Communication solutions supporting
-                    businesses serving customers across
-                    international markets.
-
-                </p>
-
-                <a href="cloud-communication.html"
-                   class="home-card-link">
-
-                    Discover Solutions →
-
-                </a>
-
-            </div>
-
-
-            <div class="home-solution-card">
-
-                <span class="home-solution-number">
-                    06
-                </span>
-
-                <div class="home-mini-icon">
-                    +
-                </div>
-
-                <h3>
-                    Business Support
-                </h3>
-
-                <p>
-
-                    Requirement identification,
-                    solution coordination and
-                    business assistance.
-
-                </p>
-
-                <a href="contact.html"
-                   class="home-card-link">
-
-                    Talk to Us →
-
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     WHY JB TECH SERVICES
-====================================================== -->
-
-<section class="home-section home-section-dark">
-
-    <div class="container">
-
-
-        <div class="home-section-heading">
-
-            <span class="home-kicker">
-                Why JB TECH SERVICES
-            </span>
-
-            <h2>
-                One Partner. Multiple Solutions.
-            </h2>
-
-            <p>
-
-                We combine technology relationships,
-                business understanding and responsive
-                support to help organizations find
-                suitable solutions.
-
-            </p>
-
-        </div>
-
-
-        <div class="home-why-grid">
-
-
-            <div class="home-why-card">
-
-                <div class="home-mini-icon">
-                    ◇
-                </div>
-
-                <h3>
-                    Multiple Technology Solutions
-                </h3>
-
-                <p>
-
-                    Access connectivity, telecom,
-                    cloud communication and GeM-related
-                    business support through one partner.
-
-                </p>
-
-            </div>
-
-
-            <div class="home-why-card">
-
-                <div class="home-mini-icon">
-                    ✓
-                </div>
-
-                <h3>
-                    Business-Focused Approach
-                </h3>
-
-                <p>
-
-                    We focus on understanding the actual
-                    requirement before discussing a
-                    suitable solution.
-
-                </p>
-
-            </div>
-
-
-            <div class="home-why-card">
-
-                <div class="home-mini-icon">
-                    ◎
-                </div>
-
-                <h3>
-                    Technology Ecosystem
-                </h3>
-
-                <p>
-
-                    Our relationships with established
-                    technology providers help us offer
-                    a broader range of solutions.
-
-                </p>
-
-            </div>
-
-
-            <div class="home-why-card">
-
-                <div class="home-mini-icon">
-                    ↗
-                </div>
-
-                <h3>
-                    Domestic & International
-                </h3>
-
-                <p>
-
-                    Support for applicable domestic and
-                    international communication
-                    requirements.
-
-                </p>
-
-            </div>
-
-
-            <div class="home-why-card">
-
-                <div class="home-mini-icon">
-                    ♢
-                </div>
-
-                <h3>
-                    Personalized Assistance
-                </h3>
-
-                <p>
-
-                    Professional assistance from
-                    requirement identification through
-                    solution coordination.
-
-                </p>
-
-            </div>
-
-
-            <div class="home-why-card">
-
-                <div class="home-mini-icon">
-                    ∞
-                </div>
-
-                <h3>
-                    Long-Term Support
-                </h3>
-
-                <p>
-
-                    Our focus is on building useful
-                    and lasting business relationships.
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     TECHNOLOGY PARTNERS
-====================================================== -->
-
-<section class="home-section home-section-light">
-
-    <div class="container">
-
-
-        <div class="home-section-heading">
-
-            <span class="home-kicker">
-                Technology Ecosystem
-            </span>
-
-            <h2>
-                Our Technology & Service Partners
-            </h2>
-
-            <p>
-
-                We work with established technology and
-                service providers to help businesses
-                access suitable solutions.
-
-            </p>
-
-        </div>
-
-
-        <div class="home-partner-grid">
-
-
-            <div class="home-partner-card">
-
-                <div class="home-partner-logo">
-                    TATA
-                </div>
-
-             <p>
-    Business Connectivity Solutions
-</p>
-
-            </div>
-
-
-            <div class="home-partner-card">
-
-                <div class="home-partner-logo">
-                    Jio
-                </div>
-
-                <h3>
-                    JioBusiness
-                </h3>
-
-                <p>
-                    Connectivity Solutions
-                </p>
-
-            </div>
-
-
-            <div class="home-partner-card">
-
-                <div class="home-partner-logo">
-                    Vi
-                </div>
-
-                <h3>
-                    Vi Business
-                </h3>
-
-                <p>
-                    Business Telecom
-                </p>
-
-            </div>
-
-
-            <div class="home-partner-card">
-
-                <div class="home-partner-logo">
-                    TeleCMI
-                </div>
-
-                <h3>
-                    TeleCMI
-                </h3>
-
-                <p>
-                    Cloud Communication
-                </p>
-
-            </div>
-
-
-            <div class="home-partner-card">
-
-                <div class="home-partner-logo">
-    GeM
-</div>
-
-<h3>
-    GeM Business Support
-</h3>
-
-<p>
-    Procurement & Marketplace Support
-</p>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="home-partner-extra">
-
-
-            <div class="home-partner-wide">
-
-                <strong>
-                    IHA Telephony
-                </strong>
-
-                <span>
-                    Cloud communication and telephony solutions.
-                </span>
-
-            </div>
-
-
-            <div class="home-partner-wide">
-
-                <strong>
-                    Technology & Service Ecosystem
-                </strong>
-
-                <span>
-                    Supporting business connectivity,
-                    telecom, cloud communication and
-                    GeM-related requirements.
-                </span>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     BUSINESS CAPABILITIES
-====================================================== -->
-
-<section class="home-section home-section-soft">
-
-    <div class="container">
-
-
-        <div class="home-section-heading">
-
-            <span class="home-kicker">
-                Our Capabilities
-            </span>
-
-            <h2>
-                Supporting Different Business Requirements
-            </h2>
-
-            <p>
-
-                Solutions designed around practical
-                business connectivity, communication
-                and support requirements.
-
-            </p>
-
-        </div>
-
-
-        <div class="home-capability-grid">
-
-
-            <div class="home-capability">
-
-                <div class="home-mini-icon">
-                    ◉
-                </div>
-
-                <h3>
-                    Business Internet
-                </h3>
-
-                <p>
-                    Connectivity solutions for
-                    business operations and teams.
-                </p>
-
-            </div>
-
-
-            <div class="home-capability">
-
-                <div class="home-mini-icon">
-                    ◎
-                </div>
-
-                <h3>
-                    Enterprise Connectivity
-                </h3>
-
-                <p>
-                    Connectivity options based on
-                    organizational requirements.
-                </p>
-
-            </div>
-
-
-            <div class="home-capability">
-
-                <div class="home-mini-icon">
-                    ☁
-                </div>
-
-                <h3>
-                    Cloud Telephony
-                </h3>
-
-                <p>
-                    Cloud communication and business
-                    calling solutions.
-                </p>
-
-            </div>
-
-
-            <div class="home-capability">
-
-                <div class="home-mini-icon">
-                    ☎
-                </div>
-
-                <h3>
-                    Business Communication
-                </h3>
-
-                <p>
-                    Communication solutions for
-                    teams and customers.
-                </p>
-
-            </div>
-
-
-            <div class="home-capability">
-
-                <div class="home-mini-icon">
-                    ↗
-                </div>
-
-                <h3>
-                    International Communication
-                </h3>
-
-                <p>
-                    Support for applicable
-                    international requirements.
-                </p>
-
-            </div>
-
-
-            <div class="home-capability">
-
-                <div class="home-mini-icon">
-                    ◆
-                </div>
-
-                <h3>
-                    GeM Business Support
-                </h3>
-
-                <p>
-                    Assistance related to relevant
-                    Government e-Marketplace requirements.
-                </p>
-
-            </div>
-
-
-            <div class="home-capability">
-
-                <div class="home-mini-icon">
-                    ✓
-                </div>
-
-                <h3>
-                    Requirement Coordination
-                </h3>
-
-                <p>
-                    Understanding and coordinating
-                    suitable business solutions.
-                </p>
-
-            </div>
-
-
-            <div class="home-capability">
-
-                <div class="home-mini-icon">
-                    +
-                </div>
-
-                <h3>
-                    Business Assistance
-                </h3>
-
-                <p>
-                    Practical support for your
-                    technology requirements.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     GEM SECTION
-====================================================== -->
-
-<section class="home-section home-section-light">
-
-    <div class="container">
-
-        <div class="home-support">
-
-
-            <div>
-
-                <span class="home-kicker">
-                    Government e-Marketplace
-                </span>
-
-
-                <h2>
-                    GeM Business Support
-                    Made More Practical
-                </h2>
-
-
-                <p>
-
-                   
-    JB TECH SERVICES provides assistance
-    for businesses dealing with relevant
-    Government e-Marketplace and
-    procurement-related requirements.
-
-                </p>
-
-
-                <ul class="home-check-list">
-
-                    <li>
-                        GeM-related business support
-                    </li>
-
-                    <li>
-                        Procurement support
-                    </li>
-
-                    <li>
-                        Requirement coordination
-                    </li>
-
-                    <li>
-                        Product and service coordination
-                    </li>
-
-                </ul>
-
-
-                <br>
-
-
-                <a href="gem-services.html"
-                   class="home-btn-primary">
-
-                    Explore GeM Services →
-
-                </a>
-
-            </div>
-
-
-            <div class="home-support-box">
-
-                <h3>
-                    Need GeM Assistance?
-                </h3>
-
-                <p>
-
-                    Tell us about your requirement and
-                    our team can discuss the relevant
-                    support available for your business.
-
-                </p>
-
-
-                <a href="contact.html"
-                   class="home-white-btn">
-
-                    Discuss Your Requirement →
-
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CLOUD COMMUNICATION
-====================================================== -->
-
-<section class="home-section home-section-soft">
-
-    <div class="container">
-
-        <div class="home-support">
-
-
-            <div class="home-support-box">
-
-                <h3>
-                    Modern Business Communication
-                </h3>
-
-                <p>
-
-                    Cloud-based communication solutions
-                    can help businesses support teams,
-                    customers and changing communication
-                    requirements.
-
-                </p>
-
-
-                <a href="cloud-communication.html"
-                   class="home-white-btn">
-
-                    Explore Cloud Solutions →
-
-                </a>
-
-            </div>
-
-
-            <div>
-
-                <span class="home-kicker">
-                    Cloud Communication
-                </span>
-
-
-                <h2>
-                    Communicate
-                    Without Boundaries
-                </h2>
-
-
-                <p>
-
-                    Through our cloud communication
-                    partnerships, we provide solutions
-                    for applicable domestic and
-                    international business requirements.
-
-                </p>
-
-
-                <ul class="home-check-list">
-
-                    <li>
-                        Cloud telephony
-                    </li>
-
-                    <li>
-                        Business calling
-                    </li>
-
-                    <li>
-                        Customer communication
-                    </li>
-
-                    <li>
-                        Domestic communication
-                    </li>
-
-                    <li>
-                        International communication
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FINAL CTA
-====================================================== -->
-
-<section class="home-final-cta">
-
-    <div class="container">
-
-        <h2>
-            Looking for the Right
-            Business Technology Solution?
-        </h2>
-
-
-        <p>
-
-            Tell us what your business needs.
-            We'll help you identify a suitable
-            solution.
-
-        </p>
-
-
-        <div class="home-final-buttons">
-
-
-            <a href="contact.html"
-               class="home-white-btn">
-
-                Get a Business Quote →
-
-            </a>
-
-
-            <a href="https://wa.me/919017125139"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="home-transparent-btn">
-
-                Talk to Us on WhatsApp ↗
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-     SAME STRUCTURE AS OTHER WORKING PAGES
-====================================================== -->
-
-<footer class="footer">
-
-    <div class="container">
-
-
-        <div class="footer-grid">
-
-
-            <!-- COMPANY -->
-
-            <div>
-
-                <h3>
-                    JB TECH SERVICES
-                </h3>
-
-
-                <p>
-
-                    Technology and business communication
-                    solutions helping organizations connect,
-                    communicate and grow.
-
-                </p>
-
-
-                <br>
-
-
-                <p>
-                    📍 South West Delhi, Delhi
-                </p>
-
-            </div>
-
-
-            <!-- QUICK LINKS -->
-
-            <div>
-
-                <h3>
-                    Quick Links
-                </h3>
-
-
-                <a href="index.html">
-                    Home
-                </a>
-
-
-                <a href="about.html">
-                    About Us
-                </a>
-
-
-                <a href="services.html">
-                    Services
-                </a>
-
-
-                <a href="cloud-communication.html">
-                    Cloud Communication
-                </a>
-
-
-                <a href="gem-services.html">
-                    GeM Services
-                </a>
-
-
-                <a href="contact.html">
-                    Contact
-                </a>
-
-            </div>
-
-
-            <!-- SOLUTIONS -->
-
-            <div>
-
-                <h3>
-                    Solutions
-                </h3>
-
-
-                <a href="services.html">
-                    Telecom Services
-                </a>
-
-
-                <a href="cloud-communication.html">
-                    Cloud Communication
-                </a>
-
-
-                <a href="cloud-communication.html">
-                    Business Calling
-                </a>
-
-
-                <a href="gem-services.html">
-                    GeM Services
-                </a>
-
-
-                <a href="contact.html">
-                    Business Solutions
-                </a>
-
-            </div>
-
-
-            <!-- CONTACT -->
-
-            <div>
-
-                <h3>
-                    Contact
-                </h3>
-
-
-                <a href="tel:+919017125139">
-                    📞 +91 90171 25139
-                </a>
-
-
-                <a href="mailto:reachus@jbtechservices.in">
-                    ✉ reachus@jbtechservices.in
-                </a>
-
-
-                <a href="https://wa.me/919017125139"
-                   target="_blank"
-                   rel="noopener noreferrer">
-
-                    💬 WhatsApp Us
-
-                </a>
-
-
-                <p>
-
-                    RZH 715B, Raj Nagar Part 2,<br>
-                    Palam Village, South West Delhi,<br>
-                    Delhi – 110077
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            © 2026 JB TECH SERVICES.
-            All Rights Reserved.
-
-        </div>
-
-    </div>
-
-</footer>
-
-
-
-<!-- =====================================================
-     FLOATING WHATSAPP
-====================================================== -->
-
-<a href="https://wa.me/919017125139"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="chat-button"
-   title="Chat with JB TECH SERVICES on WhatsApp">
-
-    💬
-
-</a>
-
-
-
-<!-- =====================================================
-     EXISTING WEBSITE JAVASCRIPT
-====================================================== -->
-
-<script src="script.js"></script>
-
-
-
-<!-- =====================================================
-     HOMEPAGE SLIDER JAVASCRIPT
-====================================================== -->
-
-<script>
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        const slides =
-            document.querySelectorAll(
-                ".home-slide"
-            );
-
-
-        const dots =
-            document.querySelectorAll(
-                ".home-dot"
-            );
-
-
-        const hero =
-            document.querySelector(
-                ".home-hero"
-            );
-
-
-        if (
-            !slides.length ||
-            !dots.length ||
-            !hero
-        ) {
-            return;
-        }
-
-
-        let currentSlide = 0;
-
-        let slideTimer;
-
-
-        function showSlide(index) {
-
-            slides.forEach(
-                function (slide, i) {
-
-                    slide.classList.toggle(
-                        "active",
-                        i === index
-                    );
-
-                }
-            );
-
-
-            dots.forEach(
-                function (dot, i) {
-
-                    dot.classList.toggle(
-                        "active",
-                        i === index
-                    );
-
-                }
-            );
-
-
-            currentSlide = index;
-        }
-
-
-        function nextSlide() {
-
-            const next =
-                (
-                    currentSlide + 1
-                )
-                %
-                slides.length;
-
-
-            showSlide(next);
-        }
-
-
-        function startSlider() {
-
-            clearInterval(
-                slideTimer
-            );
-
-
-            slideTimer =
-                setInterval(
-                    nextSlide,
-                    5500
-                );
-        }
-
-
-        dots.forEach(
-            function (dot) {
-
-                dot.addEventListener(
-                    "click",
-                    function () {
-
-                        const slideNumber =
-                            Number(
-                                dot.getAttribute(
-                                    "data-slide"
-                                )
-                            );
-
-
-                        showSlide(
-                            slideNumber
-                        );
-
-
-                        startSlider();
-
-                    }
-                );
-
-            }
-        );
-
-
-        hero.addEventListener(
-            "mouseenter",
-            function () {
-
-                clearInterval(
-                    slideTimer
-                );
-
-            }
-        );
-
-
-        hero.addEventListener(
-            "mouseleave",
-            function () {
-
-                startSlider();
-
-            }
-        );
-
-
-        showSlide(0);
-
-        startSlider();
-
-    }
-);
-
-</script>
-
+    <script src="js/script.js"></script>
 
 </body>
 
