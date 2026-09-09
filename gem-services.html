@@ -7,2510 +7,1599 @@
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <title>
-        GeM Services & Procurement Support for Businesses | JB TECH SERVICES
+        GeM Services & Procurement Support | JB TECH SERVICES
     </title>
 
-    <meta name="description"
-          content="JB TECH SERVICES provides GeM portal assistance, procurement support, product coordination and business assistance for relevant Government e-Marketplace requirements across India.">
+    <meta
+        name="description"
+        content="JB TECH SERVICES provides GeM portal assistance, procurement support, product coordination and business assistance for relevant Government e-Marketplace requirements across India."
+    >
 
-    <meta name="author"
-          content="JB TECH SERVICES">
+    <meta
+        name="author"
+        content="JB TECH SERVICES"
+    >
 
-    <meta name="robots"
-          content="index, follow">
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-    <link rel="canonical"
-          href="https://jbtechservices.in/gem-services.html">
+    <link
+        rel="canonical"
+        href="https://jbtechservices.in/gem-services.html"
+    >
 
-
-    <!-- OPEN GRAPH -->
-
-    <meta property="og:title"
-          content="GeM Services & Procurement Support for Businesses | JB TECH SERVICES">
-
-    <meta property="og:description"
-          content="GeM portal assistance, procurement support, product coordination and business assistance from JB TECH SERVICES across India.">
-
-    <meta property="og:type"
-          content="website">
-
-    <meta property="og:url"
-          content="https://jbtechservices.in/gem-services.html">
-
-    <meta property="og:site_name"
-          content="JB TECH SERVICES">
-
-    <meta name="theme-color"
-          content="#0a2d4f">
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="favicon.svg"
+    >
 
 
-    <!-- STRUCTURED DATA -->
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="GeM Services & Procurement Support | JB TECH SERVICES"
+    >
+
+    <meta
+        property="og:description"
+        content="GeM portal assistance, procurement support, product coordination and business assistance from JB TECH SERVICES."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:url"
+        content="https://jbtechservices.in/gem-services.html"
+    >
+
+    <meta
+        property="og:site_name"
+        content="JB TECH SERVICES"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0a2d4f"
+    >
+
+
+    <!-- Structured Data -->
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "GeM Services & Procurement Support | JB TECH SERVICES",
-        "url": "https://jbtechservices.in/gem-services.html",
-        "description": "GeM portal assistance, procurement support, product coordination and business assistance from JB TECH SERVICES across India."
+        "@type": "Service",
+        "name": "GeM Services & Procurement Support",
+        "description": "GeM portal assistance, procurement support, product coordination and business assistance from JB TECH SERVICES.",
+        "provider": {
+            "@type": "Organization",
+            "name": "JB TECH SERVICES",
+            "url": "https://jbtechservices.in/"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "India"
+        },
+        "serviceType": "GeM Services and Procurement Support"
     }
     </script>
 
 
-    <link rel="stylesheet"
-          href="style.css">
-
-
-    <!-- =====================================================
-         GEM PAGE DESIGN
-    ====================================================== -->
-
-    <style>
-
-        /* =====================================================
-           BASE
-        ====================================================== */
-
-        .gem-page {
-            overflow-x: hidden;
-        }
-
-        .gem-page *,
-        .gem-page *::before,
-        .gem-page *::after {
-            box-sizing: border-box;
-        }
-
-
-        /* =====================================================
-           HERO
-        ====================================================== */
-
-        .gem-hero {
-            position: relative;
-
-            min-height: 600px;
-
-            display: flex;
-            align-items: center;
-
-            overflow: hidden;
-
-            background:
-                radial-gradient(
-                    circle at 78% 42%,
-                    rgba(64,145,255,0.25),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 15% 100%,
-                    rgba(24,178,255,0.08),
-                    transparent 28%
-                ),
-                linear-gradient(
-                    120deg,
-                    #061b31 0%,
-                    #092f52 55%,
-                    #12477d 100%
-                );
-
-            color: #ffffff;
-        }
-
-
-        .gem-hero::before {
-            content: "";
-
-            position: absolute;
-
-            width: 690px;
-            height: 690px;
-
-            right: -240px;
-            top: -245px;
-
-            border:
-                1px solid rgba(255,255,255,0.08);
-
-            border-radius: 50%;
-
-            box-shadow:
-                0 0 0 65px rgba(255,255,255,0.018),
-                0 0 0 130px rgba(255,255,255,0.012);
-
-            pointer-events: none;
-        }
-
-
-        .gem-hero::after {
-            content: "";
-
-            position: absolute;
-
-            width: 360px;
-            height: 360px;
-
-            left: -190px;
-            bottom: -240px;
-
-            border:
-                1px solid rgba(255,255,255,0.06);
-
-            border-radius: 50%;
-        }
-
-
-        .gem-hero .container {
-            position: relative;
-            z-index: 3;
-        }
-
-
-        .gem-hero-grid {
-            display: grid;
-
-            grid-template-columns:
-                minmax(0, 1.05fr)
-                minmax(400px, 0.95fr);
-
-            gap: 65px;
-
-            align-items: center;
-        }
-
-
-        .gem-hero-content {
-            padding: 75px 0;
-        }
-
-
-        .gem-kicker {
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 10px;
-
-            margin-bottom: 19px;
-
-            color: #70b5ff;
-
-            font-size: 12px;
-
-            font-weight: 900;
-
-            letter-spacing: 2.5px;
-
-            text-transform: uppercase;
-        }
-
-
-        .gem-kicker::before {
-            content: "";
-
-            width: 30px;
-            height: 2px;
-
-            background: #70b5ff;
-        }
-
-
-        .gem-hero h1 {
-            margin: 0 0 23px;
-
-            color: #ffffff;
-
-            font-size:
-                clamp(42px, 5vw, 65px);
-
-            line-height: 1.05;
-
-            letter-spacing: -2.2px;
-
-            font-weight: 850;
-        }
-
-
-        .gem-hero h1 span {
-            color: #70b5ff;
-        }
-
-
-        .gem-hero-text {
-            max-width: 650px;
-
-            margin: 0 0 30px;
-
-            color: #d4e5f6;
-
-            font-size: 17px;
-
-            line-height: 1.8;
-        }
-
-
-        .gem-hero-buttons {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 13px;
-        }
-
-
-        .gem-btn-primary,
-        .gem-btn-outline {
-            min-height: 53px;
-
-            padding: 0 23px;
-
-            display: inline-flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 9px;
-
-            text-decoration: none;
-
-            font-size: 14px;
-
-            font-weight: 800;
-
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease,
-                background 0.25s ease;
-        }
-
-
-        .gem-btn-primary {
-            background: #ffffff;
-
-            color: #0a3157 !important;
-
-            box-shadow:
-                0 15px 35px rgba(0,0,0,0.18);
-        }
-
-
-        .gem-btn-primary:hover {
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 20px 42px rgba(0,0,0,0.24);
-        }
-
-
-        .gem-btn-outline {
-            border:
-                1px solid rgba(255,255,255,0.30);
-
-            background:
-                rgba(255,255,255,0.04);
-
-            color: #ffffff !important;
-        }
-
-
-        .gem-btn-outline:hover {
-            transform: translateY(-3px);
-
-            background:
-                rgba(255,255,255,0.10);
-        }
-
-
-        /* =====================================================
-           HERO VISUAL
-        ====================================================== */
-
-        .gem-visual {
-            position: relative;
-
-            min-height: 450px;
-        }
-
-
-        .gem-orbit {
-            position: absolute;
-
-            left: 50%;
-            top: 50%;
-
-            transform:
-                translate(-50%, -50%);
-
-            width: 325px;
-            height: 325px;
-
-            border:
-                1px solid rgba(113,181,255,0.22);
-
-            border-radius: 50%;
-        }
-
-
-        .gem-orbit::before,
-        .gem-orbit::after {
-            content: "";
-
-            position: absolute;
-
-            left: 50%;
-            top: 50%;
-
-            transform:
-                translate(-50%, -50%);
-
-            border:
-                1px solid rgba(113,181,255,0.10);
-
-            border-radius: 50%;
-        }
-
-
-        .gem-orbit::before {
-            width: 445px;
-            height: 445px;
-        }
-
-
-        .gem-orbit::after {
-            width: 550px;
-            height: 550px;
-        }
-
-
-        .gem-core {
-            position: absolute;
-
-            left: 50%;
-            top: 50%;
-
-            transform:
-                translate(-50%, -50%);
-
-            width: 210px;
-            height: 210px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-
-            border:
-                1px solid rgba(255,255,255,0.20);
-
-            border-radius: 50%;
-
-            background:
-                radial-gradient(
-                    circle at 30% 25%,
-                    rgba(96,176,255,0.30),
-                    transparent 45%
-                ),
-                linear-gradient(
-                    145deg,
-                    #144a82,
-                    #071d34
-                );
-
-            box-shadow:
-                0 30px 70px rgba(0,0,0,0.28),
-                inset 0 0 45px rgba(77,154,255,0.10);
-
-            z-index: 3;
-
-            animation:
-                gemCoreFloat 5s ease-in-out infinite;
-        }
-
-
-        @keyframes gemCoreFloat {
-
-            0%,
-            100% {
-                transform:
-                    translate(-50%, -50%)
-                    translateY(0);
-            }
-
-            50% {
-                transform:
-                    translate(-50%, -50%)
-                    translateY(-8px);
-            }
-        }
-
-
-        .gem-core-mark {
-            width: 62px;
-            height: 62px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            margin-bottom: 12px;
-
-            border-radius: 16px;
-
-            background:
-                rgba(255,255,255,0.10);
-
-            color: #8ac4ff;
-
-            font-size: 23px;
-
-            font-weight: 900;
-        }
-
-
-        .gem-core strong {
-            color: #ffffff;
-
-            font-size: 17px;
-        }
-
-
-        .gem-core span {
-            margin-top: 5px;
-
-            color: #a9c9e7;
-
-            font-size: 9px;
-
-            letter-spacing: 1.3px;
-
-            text-transform: uppercase;
-        }
-
-
-        .gem-floating-card {
-            position: absolute;
-
-            z-index: 5;
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 11px;
-
-            min-width: 205px;
-
-            padding: 13px 15px;
-
-            border:
-                1px solid rgba(255,255,255,0.14);
-
-            border-radius: 12px;
-
-            background:
-                rgba(5,25,46,0.78);
-
-            backdrop-filter: blur(12px);
-
-            box-shadow:
-                0 20px 40px rgba(0,0,0,0.20);
-
-            animation:
-                gemFloat 4.5s ease-in-out infinite;
-        }
-
-
-        .gem-floating-icon {
-            width: 38px;
-            height: 38px;
-
-            flex: 0 0 38px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 10px;
-
-            background:
-                rgba(90,166,255,0.13);
-
-            color: #78b9ff;
-
-            font-size: 18px;
-        }
-
-
-        .gem-floating-card strong {
-            display: block;
-
-            color: #ffffff;
-
-            font-size: 13px;
-        }
-
-
-        .gem-floating-card small {
-            display: block;
-
-            margin-top: 3px;
-
-            color: #a8c5df;
-
-            font-size: 10px;
-        }
-
-
-        .gem-float-one {
-            left: 0;
-            top: 45px;
-
-            animation-delay: -0.7s;
-        }
-
-
-        .gem-float-two {
-            right: -5px;
-            top: 165px;
-
-            animation-delay: -2s;
-        }
-
-
-        .gem-float-three {
-            left: 25px;
-            bottom: 30px;
-
-            animation-delay: -3.1s;
-        }
-
-
-        @keyframes gemFloat {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-9px);
-            }
-        }
-
-
-        /* =====================================================
-           SECTIONS
-        ====================================================== */
-
-        .gem-section {
-            padding: 95px 0;
-        }
-
-
-        .gem-section-white {
-            background: #ffffff;
-        }
-
-
-        .gem-section-soft {
-            background: #f7f9fc;
-        }
-
-
-        .gem-section-dark {
-            position: relative;
-
-            overflow: hidden;
-
-            background:
-                radial-gradient(
-                    circle at 80% 30%,
-                    rgba(52,125,226,0.18),
-                    transparent 33%
-                ),
-                linear-gradient(
-                    135deg,
-                    #061b31,
-                    #0d355e
-                );
-
-            color: #ffffff;
-        }
-
-
-        .gem-section-heading {
-            max-width: 790px;
-
-            margin:
-                0 auto 52px;
-
-            text-align: center;
-        }
-
-
-        .gem-section-label {
-            display: block;
-
-            margin-bottom: 11px;
-
-            color: #2177e8;
-
-            font-size: 12px;
-
-            font-weight: 900;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-        }
-
-
-        .gem-section-dark .gem-section-label {
-            color: #70b5ff;
-        }
-
-
-        .gem-section-heading h2 {
-            margin: 0 0 15px;
-
-            color: #0a2340;
-
-            font-size:
-                clamp(31px, 4vw, 47px);
-
-            line-height: 1.12;
-
-            letter-spacing: -1.3px;
-        }
-
-
-        .gem-section-dark .gem-section-heading h2 {
-            color: #ffffff;
-        }
-
-
-        .gem-section-heading p {
-            margin: 0;
-
-            color: #66788c;
-
-            font-size: 16px;
-
-            line-height: 1.75;
-        }
-
-
-        .gem-section-dark .gem-section-heading p {
-            color: #c2d7ea;
-        }
-
-
-        /* =====================================================
-           INTRO
-        ====================================================== */
-
-        .gem-intro-grid {
-            display: grid;
-
-            grid-template-columns:
-                minmax(0, 1.05fr)
-                minmax(340px, 0.95fr);
-
-            gap: 65px;
-
-            align-items: center;
-        }
-
-
-        .gem-intro-copy h2 {
-            margin: 0 0 20px;
-
-            color: #0a2340;
-
-            font-size:
-                clamp(31px, 3.5vw, 44px);
-
-            line-height: 1.12;
-
-            letter-spacing: -1px;
-        }
-
-
-        .gem-intro-copy p {
-            margin: 0 0 16px;
-
-            color: #66788c;
-
-            font-size: 15px;
-
-            line-height: 1.8;
-        }
-
-
-        .gem-intro-list {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 12px;
-
-            margin: 25px 0 0;
-
-            padding: 0;
-
-            list-style: none;
-        }
-
-
-        .gem-intro-list li {
-            position: relative;
-
-            padding: 14px 15px 14px 40px;
-
-            border:
-                1px solid #e1e8f0;
-
-            border-radius: 11px;
-
-            background: #ffffff;
-
-            color: #354b61;
-
-            font-size: 13px;
-
-            font-weight: 700;
-        }
-
-
-        .gem-intro-list li::before {
-            content: "✓";
-
-            position: absolute;
-
-            left: 15px;
-            top: 13px;
-
-            color: #2478ff;
-
-            font-weight: 900;
-        }
-
-
-        .gem-intro-panel {
-            position: relative;
-
-            padding: 37px;
-
-            overflow: hidden;
-
-            border-radius: 22px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #092947,
-                    #164d84
-                );
-
-            box-shadow:
-                0 25px 55px rgba(15,35,60,0.15);
-        }
-
-
-        .gem-intro-panel::after {
-            content: "";
-
-            position: absolute;
-
-            width: 250px;
-            height: 250px;
-
-            right: -120px;
-            bottom: -120px;
-
-            border:
-                1px solid rgba(255,255,255,0.08);
-
-            border-radius: 50%;
-        }
-
-
-        .gem-intro-icon {
-            width: 58px;
-            height: 58px;
-
-            margin-bottom: 21px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 15px;
-
-            background:
-                rgba(255,255,255,0.09);
-
-            color: #80beff;
-
-            font-size: 25px;
-
-            font-weight: 900;
-        }
-
-
-        .gem-intro-panel h3 {
-            position: relative;
-
-            z-index: 2;
-
-            margin: 0 0 11px;
-
-            color: #ffffff;
-
-            font-size: 24px;
-        }
-
-
-        .gem-intro-panel p {
-            position: relative;
-
-            z-index: 2;
-
-            margin: 0;
-
-            color: #c4d9ed;
-
-            font-size: 14px;
-
-            line-height: 1.75;
-        }
-
-
-        /* =====================================================
-           SERVICE CARDS
-        ====================================================== */
-
-        .gem-card-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 20px;
-        }
-
-
-        .gem-card {
-            position: relative;
-
-            min-height: 270px;
-
-            padding: 29px;
-
-            overflow: hidden;
-
-            border:
-                1px solid #e0e7ef;
-
-            border-radius: 18px;
-
-            background: #ffffff;
-
-            box-shadow:
-                0 12px 35px rgba(15,23,42,0.045);
-
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease,
-                border-color 0.3s ease;
-        }
-
-
-        .gem-card:hover {
-            transform: translateY(-7px);
-
-            border-color: #c3dbf8;
-
-            box-shadow:
-                0 24px 48px rgba(15,35,60,0.10);
-        }
-
-
-        .gem-card::after {
-            content: "";
-
-            position: absolute;
-
-            width: 125px;
-            height: 125px;
-
-            right: -65px;
-            bottom: -65px;
-
-            border-radius: 50%;
-
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(36,120,255,0.10),
-                    transparent 68%
-                );
-        }
-
-
-        .gem-card-icon {
-            width: 51px;
-            height: 51px;
-
-            margin-bottom: 19px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 14px;
-
-            background: #edf4ff;
-
-            color: #2478ff;
-
-            font-size: 21px;
-        }
-
-
-        .gem-card-number {
-            position: absolute;
-
-            right: 22px;
-            top: 22px;
-
-            color: #d5e0eb;
-
-            font-size: 12px;
-
-            font-weight: 900;
-        }
-
-
-        .gem-card h3 {
-            margin: 0 0 10px;
-
-            color: #0a2340;
-
-            font-size: 19px;
-        }
-
-
-        .gem-card p {
-            margin: 0;
-
-            color: #68798d;
-
-            font-size: 13px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =====================================================
-           PROCESS
-        ====================================================== */
-
-        .gem-process {
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 18px;
-
-            position: relative;
-        }
-
-
-        .gem-process::before {
-            content: "";
-
-            position: absolute;
-
-            left: 12%;
-            right: 12%;
-
-            top: 34px;
-
-            height: 1px;
-
-            background: #d6e0ea;
-        }
-
-
-        .gem-process-step {
-            position: relative;
-
-            z-index: 2;
-
-            text-align: center;
-        }
-
-
-        .gem-process-number {
-            width: 68px;
-            height: 68px;
-
-            margin:
-                0 auto 19px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border:
-                5px solid #f7f9fc;
-
-            border-radius: 50%;
-
-            background: #0c3d6c;
-
-            color: #ffffff;
-
-            font-size: 15px;
-
-            font-weight: 900;
-
-            box-shadow:
-                0 0 0 1px #d4dfeb;
-        }
-
-
-        .gem-process-step h3 {
-            margin: 0 0 8px;
-
-            color: #0a2340;
-
-            font-size: 17px;
-        }
-
-
-        .gem-process-step p {
-            max-width: 215px;
-
-            margin: 0 auto;
-
-            color: #68798d;
-
-            font-size: 12px;
-
-            line-height: 1.65;
-        }
-
-
-        /* =====================================================
-           WHO WE HELP
-        ====================================================== */
-
-        .gem-audience-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 18px;
-        }
-
-
-        .gem-audience-card {
-            padding: 28px;
-
-            border:
-                1px solid rgba(255,255,255,0.12);
-
-            border-radius: 17px;
-
-            background:
-                rgba(255,255,255,0.055);
-
-            transition:
-                transform 0.3s ease,
-                background 0.3s ease;
-        }
-
-
-        .gem-audience-card:hover {
-            transform: translateY(-6px);
-
-            background:
-                rgba(255,255,255,0.085);
-        }
-
-
-        .gem-audience-icon {
-            width: 48px;
-            height: 48px;
-
-            margin-bottom: 17px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 13px;
-
-            background:
-                rgba(91,167,255,0.13);
-
-            color: #77b7ff;
-
-            font-size: 20px;
-        }
-
-
-        .gem-audience-card h3 {
-            margin: 0 0 9px;
-
-            color: #ffffff;
-
-            font-size: 17px;
-        }
-
-
-        .gem-audience-card p {
-            margin: 0;
-
-            color: #bdd2e6;
-
-            font-size: 13px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =====================================================
-           REQUIREMENT SECTION
-        ====================================================== */
-
-        .gem-requirement-grid {
-            display: grid;
-
-            grid-template-columns:
-                0.9fr 1.1fr;
-
-            gap: 60px;
-
-            align-items: center;
-        }
-
-
-        .gem-requirement-copy h2 {
-            margin: 0 0 18px;
-
-            color: #0a2340;
-
-            font-size:
-                clamp(31px, 3.5vw, 44px);
-
-            line-height: 1.12;
-
-            letter-spacing: -1px;
-        }
-
-
-        .gem-requirement-copy p {
-            margin: 0;
-
-            color: #68798d;
-
-            font-size: 15px;
-
-            line-height: 1.8;
-        }
-
-
-        .gem-requirement-list {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 13px;
-
-            margin-top: 25px;
-
-            padding: 0;
-
-            list-style: none;
-        }
-
-
-        .gem-requirement-list li {
-            position: relative;
-
-            padding: 14px 15px 14px 38px;
-
-            border:
-                1px solid #e1e8ef;
-
-            border-radius: 10px;
-
-            color: #354b61;
-
-            font-size: 13px;
-
-            font-weight: 700;
-        }
-
-
-        .gem-requirement-list li::before {
-            content: "✓";
-
-            position: absolute;
-
-            left: 14px;
-
-            color: #2478ff;
-
-            font-weight: 900;
-        }
-
-
-        .gem-requirement-box {
-            padding: 38px;
-
-            border-radius: 21px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #edf5ff,
-                    #f8fbff
-                );
-
-            border:
-                1px solid #dce8f5;
-        }
-
-
-        .gem-requirement-box h3 {
-            margin: 0 0 12px;
-
-            color: #0a2340;
-
-            font-size: 23px;
-        }
-
-
-        .gem-requirement-box p {
-            margin: 0 0 21px;
-
-            color: #66788c;
-
-            font-size: 14px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =====================================================
-           FAQ
-        ====================================================== */
-
-        .gem-faq-section {
-            background: #f7f9fc;
-        }
-
-
-        .gem-faq-list {
-            max-width: 900px;
-
-            margin: 0 auto;
-        }
-
-
-        .gem-faq-item {
-            margin-bottom: 12px;
-
-            overflow: hidden;
-
-            border:
-                1px solid #e0e7ef;
-
-            border-radius: 12px;
-
-            background: #ffffff;
-        }
-
-
-        .gem-faq-question {
-            width: 100%;
-
-            padding: 20px 22px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 20px;
-
-            border: 0;
-
-            background: #ffffff;
-
-            color: #0a2340;
-
-            font-size: 15px;
-
-            font-weight: 800;
-
-            text-align: left;
-
-            cursor: pointer;
-        }
-
-
-        .gem-faq-question:hover {
-            background: #f9fbff;
-        }
-
-
-        .gem-faq-question strong {
-            display: block !important;
-
-            color: #0a2340;
-
-            font-size: 15px;
-        }
-
-
-        .gem-faq-chevron {
-            display: flex !important;
-
-            flex: 0 0 25px;
-
-            width: 25px;
-            height: 25px;
-
-            align-items: center;
-            justify-content: center;
-
-            color: #2478ff;
-
-            font-size: 21px;
-
-            transition:
-                transform 0.25s ease;
-        }
-
-
-        .gem-faq-question[aria-expanded="true"]
-        .gem-faq-chevron {
-            transform: rotate(180deg);
-        }
-
-
-        .gem-faq-question::after {
-            content: none !important;
-
-            display: none !important;
-        }
-
-
-        .gem-faq-answer {
-            padding: 0 22px 20px;
-
-            color: #68798d;
-
-            font-size: 13px;
-
-            line-height: 1.75;
-        }
-
-
-        .gem-faq-answer p {
-            margin: 0;
-        }
-
-
-        /* =====================================================
-           CTA
-        ====================================================== */
-
-        .gem-final-cta {
-            position: relative;
-
-            overflow: hidden;
-
-            padding: 100px 0;
-
-            background:
-                radial-gradient(
-                    circle at 70% 0%,
-                    rgba(88,166,255,0.20),
-                    transparent 35%
-                ),
-                linear-gradient(
-                    135deg,
-                    #082c4e,
-                    #164d84
-                );
-
-            text-align: center;
-
-            color: #ffffff;
-        }
-
-
-        .gem-final-cta::after {
-            content: "";
-
-            position: absolute;
-
-            width: 500px;
-            height: 500px;
-
-            right: -270px;
-            bottom: -350px;
-
-            border:
-                1px solid rgba(255,255,255,0.08);
-
-            border-radius: 50%;
-        }
-
-
-        .gem-final-cta .container {
-            position: relative;
-
-            z-index: 2;
-        }
-
-
-        .gem-final-cta h2 {
-            max-width: 780px;
-
-            margin:
-                0 auto 16px;
-
-            color: #ffffff;
-
-            font-size:
-                clamp(32px, 4vw, 48px);
-
-            line-height: 1.12;
-
-            letter-spacing: -1px;
-        }
-
-
-        .gem-final-cta p {
-            max-width: 650px;
-
-            margin: 0 auto;
-
-            color: #c8dbed;
-
-            font-size: 16px;
-
-            line-height: 1.7;
-        }
-
-
-        .gem-final-buttons {
-            display: flex;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 13px;
-
-            margin-top: 29px;
-        }
-
-
-        .gem-white-btn,
-        .gem-whatsapp-btn {
-            min-height: 53px;
-
-            padding: 0 24px;
-
-            display: inline-flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 9px;
-
-            text-decoration: none;
-
-            font-size: 14px;
-
-            font-weight: 800;
-        }
-
-
-        .gem-white-btn {
-            background: #ffffff;
-
-            color: #0a3157 !important;
-        }
-
-
-        .gem-whatsapp-btn {
-            border:
-                1px solid rgba(255,255,255,0.30);
-
-            background:
-                rgba(255,255,255,0.05);
-
-            color: #ffffff !important;
-        }
-
-
-        /* =====================================================
-           RESPONSIVE
-        ====================================================== */
-
-        @media (max-width: 1050px) {
-
-            .gem-hero-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gem-hero-content {
-                max-width: 780px;
-
-                margin: 0 auto;
-
-                text-align: center;
-            }
-
-            .gem-kicker {
-                justify-content: center;
-            }
-
-            .gem-hero-text {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .gem-hero-buttons {
-                justify-content: center;
-            }
-
-            .gem-visual {
-                max-width: 620px;
-
-                width: 100%;
-
-                margin: 0 auto;
-            }
-
-            .gem-process {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .gem-process::before {
-                display: none;
-            }
-
-        }
-
-
-        @media (max-width: 850px) {
-
-            .gem-intro-grid,
-            .gem-requirement-grid {
-                grid-template-columns: 1fr;
-
-                gap: 45px;
-            }
-
-            .gem-card-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .gem-audience-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-        }
-
-
-        @media (max-width: 650px) {
-
-            .gem-hero {
-                min-height: 700px;
-            }
-
-            .gem-hero-content {
-                padding: 60px 0 20px;
-            }
-
-            .gem-hero h1 {
-                font-size: 40px;
-
-                letter-spacing: -1.4px;
-            }
-
-            .gem-hero-text {
-                font-size: 15px;
-            }
-
-            .gem-hero-buttons {
-                flex-direction: column;
-
-                align-items: stretch;
-            }
-
-            .gem-hero-buttons a {
-                width: 100%;
-            }
-
-            .gem-visual {
-                min-height: 350px;
-            }
-
-            .gem-orbit {
-                width: 245px;
-                height: 245px;
-            }
-
-            .gem-orbit::before {
-                width: 330px;
-                height: 330px;
-            }
-
-            .gem-orbit::after {
-                width: 405px;
-                height: 405px;
-            }
-
-            .gem-core {
-                width: 160px;
-                height: 160px;
-            }
-
-            .gem-core-mark {
-                width: 45px;
-                height: 45px;
-
-                font-size: 18px;
-            }
-
-            .gem-core strong {
-                font-size: 13px;
-            }
-
-            .gem-core span {
-                font-size: 7px;
-            }
-
-            .gem-floating-card {
-                min-width: 150px;
-
-                padding: 10px;
-            }
-
-            .gem-floating-card strong {
-                font-size: 11px;
-            }
-
-            .gem-floating-card small {
-                display: none;
-            }
-
-            .gem-floating-icon {
-                width: 32px;
-                height: 32px;
-
-                flex-basis: 32px;
-
-                font-size: 15px;
-            }
-
-            .gem-float-one {
-                left: 0;
-                top: 12px;
-            }
-
-            .gem-float-two {
-                right: 0;
-                top: 112px;
-            }
-
-            .gem-float-three {
-                left: 0;
-                bottom: 8px;
-            }
-
-            .gem-section {
-                padding: 72px 0;
-            }
-
-            .gem-intro-list,
-            .gem-requirement-list {
-                grid-template-columns: 1fr;
-            }
-
-            .gem-card-grid,
-            .gem-feature-grid,
-            .gem-audience-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gem-process {
-                grid-template-columns: 1fr;
-
-                gap: 35px;
-            }
-
-            .gem-final-buttons {
-                flex-direction: column;
-
-                align-items: stretch;
-            }
-
-            .gem-final-buttons a {
-                width: 100%;
-            }
-
-        }
-
-
-        @media (max-width: 430px) {
-
-            .gem-hero h1 {
-                font-size: 35px;
-            }
-
-            .gem-visual {
-                min-height: 320px;
-            }
-
-            .gem-orbit {
-                width: 210px;
-                height: 210px;
-            }
-
-            .gem-orbit::before {
-                width: 280px;
-                height: 280px;
-            }
-
-            .gem-orbit::after {
-                width: 350px;
-                height: 350px;
-            }
-
-            .gem-core {
-                width: 140px;
-                height: 140px;
-            }
-
-            .gem-floating-card {
-                min-width: 135px;
-            }
-
-        }
-
-
-        @media (prefers-reduced-motion: reduce) {
-
-            .gem-core,
-            .gem-floating-card,
-            .gem-card,
-            .gem-audience-card {
-                animation: none;
-
-                transition: none;
-            }
-
-        }
-
-    </style>
+    <!-- Shared Website Stylesheet -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 </head>
 
 
-<body class="gem-page">
+<body>
 
 
-<!-- =====================================================
-     HEADER
-====================================================== -->
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-<header class="navbar">
+    <header class="navbar">
 
-    <div class="container nav-container">
-
-        <a href="index.html"
-           class="logo">
-
-            JB TECH SERVICES
-
-        </a>
+        <div class="container nav-container">
 
 
-        <div class="menu-toggle"
-             aria-label="Open navigation menu"
-             aria-expanded="false">
+            <a
+                href="index.html"
+                class="logo"
+            >
+                JB TECH SERVICES
+            </a>
 
-            ☰
+
+            <div
+                class="menu-toggle"
+                role="button"
+                tabindex="0"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </div>
+
+
+            <nav
+                class="nav-links"
+                aria-label="Main navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="cloud-communication.html">
+                    Cloud Communication
+                </a>
+
+                <a href="gem-services.html">
+                    GeM Services
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="quote-btn"
+                >
+                    Get a Business Quote
+                </a>
+
+            </nav>
 
         </div>
 
-
-        <nav class="nav-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About Us
-            </a>
-
-            <a href="services.html">
-                Services
-            </a>
-
-            <a href="cloud-communication.html">
-                Cloud Communication
-            </a>
-
-            <a href="gem-services.html">
-                GeM Services
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-            <a href="contact.html"
-               class="quote-btn">
-
-                Get a Business Quote
-
-            </a>
-
-        </nav>
-
-    </div>
-
-</header>
+    </header>
 
 
 
-<!-- =====================================================
-     HERO
-====================================================== -->
-
-<section class="gem-hero">
-
-    <div class="container">
-
-        <div class="gem-hero-grid">
+    <main>
 
 
-            <div class="gem-hero-content">
+        <!-- =================================================
+             HERO
+        ================================================== -->
 
-                <span class="gem-kicker">
-                    Government e-Marketplace
-                </span>
+        <section class="hero">
+
+            <div class="container hero-grid">
 
 
-                <h1>
+                <div class="hero-content">
 
-                    GeM Support for
-                    <span>
-                        Business Requirements
+                    <span class="eyebrow">
+                        GeM SERVICES
                     </span>
 
-                </h1>
+
+                    <h1>
+                        GeM Services
+                        <span>
+                            & Procurement Support
+                        </span>
+                    </h1>
 
 
-                <p class="gem-hero-text">
-
-                    Professional assistance for businesses across India
-                    dealing with relevant Government e-Marketplace and
-                    procurement-related requirements.
-
-                </p>
+                    <p>
+                        Professional assistance for businesses
+                        and organizations managing relevant
+                        Government e-Marketplace requirements.
+                    </p>
 
 
-                <div class="gem-hero-buttons">
-
-                    <a href="contact.html"
-                       class="gem-btn-primary">
-
-                        Discuss Your Requirement →
-
-                    </a>
+                    <p>
+                        JB TECH SERVICES helps customers understand
+                        their requirement and provides applicable
+                        GeM-related assistance, procurement support
+                        and business coordination.
+                    </p>
 
 
-                    <a href="https://wa.me/919017125139"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="gem-btn-outline">
+                    <div class="hero-buttons">
 
-                        Talk to Us on WhatsApp ↗
+                        <a
+                            href="contact.html"
+                            class="btn btn-primary"
+                        >
+                            Discuss GeM Requirement
+                        </a>
 
-                    </a>
+
+                        <a
+                            href="tel:+919017125139"
+                            class="btn btn-secondary"
+                        >
+                            Call +91 90171 25139
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="hero-panel">
+
+                    <div class="hero-panel-label">
+                        GOVERNMENT E-MARKETPLACE
+                    </div>
+
+
+                    <h2>
+                        Simplifying GeM-Related Business Requirements
+                    </h2>
+
+
+                    <p>
+                        GeM requirements can involve different
+                        procurement and coordination activities.
+                        Our approach starts with understanding
+                        the requirement before discussing the
+                        relevant support.
+                    </p>
+
+
+                    <div class="hero-panel-items">
+
+
+                        <div>
+
+                            <strong>
+                                Portal Assistance
+                            </strong>
+
+                            <span>
+                                Support for relevant GeM portal
+                                requirements.
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Procurement Support
+                            </strong>
+
+                            <span>
+                                Assistance related to applicable
+                                procurement requirements.
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Product Coordination
+                            </strong>
+
+                            <span>
+                                Coordination based on the
+                                customer's requirement.
+                            </span>
+
+                        </div>
+
+
+                    </div>
 
                 </div>
 
             </div>
 
-
-            <!-- HERO VISUAL -->
-
-            <div class="gem-visual">
+        </section>
 
 
-                <div class="gem-orbit">
-                </div>
+
+        <!-- =================================================
+             INTRODUCTION
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="container">
 
 
-                <div class="gem-core">
+                <div class="section-heading">
 
-                    <div class="gem-core-mark">
-                        GeM
-                    </div>
-
-                    <strong>
-                        Business Support
-                    </strong>
-
-                    <span>
-                        Government e-Marketplace
+                    <span class="eyebrow">
+                        GeM BUSINESS SUPPORT
                     </span>
 
+
+                    <h2>
+                        Simplifying GeM Procurement Requirements
+                    </h2>
+
+
+                    <p>
+                        The Government e-Marketplace, commonly known
+                        as GeM, is a digital platform associated with
+                        government procurement in India.
+                    </p>
+
+
+                    <p>
+                        Businesses may require support while
+                        understanding and managing their GeM-related
+                        requirements. JB TECH SERVICES provides
+                        assistance based on the specific requirement
+                        and applicable process.
+                    </p>
+
                 </div>
 
 
-                <div class="gem-floating-card gem-float-one">
 
-                    <div class="gem-floating-icon">
-                        ▣
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Portal Assistance
-                        </strong>
-
-                        <small>
-                            GeM-related requirements
-                        </small>
-
-                    </div>
-
-                </div>
+                <div class="cards-grid">
 
 
-                <div class="gem-floating-card gem-float-two">
+                    <article class="service-card">
 
-                    <div class="gem-floating-icon">
-                        ✓
-                    </div>
+                        <div class="card-number">
+                            01
+                        </div>
 
-                    <div>
 
-                        <strong>
+                        <h3>
+                            GeM Portal Assistance
+                        </h3>
+
+
+                        <p>
+                            Assistance for businesses navigating
+                            relevant Government e-Marketplace
+                            requirements and processes.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <div class="card-number">
+                            02
+                        </div>
+
+
+                        <h3>
                             Procurement Support
-                        </strong>
+                        </h3>
 
-                        <small>
-                            Business coordination
-                        </small>
 
-                    </div>
+                        <p>
+                            Support related to procurement
+                            requirements and business coordination
+                            according to the applicable requirement.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <div class="card-number">
+                            03
+                        </div>
+
+
+                        <h3>
+                            Product Coordination
+                        </h3>
+
+
+                        <p>
+                            Assistance with product and service
+                            coordination where applicable to the
+                            customer's business requirement.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <div class="card-number">
+                            04
+                        </div>
+
+
+                        <h3>
+                            Business Assistance
+                        </h3>
+
+
+                        <p>
+                            Professional support to help businesses
+                            organize and discuss their GeM-related
+                            activities.
+                        </p>
+
+                    </article>
 
                 </div>
 
+            </div>
 
-                <div class="gem-floating-card gem-float-three">
+        </section>
 
-                    <div class="gem-floating-icon">
-                        ◆
-                    </div>
+
+
+        <!-- =================================================
+             HOW WE APPROACH REQUIREMENTS
+        ================================================== -->
+
+        <section class="section section-alt">
+
+            <div class="container">
+
+
+                <div class="two-column">
+
 
                     <div>
 
-                        <strong>
-                            Requirement Review
-                        </strong>
+                        <span class="eyebrow">
+                            REQUIREMENT FIRST
+                        </span>
 
-                        <small>
-                            Understand before action
-                        </small>
+
+                        <h2>
+                            GeM Support Based on Your Requirement
+                        </h2>
+
+
+                        <p>
+                            Every GeM-related requirement can be
+                            different depending on the business,
+                            product, service and procurement objective.
+                        </p>
+
+
+                        <p>
+                            Instead of assuming the same process for
+                            every customer, JB TECH SERVICES first
+                            understands the requirement and then
+                            discusses the relevant assistance.
+                        </p>
+
+
+                        <a
+                            href="contact.html"
+                            class="btn btn-primary"
+                        >
+                            Discuss Your Requirement
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="feature-list">
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                ✓
+                            </span>
+
+
+                            <div>
+
+                                <h3>
+                                    Understand the Requirement
+                                </h3>
+
+                                <p>
+                                    We begin by understanding what
+                                    the business or organization
+                                    needs.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                ✓
+                            </span>
+
+
+                            <div>
+
+                                <h3>
+                                    Identify Applicable Support
+                                </h3>
+
+                                <p>
+                                    We discuss the relevant GeM
+                                    assistance according to the
+                                    requirement.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                ✓
+                            </span>
+
+
+                            <div>
+
+                                <h3>
+                                    Coordinate Where Applicable
+                                </h3>
+
+                                <p>
+                                    Product, service or procurement
+                                    coordination can be discussed
+                                    where applicable.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                ✓
+                            </span>
+
+
+                            <div>
+
+                                <h3>
+                                    Keep the Process Clear
+                                </h3>
+
+                                <p>
+                                    Our objective is to make the
+                                    requirement easier to understand
+                                    and coordinate.
+                                </p>
+
+                            </div>
+
+                        </div>
+
 
                     </div>
 
                 </div>
 
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WHO CAN BENEFIT
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        BUSINESS REQUIREMENTS
+                    </span>
+
+
+                    <h2>
+                        Who Can Discuss GeM Requirements With Us?
+                    </h2>
+
+
+                    <p>
+                        Our GeM-related support is intended for
+                        businesses and organizations that need
+                        assistance with relevant Government
+                        e-Marketplace activities.
+                    </p>
+
+                </div>
+
+
+
+                <div class="cards-grid">
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            Businesses
+                        </h3>
+
+                        <p>
+                            Businesses looking for assistance with
+                            their relevant GeM-related activities
+                            can discuss their requirements with us.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            Product Suppliers
+                        </h3>
+
+                        <p>
+                            Businesses dealing with products or
+                            services can discuss applicable
+                            procurement and coordination requirements.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            Organizations
+                        </h3>
+
+                        <p>
+                            Organizations with government procurement
+                            requirements can discuss the type of
+                            support they need.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            Growing Businesses
+                        </h3>
+
+                        <p>
+                            Businesses developing their government
+                            procurement activities can explore
+                            relevant GeM-related assistance.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REQUIREMENT TYPES
+        ================================================== -->
+
+        <section class="section section-alt">
+
+            <div class="container">
+
+
+                <div class="two-column">
+
+
+                    <div>
+
+                        <span class="eyebrow">
+                            SUPPORT AREAS
+                        </span>
+
+
+                        <h2>
+                            What GeM-Related Requirements Can We Discuss?
+                        </h2>
+
+
+                        <p>
+                            Depending on the customer's requirement,
+                            JB TECH SERVICES can discuss several
+                            areas of GeM-related business support.
+                        </p>
+
+
+                        <p>
+                            Actual assistance depends on the specific
+                            requirement and applicable GeM processes.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="feature-list">
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                01
+                            </span>
+
+
+                            <div>
+
+                                <h3>
+                                    Portal Requirements
+                                </h3>
+
+                                <p>
+                                    Assistance related to relevant
+                                    GeM portal activities.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                02
+                            </span>
+
+
+                            <div>
+
+                                <h3>
+                                    Procurement Requirements
+                                </h3>
+
+                                <p>
+                                    Support and coordination related
+                                    to applicable procurement needs.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                03
+                            </span>
+
+
+                            <div>
+
+                                <h3>
+                                    Product Requirements
+                                </h3>
+
+                                <p>
+                                    Product coordination according
+                                    to the business requirement.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="feature-item">
+
+                            <span class="feature-icon">
+                                04
+                            </span>
+
+
+                            <div>
+
+                                <h3>
+                                    Service Requirements
+                                </h3>
+
+                                <p>
+                                    Discussion and coordination of
+                                    applicable service requirements.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WHY JB TECH SERVICES
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        WHY WORK WITH US
+                    </span>
+
+
+                    <h2>
+                        A Practical Approach to GeM Support
+                    </h2>
+
+
+                    <p>
+                        Our objective is not to make assumptions
+                        about your requirement. We focus on
+                        understanding what you need and discussing
+                        the appropriate support.
+                    </p>
+
+                </div>
+
+
+
+                <div class="process-grid">
+
+
+                    <div class="process-card">
+
+                        <span class="process-number">
+                            01
+                        </span>
+
+
+                        <h3>
+                            One Point of Contact
+                        </h3>
+
+
+                        <p>
+                            Discuss your GeM-related requirement
+                            directly with the JB TECH SERVICES team.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="process-card">
+
+                        <span class="process-number">
+                            02
+                        </span>
+
+
+                        <h3>
+                            Requirement-Based Discussion
+                        </h3>
+
+
+                        <p>
+                            We first understand the requirement
+                            before discussing the relevant support.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="process-card">
+
+                        <span class="process-number">
+                            03
+                        </span>
+
+
+                        <h3>
+                            Business Coordination
+                        </h3>
+
+
+                        <p>
+                            Coordinate applicable product, service
+                            or procurement requirements according
+                            to the situation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RELATED BUSINESS SOLUTIONS
+        ================================================== -->
+
+        <section class="section section-alt">
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        OTHER JB TECH SERVICES SOLUTIONS
+                    </span>
+
+
+                    <h2>
+                        Explore Our Business Technology Solutions
+                    </h2>
+
+
+                    <p>
+                        GeM-related requirements can exist alongside
+                        other business technology and communication
+                        requirements.
+                    </p>
+
+                </div>
+
+
+
+                <div class="cards-grid">
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            Business Connectivity
+                        </h3>
+
+
+                        <p>
+                            Explore business internet and connectivity
+                            solutions for offices and business locations.
+                        </p>
+
+
+                        <a
+                            href="business-connectivity.html"
+                            class="text-link"
+                        >
+                            Explore Business Connectivity →
+                        </a>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            Business Telecom Products
+                        </h3>
+
+
+                        <p>
+                            Explore business telecom products and
+                            connectivity options for different
+                            organizational requirements.
+                        </p>
+
+
+                        <a
+                            href="business-telecom-products.html"
+                            class="text-link"
+                        >
+                            Explore Telecom Products →
+                        </a>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            Cloud Communication
+                        </h3>
+
+
+                        <p>
+                            Explore cloud-based communication solutions
+                            for modern business teams.
+                        </p>
+
+
+                        <a
+                            href="cloud-communication.html"
+                            class="text-link"
+                        >
+                            Explore Cloud Communication →
+                        </a>
+
+                    </article>
+
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            Enterprise Telecom
+                        </h3>
+
+
+                        <p>
+                            Explore a broader approach to business
+                            connectivity, communication and telecom
+                            requirements.
+                        </p>
+
+
+                        <a
+                            href="enterprise-telecom.html"
+                            class="text-link"
+                        >
+                            Explore Enterprise Telecom →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FAQ
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        FAQ
+                    </span>
+
+
+                    <h2>
+                        Questions About GeM Services
+                    </h2>
+
+
+                    <p>
+                        Common questions businesses may have
+                        before discussing a GeM-related requirement.
+                    </p>
+
+                </div>
+
+
+
+                <div class="faq-list">
+
+
+                    <div class="faq-item">
+
+                        <button
+                            type="button"
+                            class="faq-question"
+                        >
+
+                            What GeM-related support does JB TECH SERVICES provide?
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                JB TECH SERVICES provides GeM portal
+                                assistance, procurement support,
+                                product and service coordination,
+                                requirement understanding and related
+                                business assistance based on the
+                                customer's requirement.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item">
+
+                        <button
+                            type="button"
+                            class="faq-question"
+                        >
+
+                            What is the Government e-Marketplace?
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                The Government e-Marketplace, commonly
+                                known as GeM, is a digital platform
+                                associated with government procurement
+                                in India.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item">
+
+                        <button
+                            type="button"
+                            class="faq-question"
+                        >
+
+                            Can JB TECH SERVICES help with GeM-related business requirements?
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Yes. We can discuss the business
+                                requirement and provide applicable
+                                GeM-related assistance, procurement
+                                support and coordination.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item">
+
+                        <button
+                            type="button"
+                            class="faq-question"
+                        >
+
+                            Do you provide GeM portal assistance?
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Yes. We provide assistance for
+                                relevant GeM portal and business
+                                requirements based on the specific
+                                requirement.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item">
+
+                        <button
+                            type="button"
+                            class="faq-question"
+                        >
+
+                            Can you help coordinate products or services?
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Where applicable, we can assist with
+                                product and service coordination
+                                according to the business requirement.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item">
+
+                        <button
+                            type="button"
+                            class="faq-question"
+                        >
+
+                            Does JB TECH SERVICES provide GeM support across India?
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                JB TECH SERVICES has a Pan-India service
+                                intent. Actual availability and the
+                                applicable support depend on the
+                                requirement and relevant process.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="faq-item">
+
+                        <button
+                            type="button"
+                            class="faq-question"
+                        >
+
+                            How can I discuss my GeM requirement?
+
+                        </button>
+
+
+                        <div class="faq-answer">
+
+                            <p>
+                                You can contact JB TECH SERVICES through
+                                the business quote form, phone or
+                                WhatsApp. Tell us what you need and
+                                we can discuss the appropriate next
+                                steps.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FINAL CTA
+        ================================================== -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+
+                <div class="cta-content">
+
+                    <span class="eyebrow">
+                        TALK TO JB TECH SERVICES
+                    </span>
+
+
+                    <h2>
+                        Have a GeM-Related Business Requirement?
+                    </h2>
+
+
+                    <p>
+                        Tell us what your organization needs.
+                        We'll understand the requirement and
+                        discuss the relevant support available
+                        for your business.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="contact.html"
+                            class="btn btn-primary"
+                        >
+                            Get a Business Quote
+                        </a>
+
+
+                        <a
+                            href="https://wa.me/919017125139"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-secondary"
+                        >
+                            Talk to Us on WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <!-- COMPANY -->
+
+            <div>
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+                    JB TECH SERVICES
+                </a>
+
+
+                <p>
+                    Business technology, telecom and
+                    communication solutions helping
+                    organizations connect, communicate
+                    and grow.
+                </p>
+
+
+                <p>
+                    South West Delhi, Delhi
+                </p>
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+
+                <a href="services.html">
+                    Services
+                </a>
+
+
+                <a href="cloud-communication.html">
+                    Cloud Communication
+                </a>
+
+
+                <a href="gem-services.html">
+                    GeM Services
+                </a>
+
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <!-- SOLUTIONS -->
+
+            <div>
+
+                <h3>
+                    Solutions
+                </h3>
+
+
+                <a href="business-connectivity.html">
+                    Business Connectivity
+                </a>
+
+
+                <a href="business-telecom-products.html">
+                    Business Telecom Products
+                </a>
+
+
+                <a href="cloud-telephony.html">
+                    Cloud Telephony
+                </a>
+
+
+                <a href="business-calling.html">
+                    Business Calling
+                </a>
+
+
+                <a href="international-communication.html">
+                    International Communication
+                </a>
+
+
+                <a href="enterprise-telecom.html">
+                    Enterprise Telecom
+                </a>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+
+                <p>
+                    +91 90171 25139
+                </p>
+
+
+                <p>
+                    reachus@jbtechservices.in
+                </p>
+
+
+                <a
+                    href="https://wa.me/919017125139"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    WhatsApp Us →
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © 2026 JB TECH SERVICES.
+                    All rights reserved.
+                </p>
 
             </div>
 
         </div>
 
-    </div>
+    </footer>
 
-</section>
 
 
+    <!-- =====================================================
+         FLOATING WHATSAPP
+    ====================================================== -->
 
-<!-- =====================================================
-     INTRODUCTION
-====================================================== -->
+    <a
+        href="https://wa.me/919017125139"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="chat-button"
+        title="Chat with JB TECH SERVICES"
+        aria-label="Chat with JB TECH SERVICES on WhatsApp"
+    >
+        💬
+    </a>
 
-<section class="gem-section gem-section-white">
 
-    <div class="container">
 
-        <div class="gem-intro-grid">
+    <!-- Shared Website JavaScript -->
 
+    <script src="script.js"></script>
 
-            <div class="gem-intro-copy">
+</body>
 
-                <span class="gem-section-label">
-                    GeM Business Support
-                </span>
-
-
-                <h2>
-                    Making GeM-Related Requirements Easier to Manage
-                </h2>
-
-
-                <p>
-
-                    The Government e-Marketplace is a digital
-                    platform used for government procurement.
-
-                </p>
-
-
-                <p>
-
-                    Businesses working with GeM may require
-                    assistance in understanding marketplace,
-                    procurement and related business requirements.
-
-                </p>
-
-
-                <p>
-
-                    JB TECH SERVICES provides GeM portal assistance,
-                    procurement support and business coordination
-                    based on the specific requirement.
-
-                </p>
-
-
-                <ul class="gem-intro-list">
-
-                    <li>
-                        GeM Portal Assistance
-                    </li>
-
-                    <li>
-                        Procurement Support
-                    </li>
-
-                    <li>
-                        Product Coordination
-                    </li>
-
-                    <li>
-                        Requirement Understanding
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <div class="gem-intro-panel">
-
-                <div class="gem-intro-icon">
-                    ◆
-                </div>
-
-
-                <h3>
-                    Requirement-Focused Assistance
-                </h3>
-
-
-                <p>
-
-                    Every business requirement can be different.
-                    Our approach is to understand what you need
-                    first and then discuss the relevant GeM-related
-                    support and next steps.
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     SERVICES
-====================================================== -->
-
-<section class="gem-section gem-section-soft">
-
-    <div class="container">
-
-
-        <div class="gem-section-heading">
-
-            <span class="gem-section-label">
-                Our GeM Services
-            </span>
-
-
-            <h2>
-                Support Around Your Procurement Requirements
-            </h2>
-
-
-            <p>
-
-                Explore the areas where JB TECH SERVICES can
-                assist businesses with relevant GeM-related
-                requirements.
-
-            </p>
-
-        </div>
-
-
-        <div class="gem-card-grid">
-
-
-            <article class="gem-card">
-
-                <span class="gem-card-number">
-                    01
-                </span>
-
-
-                <div class="gem-card-icon">
-                    ▣
-                </div>
-
-
-                <h3>
-                    GeM Portal Assistance
-                </h3>
-
-
-                <p>
-
-                    Assistance for businesses navigating their
-                    relevant Government e-Marketplace
-                    requirements.
-
-                </p>
-
-            </article>
-
-
-
-            <article class="gem-card">
-
-                <span class="gem-card-number">
-                    02
-                </span>
-
-
-                <div class="gem-card-icon">
-                    ◆
-                </div>
-
-
-                <h3>
-                    Procurement Support
-                </h3>
-
-
-                <p>
-
-                    Support related to procurement requirements
-                    and business coordination.
-
-                </p>
-
-            </article>
-
-
-
-            <article class="gem-card">
-
-                <span class="gem-card-number">
-                    03
-                </span>
-
-
-                <div class="gem-card-icon">
-                    □
-                </div>
-
-
-                <h3>
-                    Product & Service Coordination
-                </h3>
-
-
-                <p>
-
-                    Assistance with coordinating relevant
-                    products or services according to the
-                    business requirement.
-
-                </p>
-
-            </article>
-
-
-
-            <article class="gem-card">
-
-                <span class="gem-card-number">
-                    04
-                </span>
-
-
-                <div class="gem-card-icon">
-                    ◇
-                </div>
-
-
-                <h3>
-                    Requirement Understanding
-                </h3>
-
-
-                <p>
-
-                    We begin by understanding the requirement
-                    before discussing the appropriate direction.
-
-                </p>
-
-            </article>
-
-
-
-            <article class="gem-card">
-
-                <span class="gem-card-number">
-                    05
-                </span>
-
-
-                <div class="gem-card-icon">
-                    ◎
-                </div>
-
-
-                <h3>
-                    Business Assistance
-                </h3>
-
-
-                <p>
-
-                    Structured assistance for businesses managing
-                    relevant GeM-related activities.
-
-                </p>
-
-            </article>
-
-
-
-            <article class="gem-card">
-
-                <span class="gem-card-number">
-                    06
-                </span>
-
-
-                <div class="gem-card-icon">
-                    ↗
-                </div>
-
-
-                <h3>
-                    Requirement Coordination
-                </h3>
-
-
-                <p>
-
-                    Clear coordination around the requirement,
-                    applicable process and next steps.
-
-                </p>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PROCESS
-====================================================== -->
-
-<section class="gem-section gem-section-white">
-
-    <div class="container">
-
-
-        <div class="gem-section-heading">
-
-            <span class="gem-section-label">
-                Our Approach
-            </span>
-
-
-            <h2>
-                A Simple Process for GeM-Related Support
-            </h2>
-
-
-            <p>
-
-                We keep the process straightforward by first
-                understanding the requirement and then discussing
-                the relevant support.
-
-            </p>
-
-        </div>
-
-
-        <div class="gem-process">
-
-
-            <div class="gem-process-step">
-
-                <div class="gem-process-number">
-                    01
-                </div>
-
-                <h3>
-                    Share Requirement
-                </h3>
-
-                <p>
-
-                    Tell us what product, service or
-                    GeM-related assistance you need.
-
-                </p>
-
-            </div>
-
-
-            <div class="gem-process-step">
-
-                <div class="gem-process-number">
-                    02
-                </div>
-
-                <h3>
-                    Requirement Review
-                </h3>
-
-                <p>
-
-                    We understand the requirement and
-                    discuss the applicable direction.
-
-                </p>
-
-            </div>
-
-
-            <div class="gem-process-step">
-
-                <div class="gem-process-number">
-                    03
-                </div>
-
-                <h3>
-                    Discuss Options
-                </h3>
-
-                <p>
-
-                    We discuss relevant support, coordination
-                    and available next steps.
-
-                </p>
-
-            </div>
-
-
-            <div class="gem-process-step">
-
-                <div class="gem-process-number">
-                    04
-                </div>
-
-                <h3>
-                    Coordinate
-                </h3>
-
-                <p>
-
-                    We provide the applicable business
-                    assistance and coordination.
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
+</html>
