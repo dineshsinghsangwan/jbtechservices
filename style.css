@@ -2383,3 +2383,400 @@ p {
         grid-template-columns: 1fr;
     }
 }
+/* =========================================================
+   JB TECH SERVICES HOMEPAGE
+   COLOURFUL SECTION HEADING BANDS
+   ========================================================= */
+
+/*
+   Each homepage heading receives a soft professional
+   technology colour. Content sections remain clean,
+   while the heading bands create visual separation.
+*/
+
+.home-page .home-heading-band {
+    position: relative;
+    overflow: hidden;
+
+    padding: 58px 20px 46px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf5ff 0%,
+            #f7fbff 55%,
+            #eef6ff 100%
+        );
+
+    border-top: 1px solid #dce9f7;
+    border-bottom: 1px solid #dce9f7;
+
+    text-align: center;
+}
+
+
+/* Decorative soft technology glow */
+
+.home-page .home-heading-band::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    left: -120px;
+    top: -150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(55, 125, 255, 0.08);
+
+    pointer-events: none;
+}
+
+
+.home-page .home-heading-band::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    right: -100px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(40, 190, 220, 0.07);
+
+    pointer-events: none;
+}
+
+
+/*
+   Keep the actual text above the decorative shapes.
+*/
+
+.home-page .home-heading-band .container,
+.home-page .home-heading-band h2,
+.home-page .home-heading-band p,
+.home-page .home-heading-band .home-kicker {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Section label */
+
+.home-page .home-heading-band .home-kicker {
+
+    color: #1769d2;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* Main heading */
+
+.home-page .home-heading-band h2 {
+
+    color: #0b2744;
+
+    text-shadow:
+        0 1px 0 rgba(255,255,255,0.65);
+}
+
+
+/* Supporting text */
+
+.home-page .home-heading-band p {
+
+    color: #58718b;
+}
+
+
+/* =========================================================
+   ALTERNATING COLOUR BANDS
+   ========================================================= */
+
+
+/* 01 - Soft Blue */
+
+.home-page
+.home-heading-band:nth-of-type(1) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf3ff 0%,
+            #f8fbff 52%,
+            #e8f2ff 100%
+        );
+
+    border-color: #d9e8fa;
+}
+
+
+/* 02 - Soft Lavender Blue */
+
+.home-page
+.home-heading-band:nth-of-type(2) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0efff 0%,
+            #fafaff 52%,
+            #eeeefe 100%
+        );
+
+    border-color: #e2e0f7;
+}
+
+
+.home-page
+.home-heading-band:nth-of-type(2)
+.home-kicker {
+
+    color: #4965c9;
+}
+
+
+/* 03 - Soft Cyan */
+
+.home-page
+.home-heading-band:nth-of-type(3) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8f9fb 0%,
+            #f8fdfe 52%,
+            #e9f7fa 100%
+        );
+
+    border-color: #d6edf1;
+}
+
+
+.home-page
+.home-heading-band:nth-of-type(3)
+.home-kicker {
+
+    color: #087f9b;
+}
+
+
+/* 04 - Soft Slate Blue */
+
+.home-page
+.home-heading-band:nth-of-type(4) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf1f8 0%,
+            #fafbfd 52%,
+            #edf2f9 100%
+        );
+
+    border-color: #dfe5ef;
+}
+
+
+.home-page
+.home-heading-band:nth-of-type(4)
+.home-kicker {
+
+    color: #405f8d;
+}
+
+
+/* 05 - Soft Technology Blue */
+
+.home-page
+.home-heading-band:nth-of-type(5) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf4ff 0%,
+            #f9fcff 52%,
+            #e8f4ff 100%
+        );
+
+    border-color: #d9eafa;
+}
+
+
+/* 06 - Soft Teal */
+
+.home-page
+.home-heading-band:nth-of-type(6) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf8f5 0%,
+            #f9fdfc 52%,
+            #e8f7f3 100%
+        );
+
+    border-color: #d9eee8;
+}
+
+
+.home-page
+.home-heading-band:nth-of-type(6)
+.home-kicker {
+
+    color: #16806e;
+}
+
+
+/* 07 - Soft Indigo */
+
+.home-page
+.home-heading-band:nth-of-type(7) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #eeefff 0%,
+            #fafaff 52%,
+            #eff0ff 100%
+        );
+
+    border-color: #e1e2f8;
+}
+
+
+.home-page
+.home-heading-band:nth-of-type(7)
+.home-kicker {
+
+    color: #4d59b8;
+}
+
+
+/* 08 - Soft Sky */
+
+.home-page
+.home-heading-band:nth-of-type(8) {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e9f6ff 0%,
+            #f8fcff 52%,
+            #eaf5ff 100%
+        );
+
+    border-color: #d8eaf8;
+}
+
+
+/* =========================================================
+   VISUAL POLISH
+   ========================================================= */
+
+/*
+   Small accent line underneath the kicker.
+   This makes the coloured band feel intentional
+   rather than simply being a coloured rectangle.
+*/
+
+.home-page .home-heading-band .home-kicker::after {
+
+    content: "";
+
+    display: block;
+
+    width: 42px;
+    height: 2px;
+
+    margin: 10px auto 0;
+
+    border-radius: 2px;
+
+    background:
+        currentColor;
+
+    opacity: 0.65;
+}
+
+
+/*
+   Add a subtle shadow between heading band and
+   following content without making the page heavy.
+*/
+
+.home-page .home-heading-band {
+
+    box-shadow:
+        inset 0 -1px 0 rgba(20,50,80,0.025);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .home-page .home-heading-band {
+
+        padding:
+            45px 18px 36px;
+    }
+
+
+    .home-page .home-heading-band h2 {
+
+        font-size:
+            clamp(28px, 8vw, 38px);
+
+        line-height: 1.16;
+    }
+
+
+    .home-page .home-heading-band p {
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    .home-page .home-heading-band::before {
+
+        width: 200px;
+        height: 200px;
+
+        left: -110px;
+        top: -110px;
+    }
+
+
+    .home-page .home-heading-band::after {
+
+        width: 180px;
+        height: 180px;
+
+        right: -100px;
+        bottom: -110px;
+    }
+
+}
